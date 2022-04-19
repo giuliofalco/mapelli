@@ -3,7 +3,7 @@
     <head> 
         <meta charset='utf8'>
         <title>OFFICINA PCTO</title>
-        <link rel="stylesheet" type="text/css" href={% static 'OffPcto/index.css' %}>
+        <link rel="stylesheet" type="text/css" href={% static 'pcto/index.css' %}>
         {% block head %}
           
         {% endblock %}
@@ -11,15 +11,15 @@
 
     <body>
         {% block testata %}
-        <img id="logo1" src={% static "OffPcto/mape.png"  %}>
-        <img id="logo2" src={% static "OffPcto/logo.jpeg" %}>
+        <img id="logo1" src={% static "pcto/mape.png"  %}>
+        <img id="logo2" src={% static "pcto/logo.jpeg" %}>
                
         <header class="robo">
           <h1 class="titolo">OFFICINA PCTO</h1>
              <ul>
-                <h2><a href="{% url 'OffPcto:index' %}" class="active">PCTO</a></h2>
-                <h2><a href="{% url 'OffPcto:aziende' %}" class="aziende">AZIENDE</a></h2>
-                <h2><a href="{% url 'OffPcto:tutor' %}" class="tutor"> AREA TUTOR</a></h2>
+                <h2><a href="{% url 'pcto:index' %}" class="active">PCTO</a></h2>
+                <h2><a href="{% url 'pcto:aziende' %}" class="aziende">AZIENDE</a></h2>
+                <h2><a href="{% url 'pcto:tutor' %}" class="tutor"> AREA TUTOR</a></h2>
                 <h2><a href="" class="studenti">STUDENTI</a></h2>
                 <h2><a href="" class="tutor"> LOG-IN</a></h2>
           </ul>
