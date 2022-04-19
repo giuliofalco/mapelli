@@ -51,4 +51,16 @@ class TutorPgSQLite(DbImport):
     queryLettura = "SELECT cognome,nome,email,classi FROM tutor"
     query = "INSERT INTO pcto_tutor (cognome,nome,email,classi) VALUES (%s,%s,%s,%s)"
 
+class Aziende_heroku(AziendePgSQLite):
 
+    def connectPg(self):
+        import psycopg2
+        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
+        return conn 
+
+class Tutor_heroku(TutorPgSQLite):
+   
+    def connectPg(self):
+        import psycopg2
+        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
+        return conn 

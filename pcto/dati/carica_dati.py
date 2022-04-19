@@ -3,12 +3,16 @@ from oop_pcto import *
 
 # AGGIORNAMENTO DATABASE POSTGRES DA SQLITE
 
-# Aggiorno le aziende
+# Aggiorno le aziende su Posgres locale
 #oggetto = AziendePgSQLite('mapelli','pcto.db')
 #oggetto.aggiornaDb()
 
+# Aggiorno le aziende su Posgres remoto
+#oggetto = Aziende_heroku('mapelli','pcto.db')
+#oggetto.aggiornaDb()
+
 #Aggiorno i Tutor
-oggetto = TutorPgSQLite('mapelli','pcto.db')
+oggetto = Tutor_heroku('mapelli','pcto.db')
 oggetto.aggiornaDb()
 
 #for item in oggetto.dati:

@@ -1,0 +1,3 @@
+Ottenuto mediante il comando: heroku pg:credentials:url DATABASE
+
+dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require
