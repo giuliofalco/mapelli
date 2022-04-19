@@ -1,0 +1,26 @@
+{%extends "base.html" %}
+       {%block head %}
+       <style>
+              h2 {text-align: center;}
+              #container {width:50%;
+                          margin: auto;
+                         }
+              .nome {width: 40%;}
+              table {width: 80%;}
+              th  {background: #C90;}
+              td  {padding-left: 15; background: lavender;}
+       </style>
+      {%endblock %}
+    
+       {%block content %}
+              <div id=container>
+                     <h2>Elenco Tutor</h2>
+                     <table>
+                     <th>Nomi Tutor <th> Classi                
+                     {%for tutor in object_list %}
+                        <tr>
+                        <td class=nome>{{tutor}} <td class=classe> {{tutor.classi}}           
+                     {%endfor %}
+                     </table>
+              </div>
+       {% endblock %}

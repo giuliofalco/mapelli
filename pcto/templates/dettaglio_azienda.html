@@ -1,0 +1,24 @@
+{%extends 'base.html' %}
+
+{%block head%}
+        <style>
+            #dati {text-align: center; margin-top: 30px;}
+            #dati b {color:brown;}
+            #settore {text-align:center; margin-top: -20px; }
+
+        </style>
+{% endblock %}
+
+{% block content %}
+
+    <h2> {{azienda.ragione_sociale}} </h2>
+    <div id=settore>
+       {{azienda.settore}}
+    </div>
+    <div id="dati">
+          
+           <b>Telefono:</b> {{azienda.telefono}} <b>Email:</b> {{azienda.email}} <br>
+           <b>Comune:</b> {{azienda.sede_comune}} <b>Prov. :</b> {{azienda.sede_provincia}}
+    </div>
+
+{% endblock%}

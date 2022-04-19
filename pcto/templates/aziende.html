@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+       {% block head %}
+          
+              <style>
+                     h2 {text-align: center;}
+                     #container {width:90%;
+                          margin: auto;
+                     }
+                     .ragione_sociale {width: 50%; cursor: pointer;}
+                     .comune    {width: 20%}
+                     .provincia {width: 7%;}
+                     
+                     table {width: 100%; margin-bottom: 5px;}
+                     th  {background: #C90;}
+                     td  {padding-left: 15; background: lavender;}
+                     #id_sede_provincia  {width: 50px;}
+                     .pagine a {text-decoration: none}
+                     .pagine {background: rgb(82, 115, 146); padding: 2px; margin:2px;
+                             cursor: pointer; color: white;}
+                     #pagina_corr {background: gold; padding: 3px; margin: 3px;}       
+                     #titolo {font-weight: bold; color: blue;}
+
+              </style>
+              <script>
+                     function choose_page(page) {
+                     // va alla pagina di elenco aziende specificata da page
+                        var url = document.location;
+                        // se la pagina è stata chiamata senza filtri
+                        if (url.toString().indexOf('?') == -1)                    
+                           newurl =url + "?pagina="+page;
+                        else {
+                           nuova = url.toString().replace(/pagina=\d+/,'pagina='+page);
+                           // se la pagina non è mai stata usata prima
+                           if (url.toString() == nuova)
+                              newurl= url + "&pagina="+page;
+                           else
+                              newurl = nuova;   
+                        }
+                        document.location = newurl;                        
+                     }
+
+                     function dettaglio(piva) {
+                      // vai alla pagina di dettaglio Azienda     
+                            url = "{% url 'OffPcto:aziende' %}" + piva;
+                            document.location = url;
+                     }
+              </script>
+       {% endblock %}
+   
+       {% block content %}
+
+       <div id=container>
+              
+       
+              <form method="get">
+                     Azienda: {{myfilter.form.ragione_sociale}}
+                     Comune: {{myfilter.form.sede_comune}}
+                     Provincia: {{myfilter.form.sede_provincia}}
+                     Settore: {{myfilter.form.settore}}
+                     <input type="submit" value="cerca">
+              </form>
+              <span id="titolo">Elenco Aziende</span> Pagina {{numpag}} di {{totpagine}}
+              <table>
+                      <th>Ragione Sociale <th> Comune <th> Provincia <th> Settore              
+                      {%for nome in object_list %}
+                        <tr>
+                        <td class=ragione_sociale onClick=dettaglio("{{nome.partita_iva}}")>{{nome.ragione_sociale}} 
+                        <td class=comune>{{nome.sede_comune}} 
+                        <td class=provincia> {{nome.sede_provincia}}  
+                        <td class=settore> {{nome.settore}}          
+                      {%endfor %}
+              </table>
+  
+              {%for pg in pagelist0 %}              
+                     <span id={{pg}} class=pagine onClick=choose_page({{pg}})>{{pg}} </span>
+              {% endfor%}
+              <span id="pagina_corr">{{numpag}}</span>
+              {%for pg in pagelist %}              
+                     <span id={{pg}} class=pagine onClick=choose_page({{pg}})>{{pg}} </span>
+              {% endfor%}
+       </div>
+      
+      {% endblock %}
