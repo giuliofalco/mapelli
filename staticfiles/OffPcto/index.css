@@ -1,0 +1,100 @@
+body
+{
+   min-height: 175vh;
+   background: white;
+}
+
+h1 {
+   text-align: center;
+   color: red;       
+}
+
+h2 {
+   text-align: center;
+   color: blue;
+   font-weight: normal;
+}
+
+header .titolo
+{
+   color: red;
+   font-weight: 700;
+   text-decoration: none;
+   font-size: 1em;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-family: 'Poppins', sans-serif;
+}
+
+header ul
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+header ul h2
+{
+   list-style: none;
+   margin-left: 20px;
+}
+
+header ul h2 a
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: black;
+}
+
+header ul h2 a:hover,
+header ul h2 a.active
+{
+  background: #fff;
+  color: #5500a3;
+}
+
+#paragrafo {
+  width: 50%;
+  margin: auto;
+   text-align: center;
+}
+#descrizione {
+  width: 70%;
+  margin: auto;
+}
+
+#logo1 {
+    position: absolute;
+    top: 1%;
+    left: 3%;
+     width: 120px; 
+     height: 120px;
+}
+
+#logo2 {
+   position: absolute;
+   top: 1%;
+   right: 3%;
+    width: 100px; 
+    height: 100px;
+   float: right;
+}
+
+#imm1 {
+        float: right;
+    margin-right: 100px; 
+    width: 340px; 
+    height: 290px;
+}
+
+#credits {
+   font-weight: bold;
+   color: blue;
+   width: 500px;
+   margin: auto;
+   font-style: italic;
+}
+
+p {
+  font-size: 18.5px;
+}
