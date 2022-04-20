@@ -15,7 +15,7 @@ def tutor(request):
 
 def aziende(request):
     elenco = Aziende.objects.all()
-
+    numero_aziende = len(elenco)
     myfilter = AziendeFilter(request.GET,queryset=elenco)
     elenco = myfilter.qs
 
@@ -32,6 +32,7 @@ def aziende(request):
                'numpag' : numpag,
                'pagelist': pagelist, 
                'pagelist0': pagelist0,
+               'numero_aziende' : numero_aziende
               }
     return render(request,"aziende.html",context)
 
