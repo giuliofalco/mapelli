@@ -1,6 +1,6 @@
 body
 {
-   min-height: 175vh;
+   /*min-height: 175vh;*/
    background: white;
 }
 
@@ -42,7 +42,7 @@ header ul h2
 header ul h2 a
 {
   text-decoration: none;
-  padding: 6px 15px;
+  padding: 3px 15px;
   color: black;
 }
 
@@ -73,28 +73,28 @@ header ul h2 a.active
 
 #logo2 {
    position: absolute;
-   top: 1%;
+   top: 10px;
    right: 3%;
-    width: 100px; 
-    height: 100px;
+   width: 100px; 
+   height: 100px;
    float: right;
 }
 
 #imm1 {
-        float: right;
-    margin-right: 100px; 
-    width: 340px; 
-    height: 290px;
+   float: right;
+   margin-right: 100px; 
+   width: 340px; 
+   height: 290px;
 }
 
 #credits {
    font-weight: bold;
    color: blue;
-   width: 500px;
+   width: 600px;
    margin: auto;
    font-style: italic;
 }
 
 p {
-  font-size: 18.5px;
+  font-size: 16px;
 }

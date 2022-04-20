@@ -5,6 +5,14 @@
             #dati {text-align: center; margin-top: 30px;}
             #dati b {color:brown;}
             #settore {text-align:center; margin-top: -20px; }
+            #container { margin:auto; background: pink}
+            .commento { margin-top: 5px; margin-right: 10px;
+                        width: 600px; height: 150px;
+                        text-align: left; padding: 10px;}
+            #lista_contatti {width: 100%; background: pink;}
+            .contatto {float: left;}
+            h3 {color: blue;}
+
 
         </style>
 {% endblock %}
@@ -20,5 +28,18 @@
            <b>Telefono:</b> {{azienda.telefono}} <b>Email:</b> {{azienda.email}} <br>
            <b>Comune:</b> {{azienda.sede_comune}} <b>Prov. :</b> {{azienda.sede_provincia}}
     </div>
-
+    
+   
+    <a href="/admin/pcto/aziende ">Admin</a>
+    <h3>Contatti</h3>
+    <hr>
+       
+        {% for con in contatti %}
+                <div class="contatto">
+                    {{con.data}} {{con.tutor}} <p>
+                    <textarea class="commento">{{con.note}}</textarea>                  
+                </div>
+        {% endfor %}
+    <br>
+    
 {% endblock%}

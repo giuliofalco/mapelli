@@ -37,5 +37,6 @@ def aziende(request):
 
 def dettaglio_azienda(request,piva):
     azienda = Aziende.objects.get(partita_iva=piva)
-    context = {'azienda':azienda,}
+    contatti = azienda.contatti_set.all()
+    context = {'azienda':azienda, 'contatti': contatti}
     return render(request,"dettaglio_azienda.html",context)   
