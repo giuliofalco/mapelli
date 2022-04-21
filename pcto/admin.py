@@ -1,10 +1,10 @@
 from django.contrib import admin
 from .models import Tutor, Aziende, Contatti
 
-class ContattiInline(admin.TabularInline):
+class ContattiInline(admin.StackedInline):
     model = Contatti
-    fields = ['data','note','tutor']
-    extra = 1
+    fields = ['data','num_studenti','periodo_da','periodo_a','note','tutor']
+    extra = 0
 
 @admin.register(Tutor)
 class TutorAdmin(admin.ModelAdmin):
