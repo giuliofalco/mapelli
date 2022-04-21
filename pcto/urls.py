@@ -8,4 +8,6 @@ urlpatterns = [
       path('tutor/',views.tutor,name="tutor"),
       path('aziende/',views.aziende,name="aziende"),
       path('aziende/<str:piva>',views.dettaglio_azienda,name="dettaglio_aziende"),
+      path('mioLogin',views.mioLogin,name="mioLogin"),
+      path('autentica',views.autentica,name="autentica"),
 ]

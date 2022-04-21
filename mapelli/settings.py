@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*',]
 
-LOGIN_URL = 'mapelli:mioLogin'
+LOGIN_URL = 'pcto:mioLogin'
 
 # Application definition
 

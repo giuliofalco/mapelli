@@ -2,7 +2,9 @@ from django.shortcuts import render
 from pcto.models import *
 from django.templatetags.static import static
 from django.core.paginator import Paginator,EmptyPage
-
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login
+from django.http import HttpResponse, HttpResponseRedirect
 from .filters import AziendeFilter
 
 def index(request):
@@ -13,6 +15,7 @@ def tutor(request):
      context = {'object_list':elenco}
      return render(request,"tutor.html",context)
 
+@login_required
 def aziende(request):
     elenco = Aziende.objects.all()
     numero_aziende = len(elenco)
@@ -40,4 +43,24 @@ def dettaglio_azienda(request,piva):
     azienda = Aziende.objects.get(partita_iva=piva)
     contatti = azienda.contatti_set.all()
     context = {'azienda':azienda, 'contatti': contatti}
-    return render(request,"dettaglio_azienda.html",context)   
+    return render(request,"dettaglio_azienda.html",context) 
+
+def mioLogin(request):
+   # manda alla finestra di autenticazione, per chiedere username e password
+   next = request.GET['next']
+   context = {'next':next,}
+   return render(request,'login.html',context)
+
+def autentica(request):
+   # riceve dalla finestra di autenticazione e controlla per effettuare il login
+   utente  = request.POST.get('utente') 
+   password = request.POST.get('password')
+   next = request.POST.get('next')
+   user = authenticate(request, username=utente, password=password)
+ 
+   if user is not None:
+      login(request, user)
+      return HttpResponseRedirect(next)
+   else:
+      return render(request,'login.html',{'msg':'Autenticazione Fallita', 'next':next} )
+  
