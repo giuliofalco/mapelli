@@ -36,6 +36,9 @@ class Contatti(models.Model):
     tutor = models.ForeignKey(Tutor,on_delete=models.CASCADE)
     note = models.TextField(null=True,blank=True)
     responsabile = models.CharField(max_length=100,null=True,blank=True)
+    num_studenti = models.IntegerField(default=0)
+    periodo_da = models.DateField(null=True,blank=True)
+    periodo_a = models.DateField(null=True,blank=True)
 
     def __str__(self):
        return(self.data.strftime("%d/%m/%Y"))
