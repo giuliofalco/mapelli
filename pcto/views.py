@@ -40,6 +40,7 @@ def aziende(request):
     return render(request,"aziende.html",context)
 
 def dettaglio_azienda(request,piva):
+    # mostra i dati dell'aziende e dei contatti associati
     azienda = Aziende.objects.get(partita_iva=piva)
     contatti = azienda.contatti_set.all()
     context = {'azienda':azienda, 'contatti': contatti}
@@ -63,4 +64,8 @@ def autentica(request):
       return HttpResponseRedirect(next)
    else:
       return render(request,'login.html',{'msg':'Autenticazione Fallita', 'next':next} )
+
+def contatti(request):
+    # elenco dei contatti in ordine decrescente di data
+    pass
   

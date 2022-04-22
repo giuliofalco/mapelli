@@ -37,7 +37,7 @@
         {% for con in contatti %}
                 <div class="contatto">
                     {{con.data}} {{con.tutor}} <p>
-                    <b>Numero studenti:</b> {{con.num_studenti}} - <b>Periodo Da</b>: {{con.periodo_da}} <b>A:</b> {{con.periodo_a}}<p>  
+                    <b>Posti disponibili:</b> {{con.num_studenti}} - <b>Periodo Da</b>: {{con.periodo_da}} <b>A:</b> {{con.periodo_a}}<p>  
                     <textarea class="commento">{{con.note}}</textarea>                  
                 </div>
         {% endfor %}
