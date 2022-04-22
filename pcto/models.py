@@ -14,6 +14,12 @@ class Tutor(models.Model):
     class meta:
         ordering = ['cognome','nome']
 
+class Studenti(models.Model):
+    nome = models.CharField(max_length=200)
+    cognome = models.CharField(max_length=200)
+    email = models.CharField(max_length=200, null=True, blank=True)
+    classe = models.CharField(max_length=200)
+
 class Aziende(models.Model):
     partita_iva = models.CharField(max_length=80,null=True,unique=True)
     ragione_sociale = models.CharField(max_length=200)
