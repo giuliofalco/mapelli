@@ -32,7 +32,7 @@ class Aziende(models.Model):
 
 class Contatti(models.Model):
     data = models.DateField(default=timezone.now)
-    azienda = models.ForeignKey(Aziende,to_field='partita_iva',on_delete=models.DO_NOTHING)
+    azienda = models.ForeignKey(Aziende,to_field='partita_iva',on_delete=models.DO_NOTHING,null=True)
     tutor = models.ForeignKey(Tutor,on_delete=models.CASCADE)
     note = models.TextField(null=True,blank=True)
     responsabile = models.CharField(max_length=100,null=True,blank=True)
@@ -42,3 +42,6 @@ class Contatti(models.Model):
 
     def __str__(self):
        return(self.data.strftime("%d/%m/%Y"))
+
+    class Meta:
+        ordering = ['-data']

@@ -67,5 +67,7 @@ def autentica(request):
 
 def contatti(request):
     # elenco dei contatti in ordine decrescente di data
-    pass
+    contatti = Contatti.objects.all()
+    context = {'contatti':contatti}
+    return render(request,"contatti.html",context)
   

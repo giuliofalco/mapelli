@@ -30,7 +30,7 @@ class DbImport():
        
   def connectPg(self):
       # si connette al database Postgres locale. Ridefinire in caso di database remoto   
-        conn = psycopg2.connect(database="mapelli", user="giulio", password="benoni58",host = "127.0.0.1")
+        conn = self.psycopg2.connect(database="mapelli", user="giulio", password="benoni58",host = "127.0.0.1")
         return conn 
 
   def aggiornaDb(self):              # aggiorna il database target utilizzando la query di scrittura

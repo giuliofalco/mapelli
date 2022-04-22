@@ -10,4 +10,5 @@ urlpatterns = [
       path('aziende/<str:piva>',views.dettaglio_azienda,name="dettaglio_aziende"),
       path('mioLogin',views.mioLogin,name="mioLogin"),
       path('autentica',views.autentica,name="autentica"),
+      path('contatti/',views.contatti,name='contatti'),
 ]

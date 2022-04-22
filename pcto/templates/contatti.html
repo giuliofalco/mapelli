@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block head %}
+<style>
+    table {width: 100%; margin-bottom: 5px; }
+    th  {background: #C90;}
+    td  {padding-left: 15; background: lavender;} 
+    h3  {color: blue;} 
+    #container {width: 80%; margin:auto}
+    .data {width: 12%;}
+    .tutor {width: 15%;}
+    .disp  {width: 5%;}
+    .da    {width: 10%;}
+    .a     {width: 10%;}
+    .azienda {width: 20%;}
+    
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="container">
+<h3>Contatti</h3>
+<table>
+    <th>Data</th><th>Tutor</th><th>Azienda</th><th>Disp.</th><th>Da</th><th>A</th><th>Note</th>
+
+    {%for con in contatti %} 
+        <tr>
+            <td class="data"> {{con.data}}  </td>
+            <td class="tutor"> {{con.tutor}} </td>
+            <td class="azienda"> <a href="{% url 'pcto:aziende'%}{{con.azienda.partita_iva}}">{{con.azienda}} </a></td>
+            <td class="disp"> {{con.num_studenti}} </td>
+            <td class="da"> {{con.periodo_da}} </td>
+            <td class="a"> {{con.periodo_a}} </td>
+            <td class="note"> {{con.note}}  </td>
+        </tr>
+    {% endfor %}
+
+</table>    
+</div>
+
+
+{% endblock %}

@@ -45,6 +45,12 @@
                             url = "{% url 'pcto:aziende' %}" + piva;
                             document.location = url;
                      }
+
+                     function contatti() {
+                     // vai all'elenco dei contatti
+                           url = "{% url 'pcto:contatti' %}";
+                           document.location = url;
+                     }
               </script>
        {% endblock %}
    
@@ -59,7 +65,9 @@
                      Provincia: {{myfilter.form.sede_provincia}}
                      Settore: {{myfilter.form.settore}}
                      <input type="submit" value="cerca">
+                     <input type="button" value="contatti" onClick="contatti()">
               </form>
+           
               <span id="titolo">Elenco Aziende</span> Pagina {{numpag}} di {{totpagine}} ({{numero_aziende}} aziende)
               <table>
                       <th>Ragione Sociale <th> Comune <th> Provincia <th> Settore              

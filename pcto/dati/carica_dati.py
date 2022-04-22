@@ -5,7 +5,7 @@ from oop_fromDb import *
 
 # Aggiorno le aziende su Posgres locale
 oggetto = AziendePgSQLite('mapelli','pcto.db')
-#oggetto.aggiornaDb()
+oggetto.aggiornaDb()
 
 # Aggiorno le aziende su Posgres remoto
 #oggetto = Aziende_heroku('mapelli','pcto.db')
@@ -15,7 +15,7 @@ oggetto = AziendePgSQLite('mapelli','pcto.db')
 #oggetto = Tutor_heroku('mapelli','pcto.db')
 #oggetto.aggiornaDb()
 
-for item in oggetto.dati:
-    print (item)
+#for item in oggetto.dati:
+#    print (item)
 
 print ("Done")
