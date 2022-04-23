@@ -43,7 +43,9 @@ def dettaglio_azienda(request,piva):
     # mostra i dati dell'aziende e dei contatti associati
     azienda = Aziende.objects.get(partita_iva=piva)
     contatti = azienda.contatti_set.all()
-    context = {'azienda':azienda, 'contatti': contatti}
+    #stagisti = azienda.stagisti.all()
+    abbinamenti = Abbinamenti.objects.filter(azienda=azienda)
+    context = {'azienda':azienda, 'contatti': contatti, 'abbinamenti':abbinamenti}
     return render(request,"dettaglio_azienda.html",context) 
 
 def mioLogin(request):

@@ -10,8 +10,14 @@
                         width: 600px; height: 150px;
                         text-align: left; padding: 10px;}
             #lista_contatti {width: 100%; background: pink;}
-            .contatto {float: left;}
+            .contatto {float: left; margin-left: 100px;}
             h3 {color: blue;}
+            table {width: 50%; margin-bottom: 5px;
+                   margin-left: 100px;
+                   margin-bottom: 50px;
+                  }
+            th  {background: #C90;}
+            td  {padding: 10; background: lavender;}
 
 
         </style>
@@ -41,6 +47,16 @@
                     <textarea class="commento">{{con.note}}</textarea>                  
                 </div>
         {% endfor %}
-    <br>
-    
+    <br clear="all">
+    <h3>Abbinamenti</h3>
+    <hr>
+        <table>
+            <th>Studente</th><th>Da</th><th>A</th>
+        {% for abb in abbinamenti %}
+            <tr>
+            <td>{{abb.studente}} <td> {{abb.periodo_da}} <td> {{abb.periodo_a}} 
+            
+        {% endfor %}
+        </table>
+
 {% endblock%}
