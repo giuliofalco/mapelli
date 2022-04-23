@@ -20,6 +20,9 @@ class Studenti(models.Model):
     email = models.CharField(max_length=200, null=True, blank=True)
     classe = models.CharField(max_length=200)
 
+    def __str__(self):
+       return(self.classe + " - " + self.cognome + " " + self.nome )
+
 class Aziende(models.Model):
     partita_iva = models.CharField(max_length=80,null=True,unique=True)
     ragione_sociale = models.CharField(max_length=200)
@@ -29,6 +32,7 @@ class Aziende(models.Model):
     telefono = models.CharField(max_length=200,null=True,blank=True)
     email = models.CharField(max_length=100,null=True,blank=True)
     settore = models.CharField(max_length=200,null=True,blank=True)
+    stagisti = models.ManyToManyField(Studenti,through='Abbinamenti')
     
     def __str__(self):
        return(self.ragione_sociale)
@@ -51,3 +55,13 @@ class Contatti(models.Model):
 
     class Meta:
         ordering = ['-data']
+
+class Abbinamenti(models.Model):
+   
+    studente = models.ForeignKey(Studenti, on_delete=models.CASCADE)
+    azienda = models.ForeignKey(Aziende, on_delete=models.CASCADE)
+    periodo_da = models.DateField(null=True,blank=True)
+    periodo_a = models.DateField(null=True,blank=True)
+
+    def __str__(self):
+       return(self.studente.cognome)
