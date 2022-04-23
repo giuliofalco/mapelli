@@ -48,6 +48,10 @@ class TutorPgSQLite(DbImport):
     queryLettura = "SELECT cognome,nome,email,classi FROM tutor"
     query = "INSERT INTO pcto_tutor (cognome,nome,email,classi) VALUES (%s,%s,%s,%s)"
 
+class StudentiPgSQLite(DbImport):
+     queryLettura = "SELECT cognome,nome,classe FROM studenti"
+     query = "INSERT INTO pcto_studenti (cognome,nome,classe) VALUES (%s,%s,%s)"
+
 class Aziende_heroku(AziendePgSQLite):
 
     def connectPg(self):
