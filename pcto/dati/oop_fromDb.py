@@ -52,6 +52,12 @@ class StudentiPgSQLite(DbImport):
      queryLettura = "SELECT cognome,nome,classe FROM studenti"
      query = "INSERT INTO pcto_studenti (cognome,nome,classe) VALUES (%s,%s,%s)"
 
+class HerokuDb():
+    def connectPg(self):
+        import psycopg2
+        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
+        return conn 
+
 class Aziende_heroku(AziendePgSQLite):
 
     def connectPg(self):
@@ -62,6 +68,13 @@ class Aziende_heroku(AziendePgSQLite):
 class Tutor_heroku(TutorPgSQLite):
    
     def connectPg(self):
+        import psycopg2
+        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
+        return conn 
+
+class Studenti_heroku(StudentiPgSQLite):
+    
+     def connectPg(self):
         import psycopg2
         conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
         return conn 
