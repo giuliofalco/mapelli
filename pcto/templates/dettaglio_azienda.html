@@ -17,8 +17,27 @@
                    margin-bottom: 50px;
                   }
             th  {background: #C90;}
-            td  {padding: 10; background: lavender;}
+            textarea {margin-bottom: 10px;}
+        </style>   
+        
+        <script>
 
+            function email(recipient) {
+                 
+                if (recipient == "")
+                    return;
+                var testo = "Gentile Collega,\n\n";
+                 testo +=  "ho il piacere di condividere il contatto riguardante il pcto ";
+                 testo +=  "che spero ti sara' utile\n";
+                 testo +=  "In allegato troverai la pagina con le informazioni rilevanti \n\n";
+                 testo +=  "Ti saluto cordialmente\n\n";
+                 testo +=  "prof.ssa Stefania Agresta - figura strumentale PCTO ";    
+                 var subj = escape("Informazione PCTO");
+                 document.location= "mailto:"+recipient+"?subject="+subj+"&body="+escape(testo);
+                 return;
+            } 
+          
+        </script>
 
         </style>
 {% endblock %}
@@ -44,7 +63,10 @@
                 <div class="contatto">
                     {{con.data}} {{con.tutor}} <p>
                     <b>Posti disponibili:</b> {{con.num_studenti}} - <b>Periodo Da</b>: {{con.periodo_da}} <b>A:</b> {{con.periodo_a}}<p>  
-                    <textarea class="commento">{{con.note}}</textarea>                  
+                    <textarea class="commento">{{con.note}}</textarea> <br>
+                    <input type="button" value="Save" onClick="alert('Lavori in corso\nWork in progress')">  
+                    <input type="button" value="Print to PDF" onClick="window.print()">   
+                    <input type="button" value="Mail To" onClick=email("{{con.tutor.email}}")>             
                 </div>
         {% endfor %}
     <br clear="all">

@@ -5,8 +5,9 @@
               #container {width:50%;
                           margin: auto;
                          }
-              .nome {width: 40%;}
-              table {width: 80%;}
+              .nome {width: 30%;}
+              .classe {width:}
+              table {width: 90%;}
               th  {background: #C90;}
               td  {padding-left: 15; background: lavender;}
        </style>
@@ -16,10 +17,14 @@
               <div id=container>
                      <h2>Elenco Tutor</h2>
                      <table>
-                     <th>Nomi Tutor <th> Classi                
+                     <th>Nomi Tutor <th>Classi <th> Email                
                      {%for tutor in object_list %}
                         <tr>
-                        <td class=nome>{{tutor}} <td class=classe> {{tutor.classi}}           
+                        <td class=nome>{{tutor}} 
+                        <td class=classe> {{tutor.classi}} 
+                        <td class="email"> {{tutor.email}}</td>
+                           
+
                      {%endfor %}
                      </table>
               </div>

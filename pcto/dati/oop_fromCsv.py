@@ -48,7 +48,7 @@ class ImportaTutor(Importa):
     def fill_data(self): 
         # fill data with email and password
         for item in self.dati:
-           item.append(self.get_email(item[1].lower(),item[0].lower()))
+           item.append(self.get_email(item[2].lower(),item[1].lower()))
            item.append("Mapelli-2021")
 
     def togli_id(self):

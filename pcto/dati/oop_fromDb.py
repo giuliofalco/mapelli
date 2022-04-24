@@ -78,3 +78,14 @@ class Studenti_heroku(StudentiPgSQLite):
         import psycopg2
         conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
         return conn 
+
+class UpdateMailTutor(DbImport):
+    query = "update pcto_tutor set email = %s where nome = %s and cognome = %s"
+    queryLettura = "select email, nome, cognome from tutor"
+
+class UpdateMailtTutor_heroku(UpdateMailTutor):
+
+    def connectPg(self):
+        import psycopg2
+        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
+        return conn
