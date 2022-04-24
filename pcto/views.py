@@ -46,10 +46,19 @@ def dettaglio_azienda(request,piva):
     #stagisti = azienda.stagisti.all()
     abbinamenti = Abbinamenti.objects.filter(azienda=azienda)
     tutor = Tutor.objects.all()
+    
+    contatto = request.GET.get('contatto','')
+    note = request.GET.get('note','')
+    if contatto:
+        obj = Contatti.objects.get(id=contatto)
+        obj.note = note
+        obj.save()
+
     if contatti:
         posti = contatti[0].num_studenti - len(abbinamenti)
     else:
         posti = 0
+        
     context = {'azienda':azienda, 'contatti': contatti, 'abbinamenti':abbinamenti, 
                'posti':posti, 'tutor':tutor}
     return render(request,"dettaglio_azienda.html",context) 

@@ -38,7 +38,12 @@
                  document.location= "mailto:"+recipient+"?subject="+subj+"&body="+escape(testo);
                  return;
             } 
-          
+            function salva(id){
+                url = "{% url 'pcto:aziende' %}{{azienda.partita_iva}}" + "?contatto=" + id;
+                url = url + "&note=" + document.getElementById('note').value;
+                document.location = url
+                alert('saved')
+            }
         </script>
 
         </style>
@@ -65,8 +70,8 @@
                 <div class="contatto">
                     {{con.data}} {{con.tutor}} <p>
                     <b>Posti disponibili:</b> {{con.num_studenti}} - <b>Periodo Da</b>: {{con.periodo_da}} <b>A:</b> {{con.periodo_a}}<p>  
-                    <textarea class="commento">{{con.note}}</textarea> <br>
-                    <input type="button" value="Save" onClick="alert('Lavori in corso\nWork in progress')">  
+                    <textarea id=note class="commento">{{con.note}}</textarea> <br>
+                    <input type="button" value="Save" onClick=salva("{{con.id}}")>  
                     <input type="button" value="Print to PDF" onClick="window.print()">   
                     <input type="button" value="Mail To" onClick=email()>
                     <select id="tutor">
