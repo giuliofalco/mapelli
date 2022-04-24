@@ -4,6 +4,7 @@
         <meta charset='utf8'>
         <title>OFFICINA PCTO</title>
         <link rel="stylesheet" type="text/css" href={% static 'pcto/index.css' %}>
+        <link rel="stylesheet" type="text/css" href={% static 'pcto/menu.css' %}>
         {% block head %}
           
         {% endblock %}
@@ -16,13 +17,24 @@
                
         <header class="robo">
           <h1 class="titolo">OFFICINA PCTO</h1>
-             <ul>
-                <h2><a href="{% url 'pcto:index' %}" class="active">PCTO</a></h2>
-                <h2><a href="{% url 'pcto:aziende' %}" class="aziende">AZIENDE</a></h2>
-                <h2><a href="{% url 'pcto:tutor' %}" class="tutor"> AREA TUTOR</a></h2>
-                <h2><a href="" class="studenti">STUDENTI</a></h2>
-                <h2><a href="/admin" class="tutor"> LOG-IN</a></h2>
-          </ul>
+            <ul>
+                <li><a href="{% url 'pcto:index' %}" class="active">PCTO</a></li>
+                <li><a href="{% url 'pcto:aziende' %}" class="aziende">AZIENDE</a></li>
+                <li><a href="{% url 'pcto:tutor' %}" class="tutor"> AREA TUTOR</a></li>
+                <li><a href="" class="studenti">STUDENTI</a>
+                    <ul>
+                        <li>Affari e Finanza</li>
+                        <li>Sistemi Informativi</li>
+                        <li>Liceo Scienze Applicate</li>
+                        <li>Liceo Sportivo</li>
+                        <li>Agro Alimentare</li>
+                        <li>Turismo</li>
+                        <li>Ambiente e Territorio</li>
+
+                    </ul>
+                </li>
+                <li><a href="/admin" class="tutor"> LOG-IN</a></li>
+            </ul>
              
         </header>
         <hr/>
