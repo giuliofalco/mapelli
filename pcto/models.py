@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 from datetime import datetime
+from pcto.indirizzi import *
+
 
 class Tutor(models.Model):
     nome = models.CharField(max_length=200)
@@ -15,6 +17,7 @@ class Tutor(models.Model):
         ordering = ['cognome','nome']
 
 class Studenti(models.Model):
+
     nome = models.CharField(max_length=200)
     cognome = models.CharField(max_length=200)
     email = models.CharField(max_length=200, null=True, blank=True)
@@ -22,6 +25,10 @@ class Studenti(models.Model):
 
     def __str__(self):
        return(self.classe + " - " + self.cognome + " " + self.nome )
+
+    def corso (self):
+        # restituisce la sigla del corso
+        return self.classe[2:]
 
 class Aziende(models.Model):
     partita_iva = models.CharField(max_length=80,null=True,unique=True)
