@@ -22,8 +22,10 @@
         
         <script>
 
-            function email(recipient) {
-                 
+            function email() {
+                
+                recipient = document.getElementById('tutor').value;
+
                 if (recipient == "")
                     return;
                 var testo = "Gentile Collega,\n\n";
@@ -66,7 +68,12 @@
                     <textarea class="commento">{{con.note}}</textarea> <br>
                     <input type="button" value="Save" onClick="alert('Lavori in corso\nWork in progress')">  
                     <input type="button" value="Print to PDF" onClick="window.print()">   
-                    <input type="button" value="Mail To" onClick=email("{{con.tutor.email}}")>             
+                    <input type="button" value="Mail To" onClick=email()>
+                    <select id="tutor">
+                        {% for tut in tutor %}
+                           <option value="{{tut.email}}">{{tut.cognome}} {{tut.nome}}</option>
+                        {% endfor %}
+                    </select>             
                 </div>
         {% endfor %}
     <br clear="all">
