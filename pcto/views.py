@@ -45,7 +45,11 @@ def dettaglio_azienda(request,piva):
     contatti = azienda.contatti_set.all()
     #stagisti = azienda.stagisti.all()
     abbinamenti = Abbinamenti.objects.filter(azienda=azienda)
-    context = {'azienda':azienda, 'contatti': contatti, 'abbinamenti':abbinamenti}
+    if contatti:
+        posti = contatti[0].num_studenti - len(abbinamenti)
+    else:
+        posti = 0
+    context = {'azienda':azienda, 'contatti': contatti, 'abbinamenti':abbinamenti, 'posti':posti}
     return render(request,"dettaglio_azienda.html",context) 
 
 def mioLogin(request):

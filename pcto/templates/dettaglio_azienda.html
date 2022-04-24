@@ -3,7 +3,7 @@
 {%block head%}
         <style>
             .dati {text-align: center; margin-top: 30px;}
-            .dati b,.contatto b {color:brown;}
+            b {color:brown;}
             #settore {text-align:center; margin-top: -20px; }
             #container { margin:auto; background: pink}
             .commento { margin-top: 5px; margin-right: 10px;
@@ -49,6 +49,7 @@
         {% endfor %}
     <br clear="all">
     <h3>Abbinamenti</h3>
+    <b>Posti ancora disponibili: </b>{{posti}}
     <hr>
         <table>
             <th>Studente</th><th>Da</th><th>A</th>

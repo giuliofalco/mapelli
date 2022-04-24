@@ -51,7 +51,7 @@ class Contatti(models.Model):
     periodo_a = models.DateField(null=True,blank=True)
 
     def __str__(self):
-       return(self.data.strftime("%d/%m/%Y"))
+       return(self.data.strftime("%d/%m/%Y") + " " + self.tutor.cognome)
 
     class Meta:
         ordering = ['-data']
@@ -62,6 +62,7 @@ class Abbinamenti(models.Model):
     azienda = models.ForeignKey(Aziende, on_delete=models.CASCADE)
     periodo_da = models.DateField(null=True,blank=True)
     periodo_a = models.DateField(null=True,blank=True)
+    contatto = models.ForeignKey(Contatti,on_delete=models.CASCADE,null=True,blank=True)
 
     def __str__(self):
        return(self.studente.cognome)
