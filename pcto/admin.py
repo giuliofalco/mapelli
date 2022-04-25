@@ -8,7 +8,7 @@ class AbbinamentiInline(admin.StackedInline):
    
 class ContattiInline(admin.StackedInline):
     model = Contatti
-    fields = ['data','num_studenti','periodo_da','periodo_a','note','tutor']
+    fields = ['data','tutor','num_studenti','periodo_da','periodo_a','note']
     #inlines = [StudentiInline]
     extra = 0
 
@@ -20,3 +20,4 @@ class AziendeAdmin(admin.ModelAdmin):
 @admin.register(Tutor)
 class TutorAdmin(admin.ModelAdmin):
     list_display = ['cognome','nome','email','classi']
+    list_filter = ['cognome']

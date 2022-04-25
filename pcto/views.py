@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from .filters import AziendeFilter
+from pcto.indirizzi import *
 
 def index(request):
     return render(request,'index.html',{})
@@ -87,4 +88,19 @@ def contatti(request):
     contatti = Contatti.objects.all()
     context = {'contatti':contatti}
     return render(request,"contatti.html",context)
+
+def studenti(request,corso):
+    # visualizza gli studenti del corso suddivisi per classi
+    
+    studenti = Studenti.objects.all()
+    studenti_corso = [item for item in studenti if item.corso()==corso]
+    classi = [item.classe for item in studenti_corso]
+    classi = set(classi) # tolgo i doppioni
+    classi = list(classi)
+    classi.sort()
+    report = [[classe,[studente for studente in studenti if studente.classe == classe]] for classe in classi]
+    context = {'corso':sigle[corso],'report':report}
+    return render(request,"studenti.html",context)
+
+
   

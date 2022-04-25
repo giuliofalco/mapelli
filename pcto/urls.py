@@ -11,4 +11,5 @@ urlpatterns = [
       path('mioLogin',views.mioLogin,name="mioLogin"),
       path('autentica',views.autentica,name="autentica"),
       path('contatti/',views.contatti,name='contatti'),
+      path('studenti/<str:corso>',views.studenti,name='studenti'),
 ]

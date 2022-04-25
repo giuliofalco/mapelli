@@ -23,13 +23,13 @@
                 <li><a href="{% url 'pcto:tutor' %}" class="tutor"> AREA TUTOR</a></li>
                 <li><a href="" class="studenti">STUDENTI</a>
                     <ul>
-                        <li>Affari e Finanza</li>
-                        <li>Sistemi Informativi</li>
-                        <li>Liceo Scienze Applicate</li>
-                        <li>Liceo Sportivo</li>
-                        <li>Agro Alimentare</li>
-                        <li>Turismo</li>
-                        <li>Ambiente e Territorio</li>
+                        <li><a href="{% url 'pcto:studenti' 'AF' %} ">Affari e Finanza</a></li>
+                        <li><a href="{% url 'pcto:studenti' 'SI' %} ">Sistemi Informativi</a></li>
+                        <li><a href="{% url 'pcto:studenti' 'LS' %} ">Liceo Scienze Applicate</a></li>
+                        <li><a href="{% url 'pcto:studenti' 'SP' %} ">Liceo Sportivo</a></li>
+                        <li><a href="{% url 'pcto:studenti' 'AG' %} ">Agro Alimentare</a></li>
+                        <li><a href="{% url 'pcto:studenti' 'TU' %} ">Turismo</a></li>
+                        <li><a href="{% url 'pcto:studenti' 'CA' %} ">Ambiente e Territorio</a></li>
 
                     </ul>
                 </li>
@@ -37,6 +37,7 @@
             </ul>
              
         </header>
+     
         <hr/>
         {% endblock %}
         
