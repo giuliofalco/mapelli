@@ -33,11 +33,17 @@
 
                     </ul>
                 </li>
-                <li><a href="/admin" class="tutor"> LOG-IN</a></li>
+                <li>AUTENTICAZIONE 
+                    <ul>
+                        <li><a href="/admin" class="tutor"> LOG-IN</a></li>
+                        <li><a href="/admin/logout" class="tutor"> LOG-OUT</a></li>
+                    </ul>
+                </li>
+
             </ul>
              
         </header>
-     
+        <span id=sessione style="margin-left: 40px">Sessione {{user}}</span>
         <hr/>
         {% endblock %}
         

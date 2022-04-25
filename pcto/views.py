@@ -8,8 +8,15 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .filters import AziendeFilter
 from pcto.indirizzi import *
 
+
 def index(request):
-    return render(request,'index.html',{})
+    try:
+       utente = 'autenticata come: ' + request.user.first_name + " " + request.user.last_name 
+       context = {'user': utente}
+    except:
+        context = {'user': 'anonima'}
+    
+    return render(request,'index.html',context)
     
 def tutor(request):
      elenco = Tutor.objects.all()
