@@ -99,7 +99,7 @@ def studenti(request,corso):
     classi = list(classi)
     classi.sort()
     report = [[classe,[studente for studente in studenti if studente.classe == classe]] for classe in classi]
-    context = {'corso':sigle[corso],'report':report}
+    context = {'corso':sigle[corso],'report':report, 'classi' : classi}
     return render(request,"studenti.html",context)
 
 

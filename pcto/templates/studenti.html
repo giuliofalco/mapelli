@@ -3,7 +3,8 @@
 {% block head %}
    <style>
          #container {width:80%; margin: auto}
-         .classe {width: 50%; margin:auto;}
+         #elenco {width: 50%; margin:auto; text-align: center;}
+         .classe {width: 100%; margin:auto;}
          table {width: 100%; margin: auto;}
          th  {background: #C90;}
          td  {padding-left: 15; background: lavender;}
@@ -14,19 +15,25 @@
 
 {% block content %}
 <div id="container">
-<h2>Studenti del corso {{corso}}</h2>
-
-{% for rep in report%}
-      <div class="classe">
-      <h3> {{rep.0}}</h3>
-      <table>
-          <th>Num.</th><th>Cognome</th> <th>Nome</th>
-      {% for stud in rep.1%}
-         <tr>
-         <td>{{forloop.counter }}</td><td>{{stud.cognome}} <td> {{stud.nome}}
-      {% endfor %}
-    </table>
-    </div>
-{% endfor %}
+    <h2>Studenti del corso {{corso}}</h2>
+    <div id="elenco">
+        <b>Classi</b>: 
+                {% for classe in classi %}
+                   <a href=#{{classe}}>{{classe}}</a> 
+                {% endfor %}
+        {% for rep in report%}
+            <div class="classe">
+                <h3> <a name={{rep.0}}></a>{{rep.0}}</a></h3>
+     
+                <table>
+                    <th>Num.</th><th>Cognome</th> <th>Nome</th>
+                    {% for stud in rep.1%}
+                        <tr>
+                       <td>{{forloop.counter }}</td><td>{{stud.cognome}} <td> {{stud.nome}}
+                    {% endfor %}
+                </table>
+            </div>
+        {% endfor %}
+     </div>
 </div>
 {% endblock %}
