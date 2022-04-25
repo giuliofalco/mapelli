@@ -8,6 +8,12 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .filters import AziendeFilter
 from pcto.indirizzi import *
 
+def visualizza_utente(request):
+    try:
+       utente = 'autenticata come: ' + request.user.first_name + " " + request.user.last_name 
+       return utente
+    except:
+       return 'anonima'
 
 def index(request):
     try:
@@ -19,9 +25,11 @@ def index(request):
     return render(request,'index.html',context)
     
 def tutor(request):
-     elenco = Tutor.objects.all()
-     context = {'object_list':elenco}
-     return render(request,"tutor.html",context)
+    elenco = Tutor.objects.all()
+    context = {'object_list':elenco}
+    context['user'] = visualizza_utente(request)
+    
+    return render(request,"tutor.html",context)
 
 @login_required
 def aziende(request):
@@ -45,6 +53,7 @@ def aziende(request):
                'pagelist0': pagelist0,
                'numero_aziende' : numero_aziende
               }
+    context['user'] = visualizza_utente(request)
     return render(request,"aziende.html",context)
 
 def dettaglio_azienda(request,piva):
@@ -69,6 +78,7 @@ def dettaglio_azienda(request,piva):
         
     context = {'azienda':azienda, 'contatti': contatti, 'abbinamenti':abbinamenti, 
                'posti':posti, 'tutor':tutor}
+    context['user'] = visualizza_utente(request)
     return render(request,"dettaglio_azienda.html",context) 
 
 def mioLogin(request):
@@ -107,6 +117,7 @@ def studenti(request,corso):
     classi.sort()
     report = [[classe,[studente for studente in studenti if studente.classe == classe]] for classe in classi]
     context = {'corso':sigle[corso],'report':report, 'classi' : classi}
+    context['user'] = visualizza_utente(request)
     return render(request,"studenti.html",context)
 
 
