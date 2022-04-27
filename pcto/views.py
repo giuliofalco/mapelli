@@ -103,7 +103,14 @@ def autentica(request):
 def contatti(request):
     # elenco dei contatti in ordine decrescente di data
     contatti = Contatti.objects.all()
-    context = {'contatti':contatti}
+    righe = []
+    for item in contatti:
+        azienda = item.azienda
+        stagisti = azienda.stagisti
+        disponibili = item.num_studenti - stagisti.count()
+        righe.append((item,disponibili))
+    context = {'contatti': righe}
+
     return render(request,"contatti.html",context)
 
 def studenti(request,corso):
