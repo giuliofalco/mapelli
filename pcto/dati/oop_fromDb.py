@@ -39,53 +39,58 @@ class DbImport():
       cur.executemany(self.query,self.dati)
       conn.commit()
 
+#### Sottoclassi specifiche per aggiornare PosgreSQL locale da SQLite ####
+
 class AziendePgSQLite(DbImport):
     # per aggiornare Aziende su Postgres locale da SQLite 
     query = 'INSERT INTO pcto_aziende (partita_iva,ragione_sociale,tutor_referente_azienda,sede_comune,sede_provincia,telefono,email,settore) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)'
     queryLettura = "SELECT * FROM aziende;"
 
 class TutorPgSQLite(DbImport):
+    # per aggiornare i Tutor
     queryLettura = "SELECT cognome,nome,email,classi FROM tutor"
     query = "INSERT INTO pcto_tutor (cognome,nome,email,classi) VALUES (%s,%s,%s,%s)"
 
 class StudentiPgSQLite(DbImport):
+    # per aggiornare gli studenti
      queryLettura = "SELECT cognome,nome,classe FROM studenti"
      query = "INSERT INTO pcto_studenti (cognome,nome,classe) VALUES (%s,%s,%s)"
 
-class HerokuDb():
-    def connectPg(self):
-        import psycopg2
-        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
-        return conn 
-
-class Aziende_heroku(AziendePgSQLite):
-
-    def connectPg(self):
-        import psycopg2
-        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
-        return conn 
-
-class Tutor_heroku(TutorPgSQLite):
-   
-    def connectPg(self):
-        import psycopg2
-        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
-        return conn 
-
-class Studenti_heroku(StudentiPgSQLite):
-    
-     def connectPg(self):
-        import psycopg2
-        conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
-        return conn 
-
 class UpdateMailTutor(DbImport):
+    # aggiorna solo le email sui Tutor 
+
     query = "update pcto_tutor set email = %s where nome = %s and cognome = %s"
     queryLettura = "select email, nome, cognome from tutor"
 
-class UpdateMailtTutor_heroku(UpdateMailTutor):
+###############  Classi per aggiornare Heroku ###############
+
+class HerokuDb():
+    # classe generale con il metodo e le credenziali per il collegamento a Heroku
 
     def connectPg(self):
         import psycopg2
         conn = psycopg2.connect("dbname=d8tegk8vaiu3ra host=ec2-18-214-134-226.compute-1.amazonaws.com port=5432 user=nmskmnlclwgatl password=c919be0aef8cd19dbe700808ba07d754c6f41a88d20b5ee534df912938f3db63 sslmode=require")
-        return conn
+        return conn 
+
+class Aziende_heroku(AziendePgSQLite,HerokuDb):
+    # Aggiorna Aziende su Heroku
+    def __init__(self):
+        connectPg = HerokuDb.connectPg
+
+class Tutor_heroku(TutorPgSQLite,HerokuDb):
+    # Aggiorna Tutor su Heroku
+
+    def __init__(self):
+        connectPg = HerokuDb.connectPg
+   
+class Studenti_heroku(StudentiPgSQLite,HerokuDb):
+    # Aggiorna Sudenti su Heroku
+
+    def __init__(self):
+        connectPg = HerokuDb.connectPg
+
+class UpdateMailtTutor_heroku(UpdateMailTutor,HerokuDb):
+    # Aggiorna solo le email su Heroku
+
+    def __init__(self):
+        connectPg = HerokuDb.connectPg

@@ -64,11 +64,12 @@ header ul h2 a.active
 }
 
 #logo1 {
-    position: absolute;
-    top: 0px;
-    left: 3%;
-     width: 120px; 
-     height: 120px;
+   position: absolute;
+   top: 0px;
+   left: 3%;
+   width: 120px; 
+   height: 120px;
+   z-index:1;
 }
 
 #logo2 {
@@ -78,6 +79,7 @@ header ul h2 a.active
    width: 100px; 
    height: 100px;
    float: right;
+   z-index:1;
 }
 
 #imm1 {

@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
+# Modulo per l'importazione di dati da csv a database SQLite
+# IMPORTAZIONE DA FILE CSV
+
 class Importa:
-   # per caricare i dati da un file csv
+   # per caricare i dati da un file csv. Classe generica
             
    def __init__(self,nome_file,csep=','):
        self.nome_file = nome_file     # il nome del file da importare
@@ -32,6 +35,7 @@ class Importa:
                                     # ritorna la lista con campi separati
           
 class ImportaTutor(Importa):
+    # classe specifica per importare i tutor
     
     def __init__(self,nome_file):
         super().__init__(nome_file)
@@ -56,7 +60,8 @@ class ImportaTutor(Importa):
         self.dati = [item[1:] for item in self.dati]
 
 class ImportaAziende(Importa):
-    # importa direttamente da file tsv originale con tutti i campi
+    # classe specifica per importare le Aziende
+
     def __init__(self,fname):
         super().__init__(fname,';')    
         self.dati = [[item[2],item[0],item[4],item[6],item[8],item[9],item[16]] for item in self.dati]
@@ -73,6 +78,8 @@ class ImportaAziende(Importa):
         self.dati = new_list
     
 class ImportaClassi(Importa):
+    # classe specifica per importare le classi da abbinare ai Tutor
+
     def __init__(self,fname):
         super().__init__(fname) 
         self.dati = self.raccogli_classi()
@@ -91,16 +98,19 @@ class ImportaClassi(Importa):
        return [(item[1],item[0]) for item in self.dati]
 
 class ImportaStudenti(Importa):
+    # classe specifica per imortare gli studenti
 
    def modifica_dati(self): 
        self.dati = [item[:3] for item in self.dati]
        for item in self.dati:
-          #  item.append(self.get_email(item[2],item[1]))
+        # il primo campo è la classe seguita dall'indirizzo di studi che ignoro
             item[0] = item[0].split()[0]
 
+#### IMPORTAZIONE DATI NEL DATABASE
 
 class DbImport():
-  # classe per aggiornare il database
+  # classe generica per aggiornare il database SQLite
+
   query="" # query generica da ridefinire nella classi figlie
 
   def __init__(self,fname,dbname):
@@ -119,19 +129,21 @@ class DbImport():
       conn.commit()
       
 class TutorImport(DbImport):
-   # sottoclasse che specifica la query da utilizzare
-   query = "INSERT INTO tutor (cognome,nome,email,password)  VALUES (?,?,?,?)"
-   def __init__(self,fname,dbname):
+   # sottoclasse specifica per popolare il database con i dati dei tutor
+
+    query = "INSERT INTO tutor (cognome,nome,email,password)  VALUES (?,?,?,?)"
+    def __init__(self,fname,dbname):
        self.source = ImportaTutor(fname)
        self.dbname = dbname
-  
-         
+        
 class AziendeImport(DbImport):
+     # sottoclasse specifica per popolare il database con i dati delle aziende
+
     query = "INSERT INTO Aziende (partita_iva,ragione_sociale,sede_comune,sede_provincia,telefono,email,settore) VALUES(?,?,?,?,?,?,?)"
     
     def __init__(self,fname,dbname):
         self.source = ImportaAziende(fname) 
-
+        self.dbname = dbname
 
 class Classi_tutor(DbImport):
   # per aggiornare i dati delle classi dei tutor. SQLite
@@ -143,6 +155,8 @@ class Classi_tutor(DbImport):
         self.source = ImportaClassi(fname)
       
 class StudentiImport(DbImport):
+     # sottoclasse specifica per popolare il database con i dati degli studenti
+
     query = "insert into studenti (classe,cognome,nome) values (?,?,?)"
     def __init__(self,nome_file,dbname,csep=','):
          self.dbname = dbname

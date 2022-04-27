@@ -19,19 +19,20 @@
 
 {% block content %}
 <div id="container">
-<h3>Contatti</h3>
+<h3><a href="javascript:window.print()">Contatti</a></h3>
 <table>
-    <th>Data</th><th>Tutor</th><th>Azienda</th><th>Disp.</th><th>Da</th><th>A</th><th>Note</th>
+    <th>Data</th><th>Tutor</th><th>Azienda</th><th>Posti</th>.<th>Disp.<th>Da</th><th>A</th><th>Note</th>
 
     {%for con in contatti %} 
         <tr>
-            <td class="data"> {{con.data}}  </td>
-            <td class="tutor"> {{con.tutor}} </td>
-            <td class="azienda"> <a href="{% url 'pcto:aziende'%}{{con.azienda.partita_iva}}">{{con.azienda}} </a></td>
-            <td class="disp"> {{con.num_studenti}} </td>
-            <td class="da"> {{con.periodo_da}} </td>
-            <td class="a"> {{con.periodo_a}} </td>
-            <td class="note"> {{con.note}}  </td>
+            <td class="data"> {{con.0.data}}  </td>
+            <td class="tutor"> {{con.0.tutor}} </td>
+            <td class="azienda"><a href="{% url 'pcto:aziende'%}{{con.0.azienda.partita_iva}}">{{con.0.azienda}}</a></td>
+            <td class="posti"> {{con.0.num_studenti}} </td>
+            <td class="disp">{{con.1}}</td>
+            <td class="da"> {{con.0.periodo_da}} </td>
+            <td class="a"> {{con.0.periodo_a}} </td>
+            <td class="note"> {{con.0.note}}  </td>
         </tr>
     {% endfor %}
 
