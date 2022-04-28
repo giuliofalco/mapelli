@@ -112,7 +112,8 @@ def contatti(request):
     context = {'contatti': righe}
 
     return render(request,"contatti.html",context)
-
+    
+@login_required
 def studenti(request,corso):
     # visualizza gli studenti del corso suddivisi per classi
     
