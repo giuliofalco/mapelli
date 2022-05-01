@@ -26,10 +26,10 @@
                 <h3> <a name={{rep.0}}></a>{{rep.0}}</a></h3>
      
                 <table>
-                    <th>Num.</th><th>Cognome</th> <th>Nome</th>
+                    <th>Num.</th><th>Cognome</th> <th>Nome</th><th>Abbinamento</th>
                     {% for stud in rep.1%}
                         <tr>
-                       <td>{{forloop.counter }}</td><td>{{stud.cognome}} <td> {{stud.nome}}
+                       <td>{{forloop.counter }}</td><td>{{stud.0.cognome}} <td> {{stud.0.nome}} <td> <a href="{% url 'pcto:aziende'%}{{stud.1.partita_iva}}">{{stud.1}}</a></td>
                     {% endfor %}
                 </table>
             </div>

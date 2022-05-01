@@ -117,13 +117,22 @@ def contatti(request):
 def studenti(request,corso):
     # visualizza gli studenti del corso suddivisi per classi
     
-    studenti = Studenti.objects.all()
+    studenti = Studenti.objects.all()        # elenco di tutti gli studenti
+    abbinamenti = Abbinamenti.objects.all()  # elenco di tutti gli abbinamenti
     studenti_corso = [item for item in studenti if item.corso()==corso]
-    classi = [item.classe for item in studenti_corso]
-    classi = set(classi) # tolgo i doppioni
-    classi = list(classi)
-    classi.sort()
+    classi = [item.classe for item in studenti_corso] # la classe di ciascun studente
+    classi = set(classi)  # tolgo i doppioni
+    classi = list(classi) # lista con le classi
+    classi.sort()         # in ordine alfabetico
     report = [[classe,[studente for studente in studenti if studente.classe == classe]] for classe in classi]
+    for classe in report:
+        for i in range(len(classe[1])):
+            abbinati = abbinamenti.filter(studente=classe[1][i])
+            if abbinati:
+                classe[1][i] = [classe[1][i],abbinati[0].azienda]
+            else:
+                classe[1][i] = [classe[1][i],""]
+   
     context = {'corso':sigle[corso],'report':report, 'classi' : classi}
     context['user'] = visualizza_utente(request)
     return render(request,"studenti.html",context)
