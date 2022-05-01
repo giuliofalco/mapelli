@@ -125,6 +125,9 @@ def studenti(request,corso):
     classi = list(classi) # lista con le classi
     classi.sort()         # in ordine alfabetico
     report = [[classe,[studente for studente in studenti if studente.classe == classe]] for classe in classi]
+    # dopo che ho raggruppato l'elenco studenti per classe, 
+    # verifico per ognuno se lo studente compare nella lista degli abbinamenti
+    # sostituisco lo studente con una lista: al primo posto lo studente al secondo l'azienda
     for classe in report:
         for i in range(len(classe[1])):
             abbinati = abbinamenti.filter(studente=classe[1][i])
