@@ -6,21 +6,21 @@
 class Importa:
    # per caricare i dati da un file csv. Classe generica
             
-   def __init__(self,nome_file,csep=','):
+    def __init__(self,nome_file,csep=','):
        self.nome_file = nome_file     # il nome del file da importare
        self.csep = csep               # il carattere separatore
        self.campi = ""                # i nomi dei campi
        self.dati = self.carica_dati() # i dati come lista e l'intestazione con in nomi dei campi
        self.modifica_dati()           # personalizza i dati per adattarli alla particolare tabella
 
-   def modifica_dati(self):
+    def modifica_dati(self):
        pass
 
-   def get_email(self,nome,cognome):
+    def get_email(self,nome,cognome):
        #restituisce la mail istituzionale del Mapelli, dati nome e cognome
        return(nome.lower() + "." + cognome.lower() + "@mapelli-monza.edu.it")
 
-   def carica_dati(self):
+    def carica_dati(self):
       #  carica il file di dati, utilizza la prima riga per inizializzare l'intestazione
       #  prepara la lista dati ottenuta separando i campi, togliendo il fine stringa ed eliminando    
       #  l'intestazione
@@ -33,11 +33,16 @@ class Importa:
       listaRighe = listaRighe[1:]   # toglie la prima riga da listaRighe
       return [item.strip().split(self.csep) for item in listaRighe] 
                                     # ritorna la lista con campi separati
+
+    def json_data(self):
+        # trasforma i dati in una stringa json adatta a essere salvata come fixture
+        pass
           
 class ImportaTutor(Importa):
     # classe specifica per importare i tutor
     
     def __init__(self,nome_file):
+        model = "pcto.tutor"
         super().__init__(nome_file)
         self.lower_nomi()
         self.fill_data()
