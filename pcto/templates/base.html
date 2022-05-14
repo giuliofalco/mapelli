@@ -5,6 +5,7 @@
         <title>OFFICINA PCTO</title>
         <link rel="stylesheet" type="text/css" href={% static 'pcto/index.css' %}>
         <link rel="stylesheet" type="text/css" href={% static 'pcto/menu.css' %}>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         {% block head %}
           
         {% endblock %}
@@ -44,6 +45,7 @@
              
         </header>
         <span id=sessione style="margin-left: 40px">Sessione {{user}}</span>
+        <span id=stampa><a href="javascript:window.print()">Print Page</a></span>
         <hr/>
         {% endblock %}
         

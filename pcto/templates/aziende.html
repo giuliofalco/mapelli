@@ -11,9 +11,9 @@
                      .comune    {width: 20%}
                      .provincia {width: 7%;}
                      
-                     table {width: 100%; margin-bottom: 5px;}
+                    /* table {width: 100%; margin-bottom: 5px;}
                      th  {background: #C90;}
-                     td  {padding-left: 15; background: lavender;}
+                     td  {padding-left: 15; background: lavender;} */
                      #id_sede_provincia  {width: 50px;}
                      .pagine a {text-decoration: none}
                      .pagine {background: rgb(82, 115, 146); padding: 2px; margin:2px;
@@ -69,7 +69,7 @@
               </form>
            
               <span id="titolo">Elenco Aziende</span> Pagina {{numpag}} di {{totpagine}} ({{numero_aziende}} aziende)
-              <table>
+              <table class="w3-table-all w3-card-4">
                       <th>Ragione Sociale <th> Comune <th> Provincia <th> Settore              
                       {%for nome in object_list %}
                         <tr>
