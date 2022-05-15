@@ -3,11 +3,10 @@ from django.utils import timezone
 from datetime import datetime
 from pcto.indirizzi import *
 
-
 class Tutor(models.Model):
     nome = models.CharField(max_length=200)
     cognome = models.CharField(max_length=200)
-    email = models.CharField(max_length=200)
+    email = models.CharField(max_length=200,unique=True)
     classi = models.CharField(max_length=200,null=True,blank=True)
     
     def __str__(self):
@@ -50,7 +49,7 @@ class Aziende(models.Model):
 class Contatti(models.Model):
     data = models.DateField(default=timezone.now)
     azienda = models.ForeignKey(Aziende,to_field='partita_iva',on_delete=models.DO_NOTHING,null=True)
-    tutor = models.ForeignKey(Tutor,on_delete=models.CASCADE)
+    tutor = models.ForeignKey(Tutor,to_field='email',on_delete=models.CASCADE)
     note = models.TextField(null=True,blank=True)
     responsabile = models.CharField(max_length=100,null=True,blank=True)
     num_studenti = models.IntegerField(default=0)
@@ -63,13 +62,16 @@ class Contatti(models.Model):
     class Meta:
         ordering = ['-data']
 
+    def natural_key(self):
+        return (self.data, self.tutor)
+
 class Abbinamenti(models.Model):
    
     studente = models.ForeignKey(Studenti, on_delete=models.CASCADE)
-    azienda = models.ForeignKey(Aziende, on_delete=models.CASCADE)
+    azienda = models.ForeignKey(Aziende, to_field='partita_iva',on_delete=models.CASCADE)
     periodo_da = models.DateField(null=True,blank=True)
     periodo_a = models.DateField(null=True,blank=True)
-    contatto = models.ForeignKey(Contatti,on_delete=models.CASCADE,null=True,blank=True)
+   # contatto = models.ForeignKey(Contatti,to_field='data',on_delete=models.CASCADE,null=True,blank=True)
 
     def __str__(self):
        return(self.studente.cognome)
