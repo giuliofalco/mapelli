@@ -4,11 +4,16 @@ from oop_fromCsv import *
 
                           # IMPORTAZIONE DA FILE CSV A SQLITE
 
-    # Aggiorno i Tutor
+# Aggiorno i Tutor
 
-#oggetto = ImportaTutor('tutor.csv') 
-#oggetto = TutorImport('tutor.csv','pcto.db')
+#oggetto = TutorImport('tutor.csv','pcto.db') # importo i tutor in SQLite
 #oggetto.aggiornaDb()
+
+#oggetto = Classi_Tutor('classi_tutor.csv','pcto.db')  # abbino ai tutor le rispettive classi
+#oggetto.aggiornaDb()
+
+oggetto = TutorPgSQLite('pcto.db','mapelli')  # importo tutor e classi in PostgreSQL
+oggetto.aggiornaDb()
                       
     #Aggiorno gli studenti
 

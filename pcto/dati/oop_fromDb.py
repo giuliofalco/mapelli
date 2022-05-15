@@ -12,7 +12,7 @@ class DbImport():
   queryLettura = ""  # query di lettura dei dati, da ridefinire
   dati = []          # dati da scrivere con la query di aggiornamento del target
 
-  def __init__(self,target,source):
+  def __init__(self,source,target):
        self.target = target          # nome del database target
        self.source = source          # nome del database sorgente
        self.leggi()                  # legge i dati dal source senza apporre modifiche

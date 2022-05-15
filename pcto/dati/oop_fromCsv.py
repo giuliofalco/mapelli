@@ -150,7 +150,7 @@ class AziendeImport(DbImport):
         self.source = ImportaAziende(fname) 
         self.dbname = dbname
 
-class Classi_tutor(DbImport):
+class Classi_Tutor(DbImport):
   # per aggiornare i dati delle classi dei tutor. SQLite
    
     query = "update tutor set classi = ? WHERE cognome like ?"

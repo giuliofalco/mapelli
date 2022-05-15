@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'django_extensions',
 ]
 
 ROOT_URLCONF = 'mapelli.urls'
@@ -112,7 +113,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -123,7 +123,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/

@@ -1,0 +1,44 @@
+[
+{
+    "model": "pcto.contatti",
+    "pk": 9,
+    "fields": {
+        "data": "2022-04-04",
+        "azienda": "10224940964",
+        "tutor": 65,
+        "note": "prova",
+        "responsabile": null,
+        "num_studenti": 0,
+        "periodo_da": null,
+        "periodo_a": null
+    }
+},
+{
+    "model": "pcto.contatti",
+    "pk": 10,
+    "fields": {
+        "data": "2022-04-22",
+        "azienda": "10224940964",
+        "tutor": 83,
+        "note": "boh",
+        "responsabile": null,
+        "num_studenti": 1,
+        "periodo_da": null,
+        "periodo_a": null
+    }
+},
+{
+    "model": "pcto.contatti",
+    "pk": 11,
+    "fields": {
+        "data": "2022-04-23",
+        "azienda": "03553510136",
+        "tutor": 65,
+        "note": "una seconda nota stonata",
+        "responsabile": null,
+        "num_studenti": 4,
+        "periodo_da": null,
+        "periodo_a": null
+    }
+}
+]
