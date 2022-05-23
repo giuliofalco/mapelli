@@ -1,0 +1,6742 @@
+[
+{
+    "model": "pcto.studenti",
+    "pk": 1,
+    "fields": {
+        "nome": "FEDERICA",
+        "cognome": "ANTONINI",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 2,
+    "fields": {
+        "nome": "LISA",
+        "cognome": "AROSIO",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 3,
+    "fields": {
+        "nome": "YONGKANG JOB",
+        "cognome": "CAO RODRIGUEZ",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 4,
+    "fields": {
+        "nome": "LEONARDO EMILIO",
+        "cognome": "CAPORAL",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 5,
+    "fields": {
+        "nome": "THOMAS",
+        "cognome": "CASSOL",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 6,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "FREZZA",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 7,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "GHISOLFI",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 8,
+    "fields": {
+        "nome": "NOEMI",
+        "cognome": "GUASTELLA",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 9,
+    "fields": {
+        "nome": "HARLEEN",
+        "cognome": "KAUR",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 10,
+    "fields": {
+        "nome": "MARIEM",
+        "cognome": "KHALDI",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 11,
+    "fields": {
+        "nome": "DAFNE",
+        "cognome": "LAURENCIC",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 12,
+    "fields": {
+        "nome": "ALICE",
+        "cognome": "MANCA",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 13,
+    "fields": {
+        "nome": "JACOPO",
+        "cognome": "PIANETTI",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 14,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "RAGONE",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 15,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "RONCHI",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 16,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "SALIS",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 17,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "VALDESE",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 18,
+    "fields": {
+        "nome": "THOMAS",
+        "cognome": "ZAGARIA",
+        "email": null,
+        "classe": "3AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 19,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "AUCELLO",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 20,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "BOUSAIDI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 21,
+    "fields": {
+        "nome": "ALESSANDRO MARIA",
+        "cognome": "BRIOSCHI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 22,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "CASTELLANI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 23,
+    "fields": {
+        "nome": "CRISTIANO MICHELE",
+        "cognome": "CORNO",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 24,
+    "fields": {
+        "nome": "FRANCESCA",
+        "cognome": "DE MARTINO",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 25,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "DEL SOLDATO",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 26,
+    "fields": {
+        "nome": "CAMILLA",
+        "cognome": "FANULI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 27,
+    "fields": {
+        "nome": "ANNA",
+        "cognome": "FORTUNA",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 28,
+    "fields": {
+        "nome": "GAIA",
+        "cognome": "FRIGERIO",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 29,
+    "fields": {
+        "nome": "STEFANO",
+        "cognome": "GALBUSSERA",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 30,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "GAZZOLA",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 31,
+    "fields": {
+        "nome": "FABIO",
+        "cognome": "GIANDOMENICO",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 32,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "MAGGIONI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 33,
+    "fields": {
+        "nome": "TOMMASO",
+        "cognome": "MARASCHI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 34,
+    "fields": {
+        "nome": "NICOLA",
+        "cognome": "MARTORELLI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 35,
+    "fields": {
+        "nome": "VERONICA",
+        "cognome": "ORNAGHI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 36,
+    "fields": {
+        "nome": "GABRIEL SALVATORE",
+        "cognome": "PULLANO",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 37,
+    "fields": {
+        "nome": "STEFANO",
+        "cognome": "RATTI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 38,
+    "fields": {
+        "nome": "GIORGIA",
+        "cognome": "ROGGIA",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 39,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "STELLA",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 40,
+    "fields": {
+        "nome": "SOFIA",
+        "cognome": "STRAZZERI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 41,
+    "fields": {
+        "nome": "ROBERTO MARIA",
+        "cognome": "TERUZZI",
+        "email": null,
+        "classe": "3ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 42,
+    "fields": {
+        "nome": "REBECCA",
+        "cognome": "ANTONINI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 43,
+    "fields": {
+        "nome": "KAITY",
+        "cognome": "BARBER",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 44,
+    "fields": {
+        "nome": "IVANO",
+        "cognome": "CAMMARATA",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 45,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "CAMPANINI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 46,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "CAVAGNOLI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 47,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "COLOMBO",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 48,
+    "fields": {
+        "nome": "FABIO",
+        "cognome": "CONZA",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 49,
+    "fields": {
+        "nome": "MANUEL",
+        "cognome": "CORIGLIANO",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 50,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "DANIELI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 51,
+    "fields": {
+        "nome": "GIUSEPPE",
+        "cognome": "DIPACE",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 52,
+    "fields": {
+        "nome": "JUSTIN GAPAL",
+        "cognome": "FABILONIA",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 53,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "FINAZZI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 54,
+    "fields": {
+        "nome": "CINZIA",
+        "cognome": "LAMPERTI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 55,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "MARCHIORO",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 56,
+    "fields": {
+        "nome": "MARIM MOHAMED ABDELHAMID MOHAMED MOUSSA",
+        "cognome": "MATTAR",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 57,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "MERLO",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 58,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "NATALI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 59,
+    "fields": {
+        "nome": "STEFANO",
+        "cognome": "RINALDI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 60,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "ROSITANI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 61,
+    "fields": {
+        "nome": "ELENA",
+        "cognome": "TORELLI",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 62,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "VAN WINDEN",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 63,
+    "fields": {
+        "nome": "EMANUELE",
+        "cognome": "VILLA",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 64,
+    "fields": {
+        "nome": "FRANCESCO",
+        "cognome": "ZANIN",
+        "email": null,
+        "classe": "3BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 65,
+    "fields": {
+        "nome": "RIDOWAN",
+        "cognome": "AHMED",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 66,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "ANDREUCCI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 67,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "BARBIERI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 68,
+    "fields": {
+        "nome": "SHERINE",
+        "cognome": "BOUSTANJI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 69,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "DE LEO",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 70,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "ESPOSITO",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 71,
+    "fields": {
+        "nome": "THOMAS KAROL",
+        "cognome": "FABBRI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 72,
+    "fields": {
+        "nome": "SERENA",
+        "cognome": "FRAUDATARIO",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 73,
+    "fields": {
+        "nome": "MASSIMO",
+        "cognome": "FUMAGALLI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 74,
+    "fields": {
+        "nome": "ASHLEY",
+        "cognome": "HISLOP",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 75,
+    "fields": {
+        "nome": "ADAM",
+        "cognome": "JOVANOVIC",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 76,
+    "fields": {
+        "nome": "EMIR RICCARDO",
+        "cognome": "KOUKI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 77,
+    "fields": {
+        "nome": "FEDERICA",
+        "cognome": "MALEGORI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 78,
+    "fields": {
+        "nome": "GAIA",
+        "cognome": "MANCASTROPPA",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 79,
+    "fields": {
+        "nome": "NICOLO'",
+        "cognome": "MANDUCI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 80,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "MARCHINI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 81,
+    "fields": {
+        "nome": "GIOVANNI",
+        "cognome": "MARTINI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 82,
+    "fields": {
+        "nome": "ALBERTO",
+        "cognome": "MOSCATELLI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 83,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "NORATA",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 84,
+    "fields": {
+        "nome": "EDOARDO",
+        "cognome": "PALAZZARI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 85,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "PICCOLO",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 86,
+    "fields": {
+        "nome": "FABIO",
+        "cognome": "PIUMATTI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 87,
+    "fields": {
+        "nome": "LEONARDO",
+        "cognome": "RINALDI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 88,
+    "fields": {
+        "nome": "SOFIA",
+        "cognome": "ROSIN",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 89,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "ROSSI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 90,
+    "fields": {
+        "nome": "TOMMASO",
+        "cognome": "SENZACQUA",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 91,
+    "fields": {
+        "nome": "ELETTRA",
+        "cognome": "SPADAVECCHIA",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 92,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "TORREGGIANI",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 93,
+    "fields": {
+        "nome": "ALICE",
+        "cognome": "ZANIN",
+        "email": null,
+        "classe": "3BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 94,
+    "fields": {
+        "nome": "GABRIELE ALESSANDRO",
+        "cognome": "ALVARADO SARMIENTO",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 95,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "BERTIN",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 96,
+    "fields": {
+        "nome": "VINCENZO",
+        "cognome": "DELLA VALLE",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 97,
+    "fields": {
+        "nome": "CRISTOPHER",
+        "cognome": "GAGLIO",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 98,
+    "fields": {
+        "nome": "THOMAS",
+        "cognome": "GALVAGNI",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 99,
+    "fields": {
+        "nome": "NICHOLAS",
+        "cognome": "MARCI'",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 100,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "MAZZOCCATO",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 101,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "MORRONE",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 102,
+    "fields": {
+        "nome": "SERGIO",
+        "cognome": "PELOSI",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 103,
+    "fields": {
+        "nome": "ANDRII",
+        "cognome": "PETRYCHAN",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 104,
+    "fields": {
+        "nome": "GABRIEL",
+        "cognome": "RIBOLDI",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 105,
+    "fields": {
+        "nome": "SIMONE",
+        "cognome": "ROCCA",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 106,
+    "fields": {
+        "nome": "ADOR",
+        "cognome": "RODA",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 107,
+    "fields": {
+        "nome": "THOMAS",
+        "cognome": "SCIACCA",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 108,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "SIMONINI",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 109,
+    "fields": {
+        "nome": "EDOARDO",
+        "cognome": "TODARO",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 110,
+    "fields": {
+        "nome": "MANUEL",
+        "cognome": "TOMA",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 111,
+    "fields": {
+        "nome": "CHRISTIAN",
+        "cognome": "TURLA",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 112,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "VALVO",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 113,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "VERDERIO",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 114,
+    "fields": {
+        "nome": "RADU",
+        "cognome": "ZDRAGATU",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 115,
+    "fields": {
+        "nome": "ALESSIO",
+        "cognome": "ZOTKAJ",
+        "email": null,
+        "classe": "3BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 116,
+    "fields": {
+        "nome": "EDUARDO",
+        "cognome": "APREA",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 117,
+    "fields": {
+        "nome": "ANNA",
+        "cognome": "BERTOLDI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 118,
+    "fields": {
+        "nome": "DARIO",
+        "cognome": "BRIONI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 119,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "CALABRESI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 120,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "CAZZANIGA",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 121,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "CERVATI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 122,
+    "fields": {
+        "nome": "ISLAM",
+        "cognome": "CHABLAOUI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 123,
+    "fields": {
+        "nome": "CHIARA",
+        "cognome": "CHIRONNA",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 124,
+    "fields": {
+        "nome": "IRIS",
+        "cognome": "CJAPI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 125,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "CRIPPA",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 126,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "CUCINOTTA",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 127,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "DE LUCA",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 128,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "DE SANDRE",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 129,
+    "fields": {
+        "nome": "GABRIELLA",
+        "cognome": "DI CUIA",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 130,
+    "fields": {
+        "nome": "GIADA",
+        "cognome": "FERRARI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 131,
+    "fields": {
+        "nome": "STEPHANIE",
+        "cognome": "FOSSA",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 132,
+    "fields": {
+        "nome": "KLARA",
+        "cognome": "KAMEL",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 133,
+    "fields": {
+        "nome": "ETTORE",
+        "cognome": "LIONETTI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 134,
+    "fields": {
+        "nome": "DANIELE",
+        "cognome": "LOCATI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 135,
+    "fields": {
+        "nome": "GIOVANNI",
+        "cognome": "MEREGALLI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 136,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "PAPPALARDO",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 137,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "PEREGO",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 138,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "PINZANI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 139,
+    "fields": {
+        "nome": "LUDOVICA",
+        "cognome": "ROVARIS",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 140,
+    "fields": {
+        "nome": "ANGELICA VALERIA",
+        "cognome": "SAMANIEGO BERNABEL",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 141,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "SPREAFICO",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 142,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "VALENTI",
+        "email": null,
+        "classe": "3CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 143,
+    "fields": {
+        "nome": "NOEMI",
+        "cognome": "BONANNO",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 144,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "BRIGNANI",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 145,
+    "fields": {
+        "nome": "GIADA",
+        "cognome": "BRUNO",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 146,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "CALATRONI",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 147,
+    "fields": {
+        "nome": "MELISSA",
+        "cognome": "CASIRAGHI",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 148,
+    "fields": {
+        "nome": "YOUSRA",
+        "cognome": "CHAHAB",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 149,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "CIRELLI",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 150,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "D'ADDESIO",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 151,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "D'AMATO",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 152,
+    "fields": {
+        "nome": "FRANCESCO LUIGI",
+        "cognome": "DONNARUMMA",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 153,
+    "fields": {
+        "nome": "FRANCESCA",
+        "cognome": "GULIA",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 154,
+    "fields": {
+        "nome": "ENKELEDA",
+        "cognome": "KETA",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 155,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "LECCA",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 156,
+    "fields": {
+        "nome": "MATTEO FRANCESCO",
+        "cognome": "MARIANI",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 157,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "MELONI",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 158,
+    "fields": {
+        "nome": "CHIARA",
+        "cognome": "PETROSILLO",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 159,
+    "fields": {
+        "nome": "CRISTIAN",
+        "cognome": "PORCINO",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 160,
+    "fields": {
+        "nome": "EMANUELE",
+        "cognome": "PUGLIESE",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 161,
+    "fields": {
+        "nome": "ANASTASIA",
+        "cognome": "RIVA",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 162,
+    "fields": {
+        "nome": "SIMONE",
+        "cognome": "RIVA",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 163,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "SODANO",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 164,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "VALENTE",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 165,
+    "fields": {
+        "nome": "VIVIANA",
+        "cognome": "VARISCO",
+        "email": null,
+        "classe": "3CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 166,
+    "fields": {
+        "nome": "SERENA",
+        "cognome": "ASPES",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 167,
+    "fields": {
+        "nome": "ALESSIA GAIA",
+        "cognome": "BELLINA",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 168,
+    "fields": {
+        "nome": "CHRISTIAN",
+        "cognome": "CANALI",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 169,
+    "fields": {
+        "nome": "GIORGIA",
+        "cognome": "CASE'",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 170,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "CASPANI",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 171,
+    "fields": {
+        "nome": "CAMILLA",
+        "cognome": "CATTANEO",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 172,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "COCCIOLO",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 173,
+    "fields": {
+        "nome": "LUCA EDOARDO",
+        "cognome": "COLOTTA",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 174,
+    "fields": {
+        "nome": "GIORGIA",
+        "cognome": "CRESPI",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 175,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "GALBUSERA",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 176,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "MENNILLO",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 177,
+    "fields": {
+        "nome": "MAURIZIO",
+        "cognome": "MERONI",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 178,
+    "fields": {
+        "nome": "PAOLO",
+        "cognome": "MONTRASIO",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 179,
+    "fields": {
+        "nome": "ESTER",
+        "cognome": "MOSCA",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 180,
+    "fields": {
+        "nome": "IVAN",
+        "cognome": "PIERSANTE",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 181,
+    "fields": {
+        "nome": "FRANCESCO",
+        "cognome": "PITARDI",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 182,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "RUOCCO",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 183,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "SCOPAZZO",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 184,
+    "fields": {
+        "nome": "GAIA FRANCESCA",
+        "cognome": "SUMA",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 185,
+    "fields": {
+        "nome": "VITTORIO ANGELO FERRUCCIO",
+        "cognome": "TUCCI",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 186,
+    "fields": {
+        "nome": "ARIANNA",
+        "cognome": "VILLA",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 187,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "VIRGILIO",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 188,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "VISCARDI",
+        "email": null,
+        "classe": "3DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 189,
+    "fields": {
+        "nome": "BENEDETTA",
+        "cognome": "ASNAGHI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 190,
+    "fields": {
+        "nome": "GIOELE",
+        "cognome": "BERNARDINI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 191,
+    "fields": {
+        "nome": "THOMAS",
+        "cognome": "BRIVIO",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 192,
+    "fields": {
+        "nome": "CHIARA",
+        "cognome": "BUNI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 193,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "CASIRAGHI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 194,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "CASTELLANI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 195,
+    "fields": {
+        "nome": "ILIA",
+        "cognome": "COPPOLA BERTOLI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 196,
+    "fields": {
+        "nome": "NOEMI",
+        "cognome": "DI BELLA",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 197,
+    "fields": {
+        "nome": "ALESSANDRA",
+        "cognome": "FRANCESCONI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 198,
+    "fields": {
+        "nome": "GIORGIA",
+        "cognome": "GENTILE",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 199,
+    "fields": {
+        "nome": "SHEILA",
+        "cognome": "GUZMAN URRUTIA",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 200,
+    "fields": {
+        "nome": "AURORA",
+        "cognome": "LAGONIGRO",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 201,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "LORENZETTI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 202,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "MANTOVANELLI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 203,
+    "fields": {
+        "nome": "LISA",
+        "cognome": "MESSINA",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 204,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "OGGIONI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 205,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "PERIN",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 206,
+    "fields": {
+        "nome": "CLAUDIA",
+        "cognome": "REDAELLI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 207,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "SALA",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 208,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "SCHIATTI",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 209,
+    "fields": {
+        "nome": "ADHAM",
+        "cognome": "SHAMA",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 210,
+    "fields": {
+        "nome": "ALESSANDRA",
+        "cognome": "STANCIU",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 211,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "ZAMBON",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 212,
+    "fields": {
+        "nome": "LAURA",
+        "cognome": "ZANCA",
+        "email": null,
+        "classe": "3ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 213,
+    "fields": {
+        "nome": "ASIA",
+        "cognome": "BARLASSINA",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 214,
+    "fields": {
+        "nome": "MARCO PIETRO",
+        "cognome": "BASILICA",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 215,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "BAZZINOTTI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 216,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "BIAGINI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 217,
+    "fields": {
+        "nome": "PATRICIA",
+        "cognome": "BOADU",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 218,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "BOUDJEDDAR",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 219,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "CAMPANELLA",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 220,
+    "fields": {
+        "nome": "MADDALENA",
+        "cognome": "CAVENAGHI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 221,
+    "fields": {
+        "nome": "SOFIA",
+        "cognome": "CAZZANIGA",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 222,
+    "fields": {
+        "nome": "GRETA",
+        "cognome": "CELANO",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 223,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "COGLIATI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 224,
+    "fields": {
+        "nome": "GIULIA FLORES CELESTE",
+        "cognome": "CONTI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 225,
+    "fields": {
+        "nome": "MORENA",
+        "cognome": "CORTECCI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 226,
+    "fields": {
+        "nome": "AURORA LUIGIA",
+        "cognome": "FONDACARO",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 227,
+    "fields": {
+        "nome": "REALF",
+        "cognome": "HARUNI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 228,
+    "fields": {
+        "nome": "LEILA",
+        "cognome": "KESSIS",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 229,
+    "fields": {
+        "nome": "ADAM",
+        "cognome": "LAGHLID",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 230,
+    "fields": {
+        "nome": "LAURA",
+        "cognome": "LANFRANCHI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 231,
+    "fields": {
+        "nome": "ADINA VALENTINA",
+        "cognome": "MANEA",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 232,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "MAURI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 233,
+    "fields": {
+        "nome": "SUSANNA",
+        "cognome": "PENATI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 234,
+    "fields": {
+        "nome": "FABIO",
+        "cognome": "RIGHI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 235,
+    "fields": {
+        "nome": "VALERIA",
+        "cognome": "RUSSO",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 236,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "SANDINI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 237,
+    "fields": {
+        "nome": "VALENTINA",
+        "cognome": "SIRONI",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 238,
+    "fields": {
+        "nome": "MANUEL",
+        "cognome": "TRIUNFO",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 239,
+    "fields": {
+        "nome": "CECILIA",
+        "cognome": "TROIANO",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 240,
+    "fields": {
+        "nome": "CHIARA",
+        "cognome": "ZEFAJ",
+        "email": null,
+        "classe": "3FTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 241,
+    "fields": {
+        "nome": "AURORA",
+        "cognome": "ANEDDA",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 242,
+    "fields": {
+        "nome": "LEONARDO",
+        "cognome": "FERRARIO",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 243,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "LAVELLI",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 244,
+    "fields": {
+        "nome": "JACOPO",
+        "cognome": "MALEGORI",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 245,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "NEGREA",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 246,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "ROSSI",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 247,
+    "fields": {
+        "nome": "GIORGIA",
+        "cognome": "SICILIA",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 248,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "SPINELLI",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 249,
+    "fields": {
+        "nome": "NILTON RAUL",
+        "cognome": "YARANGA LLACUA",
+        "email": null,
+        "classe": "4AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 250,
+    "fields": {
+        "nome": "ALESSANDRA",
+        "cognome": "BARBARA",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 251,
+    "fields": {
+        "nome": "ELIAS",
+        "cognome": "BERIAN",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 252,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "CESARO",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 253,
+    "fields": {
+        "nome": "VIVIANA",
+        "cognome": "CHIESA",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 254,
+    "fields": {
+        "nome": "AURORA",
+        "cognome": "COMANDE'",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 255,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "DE MITRI",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 256,
+    "fields": {
+        "nome": "OMBRETTA",
+        "cognome": "FANTONI",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 257,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "FARAON",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 258,
+    "fields": {
+        "nome": "CAROLA",
+        "cognome": "FASSERA",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 259,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "FINESSI",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 260,
+    "fields": {
+        "nome": "JAANAT",
+        "cognome": "HOSSAIN",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 261,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "LAZZARINI",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 262,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "MANTEGAZZA",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 263,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "MARCOZZI",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 264,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "MICCOLI",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 265,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "OGGIONI",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 266,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "PANACEA",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 267,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "PASTORE",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 268,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "PERABONI",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 269,
+    "fields": {
+        "nome": "BEATRICE",
+        "cognome": "RIVA",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 270,
+    "fields": {
+        "nome": "VALENTINA",
+        "cognome": "ROSTIN",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 271,
+    "fields": {
+        "nome": "FEDERICO GIOVANNI",
+        "cognome": "VILLA",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 272,
+    "fields": {
+        "nome": "MAURIZIO",
+        "cognome": "VILLIARGIO",
+        "email": null,
+        "classe": "4ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 273,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "BARUSSO",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 274,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "BIANCHEDI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 275,
+    "fields": {
+        "nome": "CRISTINA",
+        "cognome": "BRIOSCHI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 276,
+    "fields": {
+        "nome": "GIANLUCA",
+        "cognome": "CAPOGRECO",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 277,
+    "fields": {
+        "nome": "ALICE",
+        "cognome": "CILIA",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 278,
+    "fields": {
+        "nome": "IVAN",
+        "cognome": "CLOBAZ",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 279,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "CRIPPA",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 280,
+    "fields": {
+        "nome": "ELIASSE",
+        "cognome": "EL ALAMI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 281,
+    "fields": {
+        "nome": "JACOPO",
+        "cognome": "FOSSATI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 282,
+    "fields": {
+        "nome": "GAIA",
+        "cognome": "GAIBOTTI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 283,
+    "fields": {
+        "nome": "IVO RUMENOV",
+        "cognome": "GALIOV",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 284,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "GRANATO",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 285,
+    "fields": {
+        "nome": "RAPHAEL MARIA",
+        "cognome": "LO MAGLIO",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 286,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "MARIANI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 287,
+    "fields": {
+        "nome": "LORENZO BRUCE",
+        "cognome": "MARINELLO",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 288,
+    "fields": {
+        "nome": "NOEMI",
+        "cognome": "MARTINO",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 289,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "MAZZONE",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 290,
+    "fields": {
+        "nome": "DANIELE BRUNO",
+        "cognome": "MICHELI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 291,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "RESNATI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 292,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "SOLIMAN",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 293,
+    "fields": {
+        "nome": "LEONARDO",
+        "cognome": "VISCARDI",
+        "email": null,
+        "classe": "4BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 294,
+    "fields": {
+        "nome": "JASMINA",
+        "cognome": "BORDEIAN",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 295,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "CALVI",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 296,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "CARRANO",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 297,
+    "fields": {
+        "nome": "NADIA",
+        "cognome": "CHIRICI",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 298,
+    "fields": {
+        "nome": "MARCO MICHELE",
+        "cognome": "CIAPARRONE",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 299,
+    "fields": {
+        "nome": "MADDALENA",
+        "cognome": "CITTERIO",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 300,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "CONFORTI",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 301,
+    "fields": {
+        "nome": "MATILDE",
+        "cognome": "CORBETTA",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 302,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "FEDELE",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 303,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "GALBIATI",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 304,
+    "fields": {
+        "nome": "GIOELE",
+        "cognome": "GALLO",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 305,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "GHEZZI",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 306,
+    "fields": {
+        "nome": "GIOIA",
+        "cognome": "GULLA'",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 307,
+    "fields": {
+        "nome": "MATHIAS ANDREA",
+        "cognome": "LA ROSA",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 308,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "MASORATI",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 309,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "MIGLIAVACCA",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 310,
+    "fields": {
+        "nome": "ALESSIO",
+        "cognome": "MUNGO",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 311,
+    "fields": {
+        "nome": "MASSIMO",
+        "cognome": "NASSI",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 312,
+    "fields": {
+        "nome": "LISA",
+        "cognome": "PALOMBA",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 313,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "PEREGO",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 314,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "PIAZZO",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 315,
+    "fields": {
+        "nome": "EMANUELE UMBERTO",
+        "cognome": "PRIORE",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 316,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "SCARONGELLA",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 317,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "SCHIAVON",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 318,
+    "fields": {
+        "nome": "EVAN GABRIEL",
+        "cognome": "SUAYAN",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 319,
+    "fields": {
+        "nome": "DANIELE",
+        "cognome": "ZUIN",
+        "email": null,
+        "classe": "4BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 320,
+    "fields": {
+        "nome": "TIMOTHY",
+        "cognome": "COLOMBO",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 321,
+    "fields": {
+        "nome": "JOSE' ROSENDO",
+        "cognome": "CRUZ MANRRIQUEZ",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 322,
+    "fields": {
+        "nome": "GIADA",
+        "cognome": "FERRARIO",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 323,
+    "fields": {
+        "nome": "ZAKARIA",
+        "cognome": "LASIRI",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 324,
+    "fields": {
+        "nome": "THOMAS",
+        "cognome": "NIGRO",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 325,
+    "fields": {
+        "nome": "LORENZO BRUNO",
+        "cognome": "ROTA",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 326,
+    "fields": {
+        "nome": "SINDY",
+        "cognome": "SEMA",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 327,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "STIAFFINI",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 328,
+    "fields": {
+        "nome": "THOMAS",
+        "cognome": "URGESI",
+        "email": null,
+        "classe": "4BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 329,
+    "fields": {
+        "nome": "DAVIDE ROBERTO",
+        "cognome": "ANGELONE",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 330,
+    "fields": {
+        "nome": "DOMENICO EDGARDO",
+        "cognome": "BRANCATISANO",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 331,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "CAVALLO",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 332,
+    "fields": {
+        "nome": "TOMMASO",
+        "cognome": "CICUTTO",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 333,
+    "fields": {
+        "nome": "RACHID",
+        "cognome": "EL BOURKADI",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 334,
+    "fields": {
+        "nome": "GRETA",
+        "cognome": "GULOTTA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 335,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "LUCINI",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 336,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "MAURI",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 337,
+    "fields": {
+        "nome": "ALESSIO",
+        "cognome": "MIRABELLA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 338,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "MOSCA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 339,
+    "fields": {
+        "nome": "MATTIA GIOVANNI",
+        "cognome": "OLMETTO",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 340,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "ORNAGO",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 341,
+    "fields": {
+        "nome": "GUALTIERO",
+        "cognome": "ORSENIGO",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 342,
+    "fields": {
+        "nome": "DANIELA LORENA",
+        "cognome": "PAREDES NIETO",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 343,
+    "fields": {
+        "nome": "PIETRO",
+        "cognome": "PELIZZARI",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 344,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "PERAZZO",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 345,
+    "fields": {
+        "nome": "PAOLO",
+        "cognome": "PUCCINELLI",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 346,
+    "fields": {
+        "nome": "SOFIA IRENE",
+        "cognome": "RAVENDA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 347,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "RIVA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 348,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "RIVOLTA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 349,
+    "fields": {
+        "nome": "MAURIZIO",
+        "cognome": "ROCCA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 350,
+    "fields": {
+        "nome": "ANDREA ROBERTO",
+        "cognome": "SACCHI",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 351,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "SALA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 352,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "TOFFANIN",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 353,
+    "fields": {
+        "nome": "ALICE",
+        "cognome": "VADALA'",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 354,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "VATTA",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 355,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "VENTRE",
+        "email": null,
+        "classe": "4CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 356,
+    "fields": {
+        "nome": "DYLAN",
+        "cognome": "AIRAGHI",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 357,
+    "fields": {
+        "nome": "DIEGO",
+        "cognome": "BERETTA",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 358,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "BONALUMI",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 359,
+    "fields": {
+        "nome": "CHIARA",
+        "cognome": "BONANNO",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 360,
+    "fields": {
+        "nome": "ALICE",
+        "cognome": "BORELLO",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 361,
+    "fields": {
+        "nome": "ALICE",
+        "cognome": "BRAMBILLA",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 362,
+    "fields": {
+        "nome": "GABRIELE ADRIANO",
+        "cognome": "CURCELLA",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 363,
+    "fields": {
+        "nome": "FILIPPO ALESSANDRO",
+        "cognome": "DAL MOLIN",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 364,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "FONTANA",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 365,
+    "fields": {
+        "nome": "GAIA",
+        "cognome": "GREGIS",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 366,
+    "fields": {
+        "nome": "SAMIR",
+        "cognome": "HARRAM",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 367,
+    "fields": {
+        "nome": "NADIA",
+        "cognome": "JBARIA",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 368,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "MADDALENA",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 369,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "MALEFORA",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 370,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "MANTOVANI",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 371,
+    "fields": {
+        "nome": "CHRISTIAN",
+        "cognome": "MARRADI",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 372,
+    "fields": {
+        "nome": "LISA",
+        "cognome": "MOTTA",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 373,
+    "fields": {
+        "nome": "DENISE ILARIA",
+        "cognome": "RIU",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 374,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "TERZETTO",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 375,
+    "fields": {
+        "nome": "XIN XIN VALENTINA",
+        "cognome": "ZHANG",
+        "email": null,
+        "classe": "4CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 376,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "AROSIO",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 377,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "BALLABIO",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 378,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "BERNARDI",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 379,
+    "fields": {
+        "nome": "DILETTA MARIA",
+        "cognome": "BORDOGNA",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 380,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "CARPANI",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 381,
+    "fields": {
+        "nome": "CHIARA",
+        "cognome": "CASELLA",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 382,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "CEREDA",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 383,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "COGLIATI",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 384,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "CONSOLO",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 385,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "CORBETTA",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 386,
+    "fields": {
+        "nome": "RAOUL",
+        "cognome": "GUERRA",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 387,
+    "fields": {
+        "nome": "JACOPO SERGIO",
+        "cognome": "RANA",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 388,
+    "fields": {
+        "nome": "EDOARDO",
+        "cognome": "ROLLA",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 389,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "ROSA",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 390,
+    "fields": {
+        "nome": "DAVIDE VINCENZO",
+        "cognome": "RUSSO",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 391,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "TOMASETTI",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 392,
+    "fields": {
+        "nome": "LUCREZIA",
+        "cognome": "VALENTE",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 393,
+    "fields": {
+        "nome": "GIORGIA",
+        "cognome": "VALERIO",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 394,
+    "fields": {
+        "nome": "PIETRO",
+        "cognome": "VIGANO",
+        "email": null,
+        "classe": "4DAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 395,
+    "fields": {
+        "nome": "MONICA",
+        "cognome": "CASCASI",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 396,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "D'ADDESIO",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 397,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "DAGHETTA",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 398,
+    "fields": {
+        "nome": "GIACOMO",
+        "cognome": "DAL CORNO",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 399,
+    "fields": {
+        "nome": "RICCARDO GIL",
+        "cognome": "FORMAIONI",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 400,
+    "fields": {
+        "nome": "TREVINA BAHAA AMIN MORGAN",
+        "cognome": "GATTAS",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 401,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "GRASSO",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 402,
+    "fields": {
+        "nome": "STEFANO",
+        "cognome": "GREPPI",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 403,
+    "fields": {
+        "nome": "GIUSEPPE",
+        "cognome": "MAMMANA",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 404,
+    "fields": {
+        "nome": "GAIA",
+        "cognome": "MARGUTTI",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 405,
+    "fields": {
+        "nome": "PAOLA",
+        "cognome": "PARIS",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 406,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "PRETTO",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 407,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "SANTANIELLO",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 408,
+    "fields": {
+        "nome": "ABRAHAN ANDRES",
+        "cognome": "SERRANO ORELLANA",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 409,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "SOGNE",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 410,
+    "fields": {
+        "nome": "ELEONORA",
+        "cognome": "VENDITTI",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 411,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "VILLA",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 412,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "VITI",
+        "email": null,
+        "classe": "4DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 413,
+    "fields": {
+        "nome": "CHIARA",
+        "cognome": "ACACE",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 414,
+    "fields": {
+        "nome": "COSTANZA",
+        "cognome": "AMBROSIONI",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 415,
+    "fields": {
+        "nome": "ANNAPIA",
+        "cognome": "ASCIONE",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 416,
+    "fields": {
+        "nome": "PATRISIA MADALINA",
+        "cognome": "BODNARAS",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 417,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "CITARELLA",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 418,
+    "fields": {
+        "nome": "FEDERICA",
+        "cognome": "D'ANGELO",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 419,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "DI MICCO",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 420,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "FERRANDO",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 421,
+    "fields": {
+        "nome": "ABLA MAWUSSE' LARISSA",
+        "cognome": "KOUMEDJINA",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 422,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "LA PUNTA",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 423,
+    "fields": {
+        "nome": "SABRINA",
+        "cognome": "LODA",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 424,
+    "fields": {
+        "nome": "ILARIA",
+        "cognome": "MURA",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 425,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "OGGIONI",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 426,
+    "fields": {
+        "nome": "ALESSANDRA",
+        "cognome": "PERI",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 427,
+    "fields": {
+        "nome": "AZZURRA",
+        "cognome": "SANNA",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 428,
+    "fields": {
+        "nome": "GIORGIA",
+        "cognome": "SANTINI",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 429,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "VERDERIO",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 430,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "ZAPPALA'",
+        "email": null,
+        "classe": "4ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 431,
+    "fields": {
+        "nome": "GAIA",
+        "cognome": "AROSIO",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 432,
+    "fields": {
+        "nome": "INA",
+        "cognome": "BALEANU",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 433,
+    "fields": {
+        "nome": "GAIA WENDY",
+        "cognome": "CLARIS",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 434,
+    "fields": {
+        "nome": "REBECCA",
+        "cognome": "DEPONTI",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 435,
+    "fields": {
+        "nome": "GLORIA",
+        "cognome": "FACCONI",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 436,
+    "fields": {
+        "nome": "GIULIA RACHELE",
+        "cognome": "FOGLIENI",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 437,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "KAPIDANI",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 438,
+    "fields": {
+        "nome": "GIORGIA",
+        "cognome": "LOMUSCIO",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 439,
+    "fields": {
+        "nome": "ANNA FRANCESCA",
+        "cognome": "MELE",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 440,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "NOCERA",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 441,
+    "fields": {
+        "nome": "GIADA MAYA",
+        "cognome": "PERDOMO GERONIMO",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 442,
+    "fields": {
+        "nome": "MARILU'",
+        "cognome": "PLANCA",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 443,
+    "fields": {
+        "nome": "GIACOMO",
+        "cognome": "RUGGERI",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 444,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "SASSO",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 445,
+    "fields": {
+        "nome": "PAMELA",
+        "cognome": "SPINELLI",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 446,
+    "fields": {
+        "nome": "MICHELA",
+        "cognome": "TUZZOLINO",
+        "email": null,
+        "classe": "4GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 447,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "CORBERI",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 448,
+    "fields": {
+        "nome": "GIADA",
+        "cognome": "DE FALCO",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 449,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "GATTI",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 450,
+    "fields": {
+        "nome": "NOEMY",
+        "cognome": "GIANNUBILO",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 451,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "MANICI",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 452,
+    "fields": {
+        "nome": "MARTINA ERMENEGILDA",
+        "cognome": "ROMEO",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 453,
+    "fields": {
+        "nome": "YAHYA",
+        "cognome": "SALAMI",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 454,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "SFONDRINI",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 455,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "STRACI",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 456,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "VERALDI",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 457,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "VIROLI",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 458,
+    "fields": {
+        "nome": "VINCENZO",
+        "cognome": "ZITO",
+        "email": null,
+        "classe": "5AAF"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 459,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "BELLOLI",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 460,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "BORDOGNA",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 461,
+    "fields": {
+        "nome": "ALESSIO",
+        "cognome": "BOSI",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 462,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "BOSU",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 463,
+    "fields": {
+        "nome": "ILARIA",
+        "cognome": "DELVECCHIO",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 464,
+    "fields": {
+        "nome": "SIMONE",
+        "cognome": "MAZZARISI",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 465,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "PETROSILLO",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 466,
+    "fields": {
+        "nome": "STEFANO",
+        "cognome": "PIROTTA",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 467,
+    "fields": {
+        "nome": "BRUNO",
+        "cognome": "VILLA",
+        "email": null,
+        "classe": "5ACA"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 468,
+    "fields": {
+        "nome": "ANTONIO",
+        "cognome": "AUGELLO",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 469,
+    "fields": {
+        "nome": "GIADA",
+        "cognome": "BAZZANINI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 470,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "BERETTA",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 471,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "CESARINI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 472,
+    "fields": {
+        "nome": "VITTORIA",
+        "cognome": "CIPOLLA",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 473,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "CIRILLO",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 474,
+    "fields": {
+        "nome": "TOMMASO ANDREA",
+        "cognome": "CONFALONIERI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 475,
+    "fields": {
+        "nome": "MANUEL",
+        "cognome": "GERARDI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 476,
+    "fields": {
+        "nome": "DARIO",
+        "cognome": "GIORGINI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 477,
+    "fields": {
+        "nome": "SOFIA",
+        "cognome": "GIOVANNETTI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 478,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "MAGGIORE",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 479,
+    "fields": {
+        "nome": "IONUT MIHAI",
+        "cognome": "NITULESCU",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 480,
+    "fields": {
+        "nome": "CHIARA",
+        "cognome": "POZZI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 481,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "RIPAMONTI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 482,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "RIVA",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 483,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "RIVA",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 484,
+    "fields": {
+        "nome": "FRANCESCO ALEXANDER",
+        "cognome": "ROGOZIN",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 485,
+    "fields": {
+        "nome": "ADELINA",
+        "cognome": "SHEHI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 486,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "TOME'",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 487,
+    "fields": {
+        "nome": "SIMONE",
+        "cognome": "VAGHI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 488,
+    "fields": {
+        "nome": "FRANCESCO",
+        "cognome": "VESCOVI",
+        "email": null,
+        "classe": "5ALS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 489,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "ANTONUCCI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 490,
+    "fields": {
+        "nome": "AURORA",
+        "cognome": "BERTOCCHI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 491,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "BIANCHIMANO",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 492,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "BONALUMI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 493,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "CASAVOLA",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 494,
+    "fields": {
+        "nome": "MADDALENA",
+        "cognome": "CASIRAGHI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 495,
+    "fields": {
+        "nome": "ARIANNA",
+        "cognome": "CAZZANIGA",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 496,
+    "fields": {
+        "nome": "SIMONE",
+        "cognome": "CAZZANIGA",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 497,
+    "fields": {
+        "nome": "RICCARDO",
+        "cognome": "GENTILE",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 498,
+    "fields": {
+        "nome": "VIOLA",
+        "cognome": "GILETTO",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 499,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "GOTTARDI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 500,
+    "fields": {
+        "nome": "SOFIA",
+        "cognome": "MAGGIONI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 501,
+    "fields": {
+        "nome": "EMMA",
+        "cognome": "MALATESTA",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 502,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "MANDELLI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 503,
+    "fields": {
+        "nome": "LEONARDO",
+        "cognome": "MAPELLI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 504,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "ORTO",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 505,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "PASSONI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 506,
+    "fields": {
+        "nome": "RAFFAELLA",
+        "cognome": "RAGUSA",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 507,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "RIVA",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 508,
+    "fields": {
+        "nome": "FRANCESCO",
+        "cognome": "STUCCHI",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 509,
+    "fields": {
+        "nome": "MIRKO",
+        "cognome": "VERDE",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 510,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "VILLA",
+        "email": null,
+        "classe": "5BAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 511,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "BERTOLOTTI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 512,
+    "fields": {
+        "nome": "LEONARDO",
+        "cognome": "CACEDA TORRES",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 513,
+    "fields": {
+        "nome": "ELEONORA",
+        "cognome": "CAICO",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 514,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "CORTINOVIS",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 515,
+    "fields": {
+        "nome": "DARIO",
+        "cognome": "FAMOSO",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 516,
+    "fields": {
+        "nome": "FABIANA",
+        "cognome": "FERRARI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 517,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "GIORGILLI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 518,
+    "fields": {
+        "nome": "FRANCESCA",
+        "cognome": "INCARBONE",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 519,
+    "fields": {
+        "nome": "KRISTJAN",
+        "cognome": "KERRCI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 520,
+    "fields": {
+        "nome": "GRETA",
+        "cognome": "LEVATI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 521,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "MARTIRADONNA",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 522,
+    "fields": {
+        "nome": "SHAK RASHED",
+        "cognome": "MD SHAHA",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 523,
+    "fields": {
+        "nome": "FRANCESCO",
+        "cognome": "MERLO",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 524,
+    "fields": {
+        "nome": "LEONARDO",
+        "cognome": "MORIGGI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 525,
+    "fields": {
+        "nome": "MALAK",
+        "cognome": "OUAIREM",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 526,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "PARENTI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 527,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "PENATI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 528,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "PETRI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 529,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "PIROTTA",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 530,
+    "fields": {
+        "nome": "PIETRO",
+        "cognome": "RONCHI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 531,
+    "fields": {
+        "nome": "MATILDE",
+        "cognome": "SARDI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 532,
+    "fields": {
+        "nome": "NICOLAS",
+        "cognome": "SCHWETZ",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 533,
+    "fields": {
+        "nome": "GIACOMO",
+        "cognome": "SIMONINI",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 534,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "TOZZO",
+        "email": null,
+        "classe": "5BLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 535,
+    "fields": {
+        "nome": "AHMED",
+        "cognome": "ABD EL RAHMAN",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 536,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "CONTI",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 537,
+    "fields": {
+        "nome": "EZIO",
+        "cognome": "CURCI",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 538,
+    "fields": {
+        "nome": "NICOLO'",
+        "cognome": "D'AGOSTINO",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 539,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "DELL'ACQUA",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 540,
+    "fields": {
+        "nome": "FRANCESCO  FEDERICO",
+        "cognome": "DI MAURO",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 541,
+    "fields": {
+        "nome": "MATTEO ANTONIO",
+        "cognome": "FORTUNATO",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 542,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "LUPI",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 543,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "NAPPI",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 544,
+    "fields": {
+        "nome": "ALESSANDRO ANTONIO",
+        "cognome": "ORZIERI",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 545,
+    "fields": {
+        "nome": "TOMMASO",
+        "cognome": "PENATI",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 546,
+    "fields": {
+        "nome": "MATILDE",
+        "cognome": "PULEO",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 547,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "RIU",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 548,
+    "fields": {
+        "nome": "ALESSIO",
+        "cognome": "SALA",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 549,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "SCHETTINI",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 550,
+    "fields": {
+        "nome": "FEDERICA",
+        "cognome": "SIRONI",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 551,
+    "fields": {
+        "nome": "LORENZO EUGENIO",
+        "cognome": "TEDESCO",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 552,
+    "fields": {
+        "nome": "ANNA",
+        "cognome": "XIA",
+        "email": null,
+        "classe": "5BSI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 553,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "ADAMI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 554,
+    "fields": {
+        "nome": "SIMONE",
+        "cognome": "AMADORI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 555,
+    "fields": {
+        "nome": "LEONARDO",
+        "cognome": "ANDREIS",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 556,
+    "fields": {
+        "nome": "CHIARA ALESSIA",
+        "cognome": "BARZAGHI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 557,
+    "fields": {
+        "nome": "EDOARDO",
+        "cognome": "BELINGHERI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 558,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "BOSISIO",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 559,
+    "fields": {
+        "nome": "ANNALISA",
+        "cognome": "CANDIANI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 560,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "CHIOFALO",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 561,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "DI MAIO",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 562,
+    "fields": {
+        "nome": "ANDREA PIO",
+        "cognome": "FABIANI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 563,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "FALCONE",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 564,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "GOMES COSTA",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 565,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "GRATICOLA",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 566,
+    "fields": {
+        "nome": "LARA",
+        "cognome": "LIUZZO",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 567,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "LOMBARDI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 568,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "LUPPINO",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 569,
+    "fields": {
+        "nome": "CRISTIAN",
+        "cognome": "MACRI'",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 570,
+    "fields": {
+        "nome": "FILIPPO",
+        "cognome": "MASSIMO",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 571,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "MINUTELLA",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 572,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "MORARA",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 573,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "RAFFAELLI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 574,
+    "fields": {
+        "nome": "REBECCA",
+        "cognome": "SARDI",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 575,
+    "fields": {
+        "nome": "FEDERICA ELISABETTA",
+        "cognome": "SCARPA",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 576,
+    "fields": {
+        "nome": "JACOPO",
+        "cognome": "VILLA",
+        "email": null,
+        "classe": "5CLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 577,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "BIANCOTTI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 578,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "BRAMBILLA",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 579,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "CAIANI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 580,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "CARBONI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 581,
+    "fields": {
+        "nome": "FEDERICO",
+        "cognome": "CARRERA",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 582,
+    "fields": {
+        "nome": "JACOPO",
+        "cognome": "CASIRAGHI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 583,
+    "fields": {
+        "nome": "KEVIN",
+        "cognome": "CELANO",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 584,
+    "fields": {
+        "nome": "KIMBERLY",
+        "cognome": "CELANO",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 585,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "COCO",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 586,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "DI PAOLA",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 587,
+    "fields": {
+        "nome": "GLORIA",
+        "cognome": "DOSI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 588,
+    "fields": {
+        "nome": "ROSSELLA MANE",
+        "cognome": "GERMANO",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 589,
+    "fields": {
+        "nome": "ILIASSE",
+        "cognome": "LAGHLID",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 590,
+    "fields": {
+        "nome": "MARIAM",
+        "cognome": "LASIRI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 591,
+    "fields": {
+        "nome": "FRANCESCA",
+        "cognome": "MAROPITO",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 592,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "MAZZINI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 593,
+    "fields": {
+        "nome": "NIKOLAJ",
+        "cognome": "MEMOLA",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 594,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "MILIONI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 595,
+    "fields": {
+        "nome": "CHRISTIAN",
+        "cognome": "ONWUMERE",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 596,
+    "fields": {
+        "nome": "ELENA PATRICIA",
+        "cognome": "PINOS MONTERO",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 597,
+    "fields": {
+        "nome": "NICOLO'",
+        "cognome": "PUGLIESE",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 598,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "RANIERI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 599,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "REFANO",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 600,
+    "fields": {
+        "nome": "AMINE",
+        "cognome": "RHASSANE",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 601,
+    "fields": {
+        "nome": "GIACOMO ACHILLE",
+        "cognome": "RISPETTOSO",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 602,
+    "fields": {
+        "nome": "GIADA",
+        "cognome": "TANGANELLI",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 603,
+    "fields": {
+        "nome": "SOFIA",
+        "cognome": "VIGANO'",
+        "email": null,
+        "classe": "5CRI"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 604,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "BONIARDI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 605,
+    "fields": {
+        "nome": "MARTA ANTONIA",
+        "cognome": "CAMPANA",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 606,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "CARANDINI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 607,
+    "fields": {
+        "nome": "DANIELE",
+        "cognome": "CATTANEO",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 608,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "CHIAVEGATO",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 609,
+    "fields": {
+        "nome": "FRANCESCA",
+        "cognome": "CITTERICO",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 610,
+    "fields": {
+        "nome": "DAVIDE",
+        "cognome": "CORTI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 611,
+    "fields": {
+        "nome": "NICCOLO'",
+        "cognome": "COSMA",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 612,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "DELL'AVERSANA",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 613,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "FEDERICI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 614,
+    "fields": {
+        "nome": "LORENZO",
+        "cognome": "FERRARI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 615,
+    "fields": {
+        "nome": "ALICE",
+        "cognome": "FERRI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 616,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "GENTILE",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 617,
+    "fields": {
+        "nome": "ALESSANDRA",
+        "cognome": "INCARBONE",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 618,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "MASTRORILLI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 619,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "MENEGHINI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 620,
+    "fields": {
+        "nome": "LUCA",
+        "cognome": "NEMBRINI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 621,
+    "fields": {
+        "nome": "TOMMASO",
+        "cognome": "PEDOTO",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 622,
+    "fields": {
+        "nome": "MARCO",
+        "cognome": "SPARPAGLIONE",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 623,
+    "fields": {
+        "nome": "FRANCESCO",
+        "cognome": "STUCCHI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 624,
+    "fields": {
+        "nome": "GIULIO PIO",
+        "cognome": "TERUZZI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 625,
+    "fields": {
+        "nome": "MASSIMILIANO",
+        "cognome": "TOPONE",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 626,
+    "fields": {
+        "nome": "ISABELLA MARIA",
+        "cognome": "VALIERI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 627,
+    "fields": {
+        "nome": "EDERA",
+        "cognome": "VILLA",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 628,
+    "fields": {
+        "nome": "DARIO",
+        "cognome": "ZACOMETTI",
+        "email": null,
+        "classe": "5DLS"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 629,
+    "fields": {
+        "nome": "ANDREA",
+        "cognome": "ARENA",
+        "email": null,
+        "classe": "5EAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 630,
+    "fields": {
+        "nome": "SIMONE",
+        "cognome": "BONETALLI",
+        "email": null,
+        "classe": "5EAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 631,
+    "fields": {
+        "nome": "SIMONE",
+        "cognome": "CACCIA",
+        "email": null,
+        "classe": "5EAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 632,
+    "fields": {
+        "nome": "GIULIO",
+        "cognome": "CINGI",
+        "email": null,
+        "classe": "5EAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 633,
+    "fields": {
+        "nome": "STEFANO",
+        "cognome": "LEONINI",
+        "email": null,
+        "classe": "5EAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 634,
+    "fields": {
+        "nome": "MANUELA",
+        "cognome": "MARCI'",
+        "email": null,
+        "classe": "5EAG"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 635,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "AROSIO",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 636,
+    "fields": {
+        "nome": "AURORA",
+        "cognome": "BERETTA",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 637,
+    "fields": {
+        "nome": "ALESSANDRO",
+        "cognome": "BERNARDI",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 638,
+    "fields": {
+        "nome": "MATTIA",
+        "cognome": "BIANCHI",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 639,
+    "fields": {
+        "nome": "GAIA",
+        "cognome": "DE FRESCO",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 640,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "DE LUCA",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 641,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "GALIMBERTI",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 642,
+    "fields": {
+        "nome": "VALERIA",
+        "cognome": "MAIONE",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 643,
+    "fields": {
+        "nome": "ASIA",
+        "cognome": "MALENGO",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 644,
+    "fields": {
+        "nome": "SAMUELE",
+        "cognome": "MENTO",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 645,
+    "fields": {
+        "nome": "VERONICA",
+        "cognome": "MOCCHI",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 646,
+    "fields": {
+        "nome": "MARTINA",
+        "cognome": "MOIO",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 647,
+    "fields": {
+        "nome": "ELISA",
+        "cognome": "PALEARI",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 648,
+    "fields": {
+        "nome": "EMANUELA",
+        "cognome": "PARIS",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 649,
+    "fields": {
+        "nome": "FABIANA",
+        "cognome": "PUGLIESE",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 650,
+    "fields": {
+        "nome": "LAURA",
+        "cognome": "RATTI",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 651,
+    "fields": {
+        "nome": "ILARIA",
+        "cognome": "ROMEO",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 652,
+    "fields": {
+        "nome": "ENRICO",
+        "cognome": "SALVIONI",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 653,
+    "fields": {
+        "nome": "SILVIA",
+        "cognome": "SCHIAVONE",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 654,
+    "fields": {
+        "nome": "FRANCESCA",
+        "cognome": "TUROLLA",
+        "email": null,
+        "classe": "5ETU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 655,
+    "fields": {
+        "nome": "ALESSIA",
+        "cognome": "BIELLA",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 656,
+    "fields": {
+        "nome": "ISABEL",
+        "cognome": "CAMPO",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 657,
+    "fields": {
+        "nome": "CRISTIAN",
+        "cognome": "CIARMOLI",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 658,
+    "fields": {
+        "nome": "ALINA",
+        "cognome": "COCIU",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 659,
+    "fields": {
+        "nome": "GIULIA",
+        "cognome": "DEGIOVANNI",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 660,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "ESPOSITO",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 661,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "FEDELI",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 662,
+    "fields": {
+        "nome": "FEDERICA",
+        "cognome": "FORTE",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 663,
+    "fields": {
+        "nome": "MICHELLE",
+        "cognome": "GENTILE",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 664,
+    "fields": {
+        "nome": "SERENA FRANCESCA SILVIA",
+        "cognome": "GERLI",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 665,
+    "fields": {
+        "nome": "KAREN VANESSA",
+        "cognome": "GONZALEZ MORA",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 666,
+    "fields": {
+        "nome": "SARA",
+        "cognome": "HARRAM",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 667,
+    "fields": {
+        "nome": "GIADA",
+        "cognome": "PADOVANO",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 668,
+    "fields": {
+        "nome": "MARINA",
+        "cognome": "RIGAMONTI",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 669,
+    "fields": {
+        "nome": "MYREA",
+        "cognome": "RISTORI",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 670,
+    "fields": {
+        "nome": "YLLKA",
+        "cognome": "SALIHAJ",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 671,
+    "fields": {
+        "nome": "GIULIA GRAZIA",
+        "cognome": "TOMASELLI",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 672,
+    "fields": {
+        "nome": "PEARL OSEI",
+        "cognome": "TUTU",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 673,
+    "fields": {
+        "nome": "GABRIELE",
+        "cognome": "VERONESI",
+        "email": null,
+        "classe": "5GTU"
+    }
+},
+{
+    "model": "pcto.studenti",
+    "pk": 674,
+    "fields": {
+        "nome": "MATTEO",
+        "cognome": "VIGANO'",
+        "email": null,
+        "classe": "5GTU"
+    }
+}
+]

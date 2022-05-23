@@ -1,44 +1,86 @@
 [
 {
     "model": "pcto.contatti",
-    "pk": 9,
-    "fields": {
-        "data": "2022-04-04",
-        "azienda": "10224940964",
-        "tutor": 65,
-        "note": "prova",
-        "responsabile": null,
-        "num_studenti": 0,
-        "periodo_da": null,
-        "periodo_a": null
-    }
-},
-{
-    "model": "pcto.contatti",
-    "pk": 10,
+    "pk": 2,
     "fields": {
         "data": "2022-04-22",
-        "azienda": "10224940964",
-        "tutor": 83,
-        "note": "boh",
+        "azienda": "11395050963",
+        "tutor": 2,
+        "note": "Azienda chiusa dal 15/07 al 23/07.\r\nGli studenti vengono accolti uno per volta, ogni due/tre settimane",
         "responsabile": null,
-        "num_studenti": 1,
-        "periodo_da": null,
-        "periodo_a": null
+        "num_studenti": 3,
+        "periodo_da": "2022-06-30",
+        "periodo_a": "2022-08-05"
     }
 },
 {
     "model": "pcto.contatti",
-    "pk": 11,
+    "pk": 3,
     "fields": {
-        "data": "2022-04-23",
-        "azienda": "03553510136",
-        "tutor": 65,
-        "note": "una seconda nota stonata",
+        "data": "2022-04-24",
+        "azienda": "02030880153",
+        "tutor": 2,
+        "note": "Ufficio di Polizia locale: 2 studenti da accogliere contemporaneamente nel periodo indicato",
         "responsabile": null,
-        "num_studenti": 4,
-        "periodo_da": null,
-        "periodo_a": null
+        "num_studenti": 2,
+        "periodo_da": "2022-06-13",
+        "periodo_a": "2022-07-01"
+    }
+},
+{
+    "model": "pcto.contatti",
+    "pk": 4,
+    "fields": {
+        "data": "2022-05-11",
+        "azienda": "94638180151",
+        "tutor": 2,
+        "note": "Viene accolto uno studente alla volta\r\nL'ufficio resterà chiuso nei giorni 2/06 - 24/06\r\nPeriodo di chiusura ferie: 08/08/22 - 28/08/22",
+        "responsabile": null,
+        "num_studenti": 5,
+        "periodo_da": "2022-05-30",
+        "periodo_a": "2022-09-09"
+    }
+},
+{
+    "model": "pcto.contatti",
+    "pk": 5,
+    "fields": {
+        "data": "2022-05-11",
+        "azienda": "00850950965",
+        "tutor": 2,
+        "note": "",
+        "responsabile": null,
+        "num_studenti": 1,
+        "periodo_da": "2022-06-06",
+        "periodo_a": "2022-06-24"
+    }
+},
+{
+    "model": "pcto.contatti",
+    "pk": 6,
+    "fields": {
+        "data": "2022-05-11",
+        "azienda": "13115300157",
+        "tutor": 2,
+        "note": "Tre settimane per studente, da accogliere separatamente.",
+        "responsabile": null,
+        "num_studenti": 2,
+        "periodo_da": "2022-06-06",
+        "periodo_a": "2022-07-15"
+    }
+},
+{
+    "model": "pcto.contatti",
+    "pk": 7,
+    "fields": {
+        "data": "2022-05-11",
+        "azienda": "02729030961",
+        "tutor": 2,
+        "note": "3 studenti da accogliere separatamente",
+        "responsabile": null,
+        "num_studenti": 3,
+        "periodo_da": "2022-06-13",
+        "periodo_a": "2022-07-29"
     }
 }
 ]

@@ -1,0 +1,322 @@
+[
+{
+    "model": "pcto.tutor",
+    "pk": 129,
+    "fields": {
+        "nome": "Linda",
+        "cognome": "Adamo",
+        "email": "linda.adamo@mapelli-monza.edu.it",
+        "classi": "3BAG 3DAG 4BAG 5BAG "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 130,
+    "fields": {
+        "nome": "Stefania",
+        "cognome": "Agresta",
+        "email": "stefania.agresta@mapelli-monza.edu.it",
+        "classi": "3BSI 4BSI 5BSI "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 131,
+    "fields": {
+        "nome": "Carmela",
+        "cognome": "Balliro",
+        "email": "carmela.balliro@mapelli-monza.edu.it",
+        "classi": null
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 132,
+    "fields": {
+        "nome": "Salvatore",
+        "cognome": "Barbagallo",
+        "email": "salvatore.barbagallo@mapelli-monza.edu.it",
+        "classi": "3BSI 4BSI 5BSI "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 133,
+    "fields": {
+        "nome": "Giada",
+        "cognome": "Barbariol",
+        "email": "giada.barbariol@mapelli-monza.edu.it",
+        "classi": "4CLS 5CLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 134,
+    "fields": {
+        "nome": "Mirella",
+        "cognome": "Barletta",
+        "email": "mirella.barletta@mapelli-monza.edu.it",
+        "classi": "5DLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 135,
+    "fields": {
+        "nome": "Anna maria",
+        "cognome": "Berlucchi",
+        "email": "anna maria.berlucchi@mapelli-monza.edu.it",
+        "classi": "4BLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 136,
+    "fields": {
+        "nome": "Paola",
+        "cognome": "Boccia",
+        "email": "paola.boccia@mapelli-monza.edu.it",
+        "classi": "4AAF "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 137,
+    "fields": {
+        "nome": "Marta",
+        "cognome": "Brambilla",
+        "email": "marta.brambilla@mapelli-monza.edu.it",
+        "classi": "4ETU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 138,
+    "fields": {
+        "nome": "Barbara valentina",
+        "cognome": "Bruno",
+        "email": "barbara valentina.bruno@mapelli-monza.edu.it",
+        "classi": "3CRI 4CRI 5CRI "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 139,
+    "fields": {
+        "nome": "Silvia",
+        "cognome": "Bugatti",
+        "email": "silvia.bugatti@mapelli-monza.edu.it",
+        "classi": "3BLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 140,
+    "fields": {
+        "nome": "Raffaella",
+        "cognome": "Cacciapuoti",
+        "email": "raffaella.cacciapuoti@mapelli-monza.edu.it",
+        "classi": "3ETU 4AAF "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 141,
+    "fields": {
+        "nome": "Omar",
+        "cognome": "Cattaneo",
+        "email": "omar.cattaneo@mapelli-monza.edu.it",
+        "classi": "4DLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 142,
+    "fields": {
+        "nome": "Federico",
+        "cognome": "Ceccarelli",
+        "email": "federico.ceccarelli@mapelli-monza.edu.it",
+        "classi": "4DLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 143,
+    "fields": {
+        "nome": "Andrea",
+        "cognome": "Cenci",
+        "email": "andrea.cenci@mapelli-monza.edu.it",
+        "classi": "5BLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 144,
+    "fields": {
+        "nome": "Maria assunta",
+        "cognome": "Consonni",
+        "email": "maria assunta.consonni@mapelli-monza.edu.it",
+        "classi": "4GTU 5GTU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 145,
+    "fields": {
+        "nome": "Luisa",
+        "cognome": "Dolce",
+        "email": "luisa.dolce@mapelli-monza.edu.it",
+        "classi": "3BLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 146,
+    "fields": {
+        "nome": "Maria teresa",
+        "cognome": "Facchineri",
+        "email": "maria teresa.facchineri@mapelli-monza.edu.it",
+        "classi": "4ALS 5ALS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 147,
+    "fields": {
+        "nome": "Rosa",
+        "cognome": "Lafiosca",
+        "email": "rosa.lafiosca@mapelli-monza.edu.it",
+        "classi": "3AAF 5ETU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 148,
+    "fields": {
+        "nome": "Marina maria",
+        "cognome": "Leuci",
+        "email": "marina maria.leuci@mapelli-monza.edu.it",
+        "classi": "4ETU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 149,
+    "fields": {
+        "nome": "Venera grazia",
+        "cognome": "Longo",
+        "email": "venera grazia.longo@mapelli-monza.edu.it",
+        "classi": "3ALS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 150,
+    "fields": {
+        "nome": "Marisa",
+        "cognome": "Lupo",
+        "email": "marisa.lupo@mapelli-monza.edu.it",
+        "classi": "3DAG 4DAG 5EAG "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 151,
+    "fields": {
+        "nome": "Marta",
+        "cognome": "Magni",
+        "email": "marta.magni@mapelli-monza.edu.it",
+        "classi": "3ETU 4ETU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 152,
+    "fields": {
+        "nome": "Daniele",
+        "cognome": "Mariani",
+        "email": "daniele.mariani@mapelli-monza.edu.it",
+        "classi": "4ETU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 153,
+    "fields": {
+        "nome": "Antonella",
+        "cognome": "Marrella",
+        "email": "antonella.marrella@mapelli-monza.edu.it",
+        "classi": "3FTU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 154,
+    "fields": {
+        "nome": "Cinzia",
+        "cognome": "Mengo",
+        "email": "cinzia.mengo@mapelli-monza.edu.it",
+        "classi": "5AAF "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 155,
+    "fields": {
+        "nome": "Veronica",
+        "cognome": "Nappi",
+        "email": "veronica.nappi@mapelli-monza.edu.it",
+        "classi": "3FTU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 156,
+    "fields": {
+        "nome": "Laura",
+        "cognome": "Parodi",
+        "email": "laura.parodi@mapelli-monza.edu.it",
+        "classi": "5ETU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 157,
+    "fields": {
+        "nome": "Silvia",
+        "cognome": "Piazzolla",
+        "email": "silvia.piazzolla@mapelli-monza.edu.it",
+        "classi": "5ACA "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 158,
+    "fields": {
+        "nome": "Giuseppe",
+        "cognome": "Puglisi",
+        "email": "giuseppe.puglisi@mapelli-monza.edu.it",
+        "classi": "3CLS "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 159,
+    "fields": {
+        "nome": "Fabiola",
+        "cognome": "Raschiatore",
+        "email": "fabiola.raschiatore@mapelli-monza.edu.it",
+        "classi": "4GTU 5GTU "
+    }
+},
+{
+    "model": "pcto.tutor",
+    "pk": 160,
+    "fields": {
+        "nome": "Emanuela",
+        "cognome": "Valtorta",
+        "email": "emanuela.valtorta@mapelli-monza.edu.it",
+        "classi": "5DLS "
+    }
+}
+]
