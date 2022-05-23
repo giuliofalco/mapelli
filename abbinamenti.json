@@ -1,0 +1,12 @@
+[
+{
+    "model": "pcto.abbinamenti",
+    "pk": 2,
+    "fields": {
+        "studente": 1,
+        "azienda": "03553510136",
+        "periodo_da": "2022-05-01",
+        "periodo_a": "2022-05-11"
+    }
+}
+]

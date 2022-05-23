@@ -1,0 +1,226 @@
+{
+    "24": {
+        "cognome": "MARTA", 
+        "password": null, 
+        "email": null, 
+        "id": "24", 
+        "nome": "Magni"
+    }, 
+    "25": {
+        "cognome": "DANIELE", 
+        "password": null, 
+        "email": null, 
+        "id": "25", 
+        "nome": "Mariani"
+    }, 
+    "26": {
+        "cognome": "ANTONELLA", 
+        "password": null, 
+        "email": null, 
+        "id": "26", 
+        "nome": "Marrella"
+    }, 
+    "27": {
+        "cognome": "CINZIA", 
+        "password": null, 
+        "email": null, 
+        "id": "27", 
+        "nome": "Mengo"
+    }, 
+    "20": {
+        "cognome": "ROSA", 
+        "password": null, 
+        "email": null, 
+        "id": "20", 
+        "nome": "Lafiosca"
+    }, 
+    "21": {
+        "cognome": "MARINA MARIA", 
+        "password": null, 
+        "email": null, 
+        "id": "21", 
+        "nome": "Leuci"
+    }, 
+    "22": {
+        "cognome": "VENERA GRAZIA", 
+        "password": null, 
+        "email": null, 
+        "id": "22", 
+        "nome": "Longo"
+    }, 
+    "23": {
+        "cognome": "MARISA", 
+        "password": null, 
+        "email": null, 
+        "id": "23", 
+        "nome": "Lupo"
+    }, 
+    "28": {
+        "cognome": "VERONICA", 
+        "password": null, 
+        "email": null, 
+        "id": "28", 
+        "nome": "Nappi"
+    }, 
+    "29": {
+        "cognome": "LAURA", 
+        "password": null, 
+        "email": null, 
+        "id": "29", 
+        "nome": "Parodi"
+    }, 
+    "1": {
+        "cognome": "LINDA", 
+        "password": null, 
+        "email": null, 
+        "id": "1", 
+        "nome": "Adamo"
+    }, 
+    "3": {
+        "cognome": "CARMELA", 
+        "password": null, 
+        "email": null, 
+        "id": "3", 
+        "nome": "Balliro"
+    }, 
+    "2": {
+        "cognome": "STEFANIA", 
+        "password": null, 
+        "email": null, 
+        "id": "2", 
+        "nome": "Agresta"
+    }, 
+    "5": {
+        "cognome": "SALVATORE", 
+        "password": null, 
+        "email": null, 
+        "id": "5", 
+        "nome": "Barbagallo"
+    }, 
+    "7": {
+        "cognome": "MIRELLA", 
+        "password": null, 
+        "email": null, 
+        "id": "7", 
+        "nome": "Barletta"
+    }, 
+    "6": {
+        "cognome": "GIADA", 
+        "password": null, 
+        "email": null, 
+        "id": "6", 
+        "nome": "Barbariol"
+    }, 
+    "9": {
+        "cognome": "PAOLA", 
+        "password": null, 
+        "email": null, 
+        "id": "9", 
+        "nome": "Boccia"
+    }, 
+    "8": {
+        "cognome": "ANNA MARIA", 
+        "password": null, 
+        "email": null, 
+        "id": "8", 
+        "nome": "Berlucchi"
+    }, 
+    "11": {
+        "cognome": "BARBARA VALENTINA", 
+        "password": null, 
+        "email": null, 
+        "id": "11", 
+        "nome": "Bruno"
+    }, 
+    "10": {
+        "cognome": "MARTA", 
+        "password": null, 
+        "email": null, 
+        "id": "10", 
+        "nome": "Brambilla"
+    }, 
+    "13": {
+        "cognome": "RAFFAELLA", 
+        "password": null, 
+        "email": null, 
+        "id": "13", 
+        "nome": "Cacciapuoti"
+    }, 
+    "12": {
+        "cognome": "SILVIA", 
+        "password": null, 
+        "email": null, 
+        "id": "12", 
+        "nome": "Bugatti"
+    }, 
+    "15": {
+        "cognome": "FEDERICO", 
+        "password": null, 
+        "email": null, 
+        "id": "15", 
+        "nome": "Ceccarelli"
+    }, 
+    "14": {
+        "cognome": "OMAR", 
+        "password": null, 
+        "email": null, 
+        "id": "14", 
+        "nome": "Cattaneo"
+    }, 
+    "17": {
+        "cognome": "MARIA ASSUNTA", 
+        "password": null, 
+        "email": null, 
+        "id": "17", 
+        "nome": "Consonni"
+    }, 
+    "16": {
+        "cognome": "ANDREA", 
+        "password": null, 
+        "email": null, 
+        "id": "16", 
+        "nome": "Cenci"
+    }, 
+    "19": {
+        "cognome": "MARIA TERESA", 
+        "password": null, 
+        "email": null, 
+        "id": "19", 
+        "nome": "Facchineri"
+    }, 
+    "18": {
+        "cognome": "LUISA", 
+        "password": null, 
+        "email": null, 
+        "id": "18", 
+        "nome": "Dolce"
+    }, 
+    "31": {
+        "cognome": "GIUSEPPE", 
+        "password": null, 
+        "email": null, 
+        "id": "31", 
+        "nome": "Puglisi"
+    }, 
+    "30": {
+        "cognome": "SILVIA", 
+        "password": null, 
+        "email": null, 
+        "id": "30", 
+        "nome": "Piazzolla"
+    }, 
+    "33": {
+        "cognome": "EMANUELA", 
+        "password": null, 
+        "email": null, 
+        "id": "33", 
+        "nome": "Valtorta"
+    }, 
+    "32": {
+        "cognome": "FABIOLA", 
+        "password": null, 
+        "email": null, 
+        "id": "32", 
+        "nome": "Raschiatore"
+    }
+}
