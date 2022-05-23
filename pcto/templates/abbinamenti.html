@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="w3.container w3-light-blue" >
+
+    <h1 class="w3-text-black">Elenco abbinamenti</h1>
+
+    <table class="w3-table-all w3-card-4" style="width:70%; margin: auto;">
+    <th> Azienda</th> <th>Studente</th> <th>Da</th><th>A</th>
+    {%for abb in abbinamenti%}
+       <tr>
+           <td>{{abb.azienda}}</td>
+           <td>{{abb.studente}}</td>
+           <td>{{abb.periodo_da}}</td>
+           <td>{{abb.periodo_a}}</td>
+
+       </tr>
+
+    {%endfor%}
+
+    </table>    
+
+</div>
+
+{% endblock %}

@@ -140,5 +140,9 @@ def studenti(request,corso):
     context['user'] = visualizza_utente(request)
     return render(request,"studenti.html",context)
 
+def elenco_abbinamenti(request):
+    abbinamenti = Abbinamenti.objects.all()
+    context = {'abbinamenti' : abbinamenti}
+    return render(request,"abbinamenti.html",context)
 
   

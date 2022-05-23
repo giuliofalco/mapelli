@@ -12,4 +12,5 @@ urlpatterns = [
       path('autentica',views.autentica,name="autentica"),
       path('contatti/',views.contatti,name='contatti'),
       path('studenti/<str:corso>',views.studenti,name='studenti'),
+      path('elenco_abbinamenti',views.elenco_abbinamenti,name='elenco_abbinamenti'),
 ]
