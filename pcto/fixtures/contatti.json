@@ -5,7 +5,7 @@
     "fields": {
         "data": "2022-04-22",
         "azienda": "11395050963",
-        "tutor": 2,
+        "tutor": "stefania.agresta@mapelli-monza.edu.it",
         "note": "Azienda chiusa dal 15/07 al 23/07.\r\nGli studenti vengono accolti uno per volta, ogni due/tre settimane",
         "responsabile": null,
         "num_studenti": 3,
@@ -19,7 +19,7 @@
     "fields": {
         "data": "2022-04-24",
         "azienda": "02030880153",
-        "tutor": 2,
+        "tutor":"stefania.agresta@mapelli-monza.edu.it",
         "note": "Ufficio di Polizia locale: 2 studenti da accogliere contemporaneamente nel periodo indicato",
         "responsabile": null,
         "num_studenti": 2,
@@ -33,7 +33,7 @@
     "fields": {
         "data": "2022-05-11",
         "azienda": "94638180151",
-        "tutor": 2,
+        "tutor": "stefania.agresta@mapelli-monza.edu.it",
         "note": "Viene accolto uno studente alla volta\r\nL'ufficio resterà chiuso nei giorni 2/06 - 24/06\r\nPeriodo di chiusura ferie: 08/08/22 - 28/08/22",
         "responsabile": null,
         "num_studenti": 5,
@@ -47,7 +47,7 @@
     "fields": {
         "data": "2022-05-11",
         "azienda": "00850950965",
-        "tutor": 2,
+        "tutor": "stefania.agresta@mapelli-monza.edu.it",
         "note": "",
         "responsabile": null,
         "num_studenti": 1,
@@ -61,7 +61,7 @@
     "fields": {
         "data": "2022-05-11",
         "azienda": "13115300157",
-        "tutor": 2,
+        "tutor":"stefania.agresta@mapelli-monza.edu.it",
         "note": "Tre settimane per studente, da accogliere separatamente.",
         "responsabile": null,
         "num_studenti": 2,
@@ -75,7 +75,7 @@
     "fields": {
         "data": "2022-05-11",
         "azienda": "02729030961",
-        "tutor": 2,
+        "tutor": "stefania.agresta@mapelli-monza.edu.it",
         "note": "3 studenti da accogliere separatamente",
         "responsabile": null,
         "num_studenti": 3,
