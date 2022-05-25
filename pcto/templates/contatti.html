@@ -2,10 +2,7 @@
 
 {% block head %}
 <style>
-    table {width: 100%; margin-bottom: 5px; }
-    th  {background: #C90;}
-    td  {padding-left: 15; background: lavender;} 
-    h3  {color: blue;} 
+   
     #container {width: 80%; margin:auto}
     .data {width: 12%;}
     .tutor {width: 15%;}
@@ -18,9 +15,9 @@
 {% endblock %}
 
 {% block content %}
-<div id="container">
-<h3><a href="{%url 'pcto:elenco_abbinamenti' %}">Elenco Abbinamenti</a></h3>
-<table>
+<div class="w3.container w3-light-blue" >
+    <h1 class="w3-text-black">Elenco Contatti</h1>
+<table class="w3-table-all w3-card-4" style="width:90%; margin: auto;">
     <th>Data</th><th>Tutor</th><th>Azienda</th><th>Posti</th>.<th>Disp.<th>Da</th><th>A</th><th>Note</th>
 
     {%for con in contatti %} 
