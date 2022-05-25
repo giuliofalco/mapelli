@@ -14,7 +14,7 @@
     <th> Azienda</th> <th>Studente</th> <th>Da</th><th>A</th>
     {%for abb in abbinamenti%}
        <tr>
-           <td>{{abb.azienda}}</td>
+           <td><a href="{% url 'pcto:aziende'%}{{abb.azienda.partita_iva}}">{{abb.azienda}}</a></td>
            <td>{{abb.studente}}</td>
            <td>{{abb.periodo_da}}</td>
            <td>{{abb.periodo_a}}</td>
