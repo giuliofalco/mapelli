@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from .filters import AziendeFilter
 from pcto.indirizzi import *
+from django.urls import reverse
 
 def visualizza_utente(request):
     try:
@@ -75,9 +76,11 @@ def dettaglio_azienda(request,piva):
         posti = contatti[0].num_studenti - len(abbinamenti)
     else:
         posti = 0
-        
+
+    studenti = Studenti.objects.all()
+
     context = {'azienda':azienda, 'contatti': contatti, 'abbinamenti':abbinamenti, 
-               'posti':posti, 'tutor':tutor}
+               'posti':posti, 'tutor':tutor, 'studenti':studenti}
     context['user'] = visualizza_utente(request)
     return render(request,"dettaglio_azienda.html",context) 
 
@@ -145,4 +148,27 @@ def elenco_abbinamenti(request):
     context = {'abbinamenti' : abbinamenti}
     return render(request,"abbinamenti.html",context)
 
-  
+def inserisci (request):
+    # aggiunge un abbinamento
+    piva = request.POST.get("azienda")
+    azienda = Aziende.objects.get(partita_iva=piva)
+    idstud = request.POST.get("studente")
+    studente = Studenti.objects.get(id=idstud)
+    periodo_da = request.POST.get("periodo_da")
+    periodo_a = request.POST.get("periodo_a")
+    abbinamento = Abbinamenti()
+    abbinamento.studente = studente
+    abbinamento.azienda = azienda
+    abbinamento.periodo_da = periodo_da
+    abbinamento.periodo_a = periodo_a
+    abbinamento.save()
+    return HttpResponseRedirect('aziende/' + azienda.partita_iva)
+
+def cancella (request):
+    # cancella un abbinamento
+    idabbinamento = request.GET.get('id')
+    record = Abbinamenti.objects.get(id=idabbinamento)
+    record.delete()
+    piva = request.GET.get('piva')
+    return HttpResponseRedirect('aziende/'+piva)
+

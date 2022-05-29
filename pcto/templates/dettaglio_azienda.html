@@ -1,4 +1,5 @@
 {%extends 'base.html' %}
+{% load static %}
 
 {%block head%}
         <style>
@@ -19,6 +20,7 @@
             th  {background: #C90;}
             td  {background: lavender;}
             textarea {margin-bottom: 10px;}
+            .periodo {}
         </style>   
         
         <script>
@@ -45,6 +47,19 @@
                 document.location = url
                 alert('saved')
             }
+
+            function cancella(id,piva) {
+                /* cancella un abbinamento */
+               
+                risp = confirm("vuoi cancellare l'abbinamento ?");
+                if (risp) {
+                    url = "{%url 'pcto:cancella' %}?id="+id+"&piva="+piva; 
+                    document.location=url;
+                }
+                else
+                    alert('cancellazione annullata') 
+
+            }
         </script>
 
         </style>
@@ -62,7 +77,7 @@
            <b>Comune:</b> {{azienda.sede_comune}} <b>Prov. :</b> {{azienda.sede_provincia}}
     </div>
     
-   
+ <div class="w3-container">  
     <a href="/admin/pcto/aziende/{{azienda.id}}">Admin</a>
     <h3>Contatti</h3>
     <hr>
@@ -85,14 +100,26 @@
     <br clear="all">
     <h3>Abbinamenti</h3>
     <b>Posti ancora disponibili: </b>{{posti}}
+    <form method="POST" action="{% url 'pcto:inserisci' %}">
+        {% csrf_token %}
+        <input type="hidden" name="azienda" value="{{azienda.partita_iva}}">
+        <select style="width: 250px;" name="studente">
+           {%for stud in studenti%}
+              <option value="{{stud.id}}">{{stud}}</option>
+           {% endfor %}
+        </select>
+        Periodo Da: <input class='periodo' type="date" name="periodo_da"> A <input type="date" class="periodo" name="periodo_a">
+        <input type="submit" value="Abbina">
+    </form>
     <hr>
-        <table>
-            <th>Studente</th><th>Da</th><th>A</th>
+        <table >
+            <th>Studente</th><th>Da</th><th>A</th><th>canc.</th>
         {% for abb in abbinamenti %}
             <tr>
             <td>{{abb.studente}} <td> {{abb.periodo_da}} <td> {{abb.periodo_a}} 
+            <td style="text-align: center;"> <img src="{% static 'pcto/cestino.png' %}" style="width:30px; cursor: pointer" onClick=cancella({{abb.id}},'{{azienda.partita_iva}}')></td>  
             
         {% endfor %}
         </table>
-
+</div>
 {% endblock%}

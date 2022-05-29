@@ -13,4 +13,6 @@ urlpatterns = [
       path('contatti/',views.contatti,name='contatti'),
       path('studenti/<str:corso>',views.studenti,name='studenti'),
       path('elenco_abbinamenti',views.elenco_abbinamenti,name='elenco_abbinamenti'),
+      path('inserisci',views.inserisci,name="inserisci"),
+      path('cancella',views.cancella,name="cancella"),
 ]
