@@ -83,7 +83,7 @@ def dettaglio_azienda(request,piva):
     context = {'azienda':azienda, 'contatti': contatti, 'abbinamenti':abbinamenti, 
                'posti':posti, 'tutor':tutor, 'studenti':studenti}
     context['user'] = visualizza_utente(request)
-    form = ContactForm()
+    form = ContactForm(initial={'azienda':azienda.partita_iva, 'num_studenti': 0})
     context['form'] = form
     return render(request,"dettaglio_azienda.html",context) 
 
@@ -176,4 +176,8 @@ def cancella (request):
     return HttpResponseRedirect('aziende/'+piva)
 
 def add_contatto(request):
-    pass
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            piva = form.cleaned_data('piva')
+            tutor= form.cleaned_data('tutor')
