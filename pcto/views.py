@@ -8,6 +8,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .filters import AziendeFilter
 from pcto.indirizzi import *
 from django.urls import reverse
+from .forms import *
 
 def visualizza_utente(request):
     try:
@@ -82,6 +83,8 @@ def dettaglio_azienda(request,piva):
     context = {'azienda':azienda, 'contatti': contatti, 'abbinamenti':abbinamenti, 
                'posti':posti, 'tutor':tutor, 'studenti':studenti}
     context['user'] = visualizza_utente(request)
+    form = ContactForm()
+    context['form'] = form
     return render(request,"dettaglio_azienda.html",context) 
 
 def mioLogin(request):
@@ -172,3 +175,5 @@ def cancella (request):
     piva = request.GET.get('piva')
     return HttpResponseRedirect('aziende/'+piva)
 
+def add_contatto(request):
+    pass

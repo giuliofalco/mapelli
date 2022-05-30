@@ -17,7 +17,7 @@
                    margin-left: 100px;
                    margin-bottom: 50px;
                   }
-            th  {background: #C90;}
+            th  {background: lightgray;}
             td  {background: lavender;}
             textarea {margin-bottom: 10px;}
             .periodo {}
@@ -80,8 +80,7 @@
  <div class="w3-container">  
     <a href="/admin/pcto/aziende/{{azienda.id}}">Admin</a>
     <h3>Contatti</h3>
-    <hr>
-       
+    <hr>      
         {% for con in contatti %}
                 <div class="contatto">
                     {{con.data}} {{con.tutor}} <p>
@@ -97,6 +96,16 @@
                     </select>             
                 </div>
         {% endfor %}
+        {% if not contatti %}
+                <form method="POST">
+                    {% csrf_token %}
+                    <table class="w3-table-all w3-card-4" style="width: 60%">
+                        {{form.as_table}}
+                        <tr><td colspan="2"><input type="submit" value="Crea Contatto"></td></tr>
+                    </table>
+                  
+                </form>   
+        {% endif%}
     <br clear="all">
     <h3>Abbinamenti</h3>
     <b>Posti ancora disponibili: </b>{{posti}}
