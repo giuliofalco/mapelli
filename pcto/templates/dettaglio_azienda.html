@@ -97,7 +97,7 @@
                 </div>
         {% endfor %}
         {% if not contatti %}
-                <form method="POST">
+                <form method="POST" action="{%url 'pcto:add_contatto'%}">
                     {% csrf_token %}
                     <table class="w3-table-all w3-card-4" style="width: 60%">
                         {{form.as_table}}

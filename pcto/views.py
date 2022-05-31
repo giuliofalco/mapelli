@@ -179,5 +179,17 @@ def add_contatto(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            piva = form.cleaned_data('piva')
-            tutor= form.cleaned_data('tutor')
+            piva = form.cleaned_data['azienda']
+            tutor= form.cleaned_data['tutor']
+            periodo_da= form.cleaned_data['periodo_da']
+            periodo_a= form.cleaned_data['periodo_a']
+            note = form.cleaned_data['note']
+            azienda = Aziende.objects.get(partita_iva = piva)
+            contatto = Contatti()
+            contatto.azienda = azienda
+            contatto.tutor = tutor
+            contatto.periodo_da = periodo_da
+            contatto.periodo_a = periodo_a
+            contatto.note = note
+            contatto.save()
+    return HttpResponseRedirect('aziende/'+piva)
