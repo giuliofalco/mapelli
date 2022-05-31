@@ -181,6 +181,7 @@ def add_contatto(request):
         if form.is_valid():
             piva = form.cleaned_data['azienda']
             tutor= form.cleaned_data['tutor']
+            num_studenti = form.cleaned_data['num_studenti']
             periodo_da= form.cleaned_data['periodo_da']
             periodo_a= form.cleaned_data['periodo_a']
             note = form.cleaned_data['note']
@@ -188,6 +189,7 @@ def add_contatto(request):
             contatto = Contatti()
             contatto.azienda = azienda
             contatto.tutor = tutor
+            contatto.num_studenti = num_studenti
             contatto.periodo_da = periodo_da
             contatto.periodo_a = periodo_a
             contatto.note = note
