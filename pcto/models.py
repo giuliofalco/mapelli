@@ -75,3 +75,19 @@ class Abbinamenti(models.Model):
 
     def __str__(self):
        return(self.studente.cognome)
+
+class Storico(models.Model):
+    anno = models.CharField(max_length=200)
+    nome = models.CharField(max_length=200)
+    cognome = models.CharField(max_length=200)
+    classe = models.CharField(max_length=200)
+    indirizzo = models.CharField(max_length=200)
+    anno_corso = models.CharField(max_length=200)
+    ragione_sociale = models.CharField(max_length=200)
+    sede_indirizzo = models.CharField(max_length=200)
+    sede_provincia = models.CharField(max_length=200)
+    tutor_scuola = models.CharField(max_length=200, null=True,blank=True)
+    tutor_azienda = models.CharField(max_length=200, null=True,blank=True)
+
+    def __str__(self):
+        return(f"{self.anno} {self.cognome} {self.nome}")

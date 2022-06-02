@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tutor, Aziende, Contatti, Studenti, Abbinamenti
+from .models import Tutor, Aziende, Contatti, Studenti, Abbinamenti, Storico
 
 class AbbinamentiInline(admin.StackedInline):
     model = Abbinamenti
@@ -21,3 +21,7 @@ class AziendeAdmin(admin.ModelAdmin):
 class TutorAdmin(admin.ModelAdmin):
     list_display = ['cognome','nome','email','classi']
     list_filter = ['cognome']
+
+@admin.register(Storico)
+class StoricoAdmin(admin.ModelAdmin):
+    list_display = ['anno','ragione_sociale','classe', 'cognome','nome']
