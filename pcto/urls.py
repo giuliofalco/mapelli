@@ -16,4 +16,5 @@ urlpatterns = [
       path('inserisci',views.inserisci,name="inserisci"),
       path('cancella',views.cancella,name="cancella"),
       path('add_contatto',views.add_contatto,name="add_contatto"),
+       path('statistica',views.statistica,name="statistica"),
 ]

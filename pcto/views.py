@@ -9,6 +9,8 @@ from .filters import AziendeFilter
 from pcto.indirizzi import *
 from django.urls import reverse
 from .forms import *
+from django.db.models import Count
+
 
 def visualizza_utente(request):
     try:
@@ -195,3 +197,8 @@ def add_contatto(request):
             contatto.note = note
             contatto.save()
     return HttpResponseRedirect('aziende/'+piva)
+
+def statistica(request):
+    anno = Storico.objects.values('anno').annotate(Count('anno')).order_by('-anno')
+    context = {'anno':anno,}
+    return render(request,"statistica.html",context)

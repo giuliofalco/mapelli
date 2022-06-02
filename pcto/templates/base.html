@@ -19,10 +19,15 @@
         <header class="robo">
           <h1 class="titolo">OFFICINA PCTO</h1>
             <ul>
-                <li><a href="{% url 'pcto:index' %}" class="active">PCTO</a></li>
+                <li>PCTO
+                    <ul>
+                       <li><a href="{% url 'pcto:index' %}">Home</a></li>
+                       <li><a href="{% url 'pcto:statistica' %}">Statistiche</a></li>
+                    </ul>
+                </li>
                 <li><a href="{% url 'pcto:aziende' %}" class="aziende">AZIENDE</a></li>
                 <li><a href="{% url 'pcto:tutor' %}" class="tutor">TUTOR</a></li>
-                <li><a href="" class="studenti">STUDENTI</a>
+                <li>STUDENTI
                     <ul>
                         <li><a href="{% url 'pcto:studenti' 'AF' %} ">Affari e Finanza</a></li>
                         <li><a href="{% url 'pcto:studenti' 'SI' %} ">Sistemi Informativi</a></li>

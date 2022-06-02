@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+<style>
+   
+    #container {width: 80%; margin:auto}
+    .data {width: 12%;}
+    .tutor {width: 15%;}
+    .disp  {width: 5%;}
+    .da    {width: 10%;}
+    .a     {width: 10%;}
+    .azienda {width: 20%;}
+    
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="w3.container w3-pale-blue" >
+    <h1 class="w3-text-black">Statistiche</h1>
+<table class="w3-table-all w3-card-4" style="width:30%; margin: auto;">
+    <th>Anno</th><th>Num.Abbinamenti</th>
+
+    {%for year in anno %} 
+        <tr>
+            <td class="data"> {{year.anno}}  </td>
+            <td class="tutor"> {{year.anno__count}} </td>
+            
+        </tr>
+    {% endfor %}
+
+</table>    
+</div>
+
+
+{% endblock %}
