@@ -28,7 +28,21 @@
         </tr>
     {% endfor %}
 
-</table>    
+</table> 
+<p>
+<table class="w3-table-all w3-card-4" style="width:50%; margin: auto;">
+    <th>Azienda</th><th>Prov.</th><th>Num.Abbinamenti</th>
+
+    {%for az in aziende %} 
+        <tr>
+            <td> <a href="dettaglio_stat/{{az.ragione_sociale}}">{{az.ragione_sociale}} </a> </td>
+            <td> {{az.sede_provincia}}</td>
+            <td> {{az.ragione_sociale__count}} </td>
+            
+        </tr>
+    {% endfor %}
+
+</table> 
 </div>
 
 

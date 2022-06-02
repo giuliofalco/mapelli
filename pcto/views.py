@@ -200,5 +200,11 @@ def add_contatto(request):
 
 def statistica(request):
     anno = Storico.objects.values('anno').annotate(Count('anno')).order_by('-anno')
-    context = {'anno':anno,}
+    aziende = Storico.objects.values('ragione_sociale','sede_provincia').annotate(Count('ragione_sociale')).order_by('-ragione_sociale__count','ragione_sociale')
+    context = {'anno':anno, 'aziende':aziende}
     return render(request,"statistica.html",context)
+
+def dettaglio_stat(request,azienda):
+    dist = Storico.objects.filter(ragione_sociale=azienda).values('anno').annotate(Count('anno')).order_by('-anno')
+    context = {'azienda': azienda,'dist': dist}
+    return render(request,"abbinamenti_azienda.html",context)
