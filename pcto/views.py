@@ -199,9 +199,14 @@ def add_contatto(request):
     return HttpResponseRedirect('aziende/'+piva)
 
 def statistica(request):
-    anno = Storico.objects.values('anno').annotate(Count('anno')).order_by('-anno')
+    anno = Storico.objects.values('anno').annotate(Count('anno')).order_by('anno')
     aziende = Storico.objects.values('ragione_sociale','sede_provincia').annotate(Count('ragione_sociale')).order_by('-ragione_sociale__count','ragione_sociale')
-    context = {'anno':anno, 'aziende':aziende}
+    labels = []
+    data = []
+    for year in anno:
+        labels.append(year['anno'])
+        data.append(year['anno__count'])
+    context = {'anno':anno, 'aziende':aziende, 'labels':labels, 'data':data }
     return render(request,"statistica.html",context)
 
 def dettaglio_stat(request,azienda):
