@@ -92,8 +92,8 @@ header ul h2 a.active
 #credits {
    font-weight: bold;
    color: blue;
-   width: 600px;
-   margin: auto;
+   width: 100%;
+   text-align: center;
    font-style: italic;
 }
 
