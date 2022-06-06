@@ -210,6 +210,11 @@ def statistica(request):
     return render(request,"statistica.html",context)
 
 def dettaglio_stat(request,azienda):
-    dist = Storico.objects.filter(ragione_sociale=azienda).values('anno').annotate(Count('anno')).order_by('-anno')
-    context = {'azienda': azienda,'dist': dist}
+    dist = Storico.objects.filter(ragione_sociale=azienda).values('anno').annotate(Count('anno')).order_by('anno')
+    labels = []
+    data = []
+    for d in dist:
+        labels.append(d['anno'])
+        data.append(d['anno__count'])
+    context = {'azienda': azienda,'dist': dist, 'labels':labels, 'data':data}
     return render(request,"abbinamenti_azienda.html",context)
