@@ -1,0 +1,72 @@
+[
+{
+    "model": "pcto.abbinamenti",
+    "pk": 3,
+    "fields": {
+        "studente": 247,
+        "azienda": "03553510136",
+        "periodo_da": "2022-05-30",
+        "periodo_a": "2022-06-17"
+    }
+},
+{
+    "model": "pcto.abbinamenti",
+    "pk": 4,
+    "fields": {
+        "studente": 417,
+        "azienda": "03553510136",
+        "periodo_da": "2022-06-06",
+        "periodo_a": "2022-06-24"
+    }
+},
+{
+    "model": "pcto.abbinamenti",
+    "pk": 5,
+    "fields": {
+        "studente": 327,
+        "azienda": "03553510136",
+        "periodo_da": "2022-06-06",
+        "periodo_a": "2022-06-17"
+    }
+},
+{
+    "model": "pcto.abbinamenti",
+    "pk": 6,
+    "fields": {
+        "studente": 257,
+        "azienda": "03553510136",
+        "periodo_da": "2022-06-13",
+        "periodo_a": "2022-06-24"
+    }
+},
+{
+    "model": "pcto.abbinamenti",
+    "pk": 7,
+    "fields": {
+        "studente": 249,
+        "azienda": "03553510136",
+        "periodo_da": "2022-06-27",
+        "periodo_a": "2022-07-15"
+    }
+},
+{
+    "model": "pcto.abbinamenti",
+    "pk": 8,
+    "fields": {
+        "studente": 326,
+        "azienda": "11395050963",
+        "periodo_da": null,
+        "periodo_a": null
+    }
+},
+{
+    "model": "pcto.abbinamenti",
+    "pk": 26,
+    "fields": {
+        "studente": 1,
+        "azienda": "02030880153",
+        "periodo_da": "2022-05-19",
+        "periodo_a": "2022-05-31"
+    }
+}
+]
