@@ -19,7 +19,7 @@
     "fields": {
         "data": "2022-04-24",
         "azienda": "02030880153",
-        "tutor":"stefania.agresta@mapelli-monza.edu.it",
+        "tutor": "stefania.agresta@mapelli-monza.edu.it",
         "note": "Ufficio di Polizia locale: 2 studenti da accogliere contemporaneamente nel periodo indicato",
         "responsabile": null,
         "num_studenti": 2,
@@ -61,7 +61,7 @@
     "fields": {
         "data": "2022-05-11",
         "azienda": "13115300157",
-        "tutor":"stefania.agresta@mapelli-monza.edu.it",
+        "tutor": "stefania.agresta@mapelli-monza.edu.it",
         "note": "Tre settimane per studente, da accogliere separatamente.",
         "responsabile": null,
         "num_studenti": 2,
@@ -81,6 +81,20 @@
         "num_studenti": 3,
         "periodo_da": "2022-06-13",
         "periodo_a": "2022-07-29"
+    }
+},
+{
+    "model": "pcto.contatti",
+    "pk": 10,
+    "fields": {
+        "data": "2022-05-31",
+        "azienda": "03553510136",
+        "tutor": "linda.adamo@mapelli-monza.edu.it",
+        "note": "prova",
+        "responsabile": null,
+        "num_studenti": 5,
+        "periodo_da": "2022-05-02",
+        "periodo_a": "2022-05-31"
     }
 }
 ]
