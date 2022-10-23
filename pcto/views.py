@@ -70,9 +70,12 @@ def dettaglio_azienda(request,piva):
     
     contatto = request.GET.get('contatto','')
     note = request.GET.get('note','')
+    tutoremail = request.GET.get('tutor','')
     if contatto:
         obj = Contatti.objects.get(id=contatto)
         obj.note = note
+        nuovo_tutor = Tutor.objects.get(email=tutoremail)
+        obj.tutor = nuovo_tutor
         obj.save()
 
     if contatti:
