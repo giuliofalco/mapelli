@@ -43,7 +43,9 @@
             } 
             function salva(id){
                 url = "{% url 'pcto:aziende' %}{{azienda.partita_iva}}" + "?contatto=" + id;
-                url = url + "&note=" + document.getElementById('note').value;
+                url = url + "&note=" + document.getElementById(id).value;
+                tutor = document.getElementById("tutor"+id).value;
+                url = url + "&tutor=" + tutor;
                 document.location = url
                 alert('saved')
             }
@@ -85,11 +87,11 @@
                 <div class="contatto">
                     {{con.data}} {{con.tutor}} <p>
                     <b>Posti disponibili:</b> {{con.num_studenti}} - <b>Periodo Da</b>: {{con.periodo_da}} <b>A:</b> {{con.periodo_a}}<p>  
-                    <textarea id=note class="commento">{{con.note}}</textarea> <br>
+                    <textarea id="{{con.id}}" class="commento">{{con.note}}</textarea> <br>
                     <input type="button" value="Save" onClick=salva("{{con.id}}")>  
                     <input type="button" value="Print to PDF" onClick="window.print()">   
                     <input type="button" value="Mail To" onClick=email()>
-                    <select id="tutor">
+                    <select id="tutor{{con.id}}">
                         {% for tut in tutor %}
                            <option value="{{tut.email}}">{{tut.cognome}} {{tut.nome}}</option>
                         {% endfor %}
