@@ -34,6 +34,7 @@ LOGIN_URL = 'pcto:mioLogin'
 
 INSTALLED_APPS = [
     'pcto.apps.PctoConfig',
+    'festival.apps.FestivalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

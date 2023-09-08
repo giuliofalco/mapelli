@@ -1,0 +1,56 @@
+{%extends 'festival/base.html' %}
+
+{%block head %}
+<style>
+    h2 {text-align:center; margin: auto;}
+    #container {width:80%; margin:auto; text-align:center}
+   
+    #domande {width: 75%; margin: auto; background-color: blanchedalmond;}
+    .risposte {width:400px; height: 75px;}
+    .tabella {text-align: left; float: left; margin-right: 25px; background-color: rgb(117, 211, 117); padding:5px;}
+</style>
+{%endblock%}
+
+{% block content %}
+    <div class="w3-container w3-card-4" id="container">
+       <h1>Compilazione Nuovo Questionario</h1>
+       {{opzioni}}
+       <form method="POST">
+        {% csrf_token %}
+           <table class="tabella">
+              <tr>
+                <td>Luogo:</td>
+                <td>
+                     <select name="luogo">
+                       {%for loc in luoghi%}
+                           {%if luogo == loc.0 %}
+                                <option value={{loc.0}} selected>{{loc.1}}</option>
+                           {%else%}
+                                <option value={{loc.0}}>{{loc.1}}</option>
+                           {%endif%}
+                       {%endfor%}
+                     </select>
+                </td>
+                <tr>
+                <td>Data e ora:</td><td><input type=text name="data" value="{{adesso}}"></td>
+                <tr>
+                <td>Intervistatore:</td><td><input name="intervistatore" type="text" value="{{intervistatore}}"></td>
+           </table>    
+           <input type="submit" value ="Salva e Continua">   
+           <div id="domande">
+             <table>
+              {%for dom in questions %}
+              <tr>
+                  <td> {{forloop.counter}}: {{dom.testo}}</td>
+                  <td>
+                  <textarea class="risposte" name="risposta-{{forloop.counter}}"></textarea>  
+                  </td>
+                 
+              {%endfor%}
+              </table> 
+              
+           </div>
+       </form>
+      
+    </div>
+{%endblock%}

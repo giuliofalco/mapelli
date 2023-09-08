@@ -1,0 +1,36 @@
+{%extends 'festival/base.html' %}
+{%load static %}
+{%block head%}
+<style>
+    .black {color: black; font-size:1.5em} 
+    .risp  {font-size:1.5em}
+    .risposta  {margin: 20px;}
+</style>
+{%endblock%}
+{%block content %}
+<div class="w3-container w3-card-4" id="container">
+    
+    <div class="w3-container w3-teal w3-large">
+        Luogo: <span class=w3-orange>{{luogo}}</span> Data: <span class=w3-orange>{{questionario.data}}</span>  Intervistatore: <span class=w3-orange>{{questionario.intervistatore}}</span>
+        <hr>
+    </div>
+    <div id="risposte">
+        <div class="w3-container w3-blue risposta">
+            <div class=black>1 {{risposte.0.domanda}}</div>
+            <span class=risp>{{risposte.0.risposta}}</div>
+       </div>
+       <div class="w3-container w3-gray risposta">
+        <div  class=black> 2 {{risposte.1.domanda}}</div>
+        <div class=risp> {{risposte.1.risposta}}</div>
+       </div>
+       <div class="w3-container w3-green risposta">
+        <div class=black> 3 {{risposte.2.domanda}}</div>
+        <div class=risp> {{risposte.2.risposta}}</div>
+       </div>
+       <div class="w3-container w3-yellow risposta">
+        <div  class=black>4 {{risposte.3.domanda}}</div>
+        <div class=risp>  {{risposte.3.risposta}}
+       </div>
+    </div>
+</div>
+{%endblock%}

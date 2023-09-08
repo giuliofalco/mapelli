@@ -1,0 +1,34 @@
+{%extends 'festival/base.html' %}
+{%load static %}
+
+{%block head %}
+<style>
+    h2 {text-align:center; margin: auto;}
+    #container {width:80%; margin:auto; text-align:center}
+    #tabella {width: 75%; margin: auto; text-align: left;}
+    .matita {cursor:pointer;}
+</style>
+<script>
+    function dettaglio(id) {
+        url = "dettaglio/"+id;
+        document.location = url;
+    }
+</script>
+{%endblock%}
+
+{% block content %}
+    <div class="w3-container w3-card-4" id="container">
+       <h1>Elenco Questionari</h1>
+       <table id=tabella class="w3-striped">
+            <th>Luogo</th><th>Data</th><th>Intervistatore</th><th>View</th>
+            {%for quest in elenco %}
+            <tr>
+                <td>{{quest.0}}</td>
+                <td>{{quest.1}}</td>
+                <td>{{quest.2}}</td>
+                <td class="matita" onclick="dettaglio('{{quest.3}}')"><img src="{%static 'festival/matita.png' %}"></td>
+            </tr>
+            {%endfor%}
+       </table>
+    </div>
+{%endblock%}
