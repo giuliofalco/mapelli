@@ -1,0 +1,34 @@
+<html>
+   <head>
+      <style>
+            #box {background: lightblue; padding: 15px; width: 25%; margin: auto;}
+            h2 {color : blue; text-align: center;}
+            h3 {color: #c00;}
+            #invio {text-align: center;}
+            #msg  {color:#c00; text-align: center; margin-top: 10px;}
+      </style>
+   </head>
+    
+   <body>
+       
+      <div id=box>
+         <h2>Pcto - Login</h2>
+         <form method="post" action="{% url 'pcto:autentica' %}">
+            {% csrf_token %}
+            <input type="hidden" name="next" value={{next}}>
+            <table>
+               <tr>
+                  <td>Utente: <td><input type=text name="utente">
+               <tr>
+                  <td>Password: <td> <input type=password name="password"> 
+               <tr>
+                  <td id=invio colspan=2><input type=submit value="Invia"> 
+                                         <input type=reset value="Reset">
+                                        
+            </table>
+            <div id=msg> {{msg}} </div>
+            <a href={% url 'pcto:index' %}>PCTO</a>
+         </form>
+      </box>
+    </body>
+</html>
