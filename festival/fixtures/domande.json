@@ -1,0 +1,34 @@
+[
+{
+    "model": "festival.domande",
+    "pk": 1,
+    "fields": {
+        "numero": 1,
+        "testo": "Cosa ti piace del Parco ?"
+    }
+},
+{
+    "model": "festival.domande",
+    "pk": 2,
+    "fields": {
+        "numero": 2,
+        "testo": "Cosa non ti piace del Parco ?"
+    }
+},
+{
+    "model": "festival.domande",
+    "pk": 3,
+    "fields": {
+        "numero": 3,
+        "testo": "Tu cosa proponi ?"
+    }
+},
+{
+    "model": "festival.domande",
+    "pk": 4,
+    "fields": {
+        "numero": 4,
+        "testo": "Cosa ne pensi del festival ?"
+    }
+}
+]
