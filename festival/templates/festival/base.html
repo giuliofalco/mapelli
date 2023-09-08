@@ -1,0 +1,60 @@
+{% load static %}
+<html>
+    <head> 
+        <meta charset='utf8'>
+        <title>OFFICINA PCTO</title>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            #testata { display:flex;
+                       direction: row;
+                       justify-content: space-between;
+                       width: 100%;
+                     }
+            #titolo {margin: auto; text-align: center}
+            #menu {margin-top:10px;}
+            #logo {margin-top: 15px; margin-right: 15px;}
+            #logo1 {height:170px;}
+            #logo2 {height:120px; margin-right: 0px}
+            h1 {color: #c00;}
+            h2 {color: rgb(9, 9, 105);}
+        </style>
+        {% block head %}
+          
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block testata %}
+        <div id="testata">
+            <div id="mapelli">
+               <img id="logo1" src={% static "pcto/mape.png"  %}> <br>
+               <span id=sessione style="margin-left: 40px">Sessione {{user}}</span>
+            </div>
+            <div id="titolo">
+               <h1>Officina Software</h1> <br>
+               Raccolta Dati<br>
+               <h2>FESTIVAL PARCO DI MONZA 2023</h2>
+            </div>
+            <div id="logo">
+               <img id="logo2" src={% static "pcto/logo.jpeg" %}><br>
+               A.S. 2023-24
+            </div>
+            
+        </div>
+            <div class="w3-bar w3-show-large w3-hide-small w3-light-blue" id="menu">
+                <a href="{% url 'festival:index' %}" class="w3-bar-item w3-button ">Home</a>
+                <a href="{% url 'festival:elenco' %}" class="w3-bar-item w3-button ">Elenco Questionari</a>
+                <a href="{% url 'festival:inserimento' %}" class="w3-bar-item w3-button ">Inserimento</a>   
+                <a href="/admin" class="w3-bar-item w3-button "> Login</a>
+                <a href="/admin/logout" class="w3-bar-item w3-button "> Logout</a>
+            </div>
+            
+        
+        <hr/>
+        {% endblock %}
+        
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
