@@ -1,0 +1,16 @@
+{%extends 'festival/base.html' %}
+{%load static %}
+
+{% block content %}
+
+<div class="w3-container">
+   <h2>Risposte a: {{testo_domanda}}</h1>
+   <ol class="">
+    {%for r in risposte %}
+        <li>{{r.risposta}}</li>
+    {%endfor%}
+   </ol>
+
+</div>
+
+{%endblock%}

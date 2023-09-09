@@ -58,10 +58,24 @@
         </div>
             <div class="w3-bar w3-show-large w3-hide-small w3-light-blue" id="menu">
                 <a href="{% url 'festival:index' %}" class="w3-bar-item w3-button ">Home</a>
-                <a href="{% url 'festival:elenco' %}" class="w3-bar-item w3-button ">Elenco Questionari</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">Questionari</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="{% url 'festival:elenco' %}" class="w3-bar-item w3-button ">Elenco</a>
+                        <a href="{% url 'festival:report' 0 %}" class="w3-bar-item w3-button ">Report_1</a>
+                        <a href="{% url 'festival:report' 1 %}" class="w3-bar-item w3-button ">Report_2</a>
+                        <a href="{% url 'festival:report' 2 %}" class="w3-bar-item w3-button ">Report_3</a>
+                        <a href="{% url 'festival:report' 3 %}" class="w3-bar-item w3-button ">Report_4</a>
+                    </div>
+                </div>
                 <a href="{% url 'festival:inserimento' %}" class="w3-bar-item w3-button ">Inserimento</a>   
-                <a href="/pcto/admin" class="w3-bar-item w3-button "> Login</a>
-                <a href="/pcto/admin/logout" class="w3-bar-item w3-button "> Logout</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">Autenticazione</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="/pcto/admin" class="w3-bar-item w3-button "> Login</a>
+                        <a href="/pcto/admin/logout" class="w3-bar-item w3-button "> Logout</a>
+                    </div>
+                </div>
             </div>
 
             <button class="w3-button  w3-hide-large w3-hide-medium w3-xlarge" onclick="myFunction('mySidebar')">☰</button>

@@ -86,3 +86,14 @@ def autentica(request):
       return HttpResponseRedirect(next)
    else:
       return render(request,'login.html',{'msg':'Autenticazione Fallita', 'next':next} )
+
+def report(request,num_dom):
+   # elenca un report raggruppando per domande
+   domande = Domande.objects.all()
+   domande = sorted(domande,key=lambda x: x.numero)
+   domande = domande[:4]
+   testo_domanda = domande[num_dom].testo
+   dom = num_dom + 1
+   risp = Risposte.objects.filter(domanda__numero=dom)
+   context={'risposte':risp, 'testo_domanda':testo_domanda}
+   return render(request,"festival/report.html",context)

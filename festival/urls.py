@@ -8,5 +8,5 @@ urlpatterns = [
       path('elenco',views.elenco,name="elenco"),
       path('inserimento',views.inserimento,name="inserimento"),
       path('dettaglio/<int:id>',views.dettaglio,name="dettaglio"),
-
+      path('report/<int:num_dom>',views.report,name="report"),
 ]
