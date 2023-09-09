@@ -3,11 +3,11 @@
 {%block head %}
 <style>
     h2 {text-align:center; margin: auto;}
-    #container {width:80%; margin:auto; text-align:center}
+    #container {width:95%; margin:auto; text-align:center}
    
-    #domande {width: 75%; margin: auto; background-color: blanchedalmond;}
-    .risposte {width:400px; height: 75px;}
-    .tabella {text-align: left; float: left; margin-right: 25px; background-color: rgb(117, 211, 117); padding:5px;}
+    #domande {width: 95%; margin: auto; background-color: blanchedalmond;}
+    .risposte {width:350px; height: 75px;}
+    .tabella {width: 350px;text-align: left; float: left; margin-right: 25px; background-color: rgb(117, 211, 117); padding:5px;}
 </style>
 {%endblock%}
 
@@ -42,6 +42,7 @@
               {%for dom in questions %}
               <tr>
                   <td> {{forloop.counter}}: {{dom.testo}}</td>
+		  <tr>
                   <td>
                   <textarea class="risposte" name="risposta-{{forloop.counter}}"></textarea>  
                   </td>
