@@ -18,6 +18,6 @@ urlpatterns = [
       path('add_contatto',views.add_contatto,name="add_contatto"),
       path('statistica',views.statistica,name="statistica"),
       path('dettaglio_stat/<str:azienda>',views.dettaglio_stat,name="dettaglio_stat"),
-      path('importa/<str:model>',views.importa,name="importa"),
+      # path('importa/<str:model>',views.importa,name="importa"),
 
 ]
