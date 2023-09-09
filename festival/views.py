@@ -4,7 +4,9 @@ from festival.models import *
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-import datetime
+from django.utils import timezone
+from datetime import datetime
+import pytz
 
 LUOGHI = [('0','Villa Reale'),('1', 'Villasanta'), ('2', 'Villa Mirabello')]
 
@@ -24,6 +26,7 @@ def dettaglio(request,id):
    quest = Questionari.objects.get(id=id)
    luogo = LUOGHI[quest.luogo][1]
    risposte = Risposte.objects.filter(questionario=quest)
+   risposte = sorted(risposte, key = lambda x: x.domanda.numero)
    context = {'questionario':quest,'risposte':risposte, 'luogo':luogo}
    return render(request,'festival/dettaglio.html',context)
 
@@ -57,7 +60,9 @@ def inserimento(request):
           risp.questionario_id = questionario.id
           risp.save()
 
-    now = datetime.datetime.now()
+   # now = timezone.now()
+    rome_timezone = pytz.timezone('Europe/Rome')
+    now = datetime.now(rome_timezone)
     adesso = now.strftime("%Y-%m-%d %H:%M:%S")
 
     context = {'adesso': adesso, 'questions':questions, 'luoghi':LUOGHI, 'luogo':str(luogo), 'intervistatore':intervistatore}

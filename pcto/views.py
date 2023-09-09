@@ -37,6 +37,8 @@ def tutor(request):
 
 @login_required
 def aziende(request):
+    if not request.user.is_staff:
+        return HttpResponse("utente non autorizzato ad accedere a questo elenco")
     elenco = Aziende.objects.all()
     numero_aziende = len(elenco)
     myfilter = AziendeFilter(request.GET,queryset=elenco)

@@ -29,7 +29,6 @@ class Risposte(models.Model):
     domanda = models.ForeignKey(Domande,on_delete=models.CASCADE)
     risposta = models.TextField(null=True,blank=True)
     questionario = models.ForeignKey(Questionari,on_delete=models.CASCADE)
-    valutaione = models.IntegerField(blank=True,null=True)
 
     def __str__(self):
         return (f"{self.questionario.id} {self.domanda} {self.risposta}")

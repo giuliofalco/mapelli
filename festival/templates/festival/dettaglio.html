@@ -2,8 +2,8 @@
 {%load static %}
 {%block head%}
 <style>
-    .black {color: black; font-size:1.5em} 
-    .risp  {font-size:1.5em}
+    .black {color: blue; font-size:1.5em} 
+    .risp  {font-size:1.22em}
     .risposta  {margin: 20px;}
 </style>
 {%endblock%}
@@ -15,19 +15,19 @@
         <hr>
     </div>
     <div id="risposte">
-        <div class="w3-container w3-blue risposta">
+        <div class="w3-container  risposta">
             <div class=black>1 {{risposte.0.domanda}}</div>
             <span class=risp>{{risposte.0.risposta}}</div>
        </div>
-       <div class="w3-container w3-gray risposta">
+       <div class="w3-container  risposta">
         <div  class=black> 2 {{risposte.1.domanda}}</div>
         <div class=risp> {{risposte.1.risposta}}</div>
        </div>
-       <div class="w3-container w3-green risposta">
+       <div class="w3-container  risposta">
         <div class=black> 3 {{risposte.2.domanda}}</div>
         <div class=risp> {{risposte.2.risposta}}</div>
        </div>
-       <div class="w3-container w3-yellow risposta">
+       <div class="w3-container  risposta">
         <div  class=black>4 {{risposte.3.domanda}}</div>
         <div class=risp>  {{risposte.3.risposta}}
        </div>
