@@ -14,7 +14,7 @@ class ContattiInline(admin.StackedInline):
 
 @admin.register(Aziende)
 class AziendeAdmin(admin.ModelAdmin):
-    list_display = ['ragione_sociale','sede_comune','sede_provincia']
+    list_display = ['ragione_sociale','comune','provincia']
     inlines = [ContattiInline, AbbinamentiInline]
 
 @admin.register(Tutor)

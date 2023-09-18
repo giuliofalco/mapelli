@@ -32,12 +32,14 @@ class Studenti(models.Model):
 class Aziende(models.Model):
     partita_iva = models.CharField(max_length=80,null=True,unique=True)
     ragione_sociale = models.CharField(max_length=200)
-    tutor_referente_azienda = models.CharField(max_length=200,null=True,blank=True)
-    sede_comune = models.CharField(max_length=200,null=True)
-    sede_provincia = models.CharField(max_length=20,null=True)
-    telefono = models.CharField(max_length=200,null=True,blank=True)
-    email = models.CharField(max_length=100,null=True,blank=True)
-    settore = models.CharField(max_length=200,null=True,blank=True)
+    indirizzo = models.CharField(max_length=200,null=True,blank=True)
+    comune = models.CharField(max_length=200,null=True)
+    provincia = models.CharField(max_length=20,null=True, blank=True)
+    cap = models.CharField(max_length=20,null=True,blank=True)
+    stato = models.CharField(max_length=20,null=True,blank=True)
+    codice_ateco =  models.CharField(max_length=20,null=True,blank=True)
+    data_convenzione = models.DateField(null=True,blank=True)
+    scadenza_convenzione = models.DateField(null=True,blank=True)
     stagisti = models.ManyToManyField(Studenti,through='Abbinamenti')
     
     def __str__(self):
