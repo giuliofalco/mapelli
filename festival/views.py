@@ -87,12 +87,28 @@ def autentica(request):
    else:
       return render(request,'login.html',{'msg':'Autenticazione Fallita', 'next':next} )
 
-def report(request):
-   # elenca un report raggruppando per domande
+def raggruppa_dati():
+   # raggruppa i dati dei questionari per ciascuna domanda e li restituisce al funz chiamante
    domande = Domande.objects.all()
    domande = sorted(domande,key=lambda x: x.numero)
    domande = domande[:4]
    risp = Risposte.objects.all()
    dati = [[dom, risp.filter(domanda=dom)] for dom in domande]
+
+   return dati
+
+import json
+
+def report(request):
+   # elenca un report raggruppando per domande
+   dati = raggruppa_dati()
    context={'dati':dati}
    return render(request,"festival/report.html",context)
+
+def download(request):
+   dati = raggruppa_dati()
+   dati_serializzati = [[item[0].testo, [r.risposta for r in item[1]]] for item in dati]
+   formatted_data = json.dumps(dati_serializzati, indent=4)
+   response = HttpResponse(formatted_data, content_type='text/plain')
+   response['Content-Disposition'] = 'attachment; filename="festival.json"'
+   return response
