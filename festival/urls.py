@@ -9,4 +9,5 @@ urlpatterns = [
       path('inserimento',views.inserimento,name="inserimento"),
       path('dettaglio/<int:id>',views.dettaglio,name="dettaglio"),
       path('report',views.report,name="report"),
+      path('download',views.download,name='download'),
 ]
