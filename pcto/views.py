@@ -37,6 +37,7 @@ def tutor(request):
 
 @login_required
 def aziende(request):
+    # elenco delle aziende
     if not request.user.is_staff:
         return HttpResponse("utente non autorizzato ad accedere a questo elenco")
     elenco = Aziende.objects.all()
