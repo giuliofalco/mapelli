@@ -268,7 +268,7 @@ def upload_csv_aziende(request):
                 return render(request,"errori_importazione.html",context)
            
         
-    return HttpResponse("<h3>Caricamento completato <a href='/'>Home</a>")   
+    return render(request,"errori_importazione.html",{})  
 
 def upload(request):
     # carica il template per l'uload

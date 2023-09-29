@@ -2,9 +2,11 @@
 
 {%block content %}
  <h2>Errori di importazione</h2>
-
- {%for err in errori %}
-    {{err}}<br>
- {%endfor%}
-
+   {% if errori %}
+      {%for err in errori %}
+         {{err}}<br>
+      {%endfor%}
+   {% else %}
+      <h3>Dati importati senza errori</h3>
+   {% endif %}
 {%endblock%}
