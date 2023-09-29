@@ -224,3 +224,52 @@ def dettaglio_stat(request,azienda):
         data.append(d['anno__count'])
     context = {'azienda': azienda,'dist': dist, 'labels':labels, 'data':data}
     return render(request,"abbinamenti_azienda.html",context)
+
+import csv
+from django.db import IntegrityError
+def upload_csv_aziende(request):
+    # carica dal file csv l'elenco aggiornato delle aziende
+
+    if request.method == 'POST':
+        file_csv = request.FILES['archivio'] 
+        file_content = file_csv.read().decode('utf-8').splitlines()
+        
+        reader = csv.DictReader(file_content,delimiter=';')
+        
+        aziende = Aziende.objects.all()
+        for az in aziende:
+            az.delete()
+
+        errori = []
+        for row in reader:
+               
+                azienda = Aziende(
+                    partita_iva = row['PARTITA_IVA'],
+                    ragione_sociale =row['RAGIONE_SOCIALE'],
+                    indirizzo = row['INDIRIZZO'],
+                    comune = row['COMUNE'],
+                    provincia = row['PROVINCIA'],
+                    cap = row['CAP'],
+                    stato = row['STATO'],
+                    codice_ateco = row['CODICE_ATECO'],
+                   
+                )
+                try:
+                   azienda.save()
+                except IntegrityError as e:
+                   errori.append(f"errore in {row['RAGIONE_SOCIALE']} {e}")
+                except Exception as e:
+                    errori.append(f"errore sconosciuto in {row['RAGIONE_SOCIALE']} {e}")
+                    
+
+
+        if errori:
+                context = {'errori':errori}
+                return render(request,"errori_importazione.html",context)
+           
+        
+    return HttpResponse("<h3>Caricamento completato <a href='/'>Home</a>")   
+
+def upload(request):
+    # carica il template per l'uload
+    return render(request,"upload.html") 

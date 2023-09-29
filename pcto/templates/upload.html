@@ -1,0 +1,44 @@
+{%extends "base.html" %}
+{% load static %}
+
+{%block head %}
+
+<script>
+    function carica(nome_archivio) {
+        f = document.getElementById('archivio').value;
+        if (!f) {
+            alert('specifica prima il file da caricare');
+            return;
+        }
+        risp = confirm('vuoi sostituire '+ nome_archivio + ' con i nuovi dati ?')
+        if (!risp)
+           return;
+        if (nome_archivio == 'aziende_csv') {
+           url = "/pcto/upload_csv_aziende";  
+        }
+        myform = document.getElementById('myform')
+        myform.action = url
+        myform.submit();
+        return;
+    }    
+</script>
+
+{%endblock%}
+
+{%block content %}
+
+<div class="w3-container">
+    <h1>Upload Page</h1>
+    <p>Seguire l'ordine indicato nel caricamento archivi. Scarica una copia prima di sostituirli. </p>
+    <form method="POST" enctype="multipart/form-data" id="myform" > 
+        {% csrf_token %}
+
+        File: <input type="file" name="archivio" id="archivio">
+        <p>
+        <ul class="w3-ul">
+            <li><a href="javascript:carica('aziende_csv')"> CSV Aziende </a></li>
+        </ul>
+    </form>
+</div>
+
+{%endblock%}

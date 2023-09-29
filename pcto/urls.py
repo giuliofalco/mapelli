@@ -18,6 +18,8 @@ urlpatterns = [
       path('add_contatto',views.add_contatto,name="add_contatto"),
       path('statistica',views.statistica,name="statistica"),
       path('dettaglio_stat/<str:azienda>',views.dettaglio_stat,name="dettaglio_stat"),
+      path('upload',views.upload,name='upload'),
+      path('upload_csv_aziende',views.upload_csv_aziende,name='upload_csv_aziende'),
       # path('importa/<str:model>',views.importa,name="importa"),
 
 ]

@@ -1,0 +1,10 @@
+{%extends "base.html" %}
+
+{%block content %}
+ <h2>Errori di importazione</h2>
+
+ {%for err in errori %}
+    {{err}}<br>
+ {%endfor%}
+
+{%endblock%}
