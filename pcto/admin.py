@@ -25,3 +25,7 @@ class TutorAdmin(admin.ModelAdmin):
 @admin.register(Storico)
 class StoricoAdmin(admin.ModelAdmin):
     list_display = ['anno','ragione_sociale','classe', 'cognome','nome']
+
+@admin.register(Contatti)
+class ContattiAdmin(admin.ModelAdmin):
+    list_display = ['data','azienda','tutor','note']
