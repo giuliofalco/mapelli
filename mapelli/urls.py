@@ -22,4 +22,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='pcto/', permanent=False)),
     path('pcto/',include('pcto.urls')),
     path('festival/',include('festival.urls')),
+    path('orientamento/',include('orientamento.urls')),
 ]
