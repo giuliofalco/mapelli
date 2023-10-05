@@ -1,0 +1,39 @@
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+            #box {background: lightblue; padding: 15px; width: 55%; margin: auto;}
+            h2 {color : blue; text-align: center;}
+            h3 {color: #c00;}
+            #invio {text-align: center; height: 40px;}
+            #msg  {color:#c00; text-align: center; margin-top: 10px;}
+            table {width: 50%; margin:auto;}
+      </style>
+   </head>
+    
+   <body>
+       
+      <div id=box>
+         <h2>Orientamento - Login</h2>
+         <form method="post" action="{% url 'orientamento:autentica' %}">
+            {% csrf_token %}
+            <input type="hidden" name="next" value={{next}}>
+            <table>
+               <tr>
+                  <td>Utente: <td><input type=text name="utente">
+               <tr>
+                  <td>Password: <td> <input type=password name="password"> 
+               <tr>
+                  <td id=invio colspan=2>
+                     <input type=submit value="Invia"> 
+                     <input type=reset value="Reset">
+                                        
+            </table>
+            <div id=msg> {{msg}} </div>
+            <center>
+            <a href={% url 'orientamento:index' %}>ORIENTAMENTO</a>
+            </center>
+         </form>
+      </box>
+    </body>
+</html>
