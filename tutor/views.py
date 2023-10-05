@@ -37,3 +37,10 @@ def logout_view(request):
     logout(request)
     # Redirect to a success page.
     return HttpResponseRedirect("/pcto/tutor")
+
+def upload(request):
+    return render(request,"tutor/upload.html",{})
+
+def upload_csv_proposte(request):
+   # carica il csv delle proposte
+   return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/pcto/tutor'>Torna alla hoem page</a>"))
