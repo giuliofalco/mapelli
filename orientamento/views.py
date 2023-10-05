@@ -10,7 +10,7 @@ from django.contrib.auth import logout
 # Create your views here.
 def index(request):
    # return HttpResponse("<h1>Orientamento</h1>")
-   return render(request,"index.html",{})
+   return render(request,"orientamento/index.html",{})
 
 def mioLogin(request):
    # manda alla finestra di autenticazione, per chiedere username e password
