@@ -15,7 +15,7 @@
        
       <div id=box>
          <h2>Orientamento - Login</h2>
-         <form method="post" action="{% url 'orientamento:autentica' %}">
+         <form method="post" action="{% url 'tutor:autentica' %}">
             {% csrf_token %}
             <input type="hidden" name="next" value={{next}}>
             <table>
@@ -31,7 +31,7 @@
             </table>
             <div id=msg> {{msg}} </div>
             <center>
-            <a href={% url 'orientamento:index' %}>ORIENTAMENTO</a>
+            <a href={% url 'tutor:index' %}>ORIENTAMENTO</a>
             </center>
          </form>
       </box>
