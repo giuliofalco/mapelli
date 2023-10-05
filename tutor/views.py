@@ -36,4 +36,4 @@ def logout_view(request):
 
     logout(request)
     # Redirect to a success page.
-    return HttpResponseRedirect("/orientamento/")
+    return HttpResponseRedirect("/tutor/")
