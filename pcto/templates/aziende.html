@@ -56,21 +56,21 @@
        
               <form method="get">
                      Azienda: {{myfilter.form.ragione_sociale}}
-                     Comune: {{myfilter.form.sede_comune}}
-                     Provincia: {{myfilter.form.sede_provincia}}
-                     Settore: {{myfilter.form.settore}}
+                     Comune: {{myfilter.form.comune}}
+                     Provincia: {{myfilter.form.provincia}}
+                     Codice Ateco: {{myfilter.form.codice_ateco}}
                      <input type="submit" value="cerca">
               </form>
            
               <span id="titolo">Elenco Aziende</span> Pagina {{numpag}} di {{totpagine}} ({{numero_aziende}} aziende)
               <table class="w3-table-all w3-card-4">
-                      <th>Ragione Sociale <th> Comune <th> Provincia <th> Settore              
+                      <th>Ragione Sociale <th> Comune <th> Provincia <th> Codice Ateco             
                       {%for nome in object_list %}
                         <tr>
                         <td class=ragione_sociale onClick=dettaglio("{{nome.partita_iva}}")>{{nome.ragione_sociale}} 
-                        <td class=comune>{{nome.sede_comune}} 
-                        <td class=provincia> {{nome.sede_provincia}}  
-                        <td class=settore> {{nome.settore}}          
+                        <td class=comune>{{nome.comune}} 
+                        <td class=provincia> {{nome.provincia}}  
+                        <td class=settore> {{nome.codice_ateco}}          
                       {%endfor %}
               </table>
   
