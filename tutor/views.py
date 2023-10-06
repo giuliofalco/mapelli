@@ -45,6 +45,14 @@ def upload_csv_proposte(request):
    # carica il csv delle proposte
    return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/pcto/tutor'>Torna alla hoem page</a>"))
 
+def proposte(request):
+    # elenco delle proposte
+
+   proposte = Proposte.objects.all()
+   context = {'proposte':proposte}
+
+   return render(request,"tutor/proposte.html",context)
+
 import csv
 from django.db import IntegrityError
 def upload_csv_proposte(request):
@@ -54,7 +62,7 @@ def upload_csv_proposte(request):
          file_csv = request.FILES['archivio'] 
          file_content = file_csv.read().decode('utf-8').splitlines()
         
-         reader = csv.DictReader(file_content,delimiter=',')
+         reader = csv.DictReader(file_content,delimiter=';')
         
          # aziende = Aziende.objects.all()
          #for az in aziende:
@@ -66,13 +74,13 @@ def upload_csv_proposte(request):
                proposta = Proposte (
                     nome_progetto = row['nome_progetto'],
                     disciplina =row['disciplina'],
-                    max_alunni = row['max_alunni'],
+                    # max_alunni = row['max_alunni'],
                     classi_consigliate = row['classi'],
                     ente = row['ente'],
                     referente_esterno = row['referente_esterno'],
                     email_ref_esterno = row['email_ref_esterno'],
                     tel_ref_esterno = row['tel_ref_esterno'],
-                    num_ore = int(row['num_ore']),
+                    # num_ore = int(row['num_ore']),
                     data_inizio = row['data_inizio'],
                     data_fine = row['data_fine'],
                )
@@ -85,6 +93,6 @@ def upload_csv_proposte(request):
                     
          if errori:
                 context = {'errori':errori}
-                return render(request,"errori_importazione.html",context)
+                return render(request,"tutor/errori_importazione.html",context)
            
-   return render(request,"errori_importazione.html",{})  
+   return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori

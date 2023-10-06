@@ -44,22 +44,22 @@ class Studenti(models.Model):
 
 class Proposte (models.Model):
     
-    nome_progetto = models.CharField(max_length=100)
+    nome_progetto = models.CharField(max_length=250)
     disciplina =  models.CharField(max_length=100, null=True, blank=True)
-    tipologia = models.ForeignKey(Tipologie_proposte,on_delete=models.CASCADE)
-    indirizzo = models.ForeignKey(Indirizzi,on_delete=models.CASCADE)
+    tipologia = models.ForeignKey(Tipologie_proposte,on_delete=models.CASCADE,null=True, blank=True)
+    indirizzo = models.ForeignKey(Indirizzi,on_delete=models.CASCADE,null=True, blank=True)
     max_alunni = models.IntegerField(null=True, blank=True)
     classi_consigliate = models.CharField(max_length=100,null=True,blank=True)
-    ente = models.CharField(max_length=100)
-    tipo_ente = models.ForeignKey(Tipologie_ente,on_delete=models.CASCADE)
-    referente_esterno = models.CharField(max_length=100)
-    email_ref_esterno = models.CharField(max_length=50)
-    tel_ref_esterno = models.CharField(max_length=50)
-    num_ore = models.IntegerField
-    valido_pcto = models.BooleanField
+    ente = models.CharField(max_length=100,null=True, blank=True)
+    tipo_ente = models.ForeignKey(Tipologie_ente,on_delete=models.CASCADE, null=True, blank=True)
+    referente_esterno = models.CharField(max_length=100, null=True, blank=True)
+    email_ref_esterno = models.CharField(max_length=50, null=True, blank=True)
+    tel_ref_esterno = models.CharField(max_length=50,null=True, blank=True)
+    num_ore = models.IntegerField(null=True, blank=True)
+    valido_pcto = models.BooleanField (null=True, blank=True)
     data_inizio = models.CharField(max_length=20,null = True, blank=True)
     data_fine = models.CharField(max_length=20,null = True, blank=True)
-    descrizione = models.TextField
+    descrizione = models.TextField(null=True, blank=True)
 
     def __str__(self):
        return(self.nome_progetto)

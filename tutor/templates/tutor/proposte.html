@@ -1,0 +1,33 @@
+{%extends 'tutor/base.html' %}
+{%load static %}
+{%block head%}
+
+<style>
+    h2 {text-align: center; color:blue}
+</style>
+
+{%endblock%}
+
+
+{%block content %}
+
+<h2>Elenco Proposte</h2>
+    <div class="w3-container" style="width: 90%; margin:auto;">
+        <table class="w3-table-all w3-card-4">
+            <th>Nome Progetto</th>
+            <th>Ente</th>
+            <th>Data Inizio</th>
+            <th>Data Fine</th>
+            <th>Guarda</th>
+            {%for prop in proposte %}
+            <tr>
+                <td>  {{prop.nome_progetto}}</td>
+                <td>  {{prop.ente}}</td>
+                <td>  {{prop.data_inizio}}</td>
+                <td>  {{prop.data_fine}}</td>
+                <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+{%endblock%}

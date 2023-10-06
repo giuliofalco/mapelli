@@ -10,5 +10,6 @@ urlpatterns = [
       path('autentica',views.autentica,name='autentica'),
       path('upload',views.upload,name='upload'),
       path('upload_csv_proposte',views.upload_csv_proposte,name='upload_csv_proposte'),
+      path('proposte',views.proposte,name='proposte'),
 
 ]
