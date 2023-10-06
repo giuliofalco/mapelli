@@ -39,7 +39,7 @@ def logout_view(request):
     return HttpResponseRedirect("/pcto/tutor")
 
 def upload(request):
-    return render(request,"tutor/upload.html",{})
+    return render(request,"/pcto/tutor/upload.html",{})
 
 def upload_csv_proposte(request):
    # carica il csv delle proposte
@@ -54,7 +54,7 @@ def upload_csv_proposte(request):
          file_csv = request.FILES['archivio'] 
          file_content = file_csv.read().decode('utf-8').splitlines()
         
-         reader = csv.DictReader(file_content,delimiter=';')
+         reader = csv.DictReader(file_content,delimiter=',')
         
          # aziende = Aziende.objects.all()
          #for az in aziende:
@@ -67,12 +67,12 @@ def upload_csv_proposte(request):
                     nome_progetto = row['nome_progetto'],
                     disciplina =row['disciplina'],
                     max_alunni = row['max_alunni'],
-                    classi = row['classi'],
+                    classi_consigliate = row['classi'],
                     ente = row['ente'],
                     referente_esterno = row['referente_esterno'],
-                    email_referente_esterno = row['email_referente_esterno'],
-                    tel_referente_esterno = row['tel_referente_esterno'],
-                    num_ore = row['num_ore'],
+                    email_ref_esterno = row['email_ref_esterno'],
+                    tel_ref_esterno = row['tel_ref_esterno'],
+                    num_ore = int(row['num_ore']),
                     data_inizio = row['data_inizio'],
                     data_fine = row['data_fine'],
                )
