@@ -16,6 +16,9 @@
         if (nome_archivio == 'proposte_csv') {
            url = "upload_csv_proposte";  
         }
+        if (nome_archivio == 'tutor_csv') {
+           url = "upload_csv_tutor";  
+        }
         myform = document.getElementById('myform')
         myform.action = url
         myform.submit();
@@ -37,6 +40,7 @@
         <p>
         <ul class="w3-ul">
             <li><a href="javascript:carica('proposte_csv')"> CSV Proposte </a></li>
+            <li><a href="javascript:carica('tutor_csv')"> CSV Tutor </a></li>
         </ul>
     </form>
 </div>

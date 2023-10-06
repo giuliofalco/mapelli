@@ -27,6 +27,9 @@ class Classi (models.Model):
 
    def __str__(self):
        return(self.classe )
+   
+   class meta:
+        ordering = ['indirizzo','classe']
 
 class Studenti(models.Model):
 
@@ -41,6 +44,9 @@ class Studenti(models.Model):
     def corso (self):
         # restituisce la sigla del corso
         return self.classe[2:]
+    
+    class meta:
+        ordering = ['cognome','nome']
 
 class Proposte (models.Model):
     
@@ -64,4 +70,13 @@ class Proposte (models.Model):
     def __str__(self):
        return(self.nome_progetto)
  
+class Tutor (models.Model):
+    cognome = models.CharField(max_length=80)
+    nome    = models.CharField(max_length=80,null=True, blank=True)
+    classi = models.ManyToManyField(Classi,null=True, blank=True)
 
+    def __str__(self):
+       return(f"{self.cognome} {self.nome}")
+    
+    class Meta:
+        ordering = ['cognome','nome']

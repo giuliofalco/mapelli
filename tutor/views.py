@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth import logout
+import csv
+from django.db import IntegrityError
 
 
 # Create your views here.
@@ -53,8 +55,12 @@ def proposte(request):
 
    return render(request,"tutor/proposte.html",context)
 
-import csv
-from django.db import IntegrityError
+def elenco_tutor(request):
+    
+   tutor = Tutor.objects.all()
+   context = {'tutor':tutor}
+   return render(request,"tutor/tutor.html",context)
+
 def upload_csv_proposte(request):
     # carica dal file csv l'elenco aggiornato delle aziende
 
@@ -95,4 +101,20 @@ def upload_csv_proposte(request):
                 context = {'errori':errori}
                 return render(request,"tutor/errori_importazione.html",context)
            
+   return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori
+
+def upload_csv_tutor(request):
+    # carica dal csv i nomi dei tutor
+
+   if request.method == 'POST':
+        
+      file_csv = request.FILES['archivio'] 
+      file_content = file_csv.read().decode('utf-8').splitlines()
+      reader = csv.DictReader(file_content,delimiter=';')
+      for row in reader:
+         tutor = Tutor (
+                  nome = row['nome'],
+                  cognome = row['cognome'],
+               )
+         tutor.save()
    return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori
