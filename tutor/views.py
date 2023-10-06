@@ -39,7 +39,7 @@ def logout_view(request):
     return HttpResponseRedirect("/pcto/tutor")
 
 def upload(request):
-    return render(request,"/tutor/upload.html",{})
+    return render(request,"tutor/upload.html",{})
 
 def upload_csv_proposte(request):
    # carica il csv delle proposte
