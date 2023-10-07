@@ -15,6 +15,7 @@ urlpatterns = [
       path('proposte',views.proposte,name='proposte'),
       path('elenco_tutor',views.elenco_tutor,name='elenco_tutor'),
       path('elenco_classi',views.elenco_classi,name='elenco_classi'),
+      path('elenco_studenti/<str:classe>',views.elenco_studenti,name='elenco_studenti'),
       path('completa_classi',views.completa_classi,name='completa_classi'),
 
 ]

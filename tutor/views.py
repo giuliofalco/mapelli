@@ -68,6 +68,14 @@ def elenco_classi(request):
    context = {'dati':dati}
    return render(request,"tutor/classi.html",context)
 
+def elenco_studenti(request,classe):
+   objclass = Classi.objects.get(classe=classe)
+   studenti = Studenti.objects.filter(classe=objclass)
+   context = {'classe':classe, 'studenti':studenti}
+   return render(request,"tutor/studenti.html",context)
+
+### UPLOAD - DOWNLOAD - ARCHIVI
+
 def upload_csv_proposte(request):
     # carica dal file csv l'elenco aggiornato delle aziende
 
