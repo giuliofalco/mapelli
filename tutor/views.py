@@ -63,7 +63,7 @@ def elenco_tutor(request):
 
 def elenco_classi(request):
    classi = Classi.objects.all()
-   indirizzi = Indirizzi.objects.all()
+   indirizzi = Indirizzi.objects.all().order_by('classe')
    dati = [[corso.denominazione,classi.filter(indirizzo = corso)] for corso in indirizzi]
    context = {'dati':dati}
    return render(request,"tutor/classi.html",context)
