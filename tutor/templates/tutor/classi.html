@@ -17,11 +17,12 @@
         {%for indirizzo in dati %}
             <h3>{{indirizzo.0}}</h3>
             <table class="w3-table-all w3-card-4">
-                <th>Classe</th><th>Num. Studenti</th><th>Guarda</th>
+                <th>Classe</th><th>Num. Studenti</th><th>Docenti</th><th>Guarda</th>
                 {%for classe in indirizzo.1 %}
                 <tr>
                     <td>  {{classe.classe}}</td>
                     <td>  {{classe.num_studenti}}</td>
+                    <td>  {{classe.docenti_coinvolti}}</td>
                     <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
                 </tr>
                 {%endfor%}
