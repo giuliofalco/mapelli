@@ -63,7 +63,9 @@ def elenco_tutor(request):
 
 def elenco_classi(request):
    classi = Classi.objects.all()
-   context = {'classi':classi}
+   indirizzi = Indirizzi.objects.all()
+   dati = [[corso.denominazione,classi.filter(indirizzo = corso)] for corso in indirizzi]
+   context = {'dati':dati}
    return render(request,"tutor/classi.html",context)
 
 def upload_csv_proposte(request):
