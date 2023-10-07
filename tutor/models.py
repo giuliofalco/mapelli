@@ -25,6 +25,7 @@ class Classi (models.Model):
     classe = models.CharField(max_length=30)
     num_studenti = models.IntegerField(blank=True,null=True)
     indirizzo = models.ForeignKey(Indirizzi, on_delete=models.CASCADE,blank=True,null=True)
+    docenti_coinvolti = models.CharField(max_length=200,null=True,blank=True) 
 
     def __str__(self):
        return(self.classe )
