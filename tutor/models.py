@@ -34,7 +34,7 @@ class Classi (models.Model):
         return self.classe[2:]
     
     class meta:
-        ordering = ['indirizzo','classe']
+        ordering = ['classe']
 
 class Studenti(models.Model):
 
