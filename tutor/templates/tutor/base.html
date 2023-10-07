@@ -6,10 +6,10 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
             #logo {width:350px; float:left;}
-            #logo img {width: 115px;; margin-left:30px;}
+            #logo img {width: 90px;; margin-left:30px;}
             #menu {margin-top: 10px;}
-            #sessione {margin-left: 40px;margin-top: 100px;}
-            #intestazione h2 {color:brown; margin-left: 20px;}
+            #sessione {margin-left: 40px;margin-top: 80px;}
+            #intestazione h2 {color:brown; margin-left: 400px; margin-top:60px;}
         </style>
         {% block head %}
           
@@ -21,7 +21,7 @@
         {% block testata %}
         <div class="w3-panel" id="intestazione">
             <div id="logo">
-                <h3>ITCG A. Mapelli - A.S. 2023-24</h3>
+                <h4>ITCG A. Mapelli - A.S. 2023-24</h4>
                 <img id="logo" src={% static "pcto/logo.jpeg" %}>
                 <div id=sessione>Sessione: {{user}}</div> 
             </div>
