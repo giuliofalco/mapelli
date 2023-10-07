@@ -1,0 +1,838 @@
+[
+{
+    "model": "tutor.tipologie_ente",
+    "pk": 1,
+    "fields": {
+        "denominazione": "Università"
+    }
+},
+{
+    "model": "tutor.tipologie_ente",
+    "pk": 2,
+    "fields": {
+        "denominazione": "Ente Pubblico"
+    }
+},
+{
+    "model": "tutor.tipologie_ente",
+    "pk": 3,
+    "fields": {
+        "denominazione": "Società"
+    }
+},
+{
+    "model": "tutor.tipologie_ente",
+    "pk": 4,
+    "fields": {
+        "denominazione": "Professionista"
+    }
+},
+{
+    "model": "tutor.tipologie_ente",
+    "pk": 5,
+    "fields": {
+        "denominazione": "Scuola"
+    }
+},
+{
+    "model": "tutor.indirizzi",
+    "pk": 1,
+    "fields": {
+        "sigla": "SI",
+        "denominazione": "Sistemi Informativi Aziendali"
+    }
+},
+{
+    "model": "tutor.indirizzi",
+    "pk": 2,
+    "fields": {
+        "sigla": "LS",
+        "denominazione": "Liceo Scienze Apllicate"
+    }
+},
+{
+    "model": "tutor.indirizzi",
+    "pk": 3,
+    "fields": {
+        "sigla": "TU",
+        "denominazione": "Turistico"
+    }
+},
+{
+    "model": "tutor.indirizzi",
+    "pk": 4,
+    "fields": {
+        "sigla": "RI",
+        "denominazione": "Relazioni Internazionali"
+    }
+},
+{
+    "model": "tutor.indirizzi",
+    "pk": 5,
+    "fields": {
+        "sigla": "AG",
+        "denominazione": "Agro Alimentare"
+    }
+},
+{
+    "model": "tutor.indirizzi",
+    "pk": 6,
+    "fields": {
+        "sigla": "AF",
+        "denominazione": "Affari Finanza e Marketing"
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 103,
+    "fields": {
+        "classe": "4BSI",
+        "num_studenti": 20,
+        "indirizzo": 1
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 104,
+    "fields": {
+        "classe": "3ALS",
+        "num_studenti": 17,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 105,
+    "fields": {
+        "classe": "4CLS",
+        "num_studenti": 22,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 106,
+    "fields": {
+        "classe": "4ETU",
+        "num_studenti": 21,
+        "indirizzo": 3
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 107,
+    "fields": {
+        "classe": "4CRI",
+        "num_studenti": 13,
+        "indirizzo": 4
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 108,
+    "fields": {
+        "classe": "5CRI",
+        "num_studenti": 24,
+        "indirizzo": 4
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 109,
+    "fields": {
+        "classe": "4BLS",
+        "num_studenti": 22,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 110,
+    "fields": {
+        "classe": "3BAG",
+        "num_studenti": 30,
+        "indirizzo": 5
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 111,
+    "fields": {
+        "classe": "4DAG",
+        "num_studenti": 20,
+        "indirizzo": 5
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 112,
+    "fields": {
+        "classe": "5BAG",
+        "num_studenti": 16,
+        "indirizzo": 5
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 113,
+    "fields": {
+        "classe": "5BLS",
+        "num_studenti": 25,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 114,
+    "fields": {
+        "classe": "4FTU",
+        "num_studenti": 18,
+        "indirizzo": 3
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 115,
+    "fields": {
+        "classe": "3BLS",
+        "num_studenti": 25,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 116,
+    "fields": {
+        "classe": "4ALS",
+        "num_studenti": 25,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 117,
+    "fields": {
+        "classe": "3FTU",
+        "num_studenti": 19,
+        "indirizzo": 3
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 118,
+    "fields": {
+        "classe": "4BAG",
+        "num_studenti": 15,
+        "indirizzo": 5
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 119,
+    "fields": {
+        "classe": "5BSI",
+        "num_studenti": 13,
+        "indirizzo": 1
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 120,
+    "fields": {
+        "classe": "5ALS",
+        "num_studenti": 17,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 121,
+    "fields": {
+        "classe": "3CLS",
+        "num_studenti": 12,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 122,
+    "fields": {
+        "classe": "5ETU",
+        "num_studenti": 20,
+        "indirizzo": 3
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 123,
+    "fields": {
+        "classe": "3CRI",
+        "num_studenti": 14,
+        "indirizzo": 4
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 124,
+    "fields": {
+        "classe": "3CRI",
+        "num_studenti": 10,
+        "indirizzo": 4
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 125,
+    "fields": {
+        "classe": "5AAF",
+        "num_studenti": 9,
+        "indirizzo": 6
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 126,
+    "fields": {
+        "classe": "5FTU",
+        "num_studenti": 10,
+        "indirizzo": 3
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 127,
+    "fields": {
+        "classe": "5CLS",
+        "num_studenti": 24,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 128,
+    "fields": {
+        "classe": "5DAG",
+        "num_studenti": 13,
+        "indirizzo": 5
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 129,
+    "fields": {
+        "classe": "3BSI",
+        "num_studenti": 7,
+        "indirizzo": 1
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 130,
+    "fields": {
+        "classe": "4AAF",
+        "num_studenti": 14,
+        "indirizzo": 6
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 131,
+    "fields": {
+        "classe": "5AAF",
+        "num_studenti": 9,
+        "indirizzo": 6
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 132,
+    "fields": {
+        "classe": "3CLS",
+        "num_studenti": 10,
+        "indirizzo": 2
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 133,
+    "fields": {
+        "classe": "3AAF",
+        "num_studenti": 15,
+        "indirizzo": 6
+    }
+},
+{
+    "model": "tutor.classi",
+    "pk": 134,
+    "fields": {
+        "classe": "3ETU",
+        "num_studenti": 19,
+        "indirizzo": 3
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 57,
+    "fields": {
+        "nome_progetto": "Il Risorgimento italiano e la prima modernizzazione  nazionale: economia, società e politica a confronto",
+        "disciplina": "storia",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quinta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "Dott.ssa Chiara Mariani ",
+        "email_ref_esterno": "orientamentoPNRR@unimib.it",
+        "tel_ref_esterno": "02 6448 6491",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 58,
+    "fields": {
+        "nome_progetto": "L’età giolittiana e la seconda modernizzazione nazionale:",
+        "disciplina": "storia",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quinta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 59,
+    "fields": {
+        "nome_progetto": "Non è più uno scherzo se diventa molestia. Non è un più un divertimento se diventa reato",
+        "disciplina": "diritto",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "terza",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 60,
+    "fields": {
+        "nome_progetto": "Lo sport mette il turbo al rendimento scolastico - FOCUS NEUROSCIENZE",
+        "disciplina": "scienze motorie",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "terza",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 61,
+    "fields": {
+        "nome_progetto": "Organi tascabili. I progressi delle biotecnologie per ottenere mini‐organi in laboratorio",
+        "disciplina": "biotecnologia",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 62,
+    "fields": {
+        "nome_progetto": "Alla scoperta della biodiversità: conoscerla, proteggerla e valorizzarla",
+        "disciplina": "scienze motorie",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "aprile",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 63,
+    "fields": {
+        "nome_progetto": "Onde gravitazionali: ascoltare l’universo  anziché solo guardarlo",
+        "disciplina": "fisica",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quinta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 64,
+    "fields": {
+        "nome_progetto": "Limiti e rischi dell’intelligenza artificiale",
+        "disciplina": "informatica",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 65,
+    "fields": {
+        "nome_progetto": "Creiamo assieme i profumi della frutta: dalla preparazione chimica al riconoscimento olfattivo",
+        "disciplina": "chimica",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 66,
+    "fields": {
+        "nome_progetto": "50 sfumature del cavolo",
+        "disciplina": "chimica",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "da gennaio",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 67,
+    "fields": {
+        "nome_progetto": "So di non sapere.",
+        "disciplina": "filosofia ",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "Bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 68,
+    "fields": {
+        "nome_progetto": "METODO DI STUDIO - Vorrei fare l’università, ma ho paura di non farcela! Una mappa per imparare a imparare e potenziare le proprie abilità di studio",
+        "disciplina": "tutor",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 69,
+    "fields": {
+        "nome_progetto": "Dare senso al disorientamento  & costruire scelte volte al futuro",
+        "disciplina": "tutor",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "bicocca",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 70,
+    "fields": {
+        "nome_progetto": "RECUPERO DI MATERIA ED ENERGIA DAGLI SCARTI DELL’AGRO-INDUSTRIA",
+        "disciplina": "genio",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "politecnico",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.proposte",
+    "pk": 71,
+    "fields": {
+        "nome_progetto": "FORMARSI PER CRESCERE",
+        "disciplina": "tutor",
+        "tipologia": null,
+        "indirizzo": null,
+        "max_alunni": null,
+        "classi_consigliate": "quarta",
+        "ente": "iulm",
+        "tipo_ente": null,
+        "referente_esterno": "",
+        "email_ref_esterno": "",
+        "tel_ref_esterno": "",
+        "num_ore": null,
+        "valido_pcto": null,
+        "data_inizio": "",
+        "data_fine": "",
+        "descrizione": null
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 46,
+    "fields": {
+        "cognome": "FALCO",
+        "nome": "GIULIO",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 47,
+    "fields": {
+        "cognome": "PIAZZOLLA",
+        "nome": "SILVIA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 48,
+    "fields": {
+        "cognome": "BARBARIOL",
+        "nome": "GIADA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 49,
+    "fields": {
+        "cognome": "MIRENZI",
+        "nome": "EZIO",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 50,
+    "fields": {
+        "cognome": "MARIANI",
+        "nome": "DANIELE",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 51,
+    "fields": {
+        "cognome": "BRUNO",
+        "nome": "BARBARA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 52,
+    "fields": {
+        "cognome": "PRAINITO",
+        "nome": "FRANCESCA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 53,
+    "fields": {
+        "cognome": "ADAMO",
+        "nome": "LINDA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 54,
+    "fields": {
+        "cognome": "CANNAVACCIUOLO",
+        "nome": "FRANCESCO",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 55,
+    "fields": {
+        "cognome": "TIRANNO",
+        "nome": "MARCO",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 56,
+    "fields": {
+        "cognome": "DOLCE",
+        "nome": "LUISA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 57,
+    "fields": {
+        "cognome": "LORICA",
+        "nome": "FLAVIA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 58,
+    "fields": {
+        "cognome": "GUAZZONI",
+        "nome": "STEFANIA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 59,
+    "fields": {
+        "cognome": "MUSSI",
+        "nome": "DEBORA",
+        "classi": []
+    }
+},
+{
+    "model": "tutor.tutor",
+    "pk": 60,
+    "fields": {
+        "cognome": "TEBALDI",
+        "nome": "CRISTINA",
+        "classi": []
+    }
+}
+]
