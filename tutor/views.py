@@ -134,6 +134,35 @@ def upload_csv(request,tabella):
       
    return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori
 
+def upload_csv_studenti(request):
+
+   if request.method == 'POST':
+      file_csv = request.FILES['archivio'] 
+      file_content = file_csv.read().decode('utf-8').splitlines()
+      errori = []
+     
+      reader = csv.DictReader(file_content,delimiter=';')
+      errori = []
+      for row in reader:
+        
+         classe = row['classe']
+         try:
+            oggetto_classe = Classi.objects.get(classe=classe)
+            studente = Studenti (
+               cognome = row['cognome'],
+               nome = row['nome'],
+               classe = oggetto_classe
+            )
+            studente.save()
+         except Exception as e:
+            errori.append(f"errore in {classe} {e}")
+        
+      if errori:
+         context = {'errori':errori}
+         return render(request,"tutor/errori_importazione.html",context)
+      
+   return render(request,"tutor/errori_importazione.html",{})
+   
 def completa_classi(request):
     # inserisce nei record classi, l'indirizzo a cui appartiene
    classi = Classi.objects.all()

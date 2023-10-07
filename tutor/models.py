@@ -45,7 +45,7 @@ class Studenti(models.Model):
     classe = models.ForeignKey(Classi,on_delete=models.CASCADE)
 
     def __str__(self):
-       return(self.classe + " - " + self.cognome + " " + self.nome )
+       return(self.classe.classe + " - " + self.cognome + " " + self.nome )
 
     def corso (self):
         # restituisce la sigla del corso
