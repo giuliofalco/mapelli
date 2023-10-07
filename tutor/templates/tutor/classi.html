@@ -20,7 +20,7 @@
                 <th>Classe</th><th>Num. Studenti</th><th>Docenti</th><th>Guarda</th>
                 {%for classe in indirizzo.1 %}
                 <tr>
-                    <td> <a href="{%url 'tutor:elenco_studenti'{{classe.classe}} %}"> {{classe.classe}}</a></td>
+                    <td> <a href="elenco_studenti/{{classe.classe}}"> {{classe.classe}}</a></td>
                     <td>  {{classe.num_studenti}}</td>
                     <td>  {{classe.docenti_coinvolti}}</td>
                     <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
