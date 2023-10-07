@@ -15,20 +15,25 @@ class Tipologie_ente (models.Model):
        return(self.denominazione )
 
 class Indirizzi (models.Model):
-   denominazione = models.CharField(max_length=100)
+   sigla = models.CharField(max_length=100)
+   denominazione = models.CharField(max_length=100, blank=True,null=True)
 
    def __str__(self):
        return(self.denominazione )
 
 class Classi (models.Model):
-   classe = models.CharField(max_length=30)
-   num_studenti = models.IntegerField(blank=True,null=True)
-   indirizzo = models.ForeignKey(Indirizzi, on_delete=models.CASCADE)
+    classe = models.CharField(max_length=30)
+    num_studenti = models.IntegerField(blank=True,null=True)
+    indirizzo = models.ForeignKey(Indirizzi, on_delete=models.CASCADE,blank=True,null=True)
 
-   def __str__(self):
+    def __str__(self):
        return(self.classe )
    
-   class meta:
+    def corso (self):
+        # restituisce la sigla del corso
+        return self.classe[2:]
+    
+    class meta:
         ordering = ['indirizzo','classe']
 
 class Studenti(models.Model):

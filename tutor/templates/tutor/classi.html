@@ -1,0 +1,29 @@
+{%extends 'tutor/base.html' %}
+{%load static %}
+{%block head%}
+
+<style>
+    h2 {text-align: center; color:blue}
+</style>
+
+{%endblock%}
+
+
+{%block content %}
+
+<h2>Classi</h2>
+    <div class="w3-container" style="width: 50%; margin:auto;">
+        <table class="w3-table-all w3-card-4">
+            <th>Classe</th>
+            <th>Num. Studenti</th>
+            <th>Guarda</th>
+            {%for c in classi%}
+            <tr>
+                <td>  {{c.classe}}</td>
+                <td>  {{c.num_studenti}}</td>
+                <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+{%endblock%}

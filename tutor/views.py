@@ -61,6 +61,11 @@ def elenco_tutor(request):
    context = {'tutor':tutor}
    return render(request,"tutor/tutor.html",context)
 
+def elenco_classi(request):
+   classi = Classi.objects.all()
+   context = {'classi':classi}
+   return render(request,"tutor/classi.html",context)
+
 def upload_csv_proposte(request):
     # carica dal file csv l'elenco aggiornato delle aziende
 
@@ -103,18 +108,36 @@ def upload_csv_proposte(request):
            
    return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori
 
-def upload_csv_tutor(request):
-    # carica dal csv i nomi dei tutor
+def upload_csv(request,tabella):
+   # caricamento csv generico
+
+   diz = {'Classi': Classi, 'Tutor':Tutor}
 
    if request.method == 'POST':
-        
+
       file_csv = request.FILES['archivio'] 
       file_content = file_csv.read().decode('utf-8').splitlines()
       reader = csv.DictReader(file_content,delimiter=';')
+      header_fields = reader.fieldnames
+      errori = []
       for row in reader:
-         tutor = Tutor (
-                  nome = row['nome'],
-                  cognome = row['cognome'],
-               )
-         tutor.save()
+         record = diz[tabella](**row)
+         try: 
+            record.save()
+         except Exception as e:
+            errori.append(f"{e} in {record}")
+      if errori:
+         context = {'errori':errori}
+         return render(request,"tutor/errori_importazione.html",context)
+      
    return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori
+
+def completa_classi(request):
+    # inserisce nei record classi, l'indirizzo a cui appartiene
+   classi = Classi.objects.all()
+   for classe in classi:
+        sigla = classe.corso()
+        indirizzo = Indirizzi.objects.get(sigla=sigla)
+        classe.indirizzo = indirizzo
+        classe.save()
+   return(HttpResponse('fatto'))

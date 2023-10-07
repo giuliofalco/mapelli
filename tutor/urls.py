@@ -10,8 +10,10 @@ urlpatterns = [
       path('autentica',views.autentica,name='autentica'),
       path('upload',views.upload,name='upload'),
       path('upload_csv_proposte',views.upload_csv_proposte,name='upload_csv_proposte'),
-      path('upload_csv_tutor',views.upload_csv_tutor,name='upload_csv_tutor'),
+      path('upload_csv/<str:tabella>',views.upload_csv,name='upload_csv'),
       path('proposte',views.proposte,name='proposte'),
       path('elenco_tutor',views.elenco_tutor,name='elenco_tutor'),
+      path('elenco_classi',views.elenco_classi,name='elenco_classi'),
+      path('completa_classi',views.completa_classi,name='completa_classi'),
 
 ]
