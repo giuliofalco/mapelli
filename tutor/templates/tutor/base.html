@@ -9,7 +9,9 @@
             #logo img {width: 90px;; margin-left:30px;}
             #menu {margin-top: 10px;}
             #sessione {margin-left: 40px;margin-top: 80px;}
-            #intestazione h2 {color:brown; margin-left: 400px; margin-top:60px;}
+            #titolo { margin-top:60px;
+                     margin-left: 370px; width: 700px; text-align: center}
+            #titolo h2 {color:brown;}
         </style>
         {% block head %}
           
@@ -25,11 +27,12 @@
                 <img id="logo" src={% static "pcto/logo.jpeg" %}>
                 <div id=sessione>Sessione: {{user}}</div> 
             </div>
-            <h2>OFFICINA SOFTWARE - ORIENTAMENTO</h2>
-           
+            <div id="titolo">
+                 <h2>OFFICINA SOFTWARE - ORIENTAMENTO</h2> 
+            </div>
         </div>
 
-          <div class="w3-bar w3-show-large w3-hide-small w3-light-blue" id="menu">
+        <div class="w3-bar w3-show-large w3-hide-small w3-light-blue" id="menu">
             
             <a href="{% url 'tutor:index' %}" class="w3-bar-item w3-button ">Home</a>
             
