@@ -12,9 +12,9 @@
     </head>
     <body>
     
-        {%for tutor,studenti in assegnamenti.items %}
-            <h3>{{tutor}}</h3> 
-            {%for studente in studenti %}
+        {%for item in assegnamenti %}
+            <h3>{{item.0}}</h3> 
+            {%for studente in item.1 %}
                 {{forloop.counter}} {{studente}} <br>
             {%endfor%} 
         {%endfor%}

@@ -198,7 +198,8 @@ def intera_classe(classe):
    return len(lista) == 1
 
 def studenti_tutor():
-   # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è asseganta al tutor
+   # prepara i dati alla view completa_tutor. Lista con (cognome tutor,lista di studenti)
+
    classi = Classi.objects.all()
    # tutti i tutor che hanno assegnato una intera classe, con il tutor e la classe (anche ripetuti)
    tutor = [[classe.docenti_coinvolti,classe] for classe in classi if intera_classe(classe) ]
@@ -210,8 +211,9 @@ def studenti_tutor():
          diz[t[0]] += (list(studenti))
       else:
          diz[t[0]] = list(studenti) 
-                                 
-   return diz
+   lista = diz.items()
+   lista.sort()                              
+   return lista
   
 def completa_tutor(request):
    # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è assegnata al tutor
