@@ -226,7 +226,7 @@ def completa_tutor(request):
             tutor = Tutor.objects.get(cognome=ass[0])
             for stud in ass[1]:
                studente = Studenti.objects.get(id=stud.id)
-               studente.tutor = tutor.id
+               studente.tutor = tutor
                studente.save()
          except Exception as e:
                errori.append(f"\nin studente {studente} {e} assegnamento: {ass}\n")
