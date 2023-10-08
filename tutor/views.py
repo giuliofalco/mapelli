@@ -207,9 +207,9 @@ def completa_tutor(request):
    for t in tutor:
       studenti = Studenti.objects.filter(classe=t[1])
       if t[0] in diz:
-         diz[t[0]].append(studenti)
+         diz[t[0]].append(list(studenti))
       else:
-         diz[t[0]] = studenti 
+         diz[t[0]] = list(studenti) 
    context = {'tutor':tutor, 'assegnamenti': diz}                                       
    
    return render(request,"tutor/lista_tutor.html",context)
