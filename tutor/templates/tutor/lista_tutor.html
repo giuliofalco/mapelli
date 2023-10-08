@@ -1,4 +1,15 @@
 <html>
+    <head>
+        <script>
+            function procedi() {
+                risp = confirm("Aggiorni i tutor degli studenti mostrati ?");
+                if (risp) {
+                   url = "pcto/tutor/completa_tutor=?vai=ok";
+                   document.location = url;
+                }
+            }
+        </script>
+    </head>
     <body>
     
         {%for tutor,studenti in assegnamenti.items %}
@@ -8,7 +19,7 @@
             {%endfor%} 
         {%endfor%}
         <p>
-        Associa gli studenti ai rispettivi Tutor <button>Procedi</button> 
+        Associa gli studenti ai rispettivi Tutor <button onClick="procedi()">Procedi</button> 
 
     </body>
 </html>

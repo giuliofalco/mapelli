@@ -214,11 +214,24 @@ def studenti_tutor():
    return diz
   
 def completa_tutor(request):
-   # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è asseganta al tutor
+   # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è assegnata al tutor
    assegnamenti = studenti_tutor()
+   errori = []
    if request.GET: # se viene richiamata dal template
       # assegno il tutor agli studenti
-      return HttpResponseRedirect("index")
+      for ass in assegnamenti:
+         tutor = Tutor.objects.get(cognome=ass[0])
+         for stud in ass[1]:
+            try:
+               studente = Studenti.objects.get(id=stud.id)
+               studente.tutor = tutor
+            except Exception as e:
+               errori.append(f"in studente {studente} {e}")
+      if errori:
+         context = {'errori':errori}
+         return render(request,"tutor/errori_importazione.html",context)
+      else:       
+         return HttpResponseRedirect("index")
    else:           # richiama il template
       context = {'assegnamenti': assegnamenti}        
       return render(request,"tutor/lista_tutor.html",context)
