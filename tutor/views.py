@@ -239,7 +239,7 @@ def completa_tutor(request):
          context = {'errori':errori}
          return render(request,"tutor/errori_importazione.html",context)
       else:       
-         return HttpResponseRedirect("index")
+         return render(request,"tutor/errori_importazione.html",{})
    else:           # richiama il template
       context = {'assegnamenti': assegnamenti}        
       return render(request,"tutor/lista_tutor.html",context)
