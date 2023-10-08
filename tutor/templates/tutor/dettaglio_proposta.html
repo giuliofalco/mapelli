@@ -6,6 +6,7 @@
 <style>
     h2 {color: blue; brown; text-align: center}
     .label {font-size: 1em;  font-weight: bold;}
+    a {color: blue;}
     
 </style>
 
@@ -21,7 +22,7 @@
            <td> <span class=label>Nome progetto:</span> </td> <td>{{proposta.nome_progetto}}</td>
         </tr>
         <tr>
-           <td> <span class=label>Ente promotore: </span> </td>  <td> {{proposta.ente}} - url di riferimento:  <a href={{proposta.url}}>{{proposta.url}}</a> </td>
+           <td> <span class=label>Ente promotore: </span> </td>  <td> {{proposta.ente}} - url di riferimento:  <a href={{proposta.url}}>{{proposta.url|default:""}}</a> </td>
         </tr>
     </table>  
 </div>
