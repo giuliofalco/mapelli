@@ -4,11 +4,11 @@
             {{tut.0}} {{tut.1}} <br>
         {%endfor%}
         <h2>Assegnamenti</h2>
-        {{assegnamenti}}
-        {%for tut in assegnamenti %}
-            <h3>{{tut}}</h3> 
-            {% for studente in assegnamenti.tut %}
-               {{studente}} <br>
+       
+        {%for tutor in assegnamenti %}
+            <h3>{{tutor}}</h3> 
+            {% for studente in assegnamenti.tutor %}
+               {{studente.cognome}} {{studenti.nome}} <br>
             {%endfor%}
         {%endfor%}
 
