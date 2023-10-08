@@ -7,8 +7,15 @@
     h2 {color: blue; brown; text-align: center}
     .label {font-size: 1em;  font-weight: bold;}
     a {color: blue;}
+    .evidenziato {font-size:1.3em;  font-weight: bold; color: blue;}
     
 </style>
+
+<script>
+    function aggiungimi() {
+        alert('funzionalità non ancora implementata')
+    }
+</script>
 
 {%endblock%}
 
@@ -24,7 +31,17 @@
         <tr>
            <td> <span class=label>Ente promotore: </span> </td>  <td> {{proposta.ente}} - url di riferimento:  <a href={{proposta.url}}>{{proposta.url|default:""}}</a> </td>
         </tr>
+        <tr>
+            <td><span class=label>Date:</span></td><td><b>Inizio:</b> {{proposta.data_inizio}} - <b>Fine:</b> {{proposta.data_fine}}</td>
+        </tr>
+        <tr>
+            <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|default:""}}</td>
+        </tr>
     </table>  
+    <hr>
+    <span class=evidenziato>Referenti Interni:</span>
+    <button class="w3-button w3-blue" onClick="aggiungimi()"> Aggiungimi </button></button>
+    <hr>
 </div>
 
 {%endblock%}
