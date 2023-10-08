@@ -223,7 +223,7 @@ def completa_tutor(request):
       # assegno il tutor agli studenti
       for ass in assegnamenti:
          try:
-            tutor = Tutor.objects.get(cognome=ass[0])
+            tutor = Tutor.objects.get(cognome=ass[0].strip())
             for stud in ass[1]:
                studente = Studenti.objects.get(id=stud.id)
                studente.tutor = tutor
