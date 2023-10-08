@@ -74,6 +74,14 @@ def elenco_studenti(request,classe):
    context = {'classe':classe, 'studenti':studenti}
    return render(request,"tutor/studenti.html",context)
 
+def adesioni(request):
+    return HttpResponse('Funzionalità non ancora implementata')
+
+def dettaglio_proposta(request,prop):
+    proposta = Proposte.objects.get(id=prop) 
+    context = {'proposta':proposta}
+    return render(request,"tutor/dettaglio_proposta.html",context)
+
 ### UPLOAD - DOWNLOAD - ARCHIVI
 
 def upload_csv_proposte(request):
