@@ -3,5 +3,13 @@
         {%for tut in tutor %}
             {{tut.0}} {{tut.1}} <br>
         {%endfor%}
+        <h2>Assegnamenti</h2>
+        {%for tut in assegnamenti %}
+            <h3>{{tut}}</h3> 
+            {% for studente in assegnamenti.tut %}
+               {{studente}} <br>
+            {%endfor%}
+        {%endfor%}
+
     </body>
 </html>

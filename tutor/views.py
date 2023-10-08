@@ -200,6 +200,16 @@ def intera_classe(classe):
 def completa_tutor(request):
    # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è asseganta al tutor
    classi = Classi.objects.all()
+   # tutti i tutor che hanno assegnato una intera classe, con il tutor e la classe (anche ripetuti)
    tutor = [[classe.docenti_coinvolti,classe.classe] for classe in classi if intera_classe(classe) ]
-
-   return render(request,"tutor/lista_tutor.html",{'tutor':tutor})
+   # ad ogni tutor associo gli studentii dell'intera classe
+   diz = {}
+   for t in tutor:
+      studenti = Studenti.objects.filter(classe=t.classe)
+      if t[0] in diz:
+         diz[t[0]].append(studenti)
+      else:
+         diz[t[0]] = studenti 
+   context = {'tutor':tutor, 'assegnamenti': diz}                                       
+   
+   return render(request,"tutor/lista_tutor.html",context)
