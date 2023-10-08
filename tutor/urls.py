@@ -17,8 +17,8 @@ urlpatterns = [
       path('elenco_classi',views.elenco_classi,name='elenco_classi'),
       path('elenco_studenti/<str:classe>',views.elenco_studenti,name='elenco_studenti'),
       path('completa_classi',views.completa_classi,name='completa_classi'),
+      path('completa_tutor',views.completa_tutor,name='completa_tutor'),
       path('adesioni',views.adesioni,name='adesioni'),
-      path('dettaglio_proposta/<int:prop>',views.dettaglio_proposta,name='dettaglio_proposta')
-
-
+      path('dettaglio_proposta/<int:prop>',views.dettaglio_proposta,name='dettaglio_proposta'),
+      
 ]

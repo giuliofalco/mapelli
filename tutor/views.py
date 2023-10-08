@@ -178,7 +178,9 @@ def upload_csv_studenti(request):
          return render(request,"tutor/errori_importazione.html",context)
       
    return render(request,"tutor/errori_importazione.html",{})
-   
+
+### UTILITY UTILITA'
+#    
 def completa_classi(request):
     # inserisce nei record classi, l'indirizzo a cui appartiene
    classi = Classi.objects.all()
@@ -187,4 +189,17 @@ def completa_classi(request):
         indirizzo = Indirizzi.objects.get(sigla=sigla)
         classe.indirizzo = indirizzo
         classe.save()
-   return(HttpResponse('fatto'))
+   return(HttpResponse('Done'))
+
+def intera_classe(classe):
+    # restituisce True, se l'intera classe è stata assegnata ad un solo tutor
+   doc = classe.docenti_coinvolti
+   lista = doc.split()
+   return len(lista) == 1
+
+def completa_tutor(request):
+   # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è asseganta al tutor
+   classi = Classi.objects.all()
+   tutor = [classe.docenti_coinvolti for classe in classi if intera_classe(classe) ]
+   stringa = " ".join(tutor)
+   return(HttpResponse('Done '+ stringa))
