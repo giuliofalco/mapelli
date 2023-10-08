@@ -69,6 +69,8 @@ def elenco_classi(request):
    return render(request,"tutor/classi.html",context)
 
 def elenco_studenti(request,classe):
+   # elenco degli studenti di una specifia classe
+   
    objclass = Classi.objects.get(classe=classe)
    studenti = Studenti.objects.filter(classe=objclass)
    context = {'classe':classe, 'studenti':studenti}
