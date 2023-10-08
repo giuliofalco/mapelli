@@ -197,7 +197,7 @@ def intera_classe(classe):
    lista = doc.split()
    return len(lista) == 1
 
-def completa_tutor(request):
+def studenti_tutor(request):
    # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è asseganta al tutor
    classi = Classi.objects.all()
    # tutti i tutor che hanno assegnato una intera classe, con il tutor e la classe (anche ripetuti)
@@ -210,6 +210,15 @@ def completa_tutor(request):
          diz[t[0]] += (list(studenti))
       else:
          diz[t[0]] = list(studenti) 
-   context = {'tutor':tutor, 'assegnamenti': diz}                                       
-   
-   return render(request,"tutor/lista_tutor.html",context)
+                                 
+   return diz
+  
+def completa_tutor(request):
+   # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è asseganta al tutor
+   assegnamenti = studenti_tutor()
+   if request.GET: # se viene richiamata dal template
+      # assegno il tutor agli studenti
+      return HttpResponseRedirect("index")
+   else:           # richiama il template
+      context = {'assegnamenti': assegnamenti}        
+      return render(request,"tutor/lista_tutor.html",context)
