@@ -21,7 +21,7 @@
                     <td>  {{forloop.counter}}</td>
                     <td>  {{stud.cognome}}</td>
                     <td>  {{stud.nome}}</td>
-                    <td>  {{stud.tutor}}</td>
+                    <td>  {{stud.tutor|default:""}}</td>
                     <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
                 </tr>
                 {%endfor%}
