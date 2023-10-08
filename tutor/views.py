@@ -222,13 +222,13 @@ def completa_tutor(request):
    if request.GET: # se viene richiamata dal template
       # assegno il tutor agli studenti
       for ass in assegnamenti:
-         tutor = Tutor.objects.get(cognome=ass[0])
-         for stud in ass[1]:
-            try:
+         try:
+            tutor = Tutor.objects.get(cognome=ass[0])
+            for stud in ass[1]:
                studente = Studenti.objects.get(id=stud.id)
                studente.tutor = tutor
-            except Exception as e:
-               errori.append(f"in studente {studente} {e}")
+         except Exception as e:
+               errori.append(f"in studente {studente} {e} assegnamento: {ass}")
       if errori:
          context = {'errori':errori}
          return render(request,"tutor/errori_importazione.html",context)
