@@ -5,9 +5,9 @@
         {%endfor%}
         <h2>Assegnamenti</h2>
         {{assegnamenti}}
-        {%for tutor in assegnamenti %}
+        {%for tutor,studenti in assegnamenti.items %}
             <h3>{{tutor}}</h3> 
-              assegnamenti: {{assegnamenti.tutor}}
+                {{studenti}}
            
         {%endfor%}
 
