@@ -228,7 +228,7 @@ def completa_tutor(request):
                studente = Studenti.objects.get(id=stud.id)
                studente.tutor = tutor
          except Exception as e:
-               errori.append(f"in studente {studente} {e} assegnamento: {ass}")
+               errori.append(f"\nin studente {studente} {e} assegnamento: {ass}\n")
       if errori:
          context = {'errori':errori}
          return render(request,"tutor/errori_importazione.html",context)
