@@ -212,7 +212,7 @@ def studenti_tutor():
       else:
          diz[t[0]] = list(studenti) 
    lista = diz.items()
-   lista.sort()                              
+   lista = sorted(lista,key = lambda x: x[0])                             
    return lista
   
 def completa_tutor(request):
