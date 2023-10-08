@@ -197,7 +197,7 @@ def intera_classe(classe):
    lista = doc.split()
    return len(lista) == 1
 
-def studenti_tutor(request):
+def studenti_tutor():
    # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è asseganta al tutor
    classi = Classi.objects.all()
    # tutti i tutor che hanno assegnato una intera classe, con il tutor e la classe (anche ripetuti)
