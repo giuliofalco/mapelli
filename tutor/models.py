@@ -37,12 +37,23 @@ class Classi (models.Model):
     class meta:
         ordering = ['classe']
 
+class Tutor (models.Model):
+    cognome = models.CharField(max_length=80)
+    nome    = models.CharField(max_length=80,null=True, blank=True)
+
+    def __str__(self):
+       return(f"{self.cognome} {self.nome}")
+    
+    class Meta:
+        ordering = ['cognome','nome']
+
 class Studenti(models.Model):
 
     nome = models.CharField(max_length=200)
     cognome = models.CharField(max_length=200)
     email = models.CharField(max_length=200, null=True, blank=True)
     classe = models.ForeignKey(Classi,on_delete=models.CASCADE)
+    tutor = models.ForeignKey(Tutor,null=True,blank=True,on_delete=models.SET_NULL)
 
     def __str__(self):
        return(self.classe.classe + " - " + self.cognome + " " + self.nome )
@@ -76,13 +87,3 @@ class Proposte (models.Model):
 
     def __str__(self):
        return(self.nome_progetto)
- 
-class Tutor (models.Model):
-    cognome = models.CharField(max_length=80)
-    nome    = models.CharField(max_length=80,null=True, blank=True)
-
-    def __str__(self):
-       return(f"{self.cognome} {self.nome}")
-    
-    class Meta:
-        ordering = ['cognome','nome']
