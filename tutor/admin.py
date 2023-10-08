@@ -28,4 +28,4 @@ class TutorAdmin(admin.ModelAdmin):
 
 @admin.register(Proposte)
 class ProposteAdmin(admin.ModelAdmin):
-    list_display = ['ente','tipo_ente','nome_progetto','data_inizio']
+    list_display = ['ente','tipo_ente','nome_progetto','data_inizio','url']

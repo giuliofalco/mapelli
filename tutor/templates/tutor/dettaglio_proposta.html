@@ -1,0 +1,29 @@
+{%extends 'tutor/base.html' %}
+{%load static %}
+
+{%block head%}
+
+<style>
+    h2 {color: blue; brown; text-align: center}
+    .label {font-size: 1em;  font-weight: bold;}
+    
+</style>
+
+{%endblock%}
+
+{%block content%}
+
+<div class="w3-container" style="width: 90%; margin:auto;">
+    <h2>Dettaglio Proposta</h2>
+    <table style="width: 70%">
+        <th style="width:30%"><th></th>
+        <tr>
+           <td> <span class=label>Nome progetto:</span> </td> <td>{{proposta.nome_progetto}}</td>
+        </tr>
+        <tr>
+           <td> <span class=label>Ente promotore: </span> </td>  <td> {{proposta.ente}} - url di riferimento:  </td>
+        </tr>
+    </table>  
+</div>
+
+{%endblock%}

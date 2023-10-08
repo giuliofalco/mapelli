@@ -6,6 +6,14 @@
     h2 {text-align: center; color:blue}
 </style>
 
+<script>
+
+    function dettaglio(idprop) {
+        url = "dettaglio_proposta/"+idprop;
+        document.location = url;
+    }
+
+</script>
 {%endblock%}
 
 
@@ -25,7 +33,7 @@
                 <td>  {{prop.ente}}</td>
                 <td>  {{prop.data_inizio}}</td>
                 <td>  {{prop.data_fine}}</td>
-                <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
+                <td><img src="{%static 'tutor/gnome-help.png' %}" onclick="dettaglio({{prop.id}})"> </td>
             </tr>
             {%endfor%}
         </table>
