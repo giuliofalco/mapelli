@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class Tipologie_proposte (models.Model):
    # tipologie di proposte
@@ -87,3 +88,12 @@ class Proposte (models.Model):
 
     def __str__(self):
        return(self.nome_progetto)
+    
+class Adesioni(models.Model):
+    # adesione di uno studente ad una certa proposta didattica orientativa
+    data = models.DateField(default=timezone.now)
+    proposta = models.ForeignKey(Proposte, on_delete=models.CASCADE)
+    studente = models.ForeignKey(Studenti,on_delete=models.CASCADE)
+
+    def __str__(self):
+       return f"{self.data} {self.studente}"
