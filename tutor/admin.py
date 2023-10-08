@@ -17,6 +17,7 @@ class IndirizziAdmin(admin.ModelAdmin):
 @admin.register(Classi)
 class ClassiAdmin(admin.ModelAdmin):
     list_display = ['id','classe', 'indirizzo', 'num_studenti']
+    list_filter = ['indirizzo']
 
 @admin.register(Studenti)
 class StudentiAdmin(admin.ModelAdmin):
