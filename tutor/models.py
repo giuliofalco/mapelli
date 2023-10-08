@@ -34,7 +34,7 @@ class Classi (models.Model):
         # restituisce la sigla del corso
         return self.classe[2:]
     
-    class meta:
+    class Meta:
         ordering = ['classe']
 
 class Tutor (models.Model):
