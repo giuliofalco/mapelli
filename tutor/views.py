@@ -200,6 +200,6 @@ def intera_classe(classe):
 def completa_tutor(request):
    # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è asseganta al tutor
    classi = Classi.objects.all()
-   tutor = [classe.docenti_coinvolti for classe in classi if intera_classe(classe) ]
+   tutor = [[classe.docenti_coinvolti,classe.classe] for classe in classi if intera_classe(classe) ]
    stringa = " ".join(tutor)
    return(HttpResponse('Done '+ stringa))
