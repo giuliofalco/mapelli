@@ -202,4 +202,4 @@ def completa_tutor(request):
    classi = Classi.objects.all()
    tutor = [[classe.docenti_coinvolti,classe.classe] for classe in classi if intera_classe(classe) ]
 
-   return render(request,"lista_tutor",{'tutor':tutor})
+   return render(request,"lista_tutor.html",{'tutor':tutor})
