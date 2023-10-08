@@ -205,7 +205,7 @@ def completa_tutor(request):
    # ad ogni tutor associo gli studentii dell'intera classe
    diz = {}
    for t in tutor:
-      studenti = Studenti.objects.filter(classe=t.classe)
+      studenti = Studenti.objects.filter(classe=t[1])
       if t[0] in diz:
          diz[t[0]].append(studenti)
       else:
