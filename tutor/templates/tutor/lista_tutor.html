@@ -4,7 +4,7 @@
         {%for tutor,studenti in assegnamenti.items %}
             <h3>{{tutor}}</h3> 
             {%for studente in studenti %}
-                {{studente}} <br>
+                {{forloop.counter}} {{studente}} <br>
             {%endfor%} 
         {%endfor%}
         <p>
