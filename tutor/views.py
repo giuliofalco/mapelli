@@ -70,7 +70,7 @@ def elenco_classi(request):
 
 def elenco_studenti(request,classe):
    # elenco degli studenti di una specifia classe
-   
+
    objclass = Classi.objects.get(classe=classe)
    studenti = Studenti.objects.filter(classe=objclass)
    context = {'classe':classe, 'studenti':studenti}
@@ -182,7 +182,7 @@ def upload_csv_studenti(request):
    return render(request,"tutor/errori_importazione.html",{})
 
 ### UTILITY UTILITA'
-#    
+   
 def completa_classi(request):
     # inserisce nei record classi, l'indirizzo a cui appartiene
    classi = Classi.objects.all()
@@ -226,12 +226,15 @@ def completa_tutor(request):
       for ass in assegnamenti:
          try:
             tutor = Tutor.objects.get(cognome=ass[0].strip())
-            for stud in ass[1]:
+         except Exception as e:
+            errori.append(f"assegnamento: {ass[0]}: {e}")
+         for stud in ass[1]:
                studente = Studenti.objects.get(id=stud.id)
                studente.tutor = tutor
-               studente.save()
-         except Exception as e:
-               errori.append(f"\nin studente {studente} {e} assegnamento: {ass}\n")
+               try:
+                  studente.save()
+               except Exception as e:
+                  errori.append(f"in salvataggio studente {studente} : {e} ")
       if errori:
          context = {'errori':errori}
          return render(request,"tutor/errori_importazione.html",context)
