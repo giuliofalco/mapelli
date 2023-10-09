@@ -8,16 +8,27 @@
     .label {font-size: 1em;  font-weight: bold;}
     a {color: blue;}
     .evidenziato {font-size:1.3em;  font-weight: bold; color: blue;}
+    .icone {width:32px;}
     
 </style>
 
 <script>
-    function aggiungimi() {
-        alert('funzionalità non ancora implementata')
+
+    function aggiungimi(id) {
+        url = "/tutor/aggiungimi/"+id;
+        document.location = url;
     }
+
+    function cancellami(id) {
+        url = "/tutor/cancellami/"+id
+        document.location = url;
+    }
+
     function adesione() {
         alert('funzionalità non ancora implementata')
     }
+
+    
 </script>
 
 {%endblock%}
@@ -42,8 +53,13 @@
         </tr>
     </table>  
     <hr>
+    <img src="{%static 'tutor/cestino.png'%}" class="icone" onClick="cancellami({{proposta.id}})"> 
     <span class=evidenziato>Referenti Interni:</span>
-    <button class="w3-button w3-blue" onClick="aggiungimi()"> Aggiungimi </button></button>
+    {%for ref in referenti_interni%}
+        {{ref}}  
+    {%endfor%}
+    <button class="w3-button w3-blue" onClick="aggiungimi({{proposta.id}})"> Aggiungimi </button></button>
+   
     <hr>
     <h2>Adesioni</h2>
     <button class="w3.button w3-blue" onClick="adesione()">Nuova adesione</button>

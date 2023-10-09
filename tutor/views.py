@@ -81,10 +81,34 @@ def adesioni(request):
 
 def dettaglio_proposta(request,prop):
     proposta = Proposte.objects.get(id=prop) 
-    context = {'proposta':proposta}
+    referenti_interni =  proposta.referenti_interni.all()
+    context = {'proposta':proposta, 'referenti_interni': referenti_interni}
     return render(request,"tutor/dettaglio_proposta.html",context)
 
-### UPLOAD - DOWNLOAD - ARCHIVI
+@login_required
+def aggiungimi(request,id):
+   # Aggiunge tra i referenti interni l'utente connesso alla proposta con pk = id
+   utente = str(request.user)
+   tutor = Tutor.objects.get(cognome=utente)
+   proposta = Proposte.objects.get(id=id)
+   proposta.referenti_interni.add(tutor)
+   proposta.save()
+   return HttpResponseRedirect(f"/tutor/dettaglio_proposta/{id}")
+
+@login_required
+def cancellami(request,id):
+   # rimuove il tutor dai referenti interni
+   utente = str(request.user)
+   tutor = Tutor.objects.get(cognome=utente)
+   proposta = Proposte.objects.get(id=id)
+   if tutor in proposta.referenti_interni.all():
+      proposta.referenti_interni.remove(tutor)
+   proposta.save()
+   return HttpResponseRedirect(f"/tutor/dettaglio_proposta/{id}")
+
+###################################
+### UPLOAD - DOWNLOAD - ARCHIVI ###
+###################################
 
 def upload_csv_proposte(request):
     # carica dal file csv l'elenco aggiornato delle aziende
@@ -152,6 +176,28 @@ def upload_csv(request,tabella):
       
    return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori
 
+def upload_csv_doc_coinvolti(request):
+   # Carica dal filel csv i docenti tutor assegnati alle classi
+   # Le classi devono essere giù state caricate con la procedura generica valida per classi e tutor
+
+   if request.method == 'POST':
+      file_csv = request.FILES['archivio'] 
+      file_content = file_csv.read().decode('utf-8').splitlines()
+      errori = []
+      reader = csv.DictReader(file_content,delimiter=';')
+      for row in reader:
+         classe = row['classe']
+         try:
+            objclasse = Classi.objects.get(classe=classe)
+            objclasse.docenti_coinvolti = row['docenti_coinvolti']
+            objclasse.save()
+         except:
+            errori.append(f"errore in {classe}")
+      
+      context = {'errori':errori}
+      return render(request,"tutor/errori_importazione.html",context)
+      
+
 def upload_csv_studenti(request):
 
    if request.method == 'POST':
@@ -160,7 +206,7 @@ def upload_csv_studenti(request):
       errori = []
      
       reader = csv.DictReader(file_content,delimiter=';')
-      errori = []
+
       for row in reader:
         
          classe = row['classe']

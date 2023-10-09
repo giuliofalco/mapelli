@@ -20,5 +20,7 @@ urlpatterns = [
       path('completa_tutor',views.completa_tutor,name='completa_tutor'),
       path('adesioni',views.adesioni,name='adesioni'),
       path('dettaglio_proposta/<int:prop>',views.dettaglio_proposta,name='dettaglio_proposta'),
-      
+      path('upload_csv_doc_coinvolti',views.upload_csv_doc_coinvolti,name='upload_csv_doc_coinvolti'),
+      path('aggiungimi/<int:id>',views.aggiungimi,name='aggiungimi'),
+      path('cancellami/<int:id>',views.cancellami,name='cancellami'),
 ]
