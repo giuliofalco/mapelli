@@ -93,7 +93,7 @@ def aggiungimi(request,id):
    proposta = Proposte.objects.get(id=id)
    proposta.referenti_interni.add(tutor)
    proposta.save()
-   return HttpResponseRedirect(f"pcto/tutor/dettaglio_proposta/{id}")
+   return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{id}")
 
 @login_required
 def cancellami(request,id):
@@ -104,7 +104,7 @@ def cancellami(request,id):
    if tutor in proposta.referenti_interni.all():
       proposta.referenti_interni.remove(tutor)
    proposta.save()
-   return HttpResponseRedirect(f"pcto/tutor/dettaglio_proposta/{id}")
+   return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{id}")
 
 ###################################
 ### UPLOAD - DOWNLOAD - ARCHIVI ###
