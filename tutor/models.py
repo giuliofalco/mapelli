@@ -85,6 +85,7 @@ class Proposte (models.Model):
     data_fine = models.CharField(max_length=20,null = True, blank=True)
     descrizione = models.TextField(null=True, blank=True)
     url = models.URLField(null=True,blank=True)
+    referenti_interni = models.ManyToManyField(Tutor, blank=True)
 
     def __str__(self):
        return(self.nome_progetto)
