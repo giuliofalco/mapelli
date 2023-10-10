@@ -86,6 +86,7 @@ class Proposte (models.Model):
     descrizione = models.TextField(null=True, blank=True)
     url = models.URLField(null=True,blank=True)
     referenti_interni = models.ManyToManyField(Tutor, blank=True)
+    iscrizioni = models.ManyToManyField(Studenti, blank = True)
 
     def __str__(self):
        return(self.nome_progetto)
@@ -93,11 +94,3 @@ class Proposte (models.Model):
     class Meta:
         ordering = ['-id']
 
-class Adesioni(models.Model):
-    # adesione di uno studente ad una certa proposta didattica orientativa
-    data = models.DateField(default=timezone.now)
-    proposta = models.ForeignKey(Proposte, on_delete=models.CASCADE)
-    studente = models.ForeignKey(Studenti,on_delete=models.CASCADE)
-
-    def __str__(self):
-       return f"{self.data} {self.studente}"
