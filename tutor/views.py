@@ -96,6 +96,8 @@ def adesioni(request):
     return HttpResponse('Funzionalità non ancora implementata')
 
 def dettaglio_proposta(request,prop):
+    # pagina con il dettaglio delle proposte e la popssibilità di adesione
+    
     proposta = Proposte.objects.get(id=prop) 
     referenti_interni =  proposta.referenti_interni.all()
     context = {'proposta':proposta, 'referenti_interni': referenti_interni}

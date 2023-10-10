@@ -4,6 +4,7 @@
 
 <style>
     h2 {text-align: center; color:blue}
+    .icona {cursor: pointer;}
 </style>
 
 <script>
@@ -33,7 +34,7 @@
                 <td>  {{prop.ente}}</td>
                 <td>  {{prop.data_inizio}}</td>
                 <td>  {{prop.data_fine}}</td>
-                <td><img src="{%static 'tutor/gnome-help.png' %}" onclick="dettaglio({{prop.id}})"> </td>
+                <td><img class="icona" src="{%static 'tutor/gnome-help.png' %}" onclick="dettaglio({{prop.id}})"> </td>
             </tr>
             {%endfor%}
         </table>
