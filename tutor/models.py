@@ -63,7 +63,7 @@ class Studenti(models.Model):
         # restituisce la sigla del corso
         return self.classe[2:]
     
-    class meta:
+    class Meta:
         ordering = ['cognome','nome']
 
 class Proposte (models.Model):
@@ -90,6 +90,9 @@ class Proposte (models.Model):
     def __str__(self):
        return(self.nome_progetto)
     
+    class Meta:
+        ordering = ['-id']
+
 class Adesioni(models.Model):
     # adesione di uno studente ad una certa proposta didattica orientativa
     data = models.DateField(default=timezone.now)
