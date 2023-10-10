@@ -32,8 +32,8 @@
             <tr>
                 <td>  {{prop.nome_progetto}}</td>
                 <td>  {{prop.ente}}</td>
-                <td>  {{prop.data_inizio}}</td>
-                <td>  {{prop.data_fine}}</td>
+                <td>  {{prop.data_inizio|default:''}}</td>
+                <td>  {{prop.data_fine|default:''}}</td>
                 <td><img class="icona" src="{%static 'tutor/gnome-help.png' %}" onclick="dettaglio({{prop.id}})"> </td>
             </tr>
             {%endfor%}
