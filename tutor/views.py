@@ -7,6 +7,8 @@ from django.urls import reverse
 from django.contrib.auth import logout
 import csv
 from django.db import IntegrityError
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib import messages
 
 
 # Create your views here.
@@ -39,6 +41,20 @@ def logout_view(request):
     logout(request)
     # Redirect to a success page.
     return HttpResponseRedirect("/pcto/tutor")
+
+class ChangePasswordView(PasswordChangeView):
+    # consente all'utente  di cambiarsi la password
+
+    template_name = 'tutor/change_password.html'
+    success_url = "/"
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Your password has been changed successfully.')
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, 'Please correct the errors below.')
+        return super().form_invalid(form)
 
 def upload(request):
     return render(request,"tutor/upload.html",{})

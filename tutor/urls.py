@@ -1,4 +1,5 @@
 from . import views
+from .views import *
 from django.urls import path
 
 app_name="tutor"
@@ -23,4 +24,5 @@ urlpatterns = [
       path('upload_csv_doc_coinvolti',views.upload_csv_doc_coinvolti,name='upload_csv_doc_coinvolti'),
       path('aggiungimi/<int:id>',views.aggiungimi,name='aggiungimi'),
       path('cancellami/<int:id>',views.cancellami,name='cancellami'),
+      path('change_password/', ChangePasswordView.as_view(), name='change_password'),
 ]
