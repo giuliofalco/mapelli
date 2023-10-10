@@ -46,7 +46,7 @@ class ChangePasswordView(PasswordChangeView):
     # consente all'utente  di cambiarsi la password
 
     template_name = 'tutor/change_password.html'
-    success_url = "/"
+    success_url = "/pcto/tutor"
 
     def form_valid(self, form):
         messages.success(self.request, 'Your password has been changed successfully.')
