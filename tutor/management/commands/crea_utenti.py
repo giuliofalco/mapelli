@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
-from your_app.models import Tutor  # Assicurati di importare il modello Tutor dalla tua app
+from tutor.models import Tutor  # Assicurati di importare il modello Tutor dalla tua app
 
 class Command(BaseCommand):
     help = 'Crea utenti con lo stesso cognome dei tutor'
