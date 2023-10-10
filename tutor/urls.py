@@ -25,4 +25,7 @@ urlpatterns = [
       path('aggiungimi/<int:id>',views.aggiungimi,name='aggiungimi'),
       path('cancellami/<int:id>',views.cancellami,name='cancellami'),
       path('change_password/', ChangePasswordView.as_view(), name='change_password'),
+      path('adesioni_proposta/<int:id>',views.adesioni_proposta,name='adesioni_proposta'),
+      path('salva_iscrizioni',views.salva_iscrizioni,name='salva_iscrizioni'),
+      path('ritira/<int:idstudente>/<int:idproposta>',views.ritira,name='ritira'),
 ]

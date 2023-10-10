@@ -97,10 +97,11 @@ def adesioni(request):
 
 def dettaglio_proposta(request,prop):
     # pagina con il dettaglio delle proposte e la popssibilità di adesione
-    
+    utente = str(request.user)
     proposta = Proposte.objects.get(id=prop) 
     referenti_interni =  proposta.referenti_interni.all()
-    context = {'proposta':proposta, 'referenti_interni': referenti_interni}
+    iscritti = proposta.iscrizioni.all()
+    context = {'proposta':proposta, 'referenti_interni': referenti_interni, 'iscritti':iscritti, 'utente':utente}
     return render(request,"tutor/dettaglio_proposta.html",context)
 
 @login_required
@@ -123,6 +124,50 @@ def cancellami(request,id):
       proposta.referenti_interni.remove(tutor)
    proposta.save()
    return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{id}")
+
+def ritira(request,idstudente,idproposta):
+   # ritira lo studente dall'adesione alla proposta
+   proposta = Proposte.objects.get(id=idproposta)
+   studente = Studenti.objects.get(id=idstudente)
+   proposta.iscrizioni.remove(studente)
+   proposta.save()
+   return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{idproposta}")
+
+@login_required
+def adesioni_proposta(request,id):
+   # va alla pagina con gli studneti del tutor da assegnare alla proposta pk = id
+   utente = str(request.user)
+   tutor = Tutor.objects.get(cognome=utente)
+   studenti = Studenti.objects.filter(tutor=tutor)
+   proposta = Proposte.objects.get(id=id)
+   iscrizioni = proposta.iscrizioni.all()
+   iscrivibili = []
+   for studente in studenti:
+      if studente not in iscrizioni:
+         iscrivibili.append(studente)
+   classi = []                   # elenco delle classi
+   for s in iscrivibili:
+      if s.classe not in classi:
+         classi.append(s.classe)      
+   target = [[classe,[std for std in iscrivibili if std.classe==classe]] for classe in classi]   
+   # raggruppamento per classi degli studenti iscrivibili 
+
+   context = {'idproposta':id, 'target' : target, 'tutor':tutor}
+   return render(request,"tutor/adesioni_proposta.html",context)
+
+def salva_iscrizioni(request):
+   # salva le iscrizioni degli studenti selezionati nella proposta
+   if request.method == "POST":
+      idproposta = request.POST.get('idproposta')
+      proposta = Proposte.objects.get(id=idproposta)
+      for idstudent in request.POST: 
+         if idstudent != "csrfmiddlewaretoken" and idstudent != "idproposta":
+            studente = Studenti.objects.get(id=int(idstudent))
+            proposta.iscrizioni.add(studente)
+      proposta.save()  
+      return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{idproposta}")
+   return HttpResponseRedirect("/pcto/tutor")
+   
 
 ###################################
 ### UPLOAD - DOWNLOAD - ARCHIVI ###

@@ -8,11 +8,13 @@
     .label {font-size: 1em;  font-weight: bold;}
     a {color: blue;}
     .evidenziato {font-size:1.3em;  font-weight: bold; color: blue;}
-    .icone {width:32px;}
+    .icone {width:32px; cursor: pointer;}
     
 </style>
 
 <script>
+    var utente = "{{utente|safe}}";           // l'utente connesso
+    var idproposta = "{{proposta.id|safe}}";  // l'id della proposta
 
     function aggiungimi(id) {
         url = "/pcto/tutor/aggiungimi/"+id;
@@ -24,10 +26,20 @@
         document.location = url;
     }
 
-    function adesione() {
-        alert('funzionalità non ancora implementata')
+    function adesione(id) {
+        url = "/pcto/tutor/adesioni_proposta/"+id
+        document.location= url;
     }
 
+    function cancella_studente(id,tutor) {
+        // cnacella lo studente con pk == id dalle adesioni
+        url = "/pcto/tutor/ritira/"+id+"/"+idproposta;
+        
+        if (utente == tutor)
+            document.location = url;
+        else
+           alert('utente non autorizzato alla cancellazione');
+    }
     
 </script>
 
@@ -62,10 +74,18 @@
    
     <hr>
     <h2>Adesioni</h2>
-    <button class="w3.button w3-blue" onClick="adesione()">Nuova adesione</button>
+    <button class="w3.button w3-blue" onClick="adesione({{proposta.id}})">Nuova adesione</button>
     <div class="w3.container">
         <table class="w3-table-all w3-card-4" style="width: 50%; margin:auto">
             <th>Studente</th><th>Classe</th><th>Tutor</th><th>Canc.</th>
+            {%for studente in iscritti %}
+            <tr>
+                <td>{{studente.cognome}} {{studente.nome}}</td>
+                <td>{{studente.classe}} </td>
+                <td>{{studente.tutor}}</td>
+                <td><img class=icone src="{%static 'tutor/cestino.png' %}" onclick="cancella_studente({{studente.id}},'{{studente.tutor.cognome}}')"></td>
+            </tr>
+            {% endfor %}
         </table>
     </div>
 </div>
