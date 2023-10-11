@@ -81,7 +81,7 @@ def elenco_tutor(request):
    context = {'tutor':tutor}
    return render(request,"tutor/tutor.html",context)
 
-
+@login_required
 def elenco_classi(request):
    classi = Classi.objects.all().order_by('classe')
    indirizzi = Indirizzi.objects.all()
