@@ -32,3 +32,7 @@ class TutorAdmin(admin.ModelAdmin):
 @admin.register(Proposte)
 class ProposteAdmin(admin.ModelAdmin):
     list_display = ['ente','tipo_ente','nome_progetto','data_inizio','url']
+
+@admin.register(News)
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ['titolo','autore','data']
