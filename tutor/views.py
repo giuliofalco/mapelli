@@ -135,9 +135,12 @@ def ritira(request,idstudente,idproposta):
 
 @login_required
 def adesioni_proposta(request,id):
-   # va alla pagina con gli studneti del tutor da assegnare alla proposta pk = id
+   # va alla pagina con gli studenti del tutor da assegnare alla proposta pk = id
    utente = str(request.user)
-   tutor = Tutor.objects.get(cognome=utente)
+   try:
+      tutor = Tutor.objects.get(cognome=utente)
+   except:
+      return HttpResponse("L'utente non è autorizzato ad eseguire l'operazione")
    studenti = Studenti.objects.filter(tutor=tutor)
    proposta = Proposte.objects.get(id=id)
    iscrizioni = proposta.iscrizioni.all()
