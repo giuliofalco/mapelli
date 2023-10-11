@@ -111,16 +111,18 @@ def dettaglio_proposta(request,prop):
     context = {'proposta':proposta, 'referenti_interni': referenti_interni, 'iscritti':iscritti, 'utente':utente}
     return render(request,"tutor/dettaglio_proposta.html",context)
 
-
+@login_required
 def aggiungimi(request,id):
    # Aggiunge tra i referenti interni l'utente connesso alla proposta con pk = id
    utente = str(request.user)
-   tutor = Tutor.objects.get(cognome=utente)
+   try:
+       tutor = Tutor.objects.get(cognome=utente)
+   except:
+      return HttpResponse('Utente non autorizzato')
    proposta = Proposte.objects.get(id=id)
    proposta.referenti_interni.add(tutor)
    proposta.save()
    return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{id}")
-
 
 def cancellami(request,id):
    # rimuove il tutor dai referenti interni
@@ -139,7 +141,6 @@ def ritira(request,idstudente,idproposta):
    proposta.iscrizioni.remove(studente)
    proposta.save()
    return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{idproposta}")
-
 
 def adesioni_proposta(request,id):
    # va alla pagina con gli studenti del tutor da assegnare alla proposta pk = id
