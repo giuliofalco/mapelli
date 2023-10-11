@@ -74,7 +74,7 @@ def proposte(request):
 
    return render(request,"tutor/proposte.html",context)
 
-
+@login_required
 def elenco_tutor(request):
     
    tutor = Tutor.objects.all()
