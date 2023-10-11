@@ -42,6 +42,7 @@ def logout_view(request):
     # Redirect to a success page.
     return HttpResponseRedirect("/pcto/tutor")
 
+@login_required
 class ChangePasswordView(PasswordChangeView):
     # consente all'utente  di cambiarsi la password
 
@@ -55,10 +56,12 @@ class ChangePasswordView(PasswordChangeView):
     def form_invalid(self, form):
         messages.error(self.request, 'Please correct the errors below.')
         return super().form_invalid(form)
-
+    
+@login_required
 def upload(request):
     return render(request,"tutor/upload.html",{})
 
+@login_required
 def upload_csv_proposte(request):
    # carica il csv delle proposte
    return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/pcto/tutor'>Torna alla hoem page</a>"))
@@ -71,12 +74,14 @@ def proposte(request):
 
    return render(request,"tutor/proposte.html",context)
 
+@login_required
 def elenco_tutor(request):
     
    tutor = Tutor.objects.all()
    context = {'tutor':tutor}
    return render(request,"tutor/tutor.html",context)
 
+@login_required
 def elenco_classi(request):
    classi = Classi.objects.all().order_by('classe')
    indirizzi = Indirizzi.objects.all()
@@ -84,6 +89,7 @@ def elenco_classi(request):
    context = {'dati':dati}
    return render(request,"tutor/classi.html",context)
 
+@login_required
 def elenco_studenti(request,classe):
    # elenco degli studenti di una specifia classe
 
@@ -92,6 +98,7 @@ def elenco_studenti(request,classe):
    context = {'classe':classe, 'studenti':studenti}
    return render(request,"tutor/studenti.html",context)
 
+@login_required
 def adesioni(request):
     return HttpResponse('Funzionalità non ancora implementata')
 
@@ -125,6 +132,7 @@ def cancellami(request,id):
    proposta.save()
    return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{id}")
 
+@login_required
 def ritira(request,idstudente,idproposta):
    # ritira lo studente dall'adesione alla proposta
    proposta = Proposte.objects.get(id=idproposta)
@@ -158,6 +166,7 @@ def adesioni_proposta(request,id):
    context = {'idproposta':id, 'target' : target, 'tutor':tutor}
    return render(request,"tutor/adesioni_proposta.html",context)
 
+@login_required
 def salva_iscrizioni(request):
    # salva le iscrizioni degli studenti selezionati nella proposta
    if request.method == "POST":
@@ -176,6 +185,7 @@ def salva_iscrizioni(request):
 ### UPLOAD - DOWNLOAD - ARCHIVI ###
 ###################################
 
+@login_required
 def upload_csv_proposte(request):
     # carica dal file csv l'elenco aggiornato delle aziende
 
@@ -218,6 +228,7 @@ def upload_csv_proposte(request):
            
    return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori
 
+@login_required
 def upload_csv(request,tabella):
    # caricamento csv generico
 
@@ -242,6 +253,7 @@ def upload_csv(request,tabella):
       
    return render(request,"tutor/errori_importazione.html",{})  # uscita senza errori
 
+@login_required
 def upload_csv_doc_coinvolti(request):
    # Carica dal filel csv i docenti tutor assegnati alle classi
    # Le classi devono essere giù state caricate con la procedura generica valida per classi e tutor
@@ -263,7 +275,7 @@ def upload_csv_doc_coinvolti(request):
       context = {'errori':errori}
       return render(request,"tutor/errori_importazione.html",context)
       
-
+@login_required
 def upload_csv_studenti(request):
 
    if request.method == 'POST':
@@ -294,7 +306,8 @@ def upload_csv_studenti(request):
    return render(request,"tutor/errori_importazione.html",{})
 
 ### UTILITY UTILITA'
-   
+
+@login_required
 def completa_classi(request):
     # inserisce nei record classi, l'indirizzo a cui appartiene
    classi = Classi.objects.all()
@@ -311,6 +324,7 @@ def intera_classe(classe):
    lista = doc.split()
    return len(lista) == 1
 
+@login_required
 def studenti_tutor():
    # prepara i dati alla view completa_tutor. Lista con (cognome tutor,lista di studenti)
 
@@ -328,7 +342,8 @@ def studenti_tutor():
    lista = diz.items()
    lista = sorted(lista,key = lambda x: x[0])                             
    return lista
-  
+
+@login_required 
 def completa_tutor(request):
    # inserisce a ciascuno studente il tutor assegnato, se l'intera classe è assegnata al tutor
    assegnamenti = studenti_tutor()
