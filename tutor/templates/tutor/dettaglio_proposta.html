@@ -49,7 +49,7 @@
 
 <div class="w3-container" style="width: 90%; margin:auto;">
     <h2>Dettaglio Proposta</h2>
-    <table style="width: 70%">
+    <table style="width: 85%">
         <th style="width:30%"><th></th>
         <tr>
            <td> <span class=label>Nome progetto:</span> </td> <td>{{proposta.nome_progetto}}</td>
@@ -61,7 +61,7 @@
             <td><span class=label>Date:</span></td><td><b>Inizio:</b> {{proposta.data_inizio}} - <b>Fine:</b> {{proposta.data_fine}}</td>
         </tr>
         <tr>
-            <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|default:""}}</td>
+            <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|linebreaks|default:""}}</td>
         </tr>
     </table>  
     <hr>
