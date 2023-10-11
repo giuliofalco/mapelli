@@ -20,8 +20,8 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pcto/tutor/',include('tutor.urls')),
-    path('', RedirectView.as_view(url='pcto', permanent=False)),
-    path('pcto',include('pcto.urls')),
+    path('', RedirectView.as_view(url='pcto/', permanent=False)),
+    path('pcto/',include('pcto.urls')),
     path('festival/',include('festival.urls')),
      
 ]
