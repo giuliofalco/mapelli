@@ -13,9 +13,9 @@
 
 <div class="w3-container">
       {%for new in news%}
-      <h2>new.titolo </h2>
+      <h2>{{new.titolo}} </h2>
       <div class="new">
-      {{new.testo}}
+      {{new.testo|linebreaks}}
       </div>
       {%endfor%}
 </div>
