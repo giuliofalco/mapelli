@@ -22,6 +22,10 @@
 
 <h2>Elenco Proposte</h2>
     <div class="w3-container" style="width: 90%; margin:auto;">
+        <form method="GET">
+            {{myfilter.form}} 
+            <input type="submit" value="Cerca">
+        </form>
         <table class="w3-table-all w3-card-4">
             <th>Nome Progetto</th>
             <th>Ente</th>

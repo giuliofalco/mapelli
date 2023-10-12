@@ -9,6 +9,7 @@ import csv
 from django.db import IntegrityError
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib import messages
+from .filters import ProposteFilter
 
 
 # Create your views here.
@@ -71,7 +72,9 @@ def proposte(request):
     # elenco delle proposte
 
    proposte = Proposte.objects.all()
-   context = {'proposte':proposte}
+   myfilter = ProposteFilter(request.GET,queryset=proposte)
+   proposte = myfilter.qs
+   context = {'proposte':proposte, 'myfilter':myfilter}
 
    return render(request,"tutor/proposte.html",context)
 
