@@ -33,6 +33,7 @@ LOGIN_URL = 'pcto:mioLogin'
 # Application definition
 
 INSTALLED_APPS = [
+    'openday.apps.OpendayConfig',
     'pcto.apps.PctoConfig',
     'festival.apps.FestivalConfig',
     'tutor.apps.TutorConfig',
