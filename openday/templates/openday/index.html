@@ -12,16 +12,16 @@
 
 {% block content %}
 
-<div class="w3-container">
+<div class="w3-container" style="text-align:center">
      
-      <img src="{% static 'openday/openday.png' %}">
-
       {%for new in novita%}
       <h2>{{new.titolo}} </h2>
       <div class="new">
       {{new.testo|safe}}
       </div>
       {%endfor%}
+
+      <img src="{% static 'openday/openday.png' %}">
      
 </div>
 {%endblock%}
