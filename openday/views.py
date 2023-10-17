@@ -1,6 +1,5 @@
+from openday.models import *
 from django.shortcuts import render
-from django.shortcuts import render
-from tutor.models import *
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
