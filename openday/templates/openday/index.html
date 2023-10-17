@@ -13,7 +13,12 @@
 
 <div class="w3-container">
      
-      <h2>HOME PAGE </h2>
+      {%for new in news%}
+      <h2>{{new.titolo}} </h2>
+      <div class="new">
+      {{new.testo|safe}}
+      </div>
+      {%endfor%}
      
 </div>
 {%endblock%}
