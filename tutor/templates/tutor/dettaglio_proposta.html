@@ -17,23 +17,23 @@
     var idproposta = "{{proposta.id|safe}}";  // l'id della proposta
 
     function aggiungimi(id) {
-        url = "/pcto/tutor/aggiungimi/"+id;
+        url = "tutor/aggiungimi/"+id;
         document.location = url;
     }
 
     function cancellami(id) {
-        url = "/pcto/tutor/cancellami/"+id
+        url = "tutor/cancellami/"+id
         document.location = url;
     }
 
     function adesione(id) {
-        url = "/pcto/tutor/adesioni_proposta/"+id
+        url = "tutor/adesioni_proposta/"+id
         document.location= url;
     }
 
     function cancella_studente(id,tutor) {
         // cnacella lo studente con pk == id dalle adesioni
-        url = "/pcto/tutor/ritira/"+id+"/"+idproposta;
+        url = "tutor/ritira/"+id+"/"+idproposta;
         
         if (utente == tutor)
             document.location = url;
