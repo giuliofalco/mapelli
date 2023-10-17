@@ -61,7 +61,7 @@
             <td><span class=label>Date:</span></td><td><b>Inizio:</b> {{proposta.data_inizio}} - <b>Fine:</b> {{proposta.data_fine}}</td>
         </tr>
         <tr>
-            <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|linebreaks|default:""}}</td>
+            <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|safe|default:""}}</td>
         </tr>
        
     </table>  

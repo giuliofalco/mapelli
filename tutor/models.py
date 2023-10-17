@@ -84,7 +84,7 @@ class Proposte (models.Model):
     valido_pcto = models.BooleanField (null=True, blank=True)
     data_inizio = models.CharField(max_length=20,null = True, blank=True)
     data_fine = models.CharField(max_length=20,null = True, blank=True)
-    descrizione = models.TextField(null=True, blank=True)
+    descrizione = RichTextField(null=True, blank=True)
     url = models.URLField(null=True,blank=True)
     allegato = models.URLField(null=True,blank=True)
     referenti_interni = models.ManyToManyField(Tutor, blank=True)
