@@ -11,4 +11,5 @@ from django.contrib.auth.views import PasswordChangeView
 
 # Create your views here.
 def index(request):
-   return HttpResponse("<h1>Mapelli - Monza - OpenDay 2023</h1>")
+   #return HttpResponse("<h1>Mapelli - Monza - OpenDay 2023</h1>")
+   return render(request,'openday/index,html',{})
