@@ -126,7 +126,7 @@ def aggiungimi(request,id):
    proposta = Proposte.objects.get(id=id)
    proposta.referenti_interni.add(tutor)
    proposta.save()
-   return HttpResponseRedirect(f"tutor/dettaglio_proposta/{id}")
+   return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{id}")
 
 def cancellami(request,id):
    # rimuove il tutor dai referenti interni
