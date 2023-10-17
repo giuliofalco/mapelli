@@ -11,5 +11,5 @@ from django.contrib.auth.views import PasswordChangeView
 
 # Create your views here.
 def index(request):
-   news = News.objects.all()
-   return render(request,"openday/index.html",{'new':news})
+   novita = News.objects.all()
+   return render(request,"openday/index.html",{'news':novita})
