@@ -12,4 +12,4 @@ from django.contrib.auth.views import PasswordChangeView
 # Create your views here.
 def index(request):
    novita = News.objects.all()
-   return render(request,"openday/index.html",{'news':novita})
+   return render(request,"openday/index.html",{'novita':novita})
