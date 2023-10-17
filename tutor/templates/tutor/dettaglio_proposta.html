@@ -63,6 +63,9 @@
         <tr>
             <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|linebreaks|default:""}}</td>
         </tr>
+        <tr>
+            <td>Allegato: </td> <td>{{allegato|default:''}}</td>
+        </tr>
     </table>  
     <hr>
     <img src="{%static 'tutor/cestino.png'%}" class="icone" onClick="cancellami({{proposta.id}})"> 
