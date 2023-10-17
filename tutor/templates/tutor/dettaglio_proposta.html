@@ -58,7 +58,7 @@
            <td> <span class=label>Ente promotore: </span> </td>  <td> {{proposta.ente}}<br>url di riferimento:  <a href={{proposta.url}}>{{proposta.url|default:""}}</a> </td>
         </tr>
         <tr>
-            <td><span class=label>Date:</span></td><td><b>Inizio:</b> {{proposta.data_inizio}} - <b>Fine:</b> {{proposta.data_fine}}</td>
+            <td><span class=label>Date:</span></td><td><b>Inizio:</b> {{proposta.data_inizio|default:''}} - <b>Fine:</b> {{proposta.data_fine|default:''}}</td>
         </tr>
         <tr>
             <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|safe|default:""}}</td>
