@@ -63,10 +63,11 @@
         <tr>
             <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|linebreaks|default:""}}</td>
         </tr>
-        <tr>
+       
             <td>Allegato: </td> <td>{{proposta.allegato|default:''}}</td>
-        </tr>
+       
     </table>  
+    Allegato: <a href="{{proposta.allegato}}">{{proposta.allegato|default:''}}</a>
     <hr>
     <img src="{%static 'tutor/cestino.png'%}" class="icone" onClick="cancellami({{proposta.id}})"> 
     <span class=evidenziato>Referenti Interni:</span>
