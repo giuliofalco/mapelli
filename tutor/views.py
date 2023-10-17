@@ -42,14 +42,14 @@ def logout_view(request):
 
     logout(request)
     # Redirect to a success page.
-    return HttpResponseRedirect("/pcto/tutor")
+    return HttpResponseRedirect("/orienta/tutor")
 
 
 class ChangePasswordView(PasswordChangeView):
     # consente all'utente  di cambiarsi la password
 
     template_name = 'tutor/change_password.html'
-    success_url = "/pcto/tutor"
+    success_url = "/orienta/tutor"
 
     def form_valid(self, form):
         messages.success(self.request, 'Your password has been changed successfully.')
