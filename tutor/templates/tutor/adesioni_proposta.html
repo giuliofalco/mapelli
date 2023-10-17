@@ -22,7 +22,7 @@
 
 <h2>Adesioni Proposta Studenti del tutor: {{tutor}}</h2>
     <div class="w3-container" style="width: 60%; margin:auto;">
-    <form method="POST" action="/pcto/tutor/salva_iscrizioni">
+    <form method="POST" action="/orienta/tutor/salva_iscrizioni">
         {% csrf_token %}
         <input type="submit" value="Iscrivi"> <input type="reset" value="Reset">
         <input type="hidden" name="idproposta" value="{{idproposta}}">
