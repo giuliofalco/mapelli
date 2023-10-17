@@ -136,7 +136,7 @@ def cancellami(request,id):
    if tutor in proposta.referenti_interni.all():
       proposta.referenti_interni.remove(tutor)
    proposta.save()
-   return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{id}")
+   return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{id}")
 
 def ritira(request,idstudente,idproposta):
    # ritira lo studente dall'adesione alla proposta
@@ -144,7 +144,7 @@ def ritira(request,idstudente,idproposta):
    studente = Studenti.objects.get(id=idstudente)
    proposta.iscrizioni.remove(studente)
    proposta.save()
-   return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{idproposta}")
+   return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{idproposta}")
 
 def adesioni_proposta(request,id):
    # va alla pagina con gli studenti del tutor da assegnare alla proposta pk = id
@@ -181,8 +181,8 @@ def salva_iscrizioni(request):
             studente = Studenti.objects.get(id=int(idstudent))
             proposta.iscrizioni.add(studente)
       proposta.save()  
-      return HttpResponseRedirect(f"/pcto/tutor/dettaglio_proposta/{idproposta}")
-   return HttpResponseRedirect("/pcto/tutor")
+      return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{idproposta}")
+   return HttpResponseRedirect("/orienta/tutor")
    
 
 ###################################
