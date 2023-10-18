@@ -5,14 +5,27 @@
         <title>OPEN DAY 2023</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
-            #logo {width:350px; float:left;}
-            #logo img {width: 90px;; margin-left:30px;}
+            #logo {width:150px; text-align: center}
+            #logo img {width: 90px; margin-top: 40px;}
+            #logo_ufficiale {width: 320px; }
+            #logo_uffciale img {width: 72px; margin-left:190px;}
             #menu {margin-top: 10px;}
-            #sessione {margin-left: 40px;margin-top: 80px;}
+            #sessione {margin-top: 0px;}
             #titolo { margin-top:60px;
-                     margin-left: 370px; width: 700px; text-align: center}
+                     margin-left: 70px; margin-right: 220px; width: 700px; text-align: center}
             #titolo h2 {color:brown;}
+            #intestazione {display:flex; justify-content: space-evenly;}
         </style>
+        <script>
+            function myFunction(id) {
+               var x = document.getElementById(id);
+               if (x.className.indexOf("w3-show") == -1) {
+                   x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
         {% block head %}
           
         {% endblock %}
@@ -22,30 +35,59 @@
        
         {% block testata %}
         <div class="w3-panel" id="intestazione">
-            <div id="logo">
-                <h4>ITCG A. Mapelli - A.S. 2023-24</h4>
-                <img id="logo" src={% static "pcto/logo.jpeg" %}>
-                <div id=sessione>Sessione: {{user}}</div> 
+            <div id="logo_ufficiale">
+                <img style="margin-left:50px;" src={% static "openday/logo.jpg" %}>
+                <h4>ITCG A. Mapelli A.S. 2023-24</h4>
             </div>
+           
             <div id="titolo">
                  <h2>ORIENTA - OPEN DAY 2023</h2> 
             </div>
+            <div id="logo">
+                <img src={% static "pcto/logo.jpeg" %}>
+                <div id=sessione>Sessione: {{user}}</div> 
+            </div>
         </div>
 
+        <!-- Menu schermi grandi-->
         <div class="w3-bar w3-show-large w3-hide-small w3-light-blue" id="menu">
             
-            <a href="{% url 'tutor:index' %}" class="w3-bar-item w3-button ">Home</a>
+            <a href="{% url 'openday:index' %}" class="w3-bar-item w3-button ">Home</a>
                        
+            <div class="w3-dropdown-hover">
+                <button class="w3-button">Iscrizioni</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href=""> <button class="w3-bar-item w3-button ">18 nov. 8:30-10:30 Liceo Scienze Applicate</a>
+                    <a href=""> <button class="w3-bar-item w3-button">18 nov. 11:00-13:30 Liceo Sportivo</button></a>
+                    <a href=""> <button class="w3-bar-item w3-button">02 dic. 8:30-10:30 AFM e Turismo</button></a>
+                    <a href=""> <button class="w3-bar-item w3-button">02 dic. 11:00-13:30 Agro Alimentare</button></a>
+                </div>
+            </div>
+
             <div class="w3-dropdown-hover">
                 <button class="w3-button">Autenticazione</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a href="{%url 'admin:index'%}" class="w3-bar-item w3-button ">Admin</a>
-
                 </div>
             </div>
+        </div>
 
-          </div>
+        <!-- Menu schermi piccoli-->
+        <button class="w3-button  w3-hide-large w3-hide-medium w3-xlarge" onclick="myFunction('mySidebar')">☰</button>
+       
+        <div class="w3-sidebar w3-bar-block w3-border-right w3-light-blue" style="display:none" id="mySidebar">
+        
+            <button onclick="myFunction('mySidebar')" class="w3-bar-item w3-large">Chiudi &times;</button>
+            <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Iscrizioni</button>
+            <div class="w3-sidebar" style="display:none" id="iscrizioni">
+                <a href=""> <button class="w3-bar-item w3-button">18 nov. 8:30-10:30 Liceo Scienze Applicate</button></a>
+                <a href=""> <button class="w3-bar-item w3-button">18 nov. 11:00-13:30 Liceo Sportivo</button></a>
+                <a href=""> <button class="w3-bar-item w3-button">02 dic. 8:30-10:30 AFM e Turismo</button></a>
+                <a href=""> <button class="w3-bar-item w3-button">02 dic. 11:00-13:30 Agro Alimentare</button></a>
+              </div>
 
+        </div>
+        
         {% endblock %}
 
         {% block content %}
