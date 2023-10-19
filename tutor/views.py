@@ -124,8 +124,11 @@ def aggiungimi(request,id):
    except:
       return HttpResponse('Utente non autorizzato')
    proposta = Proposte.objects.get(id=id)
-   proposta.referenti_interni.add(tutor)
-   proposta.save()
+   try:
+      proposta.referenti_interni.add(tutor)
+      proposta.save()
+   except:
+      pass
    return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{id}")
 
 def cancellami(request,id):
