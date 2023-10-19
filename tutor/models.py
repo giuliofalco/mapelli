@@ -74,7 +74,7 @@ class Proposte (models.Model):
     nome_progetto = models.CharField(max_length=250)
     disciplina =  models.CharField(max_length=100, null=True, blank=True)
     tipologia = models.ForeignKey(Tipologie_proposte,on_delete=models.CASCADE,null=True, blank=True)
-    indirizzo = models.ForeignKey(Indirizzi,on_delete=models.CASCADE,null=True, blank=True)
+    indirizzo = models.ManyToManyField(Indirizzi, blank=True)
     max_alunni = models.IntegerField(null=True, blank=True)
     classi_consigliate = models.CharField(max_length=100,null=True,blank=True)
     ente = models.CharField(max_length=100,null=True, blank=True)
