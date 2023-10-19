@@ -66,7 +66,7 @@ def upload(request):
 
 def upload_csv_proposte(request):
    # carica il csv delle proposte
-   return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/pcto/tutor'>Torna alla hoem page</a>"))
+   return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/orienta/tutor'>Torna alla hoem page</a>"))
 
 def proposte(request):
     # elenco delle proposte
@@ -131,11 +131,14 @@ def aggiungimi(request,id):
 def cancellami(request,id):
    # rimuove il tutor dai referenti interni
    utente = str(request.user)
-   tutor = Tutor.objects.get(cognome=utente)
-   proposta = Proposte.objects.get(id=id)
-   if tutor in proposta.referenti_interni.all():
-      proposta.referenti_interni.remove(tutor)
-   proposta.save()
+   try:
+      tutor = Tutor.objects.get(cognome=utente)
+      proposta = Proposte.objects.get(id=id)
+      if tutor in proposta.referenti_interni.all():
+         proposta.referenti_interni.remove(tutor)
+      proposta.save()
+   except:
+      pass
    return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{id}")
 
 def ritira(request,idstudente,idproposta):
