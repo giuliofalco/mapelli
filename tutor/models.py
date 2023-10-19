@@ -67,6 +67,8 @@ class Studenti(models.Model):
     class Meta:
         ordering = ['cognome','nome']
 
+LUOGHI = [(0,'A Scuola'),(1,'Esterno'),(2,'Da definire')]
+
 class Proposte (models.Model):
     
     nome_progetto = models.CharField(max_length=250)
@@ -89,6 +91,7 @@ class Proposte (models.Model):
     allegato = models.URLField(null=True,blank=True)
     referenti_interni = models.ManyToManyField(Tutor, blank=True)
     iscrizioni = models.ManyToManyField(Studenti, blank = True)
+    luogo = models.IntegerField(choices=LUOGHI, default=2)
 
     def __str__(self):
        return(self.nome_progetto)
@@ -107,3 +110,4 @@ class News(models.Model):
     
     class Meta:
         ordering = ['-data']
+
