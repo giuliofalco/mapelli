@@ -1,0 +1,12 @@
+[
+{
+    "model": "tutor.news",
+    "pk": 1,
+    "fields": {
+        "autore": "admin",
+        "data": "2023-10-11T17:01:32Z",
+        "titolo": "Welcome",
+        "testo": "<h2><span style=\"color:#003399\">Piattaforma Orientamento Tutor .</span></h2>\r\n\r\n<p>Questa piattaforma &egrave; nata con lo scopo di facilitare le attivit&agrave; e le comunicazioni fra il <strong>docente orientatore </strong>e <strong>i tutor dell&#39;orientamento</strong>. Il menu &#39;proposte&#39; consente di visionare le iniziative didattiche interne o esterne, che il docente orientatore potr&agrave; raccogliere e catalogare.</p>\r\n\r\n<p>I tutor possono eventualmente mostrare interesse per una o pi&ugrave; iniziative e segnalare i nomi di studenti interessati. Per interagire con la piattaforma utilizzare le credenziali che saranno fornite ad ogni utente autorizzato.</p>\r\n\r\n<p><strong>Piattaforma Excelsiorienta</strong></p>\r\n\r\n<p>La nuova piattaforma di Unioncamere per aiutare gli studenti a scegliere un futuro professionale in linea con i propri talenti e le proprie passioni.</p>\r\n\r\n<p><a href=\"https://excelsiorienta.unioncamere.it/\">excelsiorienta</a></p>\r\n\r\n<p>&nbsp;</p>"
+    }
+}
+]
