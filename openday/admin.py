@@ -17,3 +17,11 @@ class VisitatoriAdmin(admin.ModelAdmin):
 @admin.register(Iscrizioni)
 class IscrizioniAdmin(admin.ModelAdmin):
     list_display = ['visitatore','evento','presente']
+
+@admin.register(Indirizzi)
+class IndirizziAdmin(admin.ModelAdmin):
+    list_display = ['titolo']  
+
+@admin.register(riga_orario)
+class Admin(admin.ModelAdmin):
+    list_display = ['indirizzo','materia']  
