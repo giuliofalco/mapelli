@@ -1,0 +1,66 @@
+[
+{
+    "model": "openday.eventi",
+    "pk": 1,
+    "fields": {
+        "data": "18 novembre 8:30-10:30",
+        "sigla": "LS-1",
+        "titolo": "Liceo Scienze Applicate",
+        "descrizione": "<p>.</p>",
+        "luogo": "scuola",
+        "indirizzo": null,
+        "referente": null,
+        "telefono": null,
+        "email": null,
+        "attivo": true
+    }
+},
+{
+    "model": "openday.eventi",
+    "pk": 2,
+    "fields": {
+        "data": "18 novembre 11.00-13:00",
+        "sigla": "LZ -2",
+        "titolo": "Liceo Sportivo",
+        "descrizione": "",
+        "luogo": "scuola",
+        "indirizzo": null,
+        "referente": null,
+        "telefono": null,
+        "email": null,
+        "attivo": true
+    }
+},
+{
+    "model": "openday.eventi",
+    "pk": 3,
+    "fields": {
+        "data": "2 dicembre. 8:30-10:30",
+        "sigla": "AFM-1",
+        "titolo": "Affari Finanza e Marketing - Turismo",
+        "descrizione": "",
+        "luogo": "scuola",
+        "indirizzo": null,
+        "referente": null,
+        "telefono": null,
+        "email": null,
+        "attivo": true
+    }
+},
+{
+    "model": "openday.eventi",
+    "pk": 4,
+    "fields": {
+        "data": "2 dicembre 11:00-13:00",
+        "sigla": "AG-1",
+        "titolo": "Agro Alimentare",
+        "descrizione": "",
+        "luogo": "scuola",
+        "indirizzo": null,
+        "referente": null,
+        "telefono": null,
+        "email": null,
+        "attivo": true
+    }
+}
+]
