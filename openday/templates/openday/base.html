@@ -15,6 +15,7 @@
                      margin-left: 70px; margin-right: 220px; width: 700px; text-align: center}
             #titolo h2 {color:brown;}
             #intestazione {display:flex; justify-content: space-evenly;}
+            .nostyle  {text-decoration: none;}
         </style>
         <script>
             function myFunction(id) {
@@ -57,10 +58,13 @@
             <div class="w3-dropdown-hover">
                 <button class="w3-button">Iscrizioni</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href=""> <button class="w3-bar-item w3-button ">18 nov. 8:30-10:30 Liceo Scienze Applicate</a>
-                    <a href=""> <button class="w3-bar-item w3-button">18 nov. 11:00-13:30 Liceo Sportivo</button></a>
-                    <a href=""> <button class="w3-bar-item w3-button">02 dic. 8:30-10:30 AFM e Turismo</button></a>
-                    <a href=""> <button class="w3-bar-item w3-button">02 dic. 11:00-13:30 Agro Alimentare</button></a>
+                    {% for evento in eventi %}
+                    <a href="iscrivi_utente/{{evento.sigla}} " class="nostyle"> <button class="w3-bar-item w3-button ">{{evento.titolo}} {{evento.data}}</a>
+                    {%endfor%}
+
+                    {% if user.is_authenticated %}  
+                    <a href=""> <button class="w3-bar-item w3-button">Iscritti</button></a>
+                    {% endif %}
                 </div>
             </div>
 
@@ -80,8 +84,8 @@
                 <button class="w3-button">Autenticazione</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a href="{%url 'admin:index'%}" class="w3-bar-item w3-button ">Admin</a>
-                    <a href="" class="w3-bar-item w3-button ">Login</a>
-                    <a href="" class="w3-bar-item w3-button ">Logout</a>
+                    <a href="{% url 'openday:mioLogin' %}?next=/openday" class="w3-bar-item w3-button ">Login</a>
+                    <a href="{% url 'openday:logout_view' %}" class="w3-bar-item w3-button ">Logout</a>
                     <a href="" class="w3-bar-item w3-button ">Cambio Password</a>
                 </div>
             </div>

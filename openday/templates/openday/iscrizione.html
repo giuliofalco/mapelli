@@ -1,0 +1,38 @@
+{%extends 'openday/base.html' %}
+
+{%block head %}
+   <style>
+       #id_scuola, #id_comune {width: 100%}
+       
+   </style>
+{%endblock %}
+
+{% block content %}
+<div class="w3-container" style="text-align:center">
+<h2>Iscrizione Open Day <h2> 
+<h4> Indirizzo: {{evento.titolo}} {{evento.data}}</h4>
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name = value="{{evento.id}}">
+    <table class="w3-table w3-light-green" style="width:400px; margin: auto">
+       <tr>
+          <td>*COGNOME:</td>
+          <td>{{form.cognome}}</td>
+          <td>NOME:</td>
+          <td>{{form.nome}}</td>
+       </tr>
+       <tr>
+           <td>SCUOLA DI PROVENIENZA:</td>
+           <td colspan="3">{{form.scuola}}</td>
+       </tr>
+       <tr>
+        <td>COMUNE DI PROVENIENZA:</td>
+        <td colspan="3">{{form.comune}}</td>
+    </tr>
+
+    </table>
+    <p></p>
+    <button style="font-size: 24;" class=w3-blue type="submit">Iscrivimi</button>
+</form>
+</div>
+{%endblock%}

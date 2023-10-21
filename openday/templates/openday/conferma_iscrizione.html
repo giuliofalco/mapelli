@@ -1,0 +1,24 @@
+{%extends 'openday/base.html' %}
+
+{%block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+      h2   {text-align:center; color: blue;}
+      .conferma {font-size:medium; background-color: aquamarine; width:600px; padding: 16px;
+                 margin: auto}
+</style>
+
+{%endblock %}
+
+{% block content %}
+
+<div class="w3-container" style="text-align:center">
+     
+    <h2>Conferma Iscrizione</h2>
+    <div class="conferma">
+        Le confermiamo la ricezione della prenotazione, l'aspettiamo 
+        all' OPEN DAY Mapelli per il {{evento.data}} {{evento.titolo}}
+    </div>
+     
+</div>
+{%endblock%}
