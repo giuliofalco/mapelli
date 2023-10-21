@@ -21,7 +21,7 @@ def mioLogin(request):
    # manda alla finestra di autenticazione, per chiedere username e password
    next = request.GET['next']
    context = {'next':next,}
-   return render(request,'/orienta/openday/login.html',context)
+   return render(request,'openday/login.html',context)
 
 def autentica(request):
    # riceve dalla finestra di autenticazione e controlla per effettuare il login
