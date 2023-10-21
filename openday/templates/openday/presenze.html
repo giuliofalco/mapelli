@@ -1,0 +1,42 @@
+{%extends 'openday/base.html' %}
+
+{%block head %}
+
+<style>
+      h2 {text-align: center;}
+      .checkbox {width:25px;}
+      .nome     {width: 550px;}
+      th        {text-align:left;}
+</style> 
+ 
+<script>       
+</script>
+{%endblock %}
+
+{% block content %}
+
+<h2>Rilevazione Presenze</h2>
+<div class="w3-container" style="text-align:left; width:75%; margin:auto;">
+
+    <h4>{{iscritti.0.evento.titolo}} : {{iscritti.0.evento.data}}</h4>
+    <button class="w3-blue">Salva</button>
+    <p>
+    <table class="w3-table w3-card-4" style="width: 300px;">
+        <th ></th><th>Visitatore</th><th>Presenza</th>
+        
+        {%for v in iscritti %}
+            <tr>
+                <td class="checkbox"><input type=checkbox></td>
+                <td class="nome">{{v.visitatore.cognome}} {{v.visitatore.nome}}</td>
+            </tr>
+        {%endfor%}
+
+    </table>
+    
+   
+
+   
+     
+</div>
+
+{%endblock%}

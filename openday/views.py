@@ -68,3 +68,10 @@ def indirizzi(request,indirizzo):
     # mostra la pagina descrittiva dell'indirizzo
    pagina = Indirizzi.objects.get(titolo=indirizzo)
    return render(request,"openday/indirizzo.html",{'pagina':pagina})
+
+def rileva_presenze(request,sigla):
+   evento = Eventi.objects.get(sigla=sigla)
+   iscritti = Iscrizioni.objects.filter(evento=evento)
+   context = {'iscritti':iscritti}
+   return render(request,"openday/presenze.html",context)
+   
