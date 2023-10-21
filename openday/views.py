@@ -14,7 +14,8 @@ from .forms import IscrizioniForm
 def index(request):
    novita = News.objects.all()
    eventi = Eventi.objects.filter(attivo=True)
-   context = {'novita':novita, 'eventi':eventi}
+   indirizzi = Indirizzi.objects.all()
+   context = {'novita':novita, 'eventi':eventi, 'indirizzi':indirizzi}
    return render(request,"openday/index.html",context)
 
 def mioLogin(request):
@@ -62,3 +63,8 @@ def iscrivi_utente(request,sigla):
    else:
          context = {'form': form, 'evento':evento}
          return render(request, 'openday/iscrizione.html', context)
+
+def indirizzi(request,indirizzo):
+    # mostra la pagina descrittiva dell'indirizzo
+   pagina = Indirizzi.objects.get(titolo=indirizzo)
+   return render(request,"openday/indirizzo.html",{'pagina':pagina})

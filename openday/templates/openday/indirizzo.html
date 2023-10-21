@@ -1,0 +1,26 @@
+{%extends 'openday/base.html' %}
+{% load 'static' %}
+
+{%block head %}
+<style>
+       
+       
+   </style>
+   <script>
+       
+       
+</script>
+{%endblock %}
+
+{% block content %}
+
+<div class="w3-container" style="text-align:center">
+    <img src="{{pagina.immagine}}">
+    <h2>{{pagina.titolo}}</h2>
+    <div class="testo">
+        {{descrizione|safe}}
+    </div>
+     
+</div>
+
+{%endblock%}
