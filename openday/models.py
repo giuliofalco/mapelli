@@ -32,7 +32,7 @@ class Eventi(models.Model):
 RUOLO = [(0,'genitore'),(1,'studente'),(2,'docente')]
 class Visitatori(models.Model):
     cognome =  models.CharField(max_length=100)
-    nome = models.CharField(max_length=100,)
+    nome = models.CharField(max_length=100,default='')
     email = models.EmailField(blank=True,null=True)
     comune =  models.CharField(max_length=80, blank=True, null=True)
     scuola =  models.CharField(max_length=80, blank=True, null=True)
@@ -46,3 +46,23 @@ class Iscrizioni(models.Model):
     evento = models.ForeignKey(Eventi, on_delete=models.CASCADE)
     data_iscrizione = models.DateTimeField(default=timezone.now) 
     presente = models.BooleanField(default=False,blank=True)
+
+class Indirizzi(models.Model):
+    titolo = models.CharField(max_length=50)
+    banner = models.ImageField(null=True,blank=True)
+    descrizione = RichTextField()
+
+    def __str__(self) -> str:
+        return self.titolo
+    
+class riga_orario(models.Model):
+    materia = models.CharField(max_length=80)
+    prima   = models.IntegerField(null=True,blank=True)
+    seconda = models.IntegerField(null=True,blank=True)
+    terza   = models.IntegerField(null=True,blank=True)
+    quarta  = models.IntegerField(null=True,blank=True)
+    quinta  = models.IntegerField(null=True,blank=True)
+    indirizzo = models.ForeignKey(Indirizzi,on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return f" {self.indirizzo} {self.materia}"
