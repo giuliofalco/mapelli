@@ -22,7 +22,7 @@
 <div class="w3-container" style="text-align:center">
 <h2>Iscrizione Open Day <h2> 
 <h4> Indirizzo: {{evento.titolo}} {{evento.data}}</h4>
-<form method="post" id="myForm" action="/orienta/openday/iscrivimi">
+<form method="post" id="myForm" >
     {% csrf_token %}
     <input type="hidden" name = value="{{evento.id}}">
     <table class="w3-table w3-light-green" style="width:400px; margin: auto">
