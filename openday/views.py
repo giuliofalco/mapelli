@@ -41,7 +41,7 @@ def logout_view(request):
 
     logout(request)
     # Redirect to a success page.
-    return HttpResponseRedirect("/openday")
+    return HttpResponseRedirect("orienta/openday")
 
 def iscrivi_utente(request,sigla):
    evento = Eventi.objects.get(sigla=sigla)
