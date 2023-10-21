@@ -8,12 +8,12 @@
    <script>
         function iscrivimi() {
             var privacy = document.getElementById('privacy');
-            if (privacy.checked) {
-                document.getElementById('myForm').submit();
-            }
-            else {
+            var myform =  document.getElementById('myForm');
+            if (!privacy.checked) {
                 alert("Autorizzare il trattamento dei dati, selezionando l'apposita casella ");
+                return;
             }
+            myform.submit();
         }
    </script>
 {%endblock %}
