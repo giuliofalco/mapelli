@@ -61,4 +61,4 @@ def iscrivi_utente(request,sigla):
          return render(request,f"openday/conferma_iscrizione.html",context)  # Reindirizza a una pagina di conferma o a un'altra vista
    else:
          context = {'form': form, 'evento':evento}
-   return render(request, 'openday/iscrizione.html', context)
+         return render(request, 'openday/iscrizione.html', context)
