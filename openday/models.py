@@ -69,5 +69,5 @@ class riga_orario(models.Model):
     
 class Gallery(models.Model):
     titolo = models.CharField(max_length=50, null=True, blank=True)
-    immagine = models.ImageField
+    immagine = models.ImageField(default='')
     descrizione = RichTextField(null=True,blank=True)
