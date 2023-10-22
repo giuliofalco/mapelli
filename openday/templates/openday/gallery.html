@@ -27,17 +27,14 @@ a {cursor:pointer;}
 
       <div class="imagebox">
         
-        {% if imm.url %}
         
-            <iframe width="560" height="315" src="{{imm.url}}" frameborder="0" allowfullscreen></iframe>
-        
-        {%else%}
-
-           <a href="/orienta{{imm.immagine.url}}">   <img src="/orienta{{imm.immagine.url}}"> </a>
-           <h4>{{imm.titolo}}</h4>
-
+        <a href="/orienta{{imm.immagine.url}}">   <img src="/orienta{{imm.immagine.url}}"> </a>
+        <h4> 
+        {{imm.titolo}}
+        {%if imm.url %}
+            <a href="{{imm.url}}">VIDEO</a>
         {%endif%}
-
+        </h4>
       </div>
 
       {% endfor %}
