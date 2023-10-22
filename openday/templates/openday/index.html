@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
      
-      h2   {text-align:center; color: blue;}
+      h2    {text-align:center; color: blue;}
       .news {text-align: left; width:70%; margin:auto}
 </style>
 
@@ -17,7 +17,7 @@
      
       {%for new in novita%}
       <h2>{{new.titolo}} </h2>
-      <div class="new">
+      <div class="news">
       {{new.testo|safe}}
       </div>
       {%endfor%}
