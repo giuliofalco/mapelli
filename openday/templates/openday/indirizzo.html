@@ -20,14 +20,15 @@
         {{pagina.descrizione|safe}}
     </div>
     <table class="w3-table w3-card-4">
+        <th>Materia</th><th>Prima</th><th>Seconda</th><th>Terza</th><th>Quarta</th><th>Quinta</th>
         {%for riga in righe_orario%}
            <tr>
                 <td>{{riga.materia}}</td>
-                <td>{{riga.prima}}</td>
-                <td>{{riga.seconda}}</td>
-                <td>{{riga.terza}}</td>
-                <td>{{riga.quarta}}</td>
-                <td>{{riga.quinta}}</td>
+                <td>{{riga.prima|default:''}}</td>
+                <td>{{riga.seconda|default:''}}</td>
+                <td>{{riga.terza|default:''}}</td>
+                <td>{{riga.quarta|default:''}}</td>
+                <td>{{riga.quinta|default:''}}</td>
            </tr>
         {%endfor%}
 
