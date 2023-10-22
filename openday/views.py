@@ -82,8 +82,10 @@ def conferma_presenza(id):
 
 def rileva_presenze(request,sigla):
    evento = Eventi.objects.get(sigla=sigla)
+   titolo = evento.titolo
+   data   = evento.data
    iscritti = Iscrizioni.objects.filter(evento=evento)
-   context = {'iscritti':iscritti}
+   context = {'iscritti':iscritti, 'titolo':titolo, 'data':data}
    if request.method == 'POST':
       for id in request.POST:
          if id != "csrfmiddlewaretoken":
