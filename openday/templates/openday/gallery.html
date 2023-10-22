@@ -8,7 +8,8 @@
  h2 {text-align: center; color: blue}
 .gallery {display: flex}
 .imagebox {height:80px;}
-.imagebox img {width: 100%}
+.imagebox img {height: 100%}
+a {cursor:pointer;}
 
 </style>
 
@@ -26,7 +27,7 @@
 
       <div class="imagebox">
         
-           <img src="/orienta{{imm.immagine.url}}">
+        <a href="/orienta{{imm.immagine.url}}">   <img src="/orienta{{imm.immagine.url}}"> </a>
 
       </div>
 
