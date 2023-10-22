@@ -66,3 +66,8 @@ class riga_orario(models.Model):
 
     def __str__(self) -> str:
         return f" {self.indirizzo} {self.materia}"
+    
+class Gallery(models.Model):
+    titolo = models.CharField(max_length=50, null=True, blank=True)
+    immagine = models.ImageField
+    descrizione = RichTextField(null=True,blank=True)
