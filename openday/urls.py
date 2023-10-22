@@ -12,4 +12,5 @@ urlpatterns = [
     path('indirizzi/<str:indirizzo>',views.indirizzi,name='indirizzi'),
     path('rileva_presenze/<str:sigla>',views.rileva_presenze,name='rileva_presenze'),
     path('conferma_presenza',views.conferma_presenza,name='conferma_presenza'),
+    path('gallery',views.gallery,name='gallery'),
 ]

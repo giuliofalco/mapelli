@@ -1,0 +1,39 @@
+{%extends 'openday/base.html'%}
+{%load static %}
+
+{% block head %}
+
+<style>
+
+ h2 {text-align: center; color: blue}
+.gallery {display: flex}
+.imagebox {width:150px;}
+.imagebox img {width: 100%}
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="w3-container">
+
+   <h2> Galleria di immagini</h2>
+
+   <div class="gallery">
+
+      {% for imm in immagini %}
+
+      <div class="imagebox">
+        
+           <img src="/orienta{{imm.immagine.url}}">
+
+      </div>
+
+      {% endfor %}
+
+   </div>
+
+</div>
+
+{% endblock %}

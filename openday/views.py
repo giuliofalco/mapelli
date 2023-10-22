@@ -94,4 +94,9 @@ def rileva_presenze(request,sigla):
             conferma_presenza(id)
    
    return render(request,"openday/presenze.html",context)
+
+def gallery(request):
+   immagini = Gallery.objects.all()
+   context = {'immagini':immagini}
+   return render(request,"openday/gallery.html",context)
    
