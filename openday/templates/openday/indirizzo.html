@@ -19,7 +19,19 @@
     <div class="testo">
         {{pagina.descrizione|safe}}
     </div>
-     
+    <table class="w3-table w3-card-4">
+        {%for riga in righe_orario%}
+           <tr>
+                <td>{{riga.materia}}</td>
+                <td>{{riga.prima}}</td>
+                <td>{{riga.seconda}}</td>
+                <td>{{riga.terza}}</td>
+                <td>{{riga.quarta}}</td>
+                <td>{{riga.quinta}}</td>
+           </tr>
+        {%endfor%}
+
+    </table>
 </div>
 
 {%endblock%}

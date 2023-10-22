@@ -67,7 +67,9 @@ def iscrivi_utente(request,sigla):
 def indirizzi(request,indirizzo):
     # mostra la pagina descrittiva dell'indirizzo
    pagina = Indirizzi.objects.get(titolo=indirizzo)
-   return render(request,"openday/indirizzo.html",{'pagina':pagina})
+   righe_orario = righe_orario.objects.filter(indirizzo = pagina) 
+   context = {'pagina':pagina, 'righe_orario':righe_orario}
+   return render(request,"openday/indirizzo.html",context)
 
 def conferma_presenza(id):
    # conferma la presenza identificata da id 
