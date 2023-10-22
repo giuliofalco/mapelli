@@ -69,6 +69,6 @@ class riga_orario(models.Model):
     
 class Gallery(models.Model):
     titolo = models.CharField(max_length=50, null=True, blank=True)
-    immagine = models.ImageField(blank = True,default='')
+    immagine = models.ImageField(blank = True, null=True, default='')
     descrizione = RichTextField(null=True,blank=True)
     url = models.URLField(null=True,blank=True) # se è un video il suo url
