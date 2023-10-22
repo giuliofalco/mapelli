@@ -25,3 +25,7 @@ class IndirizziAdmin(admin.ModelAdmin):
 @admin.register(riga_orario)
 class Admin(admin.ModelAdmin):
     list_display = ['indirizzo','materia']  
+
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ['titolo','immagine', 'descrizione']
