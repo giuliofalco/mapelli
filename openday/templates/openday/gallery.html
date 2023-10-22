@@ -29,12 +29,12 @@ a {cursor:pointer;}
         
         
         <a href="/orienta{{imm.immagine.url}}">   <img src="/orienta{{imm.immagine.url}}"> </a>
-        <h4> 
-        {{imm.titolo}}
+       
         {%if imm.url %}
             <a href="{{imm.url}}">VIDEO</a>
         {%endif%}
-        </h4>
+        {{imm.titolo}}
+     
       </div>
 
       {% endfor %}
