@@ -1,4 +1,5 @@
 {%extends 'openday/base.html' %}
+{%load static %}
 
 {%block head %}
 
@@ -7,6 +8,7 @@
       .checkbox {width:25px;}
       .nome     {width: 550px;}
       th        {text-align:left;}
+      .spunta   {width:32px;}
 </style> 
  
 <script>       
@@ -19,21 +21,31 @@
 <div class="w3-container" style="text-align:left; width:75%; margin:auto;">
 
     <h4>{{iscritti.0.evento.titolo}} : {{iscritti.0.evento.data}}</h4>
-    <button class="w3-blue">Salva</button>
+
+<form id = myForm method="post">
+    {% csrf_token %}
+
+    <button type="submit" class="w3-blue">Salva</button>
     <p>
     <table class="w3-table w3-card-4" style="width: 300px;">
         <th ></th><th>Visitatore</th><th>Presenza</th>
         
         {%for v in iscritti %}
             <tr>
-                <td class="checkbox"><input type=checkbox></td>
+                <td> <input type="checkbox" name="{{v.id}}"> </td>
                 <td class="nome">{{v.visitatore.cognome}} {{v.visitatore.nome}}</td>
+                <td>
+                  {%if v.presente%}
+                    <img class=spunta src="/static/openday/spunta.png" alt='presente'>
+                  {%endif%}
+                </td>
             </tr>
         {%endfor%}
+        
 
     </table>
     
-   
+</form>
 
    
      

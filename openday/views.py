@@ -69,9 +69,25 @@ def indirizzi(request,indirizzo):
    pagina = Indirizzi.objects.get(titolo=indirizzo)
    return render(request,"openday/indirizzo.html",{'pagina':pagina})
 
+def conferma_presenza(id):
+   # conferma la presenza identificata da id 
+   try:
+      id = int(id)
+      adesione = Iscrizioni.objects.get(id=id)
+      adesione.presente = True
+      adesione.save()
+   except:
+      print("errore nel salvataggio")
+   return
+
 def rileva_presenze(request,sigla):
    evento = Eventi.objects.get(sigla=sigla)
    iscritti = Iscrizioni.objects.filter(evento=evento)
    context = {'iscritti':iscritti}
+   if request.method == 'POST':
+      for id in request.POST:
+         if id != "csrfmiddlewaretoken":
+            conferma_presenza(id)
+   
    return render(request,"openday/presenze.html",context)
    
