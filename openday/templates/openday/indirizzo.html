@@ -11,7 +11,9 @@
 {% block content %}
 
 <div class="w3-container" style="text-align:left; width:75%; margin:auto;">
-    <img src='/orienta{{pagina.banner}}'>
+    {%if pagina.banner %}
+    <img src='/orienta{{pagina.banner.url}}'>
+    {%endif%}
     <h2>{{pagina.titolo}}</h2>
     <div class="testo">
         {{pagina.descrizione|safe}}
