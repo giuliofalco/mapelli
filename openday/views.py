@@ -35,7 +35,7 @@ def autentica(request):
       login(request, user)
       return HttpResponseRedirect(next)
    else:
-      return render(request,'/orienta/openday/login.html',{'msg':'Autenticazione Fallita', 'next':next} )
+      return render(request,'/openday/login.html',{'msg':'Autenticazione Fallita', 'next':next} )
    
 def logout_view(request):
     # esegue il logout dall'utente 
