@@ -189,7 +189,7 @@ def adesioni(request):
    # elenca le proposte con almeno un referente interno o una adesione
    # elementi della lista [proposta,referentinumerod i adesioni]
    proposte = Proposte.objects.all()
-   selezione = [prop for prop in proposte if prop.referenti_interni or prop.iscrizioni]
+   selezione = [prop for prop in proposte if len(prop.referenti_interni.all())>0 or len(prop.iscrizioni.all())>0]
    context = {'selezione':selezione}
    return render(request,"tutor/elenco_adesioni.html",context)
       
