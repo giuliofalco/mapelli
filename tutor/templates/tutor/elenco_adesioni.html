@@ -4,8 +4,7 @@
 
 <style>
      h2 {text-align: center; color:blue}
-    .icona {cursor: pointer;}
-    .casella {text-align: left;}
+    .icona {cursor: pointer; margin-right:10px;}
 </style>
 
 <script>
@@ -39,7 +38,7 @@
             {{proposta.iscrizioni.all|length}}
         </td>
         <td>
-            <td class="casella"><img class="icona" src="{%static 'tutor/gnome-help.png' %}" onclick="dettaglio({{proposta.id}})"> </td>
+            <td><img class="icona" src="{%static 'tutor/gnome-help.png' %}" onclick="dettaglio({{proposta.id}})"> </td>
         </td>
     </tr>
 
