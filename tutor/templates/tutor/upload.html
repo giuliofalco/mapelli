@@ -25,6 +25,9 @@
         if (nome_archivio == 'studenti_csv') {
            url = "upload_csv_studenti";  
         }
+        if (nome_archivio == 'doc_coinvolti_csv') {
+           url = "upload_csv_doc_coinvolti";  
+        }
         myform = document.getElementById('myform')
         myform.action = url
         myform.submit();
@@ -49,6 +52,8 @@
             <li><a href="javascript:carica('tutor_csv')"> CSV Tutor </a></li>
             <li><a href="javascript:carica('classi_csv')"> CSV Classi </a></li>
             <li><a href="javascript:carica('studenti_csv')"> CSV Studenti </a></li>
+            <li><a href="javascript:carica('doc_coinvolti_csv')"> CSV Docenti Coinvolti </a></li>
+
         </ul>
     </form>
 </div>

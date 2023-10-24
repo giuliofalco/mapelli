@@ -5,7 +5,7 @@
 <style>
     h2 {text-align: center; color:blue}
     .icona {cursor: pointer;}
-    .casella {text-align: center;}
+    
 </style>
 
 <script>
@@ -39,7 +39,7 @@
                 <td>  {{prop.ente}}</td>
                 <td>  {{prop.data_inizio|default:''}}</td>
                 <td>  {{prop.data_fine|default:''}}</td>
-                <td class="casella"><img class="icona" src="{%static 'tutor/gnome-help.png' %}" onclick="dettaglio({{prop.id}})"> </td>
+                <td><img class="icona" src="{%static 'tutor/gnome-help.png' %}" onclick="dettaglio({{prop.id}})"> </td>
             </tr>
             {%endfor%}
         </table>
