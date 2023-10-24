@@ -2,6 +2,20 @@
 {%load static %}
 {%block head%}
 
+<style>
+     h2 {text-align: center; color:blue}
+    .icona {cursor: pointer;}
+</style>
+
+<script>
+
+    function dettaglio(idprop) {
+        url = "dettaglio_proposta/"+idprop;
+        document.location = url;
+    }
+
+</script>
+
 {%endblock%}
 
 
