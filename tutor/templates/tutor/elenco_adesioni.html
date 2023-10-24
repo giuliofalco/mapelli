@@ -16,7 +16,7 @@
     {% for proposta in selezione %}    
 
     <tr>
-        <td>{{proposta.titolo}}</td>
+        <td>{{proposta.nome_progetto}}</td>
         {%for ref in proposta.referenti_interni.all%}
         <td>{{ref}}, </td>
         {%endfor%}
