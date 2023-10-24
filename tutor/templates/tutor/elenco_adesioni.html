@@ -11,7 +11,7 @@
 <div class="w3-container" style="width: 50%; margin:auto;">
 
     <table class="w3-table-all w3-card-4">
-    <th> Proposta </th><th>Referenti</th><th>Num. adesioni</th><th>Mostra</th>
+    <th> Proposta </th><th>Referenti</th><th>Iscritti</th><th>Mostra</th>
 
     {% for proposta in selezione %}    
 
@@ -20,7 +20,10 @@
         {%for ref in proposta.referenti_interni.all%}
         <td>{{ref}}, </td>
         {%endfor%}
-        <td>{{proposta.iscrizioni.all.length}}</td>
+        <td>{%for stud in proposta.iscrizioni.all %}
+              {{stud}}<br>
+            {%endfor%}
+        </td>
     </tr>
 
     {%endfor%}
