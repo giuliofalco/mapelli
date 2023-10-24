@@ -12,15 +12,15 @@
 
     <table class="w3-table-all w3-card-4">
     <th> Proposta </th><th>Referenti</th><th>Num. adesioni</th><th>Mostra</th>
-    
+
     {% for proposta in selezione %}    
 
     <tr>
         <td>{{proposta.titolo}}</td>
-        {%for ref in proposta.referenti_interni%}
+        {%for ref in proposta.referenti_interni.all%}
         <td>{{ref}}, </td>
         {%endfor%}
-        <td>{{proposta.iscrizioni.length}}</td>
+        <td>{{proposta.iscrizioni.all.length}}</td>
     </tr>
 
     {%endfor%}
