@@ -102,10 +102,6 @@ def elenco_studenti(request,classe):
    context = {'classe':classe, 'studenti':studenti}
    return render(request,"tutor/studenti.html",context)
 
-
-def adesioni(request):
-    return HttpResponse('Funzionalità non ancora implementata')
-
 def dettaglio_proposta(request,prop):
     # pagina con il dettaglio delle proposte e la popssibilità di adesione
     utente = str(request.user)
@@ -176,7 +172,6 @@ def adesioni_proposta(request,id):
    context = {'idproposta':id, 'target' : target, 'tutor':tutor}
    return render(request,"tutor/adesioni_proposta.html",context)
 
-
 def salva_iscrizioni(request):
    # salva le iscrizioni degli studenti selezionati nella proposta
    if request.method == "POST":
@@ -190,6 +185,14 @@ def salva_iscrizioni(request):
       return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{idproposta}")
    return HttpResponseRedirect("/orienta/tutor")
    
+def adesioni(request):
+   # elenca le proposte con almeno un referente interno o una adesione
+   # elementi della lista [proposta,referentinumerod i adesioni]
+   proposte = Proposte.objects.all()
+   selezione = [prop for prop in proposte if len(prop.referenti_interni)>0 or len(prop.iscrizioni) >0]
+   context = {'selezione':selezione}
+   return render(request,"tutor/elenco_adesioni",context)
+      
 
 ###################################
 ### UPLOAD - DOWNLOAD - ARCHIVI ###
@@ -204,19 +207,18 @@ def upload_csv_proposte(request):
          file_content = file_csv.read().decode('utf-8').splitlines()
         
          reader = csv.DictReader(file_content,delimiter=';')
-        
-         # aziende = Aziende.objects.all()
-         #for az in aziende:
-         #    az.delete()
 
          errori = []
          for row in reader:
-               
+        
+            try:
                proposta = Proposte (
+                    id = row['id'],
                     nome_progetto = row['nome_progetto'],
+                    descrizione = row['descrizione'],
                     disciplina =row['disciplina'],
                     # max_alunni = row['max_alunni'],
-                    classi_consigliate = row['classi'],
+                    # classi_consigliate = row['classi'],
                     ente = row['ente'],
                     referente_esterno = row['referente_esterno'],
                     email_ref_esterno = row['email_ref_esterno'],
@@ -225,11 +227,13 @@ def upload_csv_proposte(request):
                     data_inizio = row['data_inizio'],
                     data_fine = row['data_fine'],
                )
-               try:
+            except:
+               print('errore')
+            try:
                   proposta.save()
-               except IntegrityError as e:
+            except IntegrityError as e:
                    errori.append(f"errore in {row['nome_progetto']} {e}")
-               except Exception as e:
+            except Exception as e:
                     errori.append(f"errore sconosciuto in {row['nome_progetto']} {e}")
                     
          if errori:

@@ -1,0 +1,32 @@
+{%extends 'tutor/base.html' %}
+{%load static %}
+{%block head%}
+
+{%endblock%}
+
+
+{%block content %}
+
+<h2>Elenco Adesioni</h2>
+<div class="w3-container" style="width: 50%; margin:auto;">
+
+    <table class="w3-table-all w3-card-4">
+    <th> Proposta </th><th>Referenti</th><th>Num. adesioni</th><th>Mostra</th>
+    
+    {% for proposta in selezione %}    
+
+    <tr>
+        <td>{{proposta.titolo}}</td>
+        {%for ref in proposta.referenti_interni%}
+        <td>{{ref}}, </td>
+        {%endfor%}
+        <td>{{proposta.iscrizioni.length}}</td>
+    </tr>
+
+    {%endfor%}
+
+    </table>
+
+</div>
+
+{%endblock%}
