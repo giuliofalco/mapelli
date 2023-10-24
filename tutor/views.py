@@ -191,7 +191,7 @@ def adesioni(request):
    proposte = Proposte.objects.all()
    selezione = [prop for prop in proposte if prop.referenti_interni or prop.iscrizioni]
    context = {'selezione':selezione}
-   return render(request,"tutor/elenco_adesioni",context)
+   return render(request,"tutor/elenco_adesioni.html",context)
       
 
 ###################################
