@@ -20,9 +20,11 @@
         {%for ref in proposta.referenti_interni.all%}
         <td>{{ref}}, </td>
         {%endfor%}
-        <td>{%for stud in proposta.iscrizioni.all %}
-              {{stud}}<br>
-            {%endfor%}
+        <td>
+            {{proposta.iscrizioni.all|length}}
+        </td>
+        <td>
+           
         </td>
     </tr>
 
