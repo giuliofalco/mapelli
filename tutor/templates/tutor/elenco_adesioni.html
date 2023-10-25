@@ -31,9 +31,11 @@
 
     <tr>
         <td>{{proposta.nome_progetto}}</td>
+        <td>
         {%for ref in proposta.referenti_interni.all%}
-        <td>{{ref}}, </td>
+        {{ref}}, 
         {%endfor%}
+    </td>
         <td>
             {{proposta.iscrizioni.all|length}}
         </td>
