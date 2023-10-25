@@ -44,7 +44,7 @@ def logout_view(request):
     # Redirect to a success page.
     return HttpResponseRedirect("/orienta/tutor")
 
-
+@login_required
 class ChangePasswordView(PasswordChangeView):
     # consente all'utente  di cambiarsi la password
 
@@ -59,11 +59,11 @@ class ChangePasswordView(PasswordChangeView):
         messages.error(self.request, 'Please correct the errors below.')
         return super().form_invalid(form)
     
-
+@login_required
 def upload(request):
     return render(request,"tutor/upload.html",{})
 
-
+@login_required
 def upload_csv_proposte(request):
    # carica il csv delle proposte
    return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/orienta/tutor'>Torna alla hoem page</a>"))
@@ -93,7 +93,7 @@ def elenco_classi(request):
    context = {'dati':dati}
    return render(request,"tutor/classi.html",context)
 
-
+@login_required
 def elenco_studenti(request,classe):
    # elenco degli studenti di una specifia classe
 
@@ -102,6 +102,7 @@ def elenco_studenti(request,classe):
    context = {'classe':classe, 'studenti':studenti}
    return render(request,"tutor/studenti.html",context)
 
+@login_required
 def dettaglio_proposta(request,prop):
     # pagina con il dettaglio delle proposte e la popssibilità di adesione
     utente = str(request.user)
@@ -127,6 +128,7 @@ def aggiungimi(request,id):
       pass
    return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{id}")
 
+@login_required
 def cancellami(request,id):
    # rimuove il tutor dai referenti interni
    utente = str(request.user)
@@ -140,6 +142,7 @@ def cancellami(request,id):
       pass
    return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{id}")
 
+@login_required
 def ritira(request,idstudente,idproposta):
    # ritira lo studente dall'adesione alla proposta
    proposta = Proposte.objects.get(id=idproposta)
@@ -148,6 +151,7 @@ def ritira(request,idstudente,idproposta):
    proposta.save()
    return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{idproposta}")
 
+@login_required
 def adesioni_proposta(request,id):
    # va alla pagina con gli studenti del tutor da assegnare alla proposta pk = id
    utente = str(request.user)
@@ -172,6 +176,7 @@ def adesioni_proposta(request,id):
    context = {'idproposta':id, 'target' : target, 'tutor':tutor}
    return render(request,"tutor/adesioni_proposta.html",context)
 
+@login_required
 def salva_iscrizioni(request):
    # salva le iscrizioni degli studenti selezionati nella proposta
    if request.method == "POST":
@@ -184,7 +189,8 @@ def salva_iscrizioni(request):
       proposta.save()  
       return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{idproposta}")
    return HttpResponseRedirect("/orienta/tutor")
-   
+
+@login_required   
 def adesioni(request):
    # elenca le proposte con almeno un referente interno o una adesione
    # elementi della lista [proposta,referentinumerod i adesioni]
