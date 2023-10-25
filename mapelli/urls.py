@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='/orienta/tutor/', permanent=False)),
+    path('', RedirectView.as_view(url='/orienta/openday/', permanent=False)),
     path('pcto/',include('pcto.urls')),
     path('openday/',include('openday.urls')),
     path('festival/',include('festival.urls')),
