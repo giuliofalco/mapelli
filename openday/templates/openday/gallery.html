@@ -29,7 +29,7 @@ a {cursor:pointer;}
       <div class="imagebox">
         
         {%if imm.immagine %}
-           <a href="{{imm.immagine.url}}"> <img src="/orienta/media/{{imm.immagine}}"> </a>
+           <a href="orienta{{imm.immagine.url}}"> <img src="{{imm.immagine.url}}"> </a>
         {%endif%}
         <br>
         {%if imm.url %}
