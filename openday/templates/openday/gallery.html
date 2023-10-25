@@ -33,7 +33,12 @@ a {cursor:pointer;}
         {%endif%}
         <br>
         {%if imm.url %}
-            <a href="{{imm.url}}"> <img class=youtube src="{% static 'openday/youtube.png' %}"></a><br>
+            <a href="{{imm.url}}"> 
+                <!-- 
+               <img class=youtube src="{% static 'openday/youtube.png' %}">
+               -->
+              <br> VIDEO
+            </a><br>
         {%endif%}
         {{imm.titolo}}
      
