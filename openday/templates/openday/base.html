@@ -106,6 +106,7 @@
         <div class="w3-sidebar w3-bar-block w3-border-right w3-light-blue" style="display:none" id="mySidebar">
         
             <button onclick="myFunction('mySidebar')" class="w3-bar-item w3-large">Chiudi &times;</button>
+            <a href="{% url 'openday:index' %}" class="w3-bar-item w3-button ">Home</a>
             <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Indirizzi</button>
             <div class="w3-sidebar" style="display:none" id="iscrizioni">
                 {%for indirizzo in indirizzi %}
