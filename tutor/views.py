@@ -108,7 +108,7 @@ def elenco_studenti(request,classe):
 def dettaglio_proposta(request,prop):
     # pagina con il dettaglio delle proposte e la possibilità di adesione
 
-    LUOGHI = [(0,'A Scuola'),(1,'Esterno'),(2,'Da definire')]
+    LUOGHI = {0:'A Scuola', 1 : 'Esterno', 2 : 'Da definire'}
     utente = str(request.user)
     proposta = Proposte.objects.get(id=prop) 
     referenti_interni =  proposta.referenti_interni.all()
