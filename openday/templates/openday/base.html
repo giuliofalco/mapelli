@@ -109,7 +109,8 @@
 
             <a href="{% url 'openday:index' %}" class="w3-bar-item w3-button ">Home</a>
 
-            <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Indirizzi</button>
+            <button class="w3-bar-item w3-button" onClick="myFunction('indirizzi')">Indirizzi</button>
+
             <div class="w3-sidebar" style="display:none" id="indirizzi">
                 {%for indirizzo in indirizzi %}
                 <a href="indirizzi/{{indirizzo.titolo}}"> <button class="w3-bar-item w3-button">{{indirizzo.titolo}}</button></a>
