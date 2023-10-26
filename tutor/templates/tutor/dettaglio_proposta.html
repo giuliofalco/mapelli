@@ -62,11 +62,12 @@
             <td><span class=label>Date:</span></td><td><b>Inizio:</b> {{proposta.data_inizio|default:''}} - <b>Fine:</b> {{proposta.data_fine|default:''}}</td>
         </tr>
         <tr>
-            <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|safe|default:""}}</td>
-        </tr>
-        <tr>
             <td><span class=label>Luogo:</span></td><td>{{luogo}}</td>
         </tr>
+        <tr>
+            <td><span class=label>Descrizione:</span></td><td>{{proposta.descrizione|safe|default:""}}</td>
+        </tr>
+       
     </table>  
     Allegato: <a href="{{proposta.allegato}}">{{proposta.allegato|default:''}}</a>
     <hr>
