@@ -9,7 +9,7 @@
 .gallery {display: flex}
 .imagebox {height:120px; text-align:center; margin-right:10px;}
 .imagebox img {height: 100%; }
-.youtube {width:32px; height: 32px;}
+.logo_youtube {width:32px; height: 32px;}
 a {cursor:pointer;}
 
 </style>
@@ -37,7 +37,7 @@ a {cursor:pointer;}
                 <!-- 
                <img class=youtube src="{% static 'openday/youtube.png' %}">
                -->
-              <br> VIDEO
+              <br> <img class=logo_youtube src="{%static 'openday/youtube.png'%}">
             </a><br>
         {%endif%}
         {{imm.titolo}}
