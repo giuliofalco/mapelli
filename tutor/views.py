@@ -79,6 +79,7 @@ def proposte(request):
 
 @login_required
 def elenco_tutor(request):
+   # Elenco dei Tutor
     
    tutor = Tutor.objects.all()
    context = {'tutor':tutor}
@@ -86,6 +87,8 @@ def elenco_tutor(request):
 
 @login_required
 def elenco_classi(request):
+   # Elenco delle classi
+
    classi = Classi.objects.all().order_by('classe')
    indirizzi = Indirizzi.objects.all()
    dati = [[corso.denominazione,classi.filter(indirizzo = corso)] for corso in indirizzi]
@@ -94,7 +97,7 @@ def elenco_classi(request):
 
 @login_required
 def elenco_studenti(request,classe):
-   # elenco degli studenti di una specifia classe
+   # elenco degli studenti di una specifica classe
 
    objclass = Classi.objects.get(classe=classe)
    studenti = Studenti.objects.filter(classe=objclass)
@@ -103,12 +106,15 @@ def elenco_studenti(request,classe):
 
 @login_required
 def dettaglio_proposta(request,prop):
-    # pagina con il dettaglio delle proposte e la popssibilità di adesione
+    # pagina con il dettaglio delle proposte e la possibilità di adesione
+
+    LUOGHI = [(0,'A Scuola'),(1,'Esterno'),(2,'Da definire')]
     utente = str(request.user)
     proposta = Proposte.objects.get(id=prop) 
     referenti_interni =  proposta.referenti_interni.all()
     iscritti = proposta.iscrizioni.all()
-    context = {'proposta':proposta, 'referenti_interni': referenti_interni, 'iscritti':iscritti, 'utente':utente}
+    context = {'proposta':proposta, 'referenti_interni': referenti_interni, 'iscritti':iscritti, 
+               'utente':utente, 'luogo' : LUOGHI[proposta.luogo]}
     return render(request,"tutor/dettaglio_proposta.html",context)
 
 @login_required
