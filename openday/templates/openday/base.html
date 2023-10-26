@@ -113,6 +113,7 @@
                 <a href="indirizzi/{{indirizzo.titolo}}"> <button class="w3-bar-item w3-button">{{indirizzo.titolo}}</button></a>
                 {%endfor%}
             </div>
+            <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Iscrizioni</button>
             <div class="w3-sidebar" style="display:none" id="iscrizioni">
                 {%for evento in eventi%}
                 <a href="iscrivi_utente/{{evento.sigla}} "> <button class="w3-bar-item w3-button">{{evento.titolo}} {{evento.data}}</button></a>
