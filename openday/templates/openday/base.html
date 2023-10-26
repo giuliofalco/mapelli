@@ -108,13 +108,11 @@
             <button onclick="myFunction('mySidebar')" class="w3-bar-item w3-large">Chiudi &times;</button>
             <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Iscrizioni</button>
             <div class="w3-sidebar" style="display:none" id="iscrizioni">
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    {% for evento in eventi %}
-                    <a href="iscrivi_utente/{{evento.sigla}} " class="nostyle"> 
-                        <button class="w3-bar-item w3-button ">{{evento.titolo}} {{evento.data}} </button></a>
-                    {%endfor%}
-                </div>
-            </div>
+                <a href=""> <button class="w3-bar-item w3-button">18 nov. 8:30-10:30 Liceo Scienze Applicate</button></a>
+                <a href=""> <button class="w3-bar-item w3-button">18 nov. 11:00-13:30 Liceo Sportivo</button></a>
+                <a href=""> <button class="w3-bar-item w3-button">02 dic. 8:30-10:30 AFM e Turismo</button></a>
+                <a href=""> <button class="w3-bar-item w3-button">02 dic. 11:00-13:30 Agro Alimentare</button></a>
+              </div>
 
         </div>
         
