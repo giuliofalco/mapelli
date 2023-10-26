@@ -106,13 +106,12 @@
         <div class="w3-sidebar w3-bar-block w3-border-right w3-light-blue" style="display:none" id="mySidebar">
         
             <button onclick="myFunction('mySidebar')" class="w3-bar-item w3-large">Chiudi &times;</button>
-            <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Iscrizioni</button>
+            <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Indirizzi</button>
             <div class="w3-sidebar" style="display:none" id="iscrizioni">
-                <a href=""> <button class="w3-bar-item w3-button">18 nov. 8:30-10:30 Liceo Scienze Applicate</button></a>
-                <a href=""> <button class="w3-bar-item w3-button">18 nov. 11:00-13:30 Liceo Sportivo</button></a>
-                <a href=""> <button class="w3-bar-item w3-button">02 dic. 8:30-10:30 AFM e Turismo</button></a>
-                <a href=""> <button class="w3-bar-item w3-button">02 dic. 11:00-13:30 Agro Alimentare</button></a>
-              </div>
+                {%for indirizzo in indirizzi %}
+                <a href="indirizzi/{{indirizzo.titolo}}"> <button class="w3-bar-item w3-button">{{indirizzo.titolo}}</button></a>
+                {%endfor%}
+            </div>
 
         </div>
         
