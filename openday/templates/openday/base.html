@@ -106,15 +106,19 @@
         <div class="w3-sidebar w3-bar-block w3-border-right w3-light-blue" style="display:none" id="mySidebar">
         
             <button onclick="myFunction('mySidebar')" class="w3-bar-item w3-large">Chiudi &times;</button>
+
             <a href="{% url 'openday:index' %}" class="w3-bar-item w3-button ">Home</a>
+
             <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Indirizzi</button>
-            <div class="w3-sidebar" id="indirizzi">
+            <div class="w3-sidebar" style="display:none" id="indirizzi">
                 {%for indirizzo in indirizzi %}
                 <a href="indirizzi/{{indirizzo.titolo}}"> <button class="w3-bar-item w3-button">{{indirizzo.titolo}}</button></a>
                 {%endfor%}
             </div>
+
             <button class="w3-bar-item w3-button" onClick="myFunction('iscrizioni')">Iscrizioni</button>
-            <div class="w3-sidebar" id="iscrizioni">
+            
+            <div class="w3-sidebar" style="display:none"id="iscrizioni">
                 {%for evento in eventi%}
                 <a href="iscrivi_utente/{{evento.sigla}} "> <button class="w3-bar-item w3-button">{{evento.titolo}} {{evento.data}}</button></a>
                 {%endfor%}
