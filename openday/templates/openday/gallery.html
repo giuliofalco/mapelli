@@ -8,7 +8,7 @@
  h2 {text-align: center; color: blue}
 .gallery {display: flex}
 .imagebox {height:120px; text-align:center; margin-right:10px;}
-.imagebox img {height: 100%; }
+.immagine {height: 100%; }
 a {cursor:pointer;}
 
 </style>
@@ -28,7 +28,7 @@ a {cursor:pointer;}
       <div class="imagebox">
         
         {%if imm.immagine %}
-           <a href="/orienta{{imm.immagine.url}}"> <img src="/orienta/{{imm.immagine.url}}"> </a>
+           <a href="/orienta{{imm.immagine.url}}"> <img class=immagine src="/orienta/{{imm.immagine.url}}"> </a>
         {%endif%}
         <br>
         {%if imm.url %}
