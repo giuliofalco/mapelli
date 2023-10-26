@@ -10,6 +10,7 @@
 .imagebox {height:120px; text-align:center; margin-right:10px;}
 .immagine {height: 100%; }
 a {cursor:pointer;}
+.video_logo {width:48px; margin-top: -30px;}
 
 </style>
 
@@ -36,7 +37,7 @@ a {cursor:pointer;}
                 <!-- 
                <img class=youtube src="{% static 'openday/youtube.png' %}">
                -->
-              <br> <img style="width:32px" src="{%static 'openday/youtube.png'%}">
+              <br> <img class=video_logo src="{%static 'openday/youtube.png'%}">
             </a><br>
         {%endif%}
         {{imm.titolo}}
