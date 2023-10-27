@@ -70,7 +70,7 @@ def upload_csv_proposte(request):
 def proposte(request):
     # elenco delle proposte
 
-   proposte = Proposte.objects.all()
+   proposte = Proposte.objects.filter(attivo=True)
    myfilter = ProposteFilter(request.GET,queryset=proposte)
    proposte = myfilter.qs
    context = {'proposte':proposte, 'myfilter':myfilter}
