@@ -92,6 +92,7 @@ class Proposte (models.Model):
     referenti_interni = models.ManyToManyField(Tutor, blank=True)
     iscrizioni = models.ManyToManyField(Studenti, blank = True)
     luogo = models.IntegerField(choices=LUOGHI, default=2)
+    attivo = models.BooleanField(default=True)
 
     def __str__(self):
        return(self.nome_progetto)
