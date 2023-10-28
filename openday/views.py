@@ -68,10 +68,9 @@ def iscrivi_utente(request,sigla):
 
 def indirizzi(request,indirizzo):
     # mostra la pagina descrittiva dell'indirizzo
-   indirizzi = Indirizzi.objects.all()              # tutti gli indirizzi per alimentare il menu
    pagina = Indirizzi.objects.get(titolo=indirizzo) # l'indirizzo da mostrare
    righe_orario = riga_orario.objects.filter(indirizzo = pagina) 
-   context = {'pagina':pagina, 'righe_orario':righe_orario, 'indirizzi':indirizzi}
+   context = {'pagina':pagina, 'righe_orario':righe_orario,}
    return render(request,"openday/indirizzo.html",context)
 
 def conferma_presenza(id):
