@@ -59,7 +59,7 @@
                 <button class="w3-button">Iscrizioni</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     {% for evento in eventi %}
-                    <a href="iscrivi_utente/{{evento.sigla}} " class="nostyle"> 
+                    <a href="/orienta/openday/iscrivi_utente/{{evento.sigla}} " class="nostyle"> 
                         <button class="w3-bar-item w3-button ">{{evento.titolo}} {{evento.data}} </button></a>
                     {%endfor%}
                 </div>
