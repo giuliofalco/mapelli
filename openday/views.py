@@ -101,7 +101,9 @@ def rileva_presenze(request,sigla):
 
 def gallery(request):
    # mostra la gallery di immagini e video
+   eventi = Eventi.objects.filter(attivo=True) # tutti gli eeventi attivi per le voci di menu
+   indirizzi = Indirizzi.objects.all()         # tutti gli indirizzi per le voci di menu  
    immagini = Gallery.objects.all()
-   context = {'immagini':immagini,}
+   context = {'immagini':immagini,'eventi':eventi,'indirizzi':indirizzi}
    return render(request,"openday/gallery.html",context)
    
