@@ -121,7 +121,7 @@
             
             <div class="w3-sidebar" style="display:none"id="iscrizioni">
                 {%for evento in eventi%}
-                <a href="/orienta/openday/iscrivi_utente/{{evento.sigla}} "> <button class="w3-bar-item w3-button">{{evento.titolo}} {{evento.data}}</button></a>
+                <a href="{url 'openday:iscrizioni' evento.sigla %} "> <button class="w3-bar-item w3-button">{{evento.titolo}} {{evento.data}}</button></a>
                 {%endfor%}
             </div>
 
