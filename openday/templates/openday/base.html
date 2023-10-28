@@ -113,7 +113,7 @@
 
             <div class="w3-sidebar" style="display:none" id="indirizzi">
                 {%for indirizzo in indirizzi %}
-                <a href="{%url 'openday':indirizzi' indirizzo.titolo %}"> <button class="w3-bar-item w3-button">{{indirizzo.titolo}}</button></a>
+                <a href="{%url 'openday:indirizzi' indirizzo.titolo %}"> <button class="w3-bar-item w3-button">{{indirizzo.titolo}}</button></a>
                 {%endfor%}
             </div>
 
