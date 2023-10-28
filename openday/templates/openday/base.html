@@ -113,7 +113,7 @@
 
             <div class="w3-sidebar" style="display:none" id="indirizzi">
                 {%for indirizzo in indirizzi %}
-                <a href="indirizzi/{{indirizzo.titolo}}"> <button class="w3-bar-item w3-button">{{indirizzo.titolo}}</button></a>
+                <a href="/orienta/openday/indirizzi/{{indirizzo.titolo}}"> <button class="w3-bar-item w3-button">{{indirizzo.titolo}}</button></a>
                 {%endfor%}
             </div>
 
@@ -121,7 +121,7 @@
             
             <div class="w3-sidebar" style="display:none"id="iscrizioni">
                 {%for evento in eventi%}
-                <a href="iscrivi_utente/{{evento.sigla}} "> <button class="w3-bar-item w3-button">{{evento.titolo}} {{evento.data}}</button></a>
+                <a href="/orienta/openday/iscrivi_utente/{{evento.sigla}} "> <button class="w3-bar-item w3-button">{{evento.titolo}} {{evento.data}}</button></a>
                 {%endfor%}
             </div>
 
@@ -131,6 +131,6 @@
 
         {% block content %}
         {% endblock %}
-        
+
     </body>
 </html>
