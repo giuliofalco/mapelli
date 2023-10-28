@@ -99,7 +99,9 @@ def rileva_presenze(request,sigla):
    return render(request,"openday/presenze.html",context)
 
 def gallery(request):
+   eventi = Eventi.objects.filter(attivo=True) 
+   indirizzi = Indirizzi.objects.all()
    immagini = Gallery.objects.all()
-   context = {'immagini':immagini}
+   context = {'immagini':immagini, 'eventi':eventi, 'indirizzi':indirizzi}
    return render(request,"openday/gallery.html",context)
    
