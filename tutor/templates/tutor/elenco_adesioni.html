@@ -19,18 +19,18 @@
 
 {%endblock%}
 
-
 {%block content %}
 
 <h2>Elenco Adesioni</h2>
 <div class="w3-container" style="width: 70%; margin:auto;">
 
     <table class="w3-table-all w3-card-4">
-    <th> Proposta </th><th>Referenti</th><th>Iscritti</th><th>Mostra</th>
+    <th>Ente</th><th> Proposta </th><th>Referenti</th><th>Iscritti</th><th>Mostra</th>
 
     {% for proposta in selezione %}    
 
     <tr>
+        <td>{{proposta.ente}}</td> 
         <td>{{proposta.nome_progetto}}</td>
         <td>
         {%for ref in proposta.referenti_interni.all%}
