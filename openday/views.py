@@ -14,8 +14,8 @@ from .filters import IscrittiFilter
 # HOME PAGE
 def index(request):
    novita = News.objects.all()
-   eventi = Eventi.objects.filter(attivo=True)
-   indirizzi = Indirizzi.objects.all().order_by('luogo')
+   eventi = Eventi.objects.filter(attivo=True).order_by('luogo')
+   indirizzi = Indirizzi.objects.all()
    context = {'novita':novita, 'eventi':eventi, 'indirizzi':indirizzi}
    return render(request,"openday/index.html",context)
 
@@ -69,7 +69,7 @@ def iscrivi_utente(request,sigla):
 
 def indirizzi(request,indirizzo):
     # mostra la pagina descrittiva dell'indirizzo
-   # eventi = Eventi.objects.filter(attivo=True) # tutti gli eventi attivi per le voci di menu
+   eventi = Eventi.objects.filter(attivo=True) # tutti gli eventi attivi per le voci di menu
    indirizzi = Indirizzi.objects.all()         # tutti gli indirizzi per le voci di menu     
    pagina = Indirizzi.objects.get(titolo=indirizzo) # l'indirizzo da mostrare
    righe_orario = riga_orario.objects.filter(indirizzo = pagina) 
