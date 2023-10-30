@@ -70,7 +70,7 @@
                 <button class="w3-button">Arrivi</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     {% for evento in eventi %}
-                    <a href="rileva_presenze/{{evento.sigla}}" class="w3-bar-item w3-button "> 
+                    <a href="{%url 'openday:rileva_presenze' evento.sigla %}" class="w3-bar-item w3-button "> 
                         {{evento.titolo}} {{evento.data}}
                     </a> 
                     {%endfor%}
