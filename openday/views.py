@@ -15,7 +15,7 @@ from .filters import IscrittiFilter
 def index(request):
    novita = News.objects.all()
    eventi = Eventi.objects.filter(attivo=True)
-   indirizzi = Indirizzi.objects.all()
+   indirizzi = Indirizzi.objects.all().order_by('luogo')
    context = {'novita':novita, 'eventi':eventi, 'indirizzi':indirizzi}
    return render(request,"openday/index.html",context)
 
