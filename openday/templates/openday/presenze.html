@@ -30,7 +30,7 @@
 <form id = myForm method="post">
     {% csrf_token %}
 
-    <button type="submit" class="w3-blue">Salva</button>
+    <button type="submit" class="w3-blue">Salva</button> Iscritti: {{iscritti|length}}
     <p>
     <table class="w3-table w3-card-4" style="width: 300px;">
         <th ></th><th>Visitatore</th><th>Presenza</th>
