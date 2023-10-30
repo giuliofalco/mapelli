@@ -9,6 +9,7 @@ from django.db import IntegrityError
 from django.contrib.auth.views import PasswordChangeView
 from django.shortcuts import render, redirect
 from .forms import IscrizioniForm
+from .filters import IscrittiFilter
 
 # HOME PAGE
 def index(request):
@@ -87,11 +88,14 @@ def conferma_presenza(id):
    return
 
 def rileva_presenze(request,sigla):
+   # elenca gli iscritti per rilevre le presenze
    evento = Eventi.objects.get(sigla=sigla)
    titolo = evento.titolo
    data   = evento.data
-   iscritti = Iscrizioni.objects.filter(evento=evento)
-   context = {'iscritti':iscritti, 'titolo':titolo, 'data':data}
+   iscritti = Iscrizioni.objects.filter(evento=evento).order_by('visitatore__cognome')
+   myfilter = IscrittiFilter(request.GET,queryset=iscritti)
+   iscritti = myfilter.qs
+   context = {'iscritti':iscritti, 'titolo':titolo, 'data':data, 'myfilter':myfilter}
    if request.method == 'POST':
       for id in request.POST:
          if id != "csrfmiddlewaretoken":
@@ -107,3 +111,36 @@ def gallery(request):
    context = {'immagini':immagini,'eventi':eventi,'indirizzi':indirizzi}
    return render(request,"openday/gallery.html",context)
    
+def upload(request):
+    # carica il template per l'upload
+    return render(request,"openday/upload.html")
+
+import csv
+def upload_iscrizioni(request,evento):
+   # carica da file csv le nuove iscrizioni senza duplicare le esistenti
+  
+   if request.method == 'POST':
+
+      try:  
+         event = Eventi.objects.get(sigla=evento)
+      except:
+         return HttpResponse('sigla di evento non esistente o duplicato') 
+
+      file_csv = request.FILES['archivio'] 
+      file_content = file_csv.read().decode('utf-8').splitlines()
+      reader = csv.DictReader(file_content)
+        
+      for row in reader:
+                
+               utente, created = Visitatori.objects.get_or_create(cognome=row['Nome e Cognome'], email = row['Nome utente'])
+               # Creazione di una nuova istanza del modello Iscrizioni
+               try :
+                  Iscrizioni.objects.get(visitatore=utente,evento=event)
+               except:
+                  iscrizione = Iscrizioni(
+                                 visitatore = utente,
+                                 evento = event
+                              ) 
+                  iscrizione.save()
+        
+   return HttpResponse("<h3>Caricamento completato <a href='/orienta/openday/'>Home</a>")  

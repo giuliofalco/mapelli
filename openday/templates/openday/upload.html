@@ -1,0 +1,48 @@
+{%extends "openday/base.html" %}
+{% load static %}
+
+{%block head %}
+
+<script>
+    function carica(evento) {
+        f = document.getElementById('archivio').value;
+        if (!f) {
+            alert('specifica prima il file da caricare');
+            return;
+        }
+        risp = confirm('vuoi aggiungere a '+ evento + ' i nuovi dati ?');
+        if (!risp)
+           return;
+        url = "upload_iscrizioni/"+evento;
+        myform = document.getElementById('myform');
+        myform.action = url;
+        myform.submit();
+        return;
+    }    
+</script>
+
+{%endblock%}
+
+{%block content %}
+
+<div class="w3-container">
+    <h1>Upload Page</h1>
+    <p>Seguire l'ordine indicato nel caricamento archivi. Scarica una copia prima di sostituirli. </p>
+    <form method="POST" enctype="multipart/form-data" id="myform" > 
+        {% csrf_token %}
+
+        File: <input type="file" name="archivio" id="archivio">
+        <p>
+        <h3>Eventi</h3>
+        <ul class="w3-ul">
+            <li><a href="javascript:carica('LS-1')"> Liceo SA 18 nov. 8:30-10:30</a></li>
+            <li><a href="javascript:carica('LZ-2')"> Liceo Sportivo 18 nov. 11:00-13:00</a></li>
+            <li><a href="javascript:carica('AFM-1')"> AFM 2 dic. 8:30-10:30</a></li>
+            <li><a href="javascript:carica('TU-23')"> Turismo 2 dic. 8:30-10:30</a></li>
+            <li><a href="javascript:carica('AG-1')"> Agrario 2 dic. 11:00-13:00</a></li>
+        </ul>
+        
+    </form>
+</div>
+
+{%endblock%}

@@ -22,6 +22,11 @@
 
     <h4>{{titolo}} : {{data}}</h4>
 
+<form method="get">
+    {{myfilter.form}}
+    <input type="submit" value="cerca">
+</form>
+
 <form id = myForm method="post">
     {% csrf_token %}
 
@@ -33,7 +38,7 @@
         {%for v in iscritti %}
             <tr>
                 <td> <input type="checkbox" name="{{v.id}}"> </td>
-                <td class="nome">{{v.visitatore.cognome}} {{v.visitatore.nome}}</td>
+                <td class="nome"> <b>{{v.visitatore.cognome}}</b> - {{v.visitatore.email}}</td>
                 <td>
                   {%if v.presente%}
                 <!-- <img class=spunta src="/orienta/static/openday/spunta.png" alt='presente'> -->
