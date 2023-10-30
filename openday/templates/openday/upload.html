@@ -2,6 +2,11 @@
 {% load static %}
 
 {%block head %}
+<style>
+
+    .tab {width:25px;}
+
+</style>
 
 <script>
     function carica(evento) {
@@ -35,11 +40,11 @@
         <p>
         <h3>Eventi</h3>
         <ul class="w3-ul">
-            <li>LS<a href="javascript:carica('LS')"> Liceo SA 18 nov. 8:30-10:30</a></li>
-            <li>LZ<a href="javascript:carica('LZ')"> Liceo Sportivo 18 nov. 11:00-13:00</a></li>
-            <li>AFM<a href="javascript:carica('AFM')"> AFM 2 dic. 8:30-10:30</a></li>
-            <li>TU<a href="javascript:carica('TU')"> Turismo 2 dic. 8:30-10:30</a></li>
-            <li>AG<a href="javascript:carica('AG')"> Agrario 2 dic. 11:00-13:00</a></li>
+            <li><b class="tab">LS</b> <a href="javascript:carica('LS')"> Liceo SA 18 nov. 8:30-10:30</a></li>
+            <li><b class="tab">LZ</b> <a href="javascript:carica('LZ')"> Liceo Sportivo 18 nov. 11:00-13:00</a></li>
+            <li><b class="tab">AFM</b> <a href="javascript:carica('AFM')"> AFM 2 dic. 8:30-10:30</a></li>
+            <li><b class="tab">TU</b> <a href="javascript:carica('TU')"> Turismo 2 dic. 8:30-10:30</a></li>
+            <li><b class="tab">AG</b> <a href="javascript:carica('AG')"> Agrario 2 dic. 11:00-13:00</a></li>
         </ul>
         
     </form>
