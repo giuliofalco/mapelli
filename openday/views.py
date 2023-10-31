@@ -49,11 +49,10 @@ def logout_view(request):
 def iscrivi_utente(request,sigla):
    # memorizza l'iscrizione dell'utente ad un evento
    evento = Eventi.objects.get(sigla=sigla)
-   context = {'evento':evento}
-   form = IscrizioniForm()
-   if request.method == 'POST':
+     
+   if request.method == 'POST':                # se la form restituisce i risultati da salvare
          form = IscrizioniForm(request.POST)
-         if form.is_valid():
+         if form.is_valid():                   # se è valida sava i dati e passa alla conferma
             cognome = request.POST.get('cognome')
             nome = request.POST.get('nome')
             comune = request.POST.get('comune')
@@ -61,11 +60,12 @@ def iscrivi_utente(request,sigla):
             visitatore, created = Visitatori.objects.get_or_create(cognome=cognome,nome=nome,comune=comune,scuola=scuola)
             iscrizione = Iscrizioni(evento=evento,visitatore=visitatore)
             iscrizione.save()  # Salva l'iscrizione nel database
-         form = IscrizioniForm()
-         return render(request,f"openday/conferma_iscrizione.html",context)  # Reindirizza a una pagina di conferma o a un'altra vista
-   else:
-         context = {'form': form, 'evento':evento}
-         return render(request, 'openday/iscrizione.html', context)
+            return render(request,f"openday/conferma_iscrizione.html",{'evento':evento})  # Reindirizza a una pagina di conferma o a un'altra vista
+   else:                                       # se la form è chiamata per visualizzare e inserire i dati
+      form = IscrizioniForm()                  # prepara la form vuota
+
+   context = {'form':form,'evento':evento}     # in ogni caso metti la form vuota oppure con i messaggi di errore
+   return render(request, 'openday/iscrizione.html', context)
 
 def indirizzi(request,indirizzo):
     # mostra la pagina descrittiva dell'indirizzo

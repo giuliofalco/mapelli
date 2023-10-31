@@ -29,13 +29,13 @@
     <table class="w3-table w3-light-green" style="width:400px; margin: auto">
        <tr>
           <td>*COGNOME:</td>
-          <td>{{form.cognome}}</td>
+          <td>{{form.cognome}} <br> {{form.cognome.errors}}</td>
           <td>*NOME:</td>
-          <td>{{form.nome}}</td>
+          <td>{{form.nome}} <br> {{form.cognome.errors}}</td>
        </tr>
        <tr>
         <td>*COMUNE DI PROVENIENZA:</td>
-        <td colspan="3">{{form.comune}}</td>
+        <td colspan="3">{{form.comune}} <br> {{form.cognome.errors}}</td>
        </tr>
        <tr>
            <td>SCUOLA DI PROVENIENZA:</td>
