@@ -48,7 +48,12 @@ def logout_view(request):
 
 def iscrivi_utente(request,sigla):
    # memorizza l'iscrizione dell'utente ad un evento
+
+   if sigla == 'LZ':
+      return HttpResponse("<h2>Spiacenti, non è più possibile iscriversi a questo evento.</h2> <a href=/orienta/openday>Home</a>")
+
    evento = Eventi.objects.get(sigla=sigla)
+
      
    if request.method == 'POST':                # se la form restituisce i risultati da salvare
          form = IscrizioniForm(request.POST)
