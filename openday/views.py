@@ -14,7 +14,7 @@ from .filters import IscrittiFilter
 # HOME PAGE
 def index(request):
    novita = News.objects.all()
-   eventi = Eventi.objects.filter(attivo=True).order_by('luogo')
+   eventi = Eventi.objects.order_by('luogo')
    indirizzi = Indirizzi.objects.all()
    context = {'novita':novita, 'eventi':eventi, 'indirizzi':indirizzi}
    return render(request,"openday/index.html",context)
@@ -53,8 +53,8 @@ def iscrivi_utente(request,sigla):
    #   return HttpResponse("<h2>Spiacenti, non è più possibile iscriversi a questo evento.</h2> <a href=/orienta/openday>Home</a>")
 
    evento = Eventi.objects.get(sigla=sigla)
-   if evento.attivo == False:
-         return HttpResponse("<h2>Spiacenti, non è più possibile iscriversi a questo evento.</h2> <a href=/orienta/openday>Home</a>")
+   if evento.attivo == False: 
+      return HttpResponse("<h2>Spiacenti, non è più possibile iscriversi a questo evento.</h2> <a href=/orienta/openday>Home</a>")
      
    if request.method == 'POST':                # se la form restituisce i risultati da salvare
          form = IscrizioniForm(request.POST)
