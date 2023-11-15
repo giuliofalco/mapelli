@@ -9,7 +9,7 @@ class EnteSelectWidget(forms.Select):
         # Recupera le voci distinte dal campo 'ente' del modello
         ente_choices = Proposte.objects.values_list('ente', flat=True).distinct().order_by('ente')
         # Crea le opzioni per il widget
-        self.choices = [(value, value) for value in ente_choices]
+        self.choices = [('', 'Tutti')] + [(value, value) for value in ente_choices]
 
 class ProposteFilter(django_filters.FilterSet):
     nome_progetto = CharFilter(field_name="nome_progetto",lookup_expr="icontains",label='Proposta ')
