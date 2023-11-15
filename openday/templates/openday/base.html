@@ -51,7 +51,7 @@
         </div>
 
         <!-- Menu schermi grandi-->
-        <div class="w3-bar w3-show-large w3-hide-small w3-light-blue" id="menu">
+        <div class="w3-bar w3-show-large w3-hide-small w3-blue w3-large" id="menu">
             
             <a href="{% url 'openday:index' %}" class="w3-bar-item w3-button ">Home</a>
                        
@@ -83,7 +83,7 @@
                 <button class="w3-button">Indirizzi</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     {%for indirizzo in indirizzi %}
-                    <a href="/orienta/openday/indirizzi/{{indirizzo.titolo}}" class="w3-bar-item w3-button ">{{indirizzo.titolo}}</a>
+                    <a href="{%url 'openday:indirizzi' indirizzo.titolo %}" class="w3-bar-item w3-button ">{{indirizzo.titolo}}</a>
                     {%endfor%}
                 </div>
             </div>
