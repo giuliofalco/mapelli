@@ -5,7 +5,6 @@ from .models import *
 class Tipologie_proposteAdmin(admin.ModelAdmin):
     list_display = ['id','denominazione']
 
-
 @admin.register(Tipologie_ente)
 class Tipologie_enteAdmin(admin.ModelAdmin):
     list_display = ['id','denominazione']
@@ -28,6 +27,14 @@ class StudentiAdmin(admin.ModelAdmin):
 @admin.register(Tutor)
 class TutorAdmin(admin.ModelAdmin):
     list_display = ['cognome', 'nome' ]
+
+@admin.register(Attivita_tutor)
+class AttivitaTutorAdmin(admin.ModelAdmin):
+    list_display = ['data', 'tutor', 'tipologia', 'durata' ]
+
+@admin.register(Tipologia_attivita)
+class TipologiaAttivitaAdmin(admin.ModelAdmin):
+    list_display = ['etichetta']
 
 @admin.register(Proposte)
 class ProposteAdmin(admin.ModelAdmin):
