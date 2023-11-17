@@ -31,4 +31,5 @@ urlpatterns = [
       path('elenco_attivita_tutor/<int:idtutor>',views.elenco_attivita_tutor,name='elenco_attivita_tutor'),
       path('salva_attivita_tutor',views.salva_attivita_tutor,name='salva_attivita_tutor'),
       path('dettaglio_attivita_tutor/<int:idattivita>',views.dettaglio_attivita_tutor,name='dettaglio_attivita_tutor'),
+      path('cancella_attivita/<int:id>',views.cancella_attivita,name='cancella_attivita')
 ]

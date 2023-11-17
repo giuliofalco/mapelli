@@ -5,6 +5,9 @@
 <style>
     h2 {text-align: center; color:blue}
     .bottoni {margin-left: 25px; margin-top:30px;}
+    #scheda_inserimento table {width:100%; padding: 20px;}
+    #id_descrizione {width:100%;}
+    #id_durata {width: 60px;}
  
 </style>
 
@@ -12,8 +15,18 @@
     function apri() {
         scheda = document.getElementById('scheda_inserimento').style.display = 'Block';
     }
+    
     function annulla(id) {
-        document.location = "/tutor/elenco_attivita_tutor/"+id;
+        document.location = "/orienta/tutor/elenco_attivita_tutor/"+id;
+    }
+
+    function elimina(id) {
+        // cancella l'attività
+
+        risp = confirm('Sei certo di voler cancellare questa attivita ?');
+        if (!risp)
+            return;
+        document.location = "/orienta/tutor/cancella_attivita/"+id;
     }
 </script>
 
@@ -24,14 +37,14 @@
 
     <div class="w3-container" style="width: 50%; margin:auto;">
         <h2>Attività Tutor: {{attivita.tutor}}</h2>
-        <form id="scheda_inserimento" method="POST" action="">
+        <form id="scheda_inserimento" method="POST">
             {% csrf_token %}
-            <input type="hidden" name="tutor" value = "{{tutor.id}}">
+            <input type="hidden" name="tutor" value = "{{attivita.tutor.id}}">
             <table class="w3-card-4">
              {{form.as_table}}
             </table>
             <input type="submit" value="Aggiorna">
-            <input type="button" value="Elimina">
+            <input type="button" value="Elimina" onClick="elimina({{attivita.id}})">
             <input type="button" value="Annulla" onClick="annulla({{attivita.tutor.id}})">
         </form>
        

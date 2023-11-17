@@ -5,7 +5,10 @@
 <style>
     h2 {text-align: center; color:blue}
     .bottoni {margin-left: 25px; margin-top:30px;}
-    #scheda_inserimento {display:none;}
+    #scheda_inserimento {display:none; }
+    #scheda_inserimento table {width:100%; padding: 20px;}
+    #id_descrizione {width:100%;}
+    #id_durata {width: 60px;}
 </style>
 
 <script>
@@ -13,7 +16,7 @@
         scheda = document.getElementById('scheda_inserimento').style.display = 'Block';
     }
     function annulla(id) {
-        document.location = "/tutor/elenco_attivita_tutor/"+id;
+        document.location = "/orienta/tutor/elenco_attivita_tutor/"+id;
     }
 </script>
 

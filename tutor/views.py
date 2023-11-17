@@ -89,6 +89,13 @@ def elenco_tutor(request):
 @login_required
 def elenco_attivita_tutor(request,idtutor):
    # mostra l'elenco attività  o diario di bordo dei tutor
+   utente = str(request.user)
+   try:
+       tutor = Tutor.objects.get(cognome=utente)
+   except:
+      return HttpResponse('Utente non autorizzato')
+   if tutor.id != idtutor:
+      return HttpResponse('Non è consentito visualizzare attività di altri tutor')
    tutor = Tutor.objects.get(id=idtutor)
    elenco = Attivita_tutor.objects.filter(tutor=tutor)
    form = AttivitaForm()
@@ -119,10 +126,31 @@ def salva_attivita_tutor(request):
 
 def dettaglio_attivita_tutor(request,idattivita):
    # apre la form per modificare o cancellare  una attivita tutor
-   attivita = Attivita_tutor.objects.get(id=idattivita)
-   form = AttivitaForm(instance=attivita)
+   if request.method == 'POST':
+      form = AttivitaForm(request.POST)
+      if form.is_valid:
+         tutorid = request.POST.get('tutor')
+         attivita = Attivita_tutor.objects.get(id=idattivita)
+         attivita.tipologia = Tipologia_attivita.objects.get(id=request.POST.get('tipologia'))
+         attivita.target = Target_attivita.objects.get(id = request.POST.get('target'))
+         attivita.titolo = request.POST.get('titolo')
+         attivita.durata = request.POST.get('durata')
+         attivita.descrizione = request.POST.get('descrizione')
+         attivita.save()
+         return HttpResponseRedirect(f"/orienta/tutor/elenco_attivita_tutor/{tutorid}")
+   else:
+      attivita = Attivita_tutor.objects.get(id=idattivita)
+      form = AttivitaForm(instance=attivita)
    context = {'attivita':attivita, 'form':form}
    return render(request,"tutor/dettaglio_attivita_tutor.html",context)
+
+def cancella_attivita(request,id):
+   # cancella l'attività identificata dalla chiave id
+   attivita = Attivita_tutor.objects.get(id=id)
+   tutorid = attivita.tutor.id
+   attivita.delete()
+   return HttpResponseRedirect(f"/orienta/tutor/elenco_attivita_tutor/{tutorid}")
+   
 
 @login_required
 def elenco_classi(request):
