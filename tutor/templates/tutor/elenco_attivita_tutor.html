@@ -1,0 +1,35 @@
+{%extends 'tutor/base.html' %}
+{%load static %}
+{%block head%}
+
+<style>
+    h2 {text-align: center; color:blue}
+</style>
+
+{%endblock%}
+
+
+{%block content %}
+
+<h2>Elenco Attività Tutor: {{tutor}}</h2>
+    <div class="w3-container" style="width: 50%; margin:auto;">
+        <table class="w3-table-all w3-card-4">
+            <th>Data</th>
+            <th>Titolo</th>
+            <th>Tipologia</th>
+            <th>Target</th>
+            <th>Durata</th>
+            <th>Guarda</th>
+            {%for attivita in elenco%}
+            <tr>
+                <td>  {{attivita.data}}</td>
+                <td>  {{attivita.titolo}}</td>
+                <td>  {{attivita.tipologia}}</td>
+                <td>  {{attivita.target}}</td>
+                <td>  {{attivita.durata}}</td>
+                <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+{%endblock%}
