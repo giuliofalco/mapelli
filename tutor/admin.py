@@ -36,6 +36,10 @@ class AttivitaTutorAdmin(admin.ModelAdmin):
 class TipologiaAttivitaAdmin(admin.ModelAdmin):
     list_display = ['etichetta']
 
+@admin.register(Target_attivita)
+class TargetAttivitaAdmin(admin.ModelAdmin):
+    list_display = ['etichetta']
+
 @admin.register(Proposte)
 class ProposteAdmin(admin.ModelAdmin):
     list_display = ['ente','tipo_ente','nome_progetto','data_inizio','url']
