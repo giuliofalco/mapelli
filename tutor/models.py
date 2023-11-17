@@ -55,6 +55,13 @@ class Tipologia_attivita(models.Model):
 
     def __str__(self):
        return(f"{self.etichetta}")
+    
+class Target_attivita(models.Model):
+    etichetta = models.CharField(max_length=30)
+    descrizione = models.TextField(null = True, blank = True)
+
+    def __str__(self):
+       return(f"{self.etichetta}")
 
 class Attivita_tutor(models.Model):
     data = models.DateTimeField()
