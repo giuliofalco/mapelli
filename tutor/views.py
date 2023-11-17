@@ -86,6 +86,15 @@ def elenco_tutor(request):
    return render(request,"tutor/tutor.html",context)
 
 @login_required
+def elenco_attivita_tutor(request,idtutor):
+   # mostra l'elenco attività  o diario di bordo dei tutor
+
+   tutor = Tutor.objects.get(id=idtutor)
+   elenco = Attivita_tutor.objects.filter(tutor=tutor)
+   context = {'elenco':elenco, 'tutor':tutor}
+   return render(request,"tutor/elenco_attivita_tutor.html",context)
+
+@login_required
 def elenco_classi(request):
    # Elenco delle classi
 

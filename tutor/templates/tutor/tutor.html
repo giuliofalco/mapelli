@@ -21,7 +21,7 @@
             <tr>
                 <td>  {{tut.cognome}}</td>
                 <td>  {{tut.nome}}</td>
-                <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
+                <td><a href="{%url 'tutor:elenco_attivita_tutor' tut.id %}"><img src="{%static 'tutor/gnome-help.png' %}"> </a> </td>
             </tr>
             {%endfor%}
         </table>
