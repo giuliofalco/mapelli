@@ -12,6 +12,9 @@
     function apri() {
         scheda = document.getElementById('scheda_inserimento').style.display = 'Block';
     }
+    function annulla(id) {
+        document.location = "/tutor/elenco_attivita_tutor/"+id;
+    }
 </script>
 
 {%endblock%}
@@ -29,7 +32,7 @@
              {{form.as_table}}
             </table>
             <input type="submit" value="Salva">
-            <input type="reset" value="Reset">
+            <input type="button" value="Annulla" onClick="annulla({{tutor.id}})">
         </form>
 
         <h2>Elenco Attività Tutor: {{tutor}}</h2>
@@ -47,7 +50,7 @@
                 <td>  {{attivita.tipologia}}</td>
                 <td>  {{attivita.target}}</td>
                 <td>  {{attivita.durata}}</td>
-                <td><img src="{%static 'tutor/gnome-help.png' %}"> </td>
+                <td><a href="{%url 'tutor:dettaglio_attivita_tutor' attivita.id %}"><img src="{%static 'tutor/gnome-help.png' %}"></a> </td>
             </tr>
             {%endfor%}
         </table>

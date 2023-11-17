@@ -1,0 +1,39 @@
+{%extends 'tutor/base.html' %}
+{%load static %}
+{%block head%}
+
+<style>
+    h2 {text-align: center; color:blue}
+    .bottoni {margin-left: 25px; margin-top:30px;}
+ 
+</style>
+
+<script>
+    function apri() {
+        scheda = document.getElementById('scheda_inserimento').style.display = 'Block';
+    }
+    function annulla(id) {
+        document.location = "/tutor/elenco_attivita_tutor/"+id;
+    }
+</script>
+
+{%endblock%}
+
+
+{%block content %}
+
+    <div class="w3-container" style="width: 50%; margin:auto;">
+        <h2>Attività Tutor: {{attivita.tutor}}</h2>
+        <form id="scheda_inserimento" method="POST" action="">
+            {% csrf_token %}
+            <input type="hidden" name="tutor" value = "{{tutor.id}}">
+            <table class="w3-card-4">
+             {{form.as_table}}
+            </table>
+            <input type="submit" value="Aggiorna">
+            <input type="button" value="Elimina">
+            <input type="button" value="Annulla" onClick="annulla({{attivita.tutor.id}})">
+        </form>
+       
+    </div>
+{%endblock%}

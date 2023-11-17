@@ -95,7 +95,9 @@ def elenco_attivita_tutor(request,idtutor):
    context = {'elenco':elenco, 'tutor':tutor, 'form':form}
    return render(request,"tutor/elenco_attivita_tutor.html",context)
 
+@login_required
 def salva_attivita_tutor(request):
+   # salva una nuova attivita inserita dal tutor e ritorna a elenco attivita tutor
    if request.method == 'POST':
       form = AttivitaForm(request.POST)
       tutor = Tutor.objects.get(id=request.POST.get('tutor'))
@@ -114,6 +116,13 @@ def salva_attivita_tutor(request):
       return render(request,"tutor/elenco_attivita_tutor.html",context)
    else:
       return HttpResponse('errore, method diverso da POST in salva_attivita_tutor')
+
+def dettaglio_attivita_tutor(request,idattivita):
+   # apre la form per modificare o cancellare  una attivita tutor
+   attivita = Attivita_tutor.objects.get(id=idattivita)
+   form = AttivitaForm(instance=attivita)
+   context = {'attivita':attivita, 'form':form}
+   return render(request,"tutor/dettaglio_attivita_tutor.html",context)
 
 @login_required
 def elenco_classi(request):
