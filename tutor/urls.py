@@ -28,5 +28,5 @@ urlpatterns = [
       path('adesioni_proposta/<int:id>',views.adesioni_proposta,name='adesioni_proposta'),
       path('salva_iscrizioni',views.salva_iscrizioni,name='salva_iscrizioni'),
       path('ritira/<int:idstudente>/<int:idproposta>',views.ritira,name='ritira'),
-      path('elenco_attivita_tutor/<int_idtutor>',views.elenco_attivita_tutor,name='elenco_attivita_tutor'),
+      path('elenco_attivita_tutor/<int:idtutor>',views.elenco_attivita_tutor,name='elenco_attivita_tutor'),
 ]
