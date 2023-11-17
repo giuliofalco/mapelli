@@ -4,22 +4,42 @@
 
 <style>
     h2 {text-align: center; color:blue}
+    .bottoni {margin-left: 25px; margin-top:30px;}
+    #scheda_inserimento {display:none;}
 </style>
+
+<script>
+    function apri() {
+        scheda = document.getElementById('scheda_inserimento').style.display = 'Block';
+    }
+</script>
 
 {%endblock%}
 
 
 {%block content %}
+<button class="bottoni w3-blue w3-large" onClick="apri()">Nuovo</button> 
 
-<h2>Elenco Attività Tutor: {{tutor}}</h2>
     <div class="w3-container" style="width: 50%; margin:auto;">
+     
+        <form id="scheda_inserimento" method="POST" action="{% url 'tutor:salva_attivita_tutor' %}">
+            {% csrf_token %}
+            <input type="hidden" name="tutor" value = "{{tutor.id}}">
+            <table class="w3-card-4">
+             {{form.as_table}}
+            </table>
+            <input type="submit" value="Salva">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h2>Elenco Attività Tutor: {{tutor}}</h2>
         <table class="w3-table-all w3-card-4">
             <th>Data</th>
             <th>Titolo</th>
             <th>Tipologia</th>
             <th>Target</th>
             <th>Durata</th>
-            <th>Guarda</th>
+            <th>Modifica</th>
             {%for attivita in elenco%}
             <tr>
                 <td>  {{attivita.data}}</td>

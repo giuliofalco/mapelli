@@ -29,4 +29,5 @@ urlpatterns = [
       path('salva_iscrizioni',views.salva_iscrizioni,name='salva_iscrizioni'),
       path('ritira/<int:idstudente>/<int:idproposta>',views.ritira,name='ritira'),
       path('elenco_attivita_tutor/<int:idtutor>',views.elenco_attivita_tutor,name='elenco_attivita_tutor'),
+      path('salva_attivita_tutor',views.salva_attivita_tutor,name='salva_attivita_tutor'),
 ]

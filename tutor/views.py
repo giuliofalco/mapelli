@@ -10,6 +10,7 @@ from django.db import IntegrityError
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib import messages
 from .filters import ProposteFilter
+from .forms import AttivitaForm
 
 
 # Create your views here.
@@ -88,11 +89,31 @@ def elenco_tutor(request):
 @login_required
 def elenco_attivita_tutor(request,idtutor):
    # mostra l'elenco attività  o diario di bordo dei tutor
-
    tutor = Tutor.objects.get(id=idtutor)
    elenco = Attivita_tutor.objects.filter(tutor=tutor)
-   context = {'elenco':elenco, 'tutor':tutor}
+   form = AttivitaForm()
+   context = {'elenco':elenco, 'tutor':tutor, 'form':form}
    return render(request,"tutor/elenco_attivita_tutor.html",context)
+
+def salva_attivita_tutor(request):
+   if request.method == 'POST':
+      form = AttivitaForm(request.POST)
+      tutor = Tutor.objects.get(id=request.POST.get('tutor'))
+      elenco = Attivita_tutor.objects.filter(tutor=tutor)
+      if form.is_valid:
+         attivita = Attivita_tutor()
+         attivita.tutor = tutor
+         attivita.tipologia = Tipologia_attivita.objects.get(id=request.POST.get('tipologia'))
+         attivita.target = Target_attivita.objects.get(id = request.POST.get('target'))
+         attivita.titolo = request.POST.get('titolo')
+         attivita.durata = request.POST.get('durata')
+         attivita.descrizione = request.POST.get('descrizione')
+         attivita.save()
+         form = AttivitaForm()
+      context = {'elenco':elenco, 'tutor':tutor, 'form':form}
+      return render(request,"tutor/elenco_attivita_tutor.html",context)
+   else:
+      return HttpResponse('errore, method diverso da POST in salva_attivita_tutor')
 
 @login_required
 def elenco_classi(request):
