@@ -99,9 +99,10 @@ def rileva_presenze(request,sigla):
    titolo = evento.titolo
    data   = evento.data
    iscritti = Iscrizioni.objects.filter(evento=evento).order_by('visitatore__cognome')
+   presenze = len(iscritti.filter(presente=True))
    myfilter = IscrittiFilter(request.GET,queryset=iscritti)
    iscritti = myfilter.qs
-   context = {'iscritti':iscritti, 'titolo':titolo, 'data':data, 'myfilter':myfilter}
+   context = {'iscritti':iscritti, 'titolo':titolo, 'data':data, 'myfilter':myfilter, 'presenze': presenze}
    if request.method == 'POST':
       for id in request.POST:
          if id != "csrfmiddlewaretoken":
@@ -150,3 +151,32 @@ def upload_iscrizioni(request,evento):
                   iscrizione.save()
         
    return HttpResponse("<h3>Caricamento completato <a href='/orienta/openday/'>Home</a>")  
+
+def stat_iscrizioni(request):
+   # alimenta il file con le statistiche riguardanti le presenze agli eventi
+   statistica = []
+   eventi = Eventi.objects.all().order_by('luogo')
+   for ev in eventi:
+      iscrizioni = Iscrizioni.objects.filter(evento = ev)
+      iscritti = len(iscrizioni)
+      presenze = iscrizioni.filter(presente=True).count()
+      #perc = presenze/iscritti * 100
+      try:
+         perc = int(presenze / iscritti * 10000) / 100
+
+
+      except:
+         perc = 0
+      visitatori = [iscr.visitatore for iscr in iscrizioni] # elenco dei visitatori
+      comuni = {} # conteggio deo visitatori per comune di provenienza
+      for v in visitatori:
+         if v.comune in comuni:
+            comuni[v.comune] += 1
+         else:
+            comuni[v.comune] = 1
+      stat_comune = comuni.items()
+      stat_comune = sorted(stat_comune, key=lambda x: x[1], reverse=True)
+      statistica.append([ev.titolo,[iscritti,presenze,perc,stat_comune]])
+   context = {'statistica': statistica, 'eventi':eventi}
+   return render(request,"openday/statistica.html",context)
+   

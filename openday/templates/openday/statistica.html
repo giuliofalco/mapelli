@@ -1,0 +1,39 @@
+{%extends 'openday/base.html' %}
+{%load static %}
+
+{%block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+      h1 {text-align: center;}
+      h2 {color: blue;}
+      .statistiche {}
+      .evento {width: 50%; margin:auto; text-align: left; margin-bottom: 35px}
+      
+</style>
+
+{%endblock %}
+
+{% block content %}
+
+<h1>Statistiche Iscrizioni e Presenze</h1>
+
+<div class="w3-container">
+     
+      {%for stat in statistica%}
+      <div class="evento">
+            <h2>{{stat.0}} </h2>
+            <div class="statistiche w3-xlarge">
+                Iscritti: {{stat.1.0}} - Presenti: {{stat.1.1}} - pari a: <span class="w3-yellow">{{stat.1.2}}</span> %
+            </div>
+            <h3 class="w3-orange">Comune di provenienza</h3>
+            {%for comune in stat.1.3 %}
+                <div class="w3-large">
+                {{comune.0|default:'Non indicato'}}: {{comune.1}} 
+                </div>
+            {%endfor%}
+                
+      </div>
+      {%endfor%}
+     
+</div>
+{%endblock%}

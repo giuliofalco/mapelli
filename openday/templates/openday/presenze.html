@@ -30,7 +30,7 @@
 <form id = myForm method="post">
     {% csrf_token %}
 
-    <button type="submit" class="w3-blue">Salva</button> Iscritti: {{iscritti|length}}
+    <button type="submit" class="w3-blue">Salva</button> Iscritti: {{iscritti|length}} Presenti: {{presenze}}
     <p>
     <table class="w3-table w3-card-4" style="width: 300px;">
         <th ></th><th>Visitatore</th><th>Presenza</th>
@@ -38,7 +38,7 @@
         {%for v in iscritti %}
             <tr>
                 <td> <input type="checkbox" name="{{v.id}}"> </td>
-                <td class="nome"> <b>{{v.visitatore.cognome}}</b> - {{v.visitatore.email}}</td>
+                <td class="nome"> <b>{{v.visitatore.cognome}}</b> - {{v.visitatore.email|default:''}}</td>
                 <td>
                   {%if v.presente%}
                 <!-- <img class=spunta src="/orienta/static/openday/spunta.png" alt='presente'> -->
