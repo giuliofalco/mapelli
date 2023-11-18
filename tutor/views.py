@@ -90,12 +90,13 @@ def elenco_tutor(request):
 def elenco_attivita_tutor(request,idtutor):
    # mostra l'elenco attività  o diario di bordo dei tutor
    utente = str(request.user)
-   try:
-       tutor = Tutor.objects.get(cognome=utente)
-   except:
-      return HttpResponse('Utente non autorizzato')
-   if tutor.id != idtutor:
-      return HttpResponse('Non è consentito visualizzare attività di altri tutor')
+   if utente != 'annamaria':
+      try:
+         tutor = Tutor.objects.get(cognome=utente)
+      except:
+         return HttpResponse('Utente non autorizzato')
+      if tutor.id != idtutor:
+         return HttpResponse('Non è consentito visualizzare attività di altri tutor')
    tutor = Tutor.objects.get(id=idtutor)
    elenco = Attivita_tutor.objects.filter(tutor=tutor)
    form = AttivitaForm()
