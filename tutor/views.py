@@ -134,6 +134,7 @@ def dettaglio_attivita_tutor(request,idattivita):
          attivita = Attivita_tutor.objects.get(id=idattivita)
          attivita.tipologia = Tipologia_attivita.objects.get(id=request.POST.get('tipologia'))
          attivita.target = Target_attivita.objects.get(id = request.POST.get('target'))
+         attivita.data = request.POST.get('data')
          attivita.titolo = request.POST.get('titolo')
          attivita.durata = request.POST.get('durata')
          attivita.descrizione = request.POST.get('descrizione')
