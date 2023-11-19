@@ -90,7 +90,7 @@ def elenco_tutor(request):
 def elenco_attivita_tutor(request,idtutor):
    # mostra l'elenco attività  o diario di bordo dei tutor
    utente = str(request.user)
-   if utente != 'annamaria':
+   if utente not in ('annamaria','dirigente'):
       try:
          tutor = Tutor.objects.get(cognome=utente)
       except:
@@ -125,6 +125,7 @@ def salva_attivita_tutor(request):
    else:
       return HttpResponse('errore, method diverso da POST in salva_attivita_tutor')
 
+@login_required
 def dettaglio_attivita_tutor(request,idattivita):
    # apre la form per modificare o cancellare  una attivita tutor
    if request.method == 'POST':
