@@ -4,14 +4,26 @@
 {%block head %}
 
 <style>
-      h2 {text-align: center;}
+      h2 {text-align: center; }
       .checkbox {width:25px;}
       .nome     {width: 550px;}
       th        {text-align:left;}
       .spunta   {width:32px;}
+      .stat     {color: red;}
+      h4 {color: blue;}
 </style> 
  
 <script>       
+     function salva(id,sigla){
+        // salva la presenza dell'iscrizione id, dell'evento identificato da sigla
+        url="/orienta/openday/conferma_presenza/"+id+"/"+sigla;
+        document.location = url;
+     }
+     function cancella(id,sigla){
+        // salva la presenza dell'iscrizione id, dell'evento identificato da sigla
+        url="/orienta/openday/cancella_presenza/"+id+"/"+sigla;
+        document.location = url;
+     }
 </script>
 {%endblock %}
 
@@ -26,23 +38,21 @@
     {{myfilter.form}}
     <input type="submit" value="cerca">
 </form>
-
-<form id = myForm method="post">
-    {% csrf_token %}
-
-    <button type="submit" class="w3-blue">Salva</button> Iscritti: {{iscritti|length}} Presenti: {{presenze}}
+    <div style="font-size:1em">
+    <b>Iscritti:</b> <span class=stat>{{iscritti|length}} </span> <b> Presenti: </b> <span class=stat>{{presenze}}</span>
+    </div>
     <p>
-    <table class="w3-table w3-card-4" style="width: 300px;">
-        <th ></th><th>Visitatore</th><th>Presenza</th>
+    <table class="w3-table w3-card-4" style="width: 400px;">
+        <th style="width:170px;"></th><th>Visitatore</th><th>Presenza</th>
         
         {%for v in iscritti %}
             <tr>
-                <td> <input type="checkbox" name="{{v.id}}"> </td>
+                <td> <button style="padding:5px; cursor:pointer" class=w3-blue onClick="salva({{v.id}},'{{sigla}}')"> check-in </button></td>
                 <td class="nome"> <b>{{v.visitatore.cognome}}</b> - {{v.visitatore.email|default:''}}</td>
                 <td>
                   {%if v.presente%}
                 <!-- <img class=spunta src="/orienta/static/openday/spunta.png" alt='presente'> -->
-                <img class=spunta src="{%static 'openday/spunta.png'%}" alt='presente'>
+                <a href="javascript:cancella({{v.id}},'{{sigla}}')"><img class=spunta src="{%static 'openday/spunta.png'%}" alt='presente'></a>
                   {%endif%}
                 </td>
             </tr>
@@ -51,7 +61,6 @@
 
     </table>
     
-</form>
 
    
      

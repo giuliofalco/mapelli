@@ -16,4 +16,6 @@ urlpatterns = [
     path('upload',views.upload,name='upload'),
     path('upload_iscrizioni/<str:evento>',views.upload_iscrizioni,name='upload_iscrizioni'),
     path('stat_iscrizioni',views.stat_iscrizioni,name='stat_iscrizioni'),
+    path('conferma_presenza/<int:id>/<str:sigla>',views.conferma_presenza,name='conferma_presenza'),
+    path('cancella_presenza/<int:id>/<str:sigla>',views.cancella_presenza,name='cancella_presenza'),
 ]

@@ -82,16 +82,26 @@ def indirizzi(request,indirizzo):
    context = {'pagina':pagina, 'righe_orario':righe_orario, 'indirizzi':indirizzi, 'eventi':eventi}
    return render(request,"openday/indirizzo.html",context)
 
-def conferma_presenza(id):
+def conferma_presenza(request,id,sigla):
    # conferma la presenza identificata da id 
    try:
-      id = int(id)
+      #id = int(id)
       adesione = Iscrizioni.objects.get(id=id)
       adesione.presente = True
       adesione.save()
    except:
       print("errore nel salvataggio")
-   return
+   return HttpResponseRedirect(f"/orienta/openday/rileva_presenze/{sigla}")
+
+def cancella_presenza(request,id,sigla):
+   # conferma la presenza identificata da id 
+   try:
+      adesione = Iscrizioni.objects.get(id=id)
+      adesione.presente = False
+      adesione.save()
+   except:
+      print("errore nel salvataggio")
+   return HttpResponseRedirect(f"/orienta/openday/rileva_presenze/{sigla}")
 
 def rileva_presenze(request,sigla):
    # elenca gli iscritti per rilevre le presenze
@@ -102,11 +112,11 @@ def rileva_presenze(request,sigla):
    presenze = len(iscritti.filter(presente=True))
    myfilter = IscrittiFilter(request.GET,queryset=iscritti)
    iscritti = myfilter.qs
-   context = {'iscritti':iscritti, 'titolo':titolo, 'data':data, 'myfilter':myfilter, 'presenze': presenze}
-   if request.method == 'POST':
-      for id in request.POST:
-         if id != "csrfmiddlewaretoken":
-            conferma_presenza(id)
+   context = {'iscritti':iscritti, 'titolo':titolo, 'data':data, 'myfilter':myfilter, 'presenze': presenze, 'sigla':sigla}
+   #if request.method == 'POST':
+   #   for id in request.POST:
+   #      if id != "csrfmiddlewaretoken":
+   #         conferma_presenza(id)
    
    return render(request,"openday/presenze.html",context)
 
