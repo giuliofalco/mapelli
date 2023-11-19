@@ -22,7 +22,10 @@
      function cancella(id,sigla){
         // salva la presenza dell'iscrizione id, dell'evento identificato da sigla
         url="/orienta/openday/cancella_presenza/"+id+"/"+sigla;
-        document.location = url;
+        risp = confirm('vuoi annullare la presenza ?');
+        if (risp)
+           document.location = url;
+        return;
      }
 </script>
 {%endblock %}
