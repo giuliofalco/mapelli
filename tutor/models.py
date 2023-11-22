@@ -66,14 +66,14 @@ class Target_attivita(models.Model):
 class Attivita_tutor(models.Model):
     data = models.DateTimeField(default=timezone.now)
     tutor = models.ForeignKey(Tutor,on_delete = models.CASCADE) 
-    tipologia = models.ForeignKey(Tipologia_attivita,on_delete = models.CASCADE)
+    tipologia = models.ManyToManyField(Tipologia_attivita,blank=True)
     target = models.ForeignKey(Target_attivita, default=None, on_delete=models.RESTRICT)
     titolo = models.CharField(max_length=50)
     descrizione = models.TextField(null = True, blank = True)
     durata = models.IntegerField()  # in ore
 
     def __str__(self):
-       return(f"{self.tutor} {self.tipologia} {self.data}")
+       return(f"{self.tutor} {self.data}")
     
     class Meta:
         ordering = ['data','tutor']

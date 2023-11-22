@@ -30,7 +30,7 @@ class TutorAdmin(admin.ModelAdmin):
 
 @admin.register(Attivita_tutor)
 class AttivitaTutorAdmin(admin.ModelAdmin):
-    list_display = ['data', 'tutor', 'tipologia', 'durata' ]
+    list_display = ['data', 'tutor', 'durata' ]
 
 @admin.register(Tipologia_attivita)
 class TipologiaAttivitaAdmin(admin.ModelAdmin):

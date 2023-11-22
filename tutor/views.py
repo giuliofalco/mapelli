@@ -12,12 +12,12 @@ from django.contrib import messages
 from .filters import ProposteFilter
 from .forms import AttivitaForm
 
-
-# Create your views here.
 def index(request):
-   # return HttpResponse("<h1>Orientamento</h1>")
+   # Pagina prncipale con le news
    news = News.objects.all()
    return render(request,"tutor/index.html",{'news':news})
+
+### AUTENTICAZIONE ###
 
 def mioLogin(request):
    # manda alla finestra di autenticazione, per chiedere username e password
@@ -58,7 +58,9 @@ class ChangePasswordView(PasswordChangeView):
     def form_invalid(self, form):
         messages.error(self.request, 'Please correct the errors below.')
         return super().form_invalid(form)
-    
+
+### DOWNLOAD E UPLOAD ###
+
 @login_required
 def upload(request):
     return render(request,"tutor/upload.html",{})
@@ -68,15 +70,9 @@ def upload_csv_proposte(request):
    # carica il csv delle proposte
    return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/orienta/tutor'>Torna alla hoem page</a>"))
 
-def proposte(request):
-    # elenco delle proposte
+                                       ### ELENCHI ###
 
-   proposte = Proposte.objects.filter(attivo=True)
-   myfilter = ProposteFilter(request.GET,queryset=proposte)
-   proposte = myfilter.qs
-   context = {'proposte':proposte, 'myfilter':myfilter}
-
-   return render(request,"tutor/proposte.html",context)
+### TUTOR ###
 
 @login_required
 def elenco_tutor(request):
@@ -113,11 +109,15 @@ def salva_attivita_tutor(request):
       if form.is_valid:
          attivita = Attivita_tutor()
          attivita.tutor = tutor
-         attivita.tipologia = Tipologia_attivita.objects.get(id=request.POST.get('tipologia'))
          attivita.target = Target_attivita.objects.get(id = request.POST.get('target'))
          attivita.titolo = request.POST.get('titolo')
          attivita.durata = request.POST.get('durata')
          attivita.descrizione = request.POST.get('descrizione')
+         attivita.save()
+         for t in request.POST.getlist('tipologia'):
+              #attivita.tipologia.add(Tipologia_attivita.objects.get(id=t))
+              tipo = Tipologia_attivita.objects.get(id=t)
+              attivita.tipologia.add(tipo)
          attivita.save()
          form = AttivitaForm()
       context = {'elenco':elenco, 'tutor':tutor, 'form':form}
@@ -133,12 +133,16 @@ def dettaglio_attivita_tutor(request,idattivita):
       if form.is_valid:
          tutorid = request.POST.get('tutor')
          attivita = Attivita_tutor.objects.get(id=idattivita)
-         attivita.tipologia = Tipologia_attivita.objects.get(id=request.POST.get('tipologia'))
          attivita.target = Target_attivita.objects.get(id = request.POST.get('target'))
          attivita.data = request.POST.get('data')
          attivita.titolo = request.POST.get('titolo')
          attivita.durata = request.POST.get('durata')
          attivita.descrizione = request.POST.get('descrizione')
+         attivita.save()
+         for t in request.POST.getlist('tipologia'):
+              #attivita.tipologia.add(Tipologia_attivita.objects.get(id=t))
+              tipo = Tipologia_attivita.objects.get(id=t)
+              attivita.tipologia.add(tipo)
          attivita.save()
          return HttpResponseRedirect(f"/orienta/tutor/elenco_attivita_tutor/{tutorid}")
    else:
@@ -154,6 +158,7 @@ def cancella_attivita(request,id):
    attivita.delete()
    return HttpResponseRedirect(f"/orienta/tutor/elenco_attivita_tutor/{tutorid}")
    
+### CLASSI ###
 
 @login_required
 def elenco_classi(request):
@@ -173,6 +178,18 @@ def elenco_studenti(request,classe):
    studenti = Studenti.objects.filter(classe=objclass)
    context = {'classe':classe, 'studenti':studenti}
    return render(request,"tutor/studenti.html",context)
+
+### PROPOSTE ###
+
+def proposte(request):
+    # elenco delle proposte
+
+   proposte = Proposte.objects.filter(attivo=True)
+   myfilter = ProposteFilter(request.GET,queryset=proposte)
+   proposte = myfilter.qs
+   context = {'proposte':proposte, 'myfilter':myfilter}
+
+   return render(request,"tutor/proposte.html",context)
 
 @login_required
 def dettaglio_proposta(request,prop):
