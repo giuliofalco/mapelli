@@ -13,6 +13,7 @@ from .filters import IscrittiFilter
 
 # HOME PAGE
 def index(request):
+   return HttpResponse ("Sito in manutenzione, contattare l'amministratore")
    novita = News.objects.all()
    eventi = Eventi.objects.order_by('luogo')
    indirizzi = Indirizzi.objects.all()
