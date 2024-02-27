@@ -17,7 +17,7 @@ from .forms import AttivitaForm
 def index(request):
    # return HttpResponse("<h1>Orientamento</h1>")
    news = News.objects.all()
-   return HttpResponse ("<h2>Sito in manutenzione, servizi al momento non disponibili. </h2> E' possibile richiedere una copia pdf dei dati inseriti ")
+   # return HttpResponse ("<h2>Sito in manutenzione, servizi al momento non disponibili. </h2> E' possibile richiedere una copia pdf dei dati inseriti ")
    return render(request,"tutor/index.html",{'news':news})
 
 def mioLogin(request):
