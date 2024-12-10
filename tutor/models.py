@@ -67,7 +67,7 @@ class Attivita_tutor(models.Model):
     data = models.DateTimeField(default=timezone.now)
     tutor = models.ForeignKey(Tutor,on_delete = models.CASCADE) 
     tipologia = models.ForeignKey(Tipologia_attivita,on_delete = models.CASCADE)
-    target = models.ForeignKey(Target_attivita, default=None, on_delete=models.RESTRICT)
+    target = models.ForeignKey(Target_attivita, default=None, on_delete=models.CASCADE)
     titolo = models.CharField(max_length=50)
     descrizione = models.TextField(null = True, blank = True)
     durata = models.IntegerField()  # in ore

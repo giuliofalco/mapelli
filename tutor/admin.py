@@ -20,7 +20,7 @@ class ClassiAdmin(admin.ModelAdmin):
 
 @admin.register(Studenti)
 class StudentiAdmin(admin.ModelAdmin):
-    list_display = ['cognome','nome', 'classe']
+    list_display = ['cognome','nome', 'classe','tutor']
     search_fields = ['cognome','nome']
     list_filter = ['classe']
 
