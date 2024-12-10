@@ -425,7 +425,7 @@ def intera_classe(classe):
    lista = doc.split()
    return len(lista) == 1
 
-@login_required
+#@login_required
 def studenti_tutor():
    # prepara i dati alla view completa_tutor. Lista con (cognome tutor,lista di studenti)
 
