@@ -10,8 +10,9 @@ from pcto.indirizzi import *
 from django.urls import reverse
 from .forms import *
 from django.db.models import Count
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django_filters.views import FilterView
+from django.shortcuts import get_object_or_404
 
 
 def visualizza_utente(request):
@@ -82,6 +83,22 @@ def aziende(request):
               }
     context['user'] = visualizza_utente(request)
     return render(request,"aziende.html",context)
+
+class AziendaDetail(DetailView):
+    model = Aziende
+    context_object_name = "azienda"
+    template_name = "dettaglio_azienda.html"
+
+    def get_object(self, queryset=None):
+        partita_iva = self.kwargs.get('partita_iva')
+        return get_object_or_404(Aziende, partita_iva=partita_iva)
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['contatti'] = Contatti.objects.filter(azienda=self.object)
+        context['abbinamenti'] = Abbinamenti.objects.filter(azienda=self.object)
+        context['tutor'] = Tutor.objects.all()
+        return context
 
 def dettaglio_azienda(request,piva):
     # mostra i dati dell'aziende e dei contatti associati
