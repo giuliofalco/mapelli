@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from pcto.views import AziendeView
 
 app_name="pcto"
 
@@ -20,6 +21,8 @@ urlpatterns = [
       path('dettaglio_stat/<str:azienda>',views.dettaglio_stat,name="dettaglio_stat"),
       path('upload',views.upload,name='upload'),
       path('upload_csv_aziende',views.upload_csv_aziende,name='upload_csv_aziende'),
+      path('elenco_aziende',AziendeView.as_view(),name='elenco_aziende'),
+     
       # path('importa/<str:model>',views.importa,name="importa"),
 
 ]

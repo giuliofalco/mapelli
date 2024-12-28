@@ -5,11 +5,13 @@ from django.core.paginator import Paginator,EmptyPage
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
-from .filters import AziendeFilter
+from .filters import AziendeFilter,AziendeViewFilter
 from pcto.indirizzi import *
 from django.urls import reverse
 from .forms import *
 from django.db.models import Count
+from django.views.generic import ListView
+from django_filters.views import FilterView
 
 
 def visualizza_utente(request):
@@ -34,6 +36,24 @@ def tutor(request):
     context['user'] = visualizza_utente(request)
     
     return render(request,"tutor.html",context)
+   
+
+class AziendeView(FilterView):
+    model = Aziende
+    context_object_name = 'aziende'
+    template_name = 'elenco_aziende.html'
+    paginate_by = 10  # Mostra 10 oggetti per pagina
+    filterset_class = AziendeViewFilter  # Specifica la classe di filtro
+
+    def get_queryset(self):
+        return Aziende.objects.all()
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        paginator = context['paginator']  # Ottieni il Paginator
+        context['page_range'] = paginator.page_range  # Lista di tutte le pagine
+        return context
+   
 
 @login_required
 def aziende(request):

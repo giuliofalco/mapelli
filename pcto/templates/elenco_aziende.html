@@ -1,0 +1,86 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block head%}
+        <link rel="stylesheet" href="{% static 'pcto/style.css' %}">
+        <style>
+            .pagine a {text-decoration: none}
+            .pagine   {background: rgb(82, 115, 146); padding: 2px; margin:2px;
+                       cursor: pointer; color: white;
+            }
+            .pagina_corr {background: gold; padding: 3px; margin: 3px;}    
+            .filtro {display: flex; justify-content: center; gap:10px;}
+            #id_provincia {width: 50px;}
+        </style>
+    </head>
+    <script>
+        function cambia_pagina(pag) {
+            document.location = "?page="+pag;
+        }
+        function dettaglio(piva) {
+            url = "{%url 'pcto:aziende'%}"+piva;
+            // document.location = url;
+            document.location = url;
+        }
+    </script>
+{%endblock%}
+{%block content%}
+        <h1>Elenco Aziende</h1>
+        <form>
+            <div class="filtro">
+            <div>Ragione Sociale: {{filter.form.ragione_sociale}}</div>
+            <div>Comune: {{filter.form.comune}}</div>
+            <div>Prov.: {{filter.form.provincia}}</div>
+
+            <div><input type="submit" value="filtra"></div>
+            </div>
+        </form>
+
+        <table class="w3-table w3-card-4" style="width:80%; margin: auto">
+            <th>Azienda</th><th>Comune</th><th>Prov.</th>
+        {% for azienda in aziende %}
+          <tr>
+          <td onclick="dettaglio('{{azienda.partita_iva}}')">{{azienda.ragione_sociale}}</td> <td>{{azienda.comune}}</td> 
+          <td>{{azienda.provincia}}</td>
+        </tr>
+        {%endfor%}
+        </table>
+<p>
+    <!--
+        {% for num in page_range %}
+            {% if num == page_obj.number %}
+                <span class="pagina_corr">{{ num }}</span>
+            {% else %}
+                <a href="?page={{ num }}" class="pagine">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+ -->
+       
+<p>
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1{% if request.GET.comune %}&comune={{ request.GET.comune }}{% endif %}"> <img src= "{%static 'pcto/first.png' %}"></a>
+                <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.comune %}&comune={{ request.GET.comune }}{% endif %}"><img src= "{%static 'pcto/back.png' %}"></a>
+            {% endif %}
+    
+            <span class="pagine">Pagina 
+    
+            <select onchange="cambia_pagina(this.value)" >
+                {% for num in page_range %}
+                    <option value="{{num}}" {% if num == page_obj.number %}selected{% endif %}> 
+                        {{num}}
+                    </option>
+                {% endfor %}
+            </select>
+            di {{ page_obj.paginator.num_pages }}</span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}{% if request.GET.comune %}&comune={{ request.GET.comune }}{% endif %}"><img src= "{%static 'pcto/forward.png' %}"></a>
+                <a href="?page={{ page_obj.paginator.num_pages }}{% if request.GET.comune %}&comune={{ request.GET.comune }}{% endif %}"><img src= "{%static 'pcto/last.png' %}"> </a>
+            {% endif %}
+        </span>
+        
+    </div>
+
+    {%endblock%}
