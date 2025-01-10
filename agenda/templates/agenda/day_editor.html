@@ -1,0 +1,47 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editor Giorno</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-light-grey">
+
+    <header class="w3-container w3-light-blue w3-center w3-padding-16">
+        <h1>{{ entry_date | date:"d F Y"  }}</h1>
+    </header>
+
+    <div class="w3-container w3-margin-top w3-padding w3-white w3-card-4">
+        <form method="post" class="w3-container">
+            {% csrf_token %}
+            <div class="w3-row-padding">
+
+                <div class="w3-quarter">
+                    <h3>ASSENZE</h3>   
+                    {{ form.assenze|add_class:"w3-input w3-border w3-round-large" }}
+                </div>
+                <div class="w3-quarter">
+                    <h3>EVENTI</h3>  
+                    {{ form.eventi|add_class:"w3-input w3-border w3-round-large" }}
+                </div>
+                <div class="w3-quarter">
+                    <h3>CLASSI IN USCITA</h3>  
+                    {{ form.uscite|add_class:"w3-input w3-border w3-round-large" }}
+                </div>
+                <div class="w3-quarter">
+                    <h3>NOTE</h3>  
+                    {{ form.note|add_class:"w3-input w3-border w3-round-large" }}
+                </div>
+            </div>
+            <div class="w3-center w3-margin-top">
+                <button type="submit" class="w3-button w3-blue w3-round w3-large w3-hover-light-blue">Salva</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="w3-container w3-center w3-margin-top">
+        <a href="{% url 'calendar_view' %}" class="w3-button w3-grey w3-round w3-hover-dark-grey">Torna al Calendario</a>
+    </footer>
+
+</body>
+</html>

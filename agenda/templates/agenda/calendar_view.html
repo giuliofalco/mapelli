@@ -1,0 +1,74 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Calendario</title>
+</head>
+
+<style>
+   .tabella {width: 600px; margin: auto;}
+   .tabella td {border: 1px solid black; border-collapse: collapse; font-size: large;
+                text-align: center; background-color: rgb(240, 222, 198); }
+    .contenuto {text-align: center}
+    a {text-decoration: none;}
+    .today {
+            background-color: #ffeb3b;  /* Giallo chiaro */
+            color: #000;               /* Testo nero */
+            font-weight: bold;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .day {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+</style>
+<body>
+    <div class="w3-container contenuto">
+    <h1 class="w3-light-blue">Agenda - {{ month_name }} {{ year }}</h1>
+    <table class="w3-table w3-card-4 tabella">
+            <tr>
+                <th>Lun</th>
+                <th>Mar</th>
+                <th>Mer</th>
+                <th>Gio</th>
+                <th>Ven</th>
+                <th>Sab</th>
+                <th>Dom</th>
+            </tr>
+            <tr>
+                <!-- Celle vuote prima del primo giorno del mese -->
+                {% for _ in empty_start %}
+                   <td>&nbsp;</td>
+                {% endfor %}
+                {% for day in days %}
+                    
+                    <td class="{% if day.is_today %}w3-yellow{% endif %}">
+                        <a href="{% url 'day_editor' year month day.day %}">{{ day.day }}</a>
+                    </td>
+                    {% if day.date.weekday == 6 and not forloop.last %}
+                        </tr><tr>
+                    {% endif %}
+                {% endfor %}
+                <!-- Celle vuote dopo l'ultimo giorno del mese -->
+                {% for _ in empty_end %}
+                   <td>&nbsp;</td>
+                {% endfor %}
+            </tr>
+        </table>
+    <br>
+    <a href="?year={{ year }}&month={{ month|add:"-1" }}">
+        <img src = "{%static 'cal/go-previous.png' %}">
+    </a>
+    <a href="?year={{ year }}&month={{ month|add:"1" }}">
+        <img src = "{%static 'cal/go-next.png' %}">
+    </a>
+    </div>
+</body>
+</html>
