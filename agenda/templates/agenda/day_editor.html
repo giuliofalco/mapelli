@@ -1,14 +1,28 @@
 {% load custom_filters %}
+{%load static%}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Editor Giorno</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .link {text-decoration: none}
+        
+    </style>
 </head>
 <body class="w3-light-grey">
 
-    <header class="w3-container w3-light-blue w3-center w3-padding-16">
-        <h1>{{ entry_date | date:"d F Y"  }}</h1>
+    <header class="w3-container w3-light-blue w3-center w3-padding-16 ">
+        <h1>
+       
+        <a href="{%url 'day_editor' prev_year  prev_month prev_day %}" class="link">
+           <img src="{%static '/agenda/go-previous.png' %}">
+        </a>
+        {{ entry_date | date:"d F Y"  }}
+        <a href="{%url 'day_editor' next_year  next_month next_day %}" class="link">
+        <img src="{%static '/agenda/go-next.png' %}">
+        </a>
+        </h1>
     </header>
 
     <div class="w3-container w3-margin-top w3-padding w3-white w3-card-4">

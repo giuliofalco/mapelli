@@ -1,11 +1,13 @@
 from django.shortcuts import render
-
+from django.conf import settings
 from django.shortcuts import render, get_object_or_404, redirect
 from datetime import date, datetime, timedelta
 import calendar
 from .models import DayEntry
 from .forms import DayEntryForm
 from calendar import monthrange
+import os
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 def calendar_view(request):
     today = date.today()
@@ -50,6 +52,8 @@ def calendar_view(request):
 
 def day_editor(request, year, month, day):
     entry_date = date(year, month, day)
+    prev_date = entry_date - timedelta(days=1)
+    next_date = entry_date + timedelta(days=1)
     day_entry, created = DayEntry.objects.get_or_create(date=entry_date)
 
     if request.method == 'POST':
@@ -60,4 +64,19 @@ def day_editor(request, year, month, day):
     else:
         form = DayEntryForm(instance=day_entry)
 
-    return render(request, 'agenda/day_editor.html', {'form': form, 'entry_date': entry_date})
+    context = {'form': form, 'entry_date': entry_date,
+               'prev_day': prev_date.day, 'next_day':next_date.day, 
+               'prev_month':prev_date.month, 'next_month':next_date.month,
+               'prev_year': prev_date.year,'next_year': next_date.year, }
+
+    return render(request, 'agenda/day_editor.html', context )
+
+from django.http import FileResponse
+
+@xframe_options_exempt
+def serve_pdf(request, filename):
+    filepath = os.path.join(settings.MEDIA_ROOT, 'pdfs', filename)
+    response = FileResponse(open(filepath, 'rb'), content_type='application/pdf')
+    response['X-Frame-Options'] = 'SAMEORIGIN'
+    response['Content-Disposition'] = 'inline; filename="{}"'.format(filename)
+    return response
