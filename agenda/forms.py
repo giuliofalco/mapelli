@@ -6,8 +6,8 @@ class DayEntryForm(forms.ModelForm):
         model = DayEntry
         fields = ['assenze', 'eventi','uscite','note']
         widgets = {
-            'assenze': forms.Textarea(attrs={'rows': 15, 'cols': 10}),
-            'eventi': forms.Textarea(attrs={'rows': 15, 'cols': 10}),
-            'uscite': forms.Textarea(attrs={'rows': 15, 'cols': 10}),
-            'note': forms.Textarea(attrs={'rows': 15, 'cols': 10}),
+            'assenze': forms.Textarea(attrs={'rows': 28, 'cols': 10}),
+            'eventi': forms.Textarea(attrs={'rows': 28, 'cols': 10}),
+            'uscite': forms.Textarea(attrs={'rows': 28, 'cols': 10}),
+            'note': forms.Textarea(attrs={'rows': 28, 'cols': 10}),
         }
