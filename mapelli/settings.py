@@ -159,7 +159,8 @@ CKEDITOR_CONFIGS = {
         #'toolbar': 'full',
         'toolbar': [
             
-            ['TextColor','BGColor','Bold','Underline','NumberedList', 'BulletedList']
+            ['TextColor','BGColor','Bold','Underline','NumberedList', 'BulletedList'],
+            ['FontSize']
         ],
 
         'height': 500,
