@@ -9,6 +9,7 @@
         .link {text-decoration: none}
         .colonne {height: 700px}
     </style>
+    {{ form.media }} 
 </head>
 <body class="w3-light-grey">
 
@@ -33,19 +34,19 @@
 
                 <div class="w3-quarter colonne" >
                     <h3>ASSENZE</h3>   
-                    {{ form.assenze|add_class:"w3-input w3-border w3-round-large" }}
+                    {{ form.assenze }}
                 </div>
                 <div class="w3-quarter colonne">
                     <h3>EVENTI</h3>  
-                    {{ form.eventi|add_class:"w3-input w3-border w3-round-large" }}
+                    {{ form.eventi }}
                 </div>
                 <div class="w3-quarter colonne">
                     <h3>CLASSI IN USCITA</h3>  
-                    {{ form.uscite|add_class:"w3-input w3-border w3-round-large" }}
+                    {{ form.uscite}}
                 </div>
                 <div class="w3-quarter colonne">
                     <h3>NOTE</h3>  
-                    {{ form.note|add_class:"w3-input w3-border w3-round-large" }}
+                    {{ form.note }}
                 </div>
             </div>
             <div class="w3-center w3-margin-top">
