@@ -8,7 +8,9 @@ from .forms import DayEntryForm
 from calendar import monthrange
 import os
 from django.views.decorators.clickjacking import xframe_options_exempt
+from django.contrib.auth.decorators import login_required
 
+#@login_required
 def calendar_view(request):
     today = date.today()
     year = int(request.GET.get('year', today.year))
