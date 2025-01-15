@@ -32,7 +32,15 @@
 </style>
 <body>
     <div class="w3-container contenuto">
-    <h1 class="w3-light-blue">Agenda - {{ month_name }} {{ year }}</h1>
+    <h1 class="w3-light-blue">
+    <a href="?year={{ year }}&month={{ month|add:"-1" }}">
+            <img src = "{%static 'agenda/go-previous.png' %}">
+    </a>
+    Agenda - {{ mese}} {{ year }}
+    <a href="?year={{ year }}&month={{ month|add:"1" }}">
+        <img src = "{%static 'agenda/go-next.png' %}">
+    </a>
+    </h1>
     <button class="supplenze" onclick="document.location='http://mapelli.selfip.org/supplenze'"> Supplenze </button>software by: G. Falco 2025 <p>
     <table class="w3-table w3-card-4 tabella">
             <tr>
@@ -65,12 +73,8 @@
             </tr>
         </table>
     <br>
-    <a href="?year={{ year }}&month={{ month|add:"-1" }}">
-        <img src = "{%static 'agenda/go-previous.png' %}">
-    </a>
-    <a href="?year={{ year }}&month={{ month|add:"1" }}">
-        <img src = "{%static 'agenda/go-next.png' %}">
-    </a>
+  
+   
     </div>
    
    

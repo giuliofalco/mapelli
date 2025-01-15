@@ -37,7 +37,7 @@
         <a href="{%url 'day_editor' prev_year  prev_month prev_day %}" class="link">
            <img src="{%static '/agenda/go-previous.png' %}">
         </a>
-        {{ entry_date | date:"d F Y"  }}
+        {{weekday}} {{ entry_date.day }} {{mese}} {{entry_date.year}}
         <a href="{%url 'day_editor' next_year  next_month next_day %}" class="link">
         <img src="{%static '/agenda/go-next.png' %}">
         </a>

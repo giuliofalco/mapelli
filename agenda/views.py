@@ -10,6 +10,13 @@ import os
 from django.views.decorators.clickjacking import xframe_options_exempt
 from django.contrib.auth.decorators import login_required
 
+WEEKDAY = ('Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato','Domenica')
+
+MESI = ('Gennaio', 'Febbraio', 'Marzo','Aprile',
+        'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre',
+        'Ottobre', 'Novembre', 'Dicembre')
+        
+
 #@login_required
 def calendar_view(request):
     today = date.today()
@@ -45,6 +52,7 @@ def calendar_view(request):
         'year': year,
         'month': month,
         'month_name': month_name,
+        'mese': MESI[month-1],
         'first_weekday': first_weekday,  # Giorno della settimana del primo giorno
         'last_weekday': last_weekday,    # Giorno della settimana dell'ultimo giorno
         'empty_start': empty_start,
@@ -57,6 +65,7 @@ def day_editor(request, year, month, day):
     prev_date = entry_date - timedelta(days=1)
     next_date = entry_date + timedelta(days=1)
     day_entry, created = DayEntry.objects.get_or_create(date=entry_date)
+    weekday = WEEKDAY[entry_date.weekday()]
 
     if request.method == 'POST':
         form = DayEntryForm(request.POST, instance=day_entry)
@@ -66,10 +75,13 @@ def day_editor(request, year, month, day):
     else:
         form = DayEntryForm(instance=day_entry)
 
-    context = {'form': form, 'entry_date': entry_date,
+    context = {'form': form, 'entry_date': entry_date, 'mese':MESI[month-1],
                'prev_day': prev_date.day, 'next_day':next_date.day, 
                'prev_month':prev_date.month, 'next_month':next_date.month,
-               'prev_year': prev_date.year,'next_year': next_date.year, }
+               'prev_year': prev_date.year,'next_year': next_date.year, 
+               'weekday' : weekday, 
+            }
+    
 
     return render(request, 'agenda/day_editor.html', context )
 
@@ -82,3 +94,6 @@ def serve_pdf(request, filename):
     response['X-Frame-Options'] = 'SAMEORIGIN'
     response['Content-Disposition'] = 'inline; filename="{}"'.format(filename)
     return response
+
+def test(request):
+    return render(request,'agenda/test.html',{})
