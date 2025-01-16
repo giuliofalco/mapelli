@@ -89,11 +89,38 @@ from django.http import FileResponse
 
 @xframe_options_exempt
 def serve_pdf(request, filename):
+    # view di test per poter incorporare un file pdf in un iframe
     filepath = os.path.join(settings.MEDIA_ROOT, 'pdfs', filename)
     response = FileResponse(open(filepath, 'rb'), content_type='application/pdf')
     response['X-Frame-Options'] = 'SAMEORIGIN'
     response['Content-Disposition'] = 'inline; filename="{}"'.format(filename)
     return response
 
-def test(request):
-    return render(request,'agenda/test.html',{})
+
+def monthly_report(request):
+    # view per il report di backup dei dati raggrupapti per mese
+    # Ottieni tutti i record con almeno un campo non vuoto
+    entries = DayEntry.objects.filter(
+        assenze__isnull=False,
+    ) | DayEntry.objects.filter(eventi__isnull=False) | DayEntry.objects.filter(uscite__isnull=False) | DayEntry.objects.filter(note__isnull=False)
+
+    # Organizza i dati per mese
+    data_by_month = {}
+    for entry in entries:
+        # Ottieni il mese e l'anno come stringa leggibile (es. "Gennaio 2025")
+        month = entry.date.strftime('%B %Y').capitalize()
+        if month not in data_by_month:
+            data_by_month[month] = []
+        # Aggiungi il record al mese corrispondente
+        data_by_month[month].append({
+            'date': entry.date.strftime('%d-%m-%Y'),
+            'assenze': entry.assenze,
+            'eventi': entry.eventi,
+            'uscite': entry.uscite,
+            'note': entry.note,
+        })
+    # Ordina i giorni all'interno di ogni mese
+    for month in data_by_month:
+        data_by_month[month].sort(key=lambda x: x['date'])
+    # Passa i dati al template
+    return render(request, 'agenda/monthly_report.html', {'data_by_month': data_by_month})

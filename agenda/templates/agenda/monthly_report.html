@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Mensile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: rgb(173, 218, 186); 
+        }
+        h1 {color:brown;}
+        h2 {color: blue;}
+    </style>
+</head>
+<body>
+    <h1>Report Mensile</h1>
+    {% for month, days in data_by_month.items %}
+        <h2>{{ month }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Assenze</th>
+                    <th>Eventi</th>
+                    <th>Uscite</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for day in days %}
+                    <tr>
+                        <td>{{ day.date }}</td>
+                        <td>{{ day.assenze|safe }}</td>
+                        <td>{{ day.eventi|safe}}</td>
+                        <td>{{ day.uscite|safe }}</td>
+                        <td>{{ day.note|safe}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+</body>
+</html>
