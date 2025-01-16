@@ -9,6 +9,8 @@ from calendar import monthrange
 import os
 from django.views.decorators.clickjacking import xframe_options_exempt
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
+from django.http import FileResponse
 
 WEEKDAY = ('Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato','Domenica')
 
@@ -85,7 +87,7 @@ def day_editor(request, year, month, day):
 
     return render(request, 'agenda/day_editor.html', context )
 
-from django.http import FileResponse
+
 
 @xframe_options_exempt
 def serve_pdf(request, filename):
@@ -100,10 +102,14 @@ def serve_pdf(request, filename):
 def monthly_report(request):
     # view per il report di backup dei dati raggrupapti per mese
     # Ottieni tutti i record con almeno un campo non vuoto
-    entries = DayEntry.objects.filter(
-        assenze__isnull=False,
-    ) | DayEntry.objects.filter(eventi__isnull=False) | DayEntry.objects.filter(uscite__isnull=False) | DayEntry.objects.filter(note__isnull=False)
 
+    entries = DayEntry.objects.filter(
+        Q(assenze__isnull=False, assenze__gt='') |
+        Q(eventi__isnull=False, eventi__gt='') |
+        Q(uscite__isnull=False, uscite__gt='') |
+        Q(note__isnull=False, note__gt='')
+    )
+  
     # Organizza i dati per mese
     data_by_month = {}
     for entry in entries:
