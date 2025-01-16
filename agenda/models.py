@@ -10,3 +10,7 @@ class DayEntry(models.Model):
     
     def __str__(self):
         return self.date.strftime('%Y-%m-%d')
+    
+    def vuoto(self):
+        # restituisce True quando i campi di testo sono tutti vuoti
+        return not self.assenze and not self.eventi and not self.uscite and not self.note
