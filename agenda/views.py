@@ -142,6 +142,6 @@ def monthly_report(request):
         })
     # Ordina i giorni all'interno di ogni mese
     for month in data_by_month:
-        data_by_month[month].sort(key=lambda x: x['date'])
+        data_by_month[month].sort(key=lambda x: x['date'],reverse=True)
     # Passa i dati al template
     return render(request, 'agenda/monthly_report.html', {'data_by_month': data_by_month})
