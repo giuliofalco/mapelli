@@ -51,7 +51,10 @@ def calendar_view(request):
             record_giorno = DayEntry.objects.get(date=date(year,month,day))
             cookie = request.COOKIES.get(date(year,month,day).strftime("%Y-%m-%d"))
             updated =   record_giorno.updated_at.strftime("%Y-%m-%d")
-            dot = cookie != updated
+            if record_giorno.vuoto():
+                dot = False
+            else:
+                dot = cookie != updated 
         except DayEntry.DoesNotExist:
             dot = False
         
