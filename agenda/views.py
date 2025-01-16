@@ -143,7 +143,7 @@ def monthly_report(request):
         })
 
      # Ordina i mesi in ordine decrescente
-    sorted_months = sorted(data_by_month.keys(), key=lambda month: entry.date.strptime(month, "%B %Y"), reverse=True)
+    sorted_months = sorted(data_by_month.keys(), key=lambda month: datetime.strptime(month, "%B %Y"), reverse=True)
      # Crea un nuovo dizionario con i mesi ordinati
     data_by_month = {month: data_by_month[month] for month in sorted_months}
     # Ordina i giorni all'interno di ogni mese
