@@ -61,7 +61,10 @@
                 {% for day in days %}
                     
                     <td class="{% if day.is_today %}w3-yellow{% endif %}">
-                        <a href="{% url 'day_editor' year month day.day %}">{{ day.day }}</a>
+                        <a href="{% url 'day_editor' year month day.day %}">{{ day.day }} </a>
+                        {% if  day.dot  %}
+                           <span style="color: red;">●</span> <!-- Puntino rosso per modifiche non lette -->
+                        {% endif %}
                     </td>
                     {% if day.date.weekday == 6 and not forloop.last %}
                         </tr><tr>

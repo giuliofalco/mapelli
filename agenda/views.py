@@ -23,8 +23,9 @@ MESI = ('Gennaio', 'Febbraio', 'Marzo','Aprile',
 def calendar_view(request):
     today = date.today()
     year = int(request.GET.get('year', today.year))
+   
     month = int(request.GET.get('month', today.month))
-
+   
     # Gestisci i limiti dei mesi
     if month < 1:
         month = 12
@@ -37,15 +38,26 @@ def calendar_view(request):
     month_name = calendar.month_name[month]
     first_weekday = date(year, month, 1).weekday()
     last_weekday = date(year, month, days_in_month).weekday()
-    days = [
-
-        {
-            "day": day,
-            "date": date(year, month, day),
-            "is_today": today.year == year and today.month == month and today.day == day
+    days = []
+    for day in range(1, days_in_month + 1):
+        giorno = {
+        "day": day,
+        "date": date(year, month, day),
+        "is_today": today.year == year and today.month == month and today.day == day,
         }
-        for day in range(1, days_in_month + 1)
-    ]
+        print(year, month, day)
+        try:
+            record_giorno = DayEntry.objects.get(date=date(year,month,day))
+            cookie = request.COOKIES.get(date(year,month,day).strftime("%Y-%m-%d"))
+            updated =   record_giorno.updated_at.strftime("%Y-%m-%d")
+            dot = cookie != updated
+        except DayEntry.DoesNotExist:
+            dot = False
+        
+        giorno['dot'] = dot
+        
+        days.append(giorno)
+   
     # Celle vuote all'inizio e alla fine
     empty_start = list(range(first_weekday))  # Celle vuote prima del primo giorno
     empty_end = list(range(6 - last_weekday))  # Celle vuote dopo l'ultimo giorno
@@ -76,17 +88,20 @@ def day_editor(request, year, month, day):
             return redirect('calendar_view')
     else:
         form = DayEntryForm(instance=day_entry)
-
-    context = {'form': form, 'entry_date': entry_date, 'mese':MESI[month-1],
-               'prev_day': prev_date.day, 'next_day':next_date.day, 
-               'prev_month':prev_date.month, 'next_month':next_date.month,
-               'prev_year': prev_date.year,'next_year': next_date.year, 
-               'weekday' : weekday, 
-            }
+        context = {'form': form, 'entry_date': entry_date, 'mese':MESI[month-1],
+                   'prev_day': prev_date.day, 'next_day':next_date.day, 
+                   'prev_month':prev_date.month, 'next_month':next_date.month,
+                   'prev_year': prev_date.year,'next_year': next_date.year, 
+                   'weekday' : weekday, 
+        }
+        response = render(request, 'agenda/day_editor.html', context )
+        response.set_cookie(
+           key=day_entry.date.strftime('%Y-%m-%d'),
+           value=day_entry.updated_at.strftime('%Y-%m-%d'),
+           max_age=60 * 60 * 24 * 365  # Cookie valido per 1 anno
+        )
     
-
-    return render(request, 'agenda/day_editor.html', context )
-
+        return response
 
 
 @xframe_options_exempt

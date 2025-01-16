@@ -6,6 +6,7 @@ class DayEntry(models.Model):
     eventi  = models.TextField(blank=True)   # eventi
     uscite  = models.TextField(blank=True)   # Classi in uscita
     note    = models.TextField(blank=True)   # Note varie
-
+    updated_at = models.DateTimeField(auto_now=True)  # Data di ultimo aggiornamento
+    
     def __str__(self):
         return self.date.strftime('%Y-%m-%d')

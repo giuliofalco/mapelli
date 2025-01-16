@@ -1,0 +1,5 @@
+.cke_contents {
+    min-width: 600px; /* Larghezza minima */
+    max-width: 100%; /* Larghezza massima */
+    width: 100%; /* Usa tutta la larghezza disponibile */
+}
