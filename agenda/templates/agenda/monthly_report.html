@@ -1,3 +1,4 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -29,15 +30,19 @@
         }
         h1 {color:brown;}
         h2 {color: blue;}
-        form {width: 235px; margin:auto}
+        form {width: 350px; margin:auto}
+        img {margin-right:30px; margin-bottom:-5px;}
     </style>
 </head>
 <body>
-    <h1>Report Mensile</h1>
-  
+   
+    <h1> Report Mensile</h1>
+    
     <form METHOD = POST ACTION="{%url 'monthly_report'%}">
         {% csrf_token %}
+        <a href="{%url 'calendar_view' %}"><img src="/static/agenda/go-previous.png"></a>
         <input type="text" name="q" value="{{parola}}"> <input type="submit" value="filtra">
+        
     </form>
    
     {% for month, days in data_by_month.items %}
