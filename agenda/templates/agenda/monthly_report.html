@@ -29,10 +29,17 @@
         }
         h1 {color:brown;}
         h2 {color: blue;}
+        form {width: 235px; margin:auto}
     </style>
 </head>
 <body>
     <h1>Report Mensile</h1>
+  
+    <form METHOD = POST ACTION="{%url 'monthly_report'%}">
+        {% csrf_token %}
+        <input type="text" name="q" value="{{parola}}"> <input type="submit" value="filtra">
+    </form>
+   
     {% for month, days in data_by_month.items %}
         <h2>{{ month }}</h2>
         <table>

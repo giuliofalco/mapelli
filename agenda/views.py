@@ -5,6 +5,7 @@ from datetime import date, datetime, timedelta
 import calendar
 from .models import DayEntry
 from .forms import DayEntryForm
+from .filters import *
 from calendar import monthrange
 import os
 from django.views.decorators.clickjacking import xframe_options_exempt
@@ -12,6 +13,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import FileResponse
 from collections import OrderedDict
+
 
 WEEKDAY = ('Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato','Domenica')
 
@@ -144,6 +146,11 @@ def monthly_report(request):
             'uscite': entry.uscite,
             'note': entry.note,
         })
+    
+    parola = ''
+    if request.method == 'POST':             # richiama il filtro
+        parola = request.POST.get('q','')
+        data_by_month = filtra_dizionario(data_by_month,parola)
 
      # Ordina i mesi in ordine decrescente
     sorted_months = sorted(data_by_month.keys(), key=lambda month: datetime.strptime(month, "%B %Y"), reverse=True)
@@ -153,4 +160,4 @@ def monthly_report(request):
     for month in data_by_month:
         data_by_month[month].sort(key=lambda x: x['date'],reverse=True)
     # Passa i dati al template
-    return render(request, 'agenda/monthly_report.html', {'data_by_month': data_by_month})
+    return render(request, 'agenda/monthly_report.html', {'data_by_month': data_by_month, 'parola':parola})
