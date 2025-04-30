@@ -12,6 +12,7 @@
             display: flex; /* Usa Flexbox per allineare le colonne in una riga */
             gap: 10px; /* Spazio tra le colonne */
             flex-wrap: wrap; /* Permette di andare a capo se lo spazio è insufficiente */
+            width:100%;
         }
 
         .custom-column {
@@ -24,7 +25,7 @@
         .cke_contents {
             min-height: 300px !important; /* Imposta un'altezza minima */
             max-height: 700px !important; /* Limita l'altezza massima */
-            width: 350px !important;       /* Imposta la larghezza al 100% del contenitore */
+            width: 400px !important;       /* Imposta la larghezza al 100% del contenitore */
         }
     </style>
     {{ form.media }} 
@@ -70,7 +71,7 @@
             <div class="w3-center w3-margin-top">
                 <button type="submit" class="w3-button w3-blue w3-round w3-large w3-hover-light-blue">Salva</button>
                 <a href="{% url 'calendar_view' %}" class="w3-button w3-grey w3-round w3-hover-dark-grey">Torna al Calendario</a>
-                <a href="http://mapelli.selfip.org/supplenze" class="w3-button w3-green">
+                <a href="http://supplenze.mapelli.site" class="w3-button w3-green">
                  Supplenze
                 </a>
             </div>
