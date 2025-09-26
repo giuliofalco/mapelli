@@ -272,8 +272,8 @@ def salva_iscrizioni(request):
             studente = Studenti.objects.get(id=int(idstudent))
             proposta.iscrizioni.add(studente)
       proposta.save()  
-      return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{idproposta}")
-   return HttpResponseRedirect("/orienta/tutor")
+      return HttpResponseRedirect(f"/tutor/dettaglio_proposta/{idproposta}")
+   return HttpResponseRedirect("/tutor")
 
 from django.db.models import Count, Q
 @login_required   
