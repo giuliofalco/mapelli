@@ -59,7 +59,7 @@ class ChangePasswordView(PasswordChangeView):
     # consente all'utente  di cambiarsi la password
 
     template_name = 'tutor/change_password.html'
-    success_url = "/orienta/tutor"
+    success_url = "/tutor"
 
     def form_valid(self, form):
         messages.success(self.request, 'Your password has been changed successfully.')
@@ -76,7 +76,7 @@ def upload(request):
 @login_required
 def upload_csv_proposte(request):
    # carica il csv delle proposte
-   return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/orienta/tutor'>Torna alla hoem page</a>"))
+   return(HttpResponse("<h2>Dati caricati con successo</h2> <a href='/tutor'>Torna alla hoem page</a>"))
 
 def proposte(request):
     # elenco delle proposte
@@ -150,7 +150,7 @@ def dettaglio_attivita_tutor(request,idattivita):
          attivita.durata = request.POST.get('durata')
          attivita.descrizione = request.POST.get('descrizione')
          attivita.save()
-         return HttpResponseRedirect(f"/orienta/tutor/elenco_attivita_tutor/{tutorid}")
+         return HttpResponseRedirect(f"/tutor/elenco_attivita_tutor/{tutorid}")
    else:
       attivita = Attivita_tutor.objects.get(id=idattivita)
       form = AttivitaForm(instance=attivita)
@@ -162,7 +162,7 @@ def cancella_attivita(request,id):
    attivita = Attivita_tutor.objects.get(id=id)
    tutorid = attivita.tutor.id
    attivita.delete()
-   return HttpResponseRedirect(f"/orienta/tutor/elenco_attivita_tutor/{tutorid}")
+   return HttpResponseRedirect(f"/tutor/elenco_attivita_tutor/{tutorid}")
    
 
 @login_required
@@ -211,7 +211,7 @@ def aggiungimi(request,id):
       proposta.save()
    except:
       pass
-   return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{id}")
+   return HttpResponseRedirect(f"/tutor/dettaglio_proposta/{id}")
 
 @login_required
 def cancellami(request,id):
@@ -225,7 +225,7 @@ def cancellami(request,id):
       proposta.save()
    except:
       pass
-   return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{id}")
+   return HttpResponseRedirect(f"/tutor/dettaglio_proposta/{id}")
 
 @login_required
 def ritira(request,idstudente,idproposta):
@@ -234,7 +234,7 @@ def ritira(request,idstudente,idproposta):
    studente = Studenti.objects.get(id=idstudente)
    proposta.iscrizioni.remove(studente)
    proposta.save()
-   return HttpResponseRedirect(f"/orienta/tutor/dettaglio_proposta/{idproposta}")
+   return HttpResponseRedirect(f"/tutor/dettaglio_proposta/{idproposta}")
 
 @login_required
 def adesioni_proposta(request,id):
