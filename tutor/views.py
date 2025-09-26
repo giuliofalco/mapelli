@@ -44,7 +44,7 @@ def logout_view(request):
 
     logout(request)
     # Redirect to a success page.
-    return HttpResponseRedirect("/orienta/tutor")
+    return HttpResponseRedirect("/tutor")
 
 class ChangePasswordView(PasswordChangeView):
     # consente all'utente  di cambiarsi la password
