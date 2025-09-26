@@ -21,26 +21,32 @@ def index(request):
    return render(request,"tutor/index.html",{'news':news})
 
 def mioLogin(request):
-   # manda alla finestra di autenticazione, per chiedere username e password
-   next_url = request.GET.get('next', reverse("tutor:index"))
-   context = {'next':next_url,}
-   # sicurezza: se il next non inizia con /tutor/, forziamo la home
-   if not next_url.startswith("/tutor/"):
+    # prendi il next dall'URL GET
+    next_url = request.GET.get('next', reverse("tutor:index"))
+
+    # sicurezza: se il next non inizia con /tutor/, forziamo la home
+    if not next_url.startswith("/tutor/"):
         next_url = reverse("tutor:index")
-   return render(request,'tutor/login.html',context)
+
+    # passalo al template
+    context = {'next': next_url}
+    return render(request, 'tutor/login.html', context)
 
 def autentica(request):
-   # riceve dalla finestra di autenticazione e controlla per effettuare il login
-   utente  = request.POST.get('utente') 
-   password = request.POST.get('password')
-   next_url = request.POST.get('next') or reverse("tutor:index") 
-   user = authenticate(request, username=utente, password=password)
- 
-   if user is not None:
-      login(request, user)
-      return HttpResponseRedirect(next_url)
-   else:
-      return render(request,'tutor/login.html',{'msg':'Autenticazione Fallita', 'next':next_url} )
+    utente  = request.POST.get('utente')
+    password = request.POST.get('password')
+    next_url = request.POST.get('next') or reverse("tutor:index")
+
+    user = authenticate(request, username=utente, password=password)
+
+    if user is not None:
+        login(request, user)
+        return redirect(next_url)
+    else:
+        return render(request, 'tutor/login.html', {
+            'msg': 'Autenticazione Fallita',
+            'next': next_url
+        })
    
 def logout_view(request):
     # esegue il logout dall'utente 
