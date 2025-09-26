@@ -22,8 +22,11 @@ def index(request):
 
 def mioLogin(request):
    # manda alla finestra di autenticazione, per chiedere username e password
-   next = request.GET['next']
-   context = {'next':next,}
+   next_url = request.GET.get('next', reverse("tutor:index"))
+   context = {'next':next_url,}
+   # sicurezza: se il next non inizia con /tutor/, forziamo la home
+   if not next_url.startswith("/tutor/"):
+        next_url = reverse("tutor:index")
    return render(request,'tutor/login.html',context)
 
 def autentica(request):
