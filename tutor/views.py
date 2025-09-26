@@ -30,14 +30,14 @@ def autentica(request):
    # riceve dalla finestra di autenticazione e controlla per effettuare il login
    utente  = request.POST.get('utente') 
    password = request.POST.get('password')
-   next = request.POST.get('next')
+   next_url = request.POST.get('next') or reverse("tutor:index") 
    user = authenticate(request, username=utente, password=password)
  
    if user is not None:
       login(request, user)
-      return HttpResponseRedirect(next)
+      return HttpResponseRedirect(next_url)
    else:
-      return render(request,'tutor/login.html',{'msg':'Autenticazione Fallita', 'next':next} )
+      return render(request,'tutor/login.html',{'msg':'Autenticazione Fallita', 'next':next_url} )
    
 def logout_view(request):
     # esegue il logout dall'utente 
